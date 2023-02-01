@@ -15,29 +15,31 @@
       <h1 class="govuk-heading-xl">
       Review your answers and make changes where needed</h1>
 
-      <h2 class="govuk-heading-m">Personal details</h2>
+      <h2 class="govuk-heading-m">Define the purpose of your data share</h2>
+
+
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Name
+Whose data do you need?
           </dt>
           <dd class="govuk-summary-list__value">
-            Sarah Philips
+            xxx
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> name</span>
+              <span class="govuk-visually-hidden"> problem</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Date of birth
+Will your project benefit this group directly?
           </dt>
           <dd class="govuk-summary-list__value">
-            5 January 1978
+            Yes, it will benefit 'clinically extremely vulnerable patients'.
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -48,12 +50,10 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Contact information
+            What is the problem you are trying to solve?
           </dt>
           <dd class="govuk-summary-list__value">
-            72 Guild Street
-            <br>London
-            <br>SE23 6FH
+foo
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -77,17 +77,13 @@
             </a>
           </dd>
         </div>
-      </dl>
 
-      <h2 class="govuk-heading-m">Application details</h2>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Previous application number
+What do you hope to achieve with your project?
           </dt>
           <dd class="govuk-summary-list__value">
-            502135326
+            lorem bacon
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -98,10 +94,10 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Licence type
+How will this [insert data set] set help you achieve this?
           </dt>
           <dd class="govuk-summary-list__value">
-            For personal use
+            tbc foo
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -112,12 +108,12 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Home address
+            What public benefit will your project provide?
           </dt>
           <dd class="govuk-summary-list__value">
-            72 Guild Street
-            <br>London
-            <br>SE23 6FH
+            Evidence for public service delivery
+            <br>Evidence for decisions which are likely to benefit people in the UK
+            <br>Evidence for decisions about how to allocate and evaluate funding
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -128,31 +124,36 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Licence period
+            How will it impact your project if you don't get this data?
           </dt>
           <dd class="govuk-summary-list__value">
-            Valid for 6 months
+            xxx
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> licence period</span>
+              <span class="govuk-visually-hidden"> negative impact</span>
             </a>
           </dd>
         </div>
       </dl>
 
-      <h2 class="govuk-heading-m">Now send your application</h2>
+      <h2 class="govuk-heading-m">Save your work as you go</h2>
 
-      <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <p>If your team is confident you've got the purpose right, you should save these answers and move on the next phase of your data sharing request, the legal gateway status.</p>
+      <p>
+      Your answers will be saved in the account you set up.</p>
 
-      <form action="/confirmation" method="post" novalidate>
+      <form action="/jasman/000-start" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Accept and send
-        </button>
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Save and continue
+          </button>
+          <a class="govuk-link" href="#">Save on Gdrive account</a>
+        </div>
 
       </form>
 
