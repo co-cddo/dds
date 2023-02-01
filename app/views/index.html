@@ -1,0 +1,31 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Design an data share
+    </h1>
+    
+    <p class="govuk-body">Work in progress user journeys:</p>
+    
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="/jasman/000-start">Jasman end-to-end "Acquirer" journey</li>
+      <li><a href="/khadija/000-start">Khadija work with Jasman to complete data share "Supplier" journey</li>
+      <li><a href="/khadija/000-start">Khadija improves data with linter "Supplier" journey</li>
+      <li><a href="/khadija/000-start">Khadija adds her data-resource to data catalog "Supplier" journey</li>
+    </ul>
+    
+
+    <!-- include "govuk-prototype-kit/includes/homepage-bottom.njk" -->
+
+  </div>
+</div>
+
+{% endblock %}
