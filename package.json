@@ -8,6 +8,7 @@
     "@govuk-prototype-kit/step-by-step": "^2.1.0",
     "govuk-frontend": "^4.5.0",
     "govuk-prototype-components": "^1.1.0",
-    "govuk-prototype-kit": "^13.2.4"
+    "govuk-prototype-kit": "^13.2.4",
+    "hmrc-frontend": "^5.20.0"
   }
 }
