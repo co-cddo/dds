@@ -12,7 +12,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Handles form submissions from 'check-team-skills.html'
 router.post('/check-team-skills-routes', (req, res) => {
 
-  const haveSkills = req.body;
+  const haveSkills = req.body["have-skills"];
   console.log("haveSkills value: ", haveSkills);
 
   // If the checkbox is checked, redirect to agree.html

@@ -1,0 +1,112 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GDX Home – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block main %}
+
+  {{ xGovukMasthead({
+    classes: "x-govuk-masthead--large",
+    phaseBanner: {
+      text: "This is a new service"
+    },
+    title: {
+      text: "Find the data your service needs or share your department's data."
+    },
+    description: {
+      text: "Help us build a communty of open and interoperable data. Much of this functionality is public and freely available, but if you need to create any forms or documents you will need to register with the Government Data Exchange."
+    },
+    startButton: {
+      text: "Login or register",
+      href: "/jasman-authenticated/gg-login"
+    },
+    image: {
+    src: "/public/images/grabs/community-widget.png"
+    }
+  }) }}
+
+
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+
+<style type="text/css">
+  
+
+</style>
+
+
+<ul class="homepage-services-and-info__list" data-module="gem-track-click ga4-link-tracker" data-gem-track-click-module-started="true" data-ga4-link-tracker-module-started="true"
+style="height:50em;">
+          
+<li class="chevron-card">
+  <div class="chevron-card__wrapper">
+    <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-2"><a class="govuk-link chevron-card__link" data-track-action="topicsLink" data-track-category="homepageClicked" data-track-dimension-index="29" data-track-dimension="Benefits" data-track-label="/browse/benefits" data-track-value="1" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;home page&quot;,&quot;index&quot;:&quot;2.1&quot;,&quot;index_total&quot;:43,&quot;section&quot;:&quot;Topics&quot;}" href="#a">Search the data catalogue</a></h3>
+    <p class="govuk-body chevron-card__description">The government data exchange allows for a centralized platform for sharing and accessing data across departments, making it easier for departments to find and access the data they need. This streamlines the process and saves time, as data can be quickly located and shared, rather than having to be obtained through various channels.</p>
+  </div>
+</li>
+          
+<li class="chevron-card">
+  <div class="chevron-card__wrapper">
+    <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-2"><a class="govuk-link chevron-card__link" data-track-action="topicsLink" data-track-category="homepageClicked" data-track-dimension-index="29" data-track-dimension="Births, deaths, marriages and&nbsp;care" data-track-label="/browse/births-deaths-marriages" data-track-value="1" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;home page&quot;,&quot;index&quot;:&quot;2.2&quot;,&quot;index_total&quot;:43,&quot;section&quot;:&quot;Topics&quot;}" href="/jasman-authenticated/gg-login">Create your data-sharing request</a></h3>
+    <p class="govuk-body chevron-card__description">This service provides a standardized platform for creating and executing legal agreements between government agencies for sharing data resources. This streamlines the process, reduces risk and increases transparency, as the agreements will be securely stored and easily accessible. The platform can facilitate data sharing, while also protecting the privacy and security of sensitive information.</p>
+  </div>
+</li>
+          
+<li class="chevron-card">
+  <div class="chevron-card__wrapper">
+    <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-2"><a class="govuk-link chevron-card__link" data-track-action="topicsLink" data-track-category="homepageClicked" data-track-dimension-index="29" data-track-dimension="Citizenship and living in the&nbsp;UK" data-track-label="/browse/citizenship" data-track-value="1" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;home page&quot;,&quot;index&quot;:&quot;2.5&quot;,&quot;index_total&quot;:43,&quot;section&quot;:&quot;Topics&quot;}" href="#b">Improve your data</a></h3>
+
+    <p class="govuk-body chevron-card__description">The data linting tool checks the quality and consistency of data, identifying any error that need to be addressed. It helps to improve the reliability of data, making it easier for departments to trust the information they use for decision-making and analysis. By using the tool, departments can avoid costly mistakes and increase their efficiency.</p>
+  </div>
+</li>
+
+<li class="chevron-card">
+  <div class="chevron-card__wrapper">
+    <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-2"><a class="govuk-link chevron-card__link" data-track-action="topicsLink" data-track-category="homepageClicked" data-track-dimension-index="29" data-track-dimension="Cost of living support" data-track-label="/cost-of-living" data-track-value="1" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;home page&quot;,&quot;index&quot;:&quot;2.6&quot;,&quot;index_total&quot;:43,&quot;section&quot;:&quot;Topics&quot;}" href="#c">Knowledge Base</a></h3>
+
+    <p class="govuk-body chevron-card__description">A comprehensive database of articles, guidelines, and best practices covering all aspects of civil service work. The knowledge base can be used to access information quickly, reducing the need to search through multiple sources and saving time.</p>
+  </div>
+</li>
+          
+<li class="chevron-card">
+  <div class="chevron-card__wrapper">
+    <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-2"><a class="govuk-link chevron-card__link" data-track-action="topicsLink" data-track-category="homepageClicked" data-track-dimension-index="29" data-track-dimension="Crime, justice and the&nbsp;law" data-track-label="/browse/justice" data-track-value="1" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;home page&quot;,&quot;index&quot;:&quot;2.7&quot;,&quot;index_total&quot;:43,&quot;section&quot;:&quot;Topics&quot;}" href="#d">Professional Development Hub</a></h3>
+
+    <p class="govuk-body chevron-card__description">An online platform offering training, mentorship, and networking opportunities for civil servants. The platform can help to enhance skills and knowledge, keeping employees up-to-date with the latest developments in their field.</p>
+  </div>
+</li>
+          
+<li class="chevron-card">
+  <div class="chevron-card__wrapper">
+    <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-2"><a class="govuk-link chevron-card__link" data-track-action="topicsLink" data-track-category="homepageClicked" data-track-dimension-index="29" data-track-dimension="Education and learning" data-track-label="/browse/education" data-track-value="1" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;home page&quot;,&quot;index&quot;:&quot;2.10&quot;,&quot;index_total&quot;:43,&quot;section&quot;:&quot;Topics&quot;}" href="#e">Community Discussion Forum</a></h3>
+
+    <p class="govuk-body chevron-card__description">An online space where civil servants can ask questions, share experiences, and collaborate on projects. The forum can foster a sense of community, helping to increase motivation and collaboration and providing a platform for problem-solving and knowledge-sharing.</p>
+  </div>
+</li>
+
+      </ul>
+
+        </div>
+      </div>
+
+
+
+
+    </main>
+  </div>
+
+
+
+{% endblock %}
