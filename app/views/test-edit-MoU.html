@@ -159,13 +159,16 @@ function save(id) {
     var quill = element.parentElement.querySelector(".ql-editor");
     var saveBuffer = quill.innerHTML;
 
+
     // Create a div id="tempDiv"
     var tempDiv = document.createElement("div");
     tempDiv.id = "tempDiv";
 
+
     // Replace the div class="qWrapper" (and all its children) with div #tempDiv
     element.parentElement.parentNode.insertBefore(tempDiv, element.parentElement);
     tempDiv.appendChild(element.parentElement);
+
 
     // Then change the id of this div from "tempDiv" to the referenced element passed to the function
     element.id = id;
