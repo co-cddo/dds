@@ -191,18 +191,28 @@ function cancel(id) {
 
     // Create a div id="tempDiv"
     var tempDiv = document.createElement("div");
-    tempDiv.id = "tempDiv";
+    tempDiv.id = id;
+
+    
 
     // Replace the div class="qWrapper" (and all its children) with div #tempDiv
-    element.parentElement.parentNode.insertBefore(tempDiv, element.parentElement);
-    tempDiv.appendChild(element.parentElement);
+    // element.parentElement.parentNode.insertBefore(tempDiv, element.parentElement);
+    // tempDiv.appendChild(element.parentElement);
 
-    // Then change the id of this div from "tempDiv" to the referenced element passed to the function
-    element.id = id;
+    // Then change the id of this div from "tempDiv" 
+    // to the referenced element passed to the function
+    // element.id = id;
 
     // The div now contains the version of the contents of the editor
     // when the editor was first instantiated
-    element.innerHTML = cancelBufferMap[id];
+
+    tempDiv.innerHTML = cancelBufferMap[id];
+
+    element.parentElement.after(tempDiv);
+
+    element.parentElement.remove();
+
+
   } else {
     // There is no editor instance
     return;
