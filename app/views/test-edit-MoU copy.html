@@ -7,22 +7,6 @@
 {% block content %}
 
 
-<style type="text/css">
-  
-  h1, h2, h3, h4, h5 {
-    font-family: "GDS Transport";
-    font-weight: 700;
-  }
-
-</style>
-
-
-<!-- Include stylesheet -->
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-
-<!-- Include the Quill library -->
-<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -52,7 +36,6 @@
   </div>
 </div>
 
-<hr>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -82,9 +65,56 @@
   </div>
 </div>
 
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<!-- Include stylesheet -->
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+<!-- Include the Quill library -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+
+<div id="aa">Text from div aa</div>
+
+<button onclick="edit('aa')">edit aa</button>
+<button onclick="cancel('aa')">cancel aa</button>
+<button onclick="save('aa')">save aa</button>
+
 <hr>
 
-<div class="govuk-grid-row">
+<div id="bb">Text from div bb</div>
+
+<button onclick="edit('bb')">edit bb</button>
+<button onclick="cancel('bb')">cancel bb</button>
+<button onclick="save('bb')">save bb</button>
+
+<hr>
+
+<div id="cc">Text from div cc</div>
+
+<button onclick="edit('cc')">edit cc</button>
+<button onclick="cancel('cc')">cancel cc</button>
+<button onclick="save('cc')">save cc</button>
+
+<hr>
+
+<div id="dd">Text from div dd</div>
+
+<button onclick="edit('dd')">edit dd</button>
+<button onclick="cancel('dd')">cancel dd</button>
+<button onclick="save('dd')">save dd</button>
+
+
+
+
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      buttons
+    </div>
 
 
 
@@ -119,6 +149,37 @@ function edit(id) {
   }
 }
 
+function OLDsave(id) {
+  // Get the referenced element
+  var element = document.getElementById(id);
+
+  // Check if the referenced element is a child of an element with class="qWrapper"
+  if (element.parentElement.classList.contains("qWrapper")) {
+    // d3 has an editor instance live so we store the latest edits before closing
+    var quill = element.parentElement.querySelector(".ql-editor");
+    var saveBuffer = quill.innerHTML;
+
+
+    // Create a div id="tempDiv"
+    var tempDiv = document.createElement("div");
+    tempDiv.id = "tempDiv";
+
+
+    // Replace the div class="qWrapper" (and all its children) with div #tempDiv
+    element.parentElement.parentNode.insertBefore(tempDiv, element.parentElement);
+    tempDiv.appendChild(element.parentElement);
+
+
+    // Then change the id of this div from "tempDiv" to the referenced element passed to the function
+    element.id = id;
+
+    // The div now contains the latest version of the contents of the editor
+    element.innerHTML = saveBuffer;
+  } else {
+    // There is no editor instance
+    return;
+  }
+}
 
 function save(id) {
   // Get the referenced element
@@ -172,9 +233,13 @@ function cancel(id) {
 
 </script>
 
-<hr>
 
-</div>
+
+
+
+
+    </div>
+  </div>
 
 {% endblock %}
 
