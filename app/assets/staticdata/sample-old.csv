@@ -1,0 +1,643 @@
+﻿DSAP Reference No.<divider>Name/Organisation<divider>Brief Purpose<divider>DfE (& EA's) Data Assets<divider>Classification (identification risk) 1 - 5<divider>Classification (sensitivity level) A - E<divider>Frequency<divider>How was data provided<divider>Licence End Date<divider>Licence end date description
+DS00004<divider>Local Authorities (LA)<divider>Data to be provided as part of a Data Sharing agreement between the National Apprenticeship Service and Local Authorities.  This is to allow Local Authorities to have more detailed access to data to enable them to fulfil their legal responsibilities for 16-18 and also for 19-25 for learners with a learning difficulty.<divider>Individualised Learner Record (ILR)<divider>1 - contains instant identifiers<divider>"D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Two times a year<divider>Secure file transfer directly to the organisation<divider><divider>The licence end day is specific to each Local Authority and is one year from when each individual agreement is signed.
+DS00005<divider>Local Authorities (LA)<divider>"Local Authorities are required to maintain a record of the education/employment activity of all post-16 students resident in their area. These details are stored in their Client Caseload Information System(CCIS) database from which monthly extracts are provided to Department for Education(DfE).  In order for LA’s to fulfil their duty, to encourage, enable or assist effective participation, the records must reflect the full learner picture.  
+LA’s are reliant on education providers to supply accurate learner details. The delivery of Individualised Learner Data (ILR) on a twice yearly basis allows the verification of this data and to identify and correct any anomalies.  Learners with Learning Difficulties and Disabilities(LLDD) and ethnicity details are a requirement in CCIS, contact details are necessary should the LA need to contact the learner to establish their learning status.
+"<divider>Individualised Learner Record (ILR)<divider>1 - contains instant identifiers<divider>"D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Monthly<divider>Secure file transfer directly to the organisation<divider><divider>The licence end day is specific to each Local Authority and is one year from when each individual agreement is signed.
+DS00006<divider>Fischer Family Trust (FFT) Aspire, Arbor, Assett for schools, For Schools Support (FSS), Maize Education, ALPS<divider>"New commercial arrangements were introduced in May 2017 to accredit suppliers with early access to the school performance data that underpins the Analyse School Performance service (ASP) for the 2017/18 performance cycle. 
+The objective of the programme is to open up the market and enable accredited suppliers to provide innovative data services for schools/LAs etc. to procure, should they wish to do so.
+A legally bound agreement is in place between the Department for Education (DfE) and each of the suppliers who have met DfE’s rigorous security requirements.
+"<divider>National Pupil Database (NPD)<divider>1 - contains instant identifiers<divider>"B - contains highly sensitive data about interactions with Children’s services
+C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Fifteen times a year<divider>Secure file transfer directly to the organisation<divider>30/06/2022<divider>Each contract will be reviewed on this date.
+"DS00028
+"<divider>Office for National Statistics (ONS)<divider>"This Service Level Agreement (SLA) supports The Department for Education (DfE) providing National Pupil Database (NPD) data extracts, Individualised Learner Record (ILR), Children In Need (CIN), Children Looked After (CLA), School Workforce (SWC)  and Linked Data (NPD and Individualised Learner Record (ILR)) extracts to the Office of National Statistics Secure Research Service (ONS SRS) in order to provide third party researchers access to DfE data via their physical and virtual data labs. 
+
+Data extracts must be de-identified before uploading to the ONS SRS environment.  Hence data extracts can be identifiability 3, 4 or 5 and sensitivity can be B, C, D or E.
+
+Each individual data share is governed by the DfE Data Sharing Approval Panel (DSAP). Should a third party researcher wish to remove any work from the ONS SRS environment, statistical disclosure control will be applied and cleared by the ONS SRS Support team to ensure that they are not disclosive and do not identify any individual entity. 
+
+Each individual data share which is enabled by this SLA is presented as a separate line within this document.
+"<divider>"National Pupil Database (NPD)
+Individualised Learner Record (ILR)
+School Workforce data (SWC)
+Children in Need (CIN)
+Children Looked After (CLA)"<divider>This SLA enables bespoke and/or standard extract data sharing activity which is in each case presented as a separate line in this document.  This SLA also enables standard extracts to be shared with ONS SRS so that the number of bespoke extracts leaving the department is minimised.<divider>This SLA enables bespoke and/or standard extract data sharing activity which is in each case presented as a separate line in this document.  This SLA also enables standard extracts to be shared with ONS SRS so that the number of bespoke extracts leaving the department is minimised.<divider>N/A<divider>N/A  <divider>01/04/2021<divider>"Service Level Agreement reviewed annually.
+This is the review date.
+
+Review underway"
+DS00031<divider>Department for Work and Pensions<divider>"The proof of concept, covered by DR160927.02 (documented in the 'National Pupil Database third-party requests' found on GOV.uk), demonstrated that data from the Department for Education (DfE), Department for Work and Pensions (DWP) and HM Revenue and Customs could be successfully matched to construct a dataset which enabled analysis of pupils from lower income families, not eligible for free school meals. 
+
+The resulting analysis highlighted the value this cross Government work could add to research and policy making in the education sector. 
+
+A Memorandum of Understanding has been created to establish an ongoing, regular data sharing process for this purpose which will enable DfE to help inform evidence-based policy with regard to pupils from lower income households, beyond those captured by the current free school meal based measures of disadvantage.  
+
+Instant identifiers are vital to the matching process, without this data it would be impossible to accurately identify matched records across datasets. Once the matching process is complete, only data attached to meaningless identifiers is retained."<divider>"National Pupil Database (NPD) & 
+Individualised Learner Record (ILR)"<divider>1 - contains instant identifiers<divider>D - contains GDPR Special Category data<divider>Annually<divider>Secure file transfer directly to the organisation<divider><divider>This has been superseded by DS00563
+"DS00032
+"<divider>Ofsted, Independent Schools Inspectorate (ISI) and School Inspection Service (SIS)<divider>"The three inspectorates which inspect independent schools (Ofsted, ISI and SIS) require data from the School Level Annual School Census (SLASC) in order to carry out their duties during inspections. In particular, to check that schools have complied fully with all aspects of Part 4 of Schedule 1 to the Education (Independent School Standards) Regulations 2014, i.e. the suitability of staff, supply staff and proprietors.
+
+"<divider>School Level Annual School Census<divider>1 - contains instant identifiers<divider>C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,<divider>One-off<divider>Secure file transfer directly to the organisation<divider><divider>Confirmation received data has been destroyed
+DS00034<divider>Deloitts under contract for the Department for Education (DfE)<divider>Deloitts, under contract for the DfE have been asked to design, implement and operate a fully functioning Accounting Consolidation Solution for consolidating the accounts of the academies sector in England. DfE uses the information provided in the accounts return to prepare the academies annual report and accounts, which consolidates the accounts of more than 3,000 individual academy trusts to reflect the financial performance of the whole academy sector. The data that is returned is initially used for internal reporting purposes and then the DfE prepares a new sector annual report and accounts (SARA) based on this data for the academic year from 1 September to 31 August each year. This aligns with the financial reporting period of individual academy trusts. The personally identifiable datasets that are shared are the names and addresses of the Auditors of the Academy Trusts. <divider>Accounts Vacancy Data (AVD)<divider>1 - contains instant identifiers<divider>E - contains lowest sensitivity data<divider>Frequent data shares as and when new data is available<divider>Secure file transfer directly to the organisation<divider>30/09/2022<divider>Confirming data destruction
+DS00035<divider>Ofsted<divider>"Ofsted will use the DfE data provided under recurring data sharing agreement for 2022/23 and secondary analysis for a range of analytical work relevant to Ofsted’s Remit. 
+This recurring data sharing agreement is reviewed annually."<divider>"National Pupil Database
+Children In Need
+Children Looked After
+Performance data
+Absence
+Exclusions
+Academies data
+Children's Social Work Workforce
+SLASC
+Individual Learner data
+Non-Individual Learner data
+School Workforce
+ITT Reform Programme data
+"<divider>2 - contains meaningful identifiers<divider>"B - contains highly sensitive data about interactions with Children’s services
+C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>31/03/2023<divider>"Service Level Agreement reviewed annually.
+This is the review date.
+"
+DS00039<divider>National Consortium for Examination Results CIC (NCER)<divider>"Local Authorities have statutory duties in relation to supporting disadvantaged pupils in their area and ensuring school improvement.  In order to fulfil that duty, every local authority pays an annual membership fee to NCER, a not-for profit Community Interest Company co-owned by each member Local Authority which brokers the data solution (NEXUS) that supports them to fulfil their responsibility. 
+
+Under a Service Level Agreement, NCER have requested Angel Solutions to have access and process National Pupil Database (NPD) data and Children Looked After data in order to populate the Nexus tool that supports local authorities to manage their data effectively to support under performing schools. This online product is only available to local authority data analysts and school improvement users. This site is not accessible by the public.  The output from the system allows a consistent approach in data management and helps reduce the burden on schools.
+
+This is in the public interest because it allows local authorities to support disadvantaged pupils in their area and to ensure that schools are continuously improving.
+"<divider>National Pupil Database (NPD)<divider>1 - contains instant identifiers<divider>"B - contains highly sensitive data about interactions with Children’s services
+C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>31/12/2021<divider>"Service Level Agreement reviewed annually.
+This is the review date.
+
+Review underway."
+"DS00043
+"<divider>Tribal Education Limited under contract to the Department for Education (DfE)<divider>"Tribal Education Limited, under contract to DfE, require the participant level data which they will be responsible for collecting in future. 
+The requirement on Tribal Education Limited is to validate data supplied by providers to substantiate their performance against metrics against existing datasets, including, but not limited to DfE’s record of qualified teachers and databases on the characteristics of the schools at which they are employed. They will also be required to provide timely and accurate management information and analysis in relation to the performance of National Professional Qualification (NPQ) providers to DfE. 
+The outcomes of this data will be shared with DfE and NPQ providers. The analysis of data will support the DfE leadership unit to review policy and ensure programme delivery is appropriate. It will also help to identify any areas where further provision needs to be provided. It will help NPQ providers understand their reach and help them target recruitment to gaps they need to fill.
+
+
+
+"<divider>National Professional Qualification participant data<divider>1 - contains instant identifiers<divider>C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,<divider>One-off<divider>Secure file transfer directly to the organisation<divider>30/11/2022<divider>Licence has not expired
+DS00050<divider>University of East Anglia (UEA)<divider>"For children from troubled backgrounds growing up in foster care, care plans need to successfully promote their well-being through to adulthood. This project will determine whether  long-term foster care as a permanence option is being systematically and appropriately implemented in England as required by the Long-term Foster Care Regulations and Guidance (Department for Education 2015). This will be achieved by identifying which children are in long-term foster care placements, the nature of their pathways in different local authorities, and comparisons with other permanence options i.e. reunification, adoption, and Special Guardianship. 
+It is essential that the implementation of these 2015 Regulations and Guidance that were intended to improve outcomes in long-term foster care, is investigated, so that policy and practice lessons can be learned. The project will also provide data and a framework for a future follow up of target local authorities and cohorts of children in long-term foster care placements.
+"<divider>National Pupil Database (NPD)<divider>2 - contains meaningful identifiers<divider>B - contains highly sensitive data about interactions with Children’s services<divider>One-off<divider>ONS Secure Research Service<divider>30/08/2023<divider>Original licence extended
+DS00064<divider>Durham University<divider>"Durham University requires access to the National Pupil Database to look at patterns of attendance in English schools to isolate school-related and society factors.  There is a focus on disadvantaged pupils, those receiving free school meals and those that don’t.  The analysis will provide a sampling frame, and an estimate of how much difference schools might make. This intervention will be piloted and then evaluated in practice to identify whether it leads to the government’s current aspirations of improving young peoples’ mental health and emotional wellbeing and improved school attendance.
+This is in the public interest because the overarching aim is to determine whether a relationship exists between student academic buoyancy and school attendance.  This research has distinctive implications for policy and practice.
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>B - contains highly sensitive data about interactions with Children’s services<divider>One-off<divider>ONS Secure Research Service<divider>30/09/2022<divider>Confirming data destruction
+DS00069<divider>University College of London (UCL)<divider>"UCL requires access to National Pupil Database (NPD) data as part of a PhD research project to investigate how atmospheric pollution affects child cognitive development and pupil attainment. More specifically, how does exposure to air pollutants at home and at school across the life course affect pupil attainment growth between Foundation Stage Profile, Key Stage 2 and Key Stage 4. The results will be published in academic research papers. 
+
+This is in the public interest because the government can use this to inform its policy relating to school location, school design (e.g. air filtering and conditioning), vehicle emission standards and regulations, schools transport policy, etc. This is considered by some to be a significant issue, effecting hundreds of thousands of children living in urban environments, near roads or heavy industry. "<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data"<divider>One-off<divider>ONS Secure Research Service<divider>31/03/2023<divider>Licence has not expired
+DS00072<divider>University College of London (UCL) Great Ormond Street<divider>The Millennium Cohort Study (MCS) is a longitudinal birth cohort study, funded by the Economic and Social Research Council and various government departments including the Department for Education.  The study is tracking the lives of over 19,000 children born in the UK in 2000/2001 and is now in to its fourth sweep of 7 year olds.  The study has collected informed consent from the parents of cohort members to link National Pupil Database (NPD) records to the MCS.  The study, is a uniquely rich research resource which academics and policymakers use to address several research questions, such as on economic circumstances, inequalities, social mobility, educational attainment, mental health and obesity. This request is for National Pupil Database data to support the study.<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>Secure file transfer directly to the organisation<divider>29/09/2024<divider>Licence has not expired
+DS00074<divider>CFE Research under contract to the Department for Education (DfE)<divider>CFE Research, under contract to DfE, require access to the data from DfE’s online survey on gov.uk for people who are expressing an interest in the Teachers’ Student Loan Reimbursement scheme. The purpose of the data request is to use the contacts as a sample frame for an online survey among teachers who have expressed an interest (EaI) in the scheme. This survey forms part of the process and impact evaluation of the Teachers’ Student Loan Reimbursement (TSLR) scheme, commissioned by DfE in June 2018. The voluntary survey, which will take a maximum of 15 minutes to complete, will assess awareness and understanding of the loan reimbursement scheme and the results shall be delivered in an awareness report in December 2018. The sample will be used to create unique links to track non-responses, and send a minimum of three targeted reminders. <divider>Teachers' Student Loan Reimbursement Scheme Survey<divider>1 - contains instant identifiers<divider>C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,<divider>One-off<divider>Secure file transfer directly to the organisation<divider>09/09/2022<divider>Confirmation received data has been destroyed
+DS00088<divider>University of Kent<divider>"University of Kent requires National Pupil Database data to look at attainment and socio-economic indicators for one cohort of pupils in Kent, the largest grammar school area in the country.
+With this data they will evaluate the validity and fairness of selection to grammar schools in Kent. They will evaluate whether the current selection procedure based on 11-plus exam results in 2011 and 2015 are valid for predicting future attainment at Key Stage 4, fair in terms of social inclusion, and adds value over and above measuring primary attainment at Key Stage 1 and Key Stage 2.
+The public benefit of this work will be obtaining essential information about quality and fairness of grammar school selection procedure."<divider>National Pupil Database (NPD)<divider>4 - contains non-identifiers with higher re-identification risk<divider>C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,<divider>One-off<divider>ONS Secure Research Service<divider>31/10/2023<divider>Licence has not expired
+DS00091<divider>National Foundation for Educational Research (NFER) and Scottish Qualifications Authority (SQA) commissioned by Department for Education (DfE)<divider>Trials are important in the national curriculum test development process. They help to ensure that questions are appropriate for pupils, that the tests are valid and reliable and help to set and maintain standards for the tests. Suppliers contracted to the Standards and Testing Agency (STA) to deliver statutory trialling request access to pupil level School Census data to register pupils to take part in the trialling. As this data is already held centrally by DfE, lawfully sharing it is in the public interest because it reduces the burden on schools who would otherwise need to provide the information separately to the trialling agency. It also reduces the burden on suppliers, and therefore the cost to STA. The School Census data requested is for the relevant year group for schools taking part in trialling including school and pupil identifiers and some pupil characteristics. The data shared is only the data for the current academic year.<divider>School Census<divider>1 - contains instant identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>30/04/2023<divider>Licence has not expired
+DS00098<divider>University of Kent, Higher Education Access Tracker (HEAT)<divider>University of Kent requests access to School Census, attainment and higher education (HE) data to explore the impact of outreach programmes on student outcomes for their HEAT.  This is part of a longitudinal analysis that is in the public interest because it provides universities within the HEAT group evidence on how the outreach has made to the student outcomes and what they can do to improve the HE participation gap.<divider>"National Pupil Database (NPD)
+Individualised Learner Record (ILR)
+Higher Education Statistics Agency (HESA)"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>Secure file transfer directly to the organisation<divider>31/10/2022<divider>Confirmation received data has been destroyed
+DS00117<divider>Queens Mary, University of London (QMUL)<divider>"QMUL requires 2018 Key Stage 1 data for a PhD research project whose goal is to provide consistent measures of the value added (VA) of primary and secondary schools in England and to ascertain if, and to what extent, current VA measures are confounded by factors other than school effects on pupils’ achievement. 
+This research is in the public interest because consistent measures of school effects are a policy tool to improve performance targeting as well as accountability and comparability of schools.
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/01/2024<divider>Licence has not expired
+DS00120<divider>Fischer Family Trust Education Ltd (FFT)  <divider>"FFT will use the data to develop and deliver analyses that are of benefit to the educational sector in improving both pupil and school performance and in helping schools to ensure that every pupil reaches their full potential. FFT analyses are provided to schools, local authorities, academy chains and diocese through a web based analytical service called ‘FFT Aspire’, in line with the Analyse School Performance Accredited Programme.
+The use of data going back over a number of years and census data is valuable to statistical modelling and allows value added analyses and trends to be produced. It also brings together information to help schools to support their individual pupils. The data is used by teachers, school leaders, advisers and governors.
+"<divider>National Pupil Database (NPD)<divider>1 - contains instant identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>Secure file transfer directly to the organisation<divider>30/06/2022<divider>superseded by DS00715
+DS00122<divider>London School of Economics (LSE)<divider>"LSE wishes to use Department for Education data to estimate the impact of competition from academies on the performance of schools in England. 
+
+LSE is extending analysis of the system-wide impact of academies to the most recent years to properly investigate both the medium and long-term impacts of the policy changes enacted in 2010.  
+
+The academy policy programme is aimed at improving children’s education, their lifetime outcomes and wellbeing – this research directly addresses questions of the influence of policy on these child outcomes. The project would enable policymakers to evaluate the academies programme and will inform future policy discussions and improve system-design for students’ learning. 
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/03/2023<divider>Licence has not expired
+DS00123<divider>University of Manchester<divider>"The University of Manchester require Key Stage 2 (KS2) maths attainment data and other demographic data from the School Census, matched to data collected from pupils in their study (an evaluation of a maths-related school-based intervention Increasing Competence and Confidence in Algebra and Multiplicative Structures (ICCAMS)).
+With this data they will measure attainment gains over the two year period and examine effects on attainment and attitudes (measured via questionnaires) for students in the intervention schools as compared to control schools, and those eligible for Free School Meals compared to the rest.
+The public benefit of this work will be to help promote the education of children in England by assessing the impact of the ICCAMS intervention and its suitability for scalability and wider roll-out."<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>28/02/2022<divider>Licence extension approved - awaiting paperwork
+DS00127<divider>London School of Economics (LSE)<divider>"LSE wishes to use National Pupil Database (NPD) data covering applicants to two free schools. With this data they will evaluate the causal effects of attending these free schools on academic and non-cognitive outcomes. 
+
+The public benefit of this work will be the following: ultimately, the free schools programme is aimed at improving children’s education, lifetime outcomes, and wellbeing – and so their research directly addresses questions of the influence of a particular type of free schools on children’s outcomes. The project would enable policymakers to evaluate to what extent these types of schools improve pupils’ cognitive and non-cognitive outcomes, which will provide important lessons for the entire education sector.
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>30/04/2024<divider>Licence has not expired
+DS00139<divider>University of Bristol<divider>"The University of Bristol wishes to access data on those students taking their Key Stage 1 (KS1), Key Stage 2 (KS2), Key Stage 4 (KS4), and Key Stage 5 (KS5) tests and examinations in 2012/13, 2015/16, 2016/17 and 2017/18.
+
+With these data they will study the strengths and weaknesses of different KS1, KS2, KS4 and KS5 attainment and progress performance measures published in the school performance tables as well as exploring new measures, which could potentially be derived from the data using different or richer combinations of pupil test scores and background characteristics and a range of alternative statistical methods proposed in the academic literature or that are applied in other education systems. 
+
+The public benefit of this work will be that it has the potential to inform future improvements to Government performance measures and school performance tables and therefore ultimately to the education outcomes and experiences of children in England. 
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/03/2024<divider>Licence has not expired
+DS00143<divider>Office of Qualifications and Examinations Regulation (Ofqual)<divider>"Ofqual wishes to use the National Pupil Database (NPD) and Individualised Learner Record (ILR) data as part of their statutory regulatory activities as set out under the Apprenticeships, Skills, Children and Learning Act 2009, amended by the Education Act 2011.  
+Ofqual statutory duties include maintaining standards and confidence in qualifications and to give advice to Government on qualifications and assessment based on our research in these areas.  This data is requested to develop their evidence base, conduct specific areas of research to improve their understanding of the qualifications landscape, which in turn also allows us to present an evidence-led and transparent picture of qualifications and examinations to the public. 
+This supports the work to maintain standards and to promote public confidence in regulated qualifications in England. "<divider>"National Pupil Database (NPD)
+
+Individualised Learner Record (ILR)
+
+Learner Record Service  (LRS)"<divider>1 - contains instant identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>28/02/2023<divider>"Service Level Agreement reviewed annually.
+This is the review date."
+DS00144<divider>AQA Education (AQA)<divider>"AQA Education wishes to use student-level KS2 scores annually.
+
+With this data they will match current GCSE students to their prior KS2 scores, thus allowing GCSE outcomes to be accurately predicted, based on the relationship between these variables in previous years.
+
+This agreement also permits AQA Education to share with Ofqual their KS2 normalised scores (constructed from NPD data) for the purpose of supporting the work relating to the standardisation of teacher assessment grades for GCSE, AS and A levels in summer 2020.
+
+The public benefit of this work will be that GCSE results will be demonstrably maintained and be command public confidence, and the GCSE awarding organisations are compliant with the Ofqual requirement."<divider>National Pupil Database (NPD)<divider>1 - contains instant identifiers<divider>"D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>01/04/2023<divider>"Service Level Agreement reviewed annually.
+This is the review date."
+DS00153<divider>Department for Education (DfE) and OFSTED (Child Online Safeguarding Policy)<divider>"The project is to enable local authorities (LAs) to comply with a new duty, brought in by 16C(1) of the Children Act 2004, as amended by section 14 (Events to be notified to the Panel) of the Children and Social Work Act 2017, to notify incidents when a child dies or is seriously harmed and abuse or neglect is known or suspected.
+The LA enters details to be reviewed, this is then viewed by DfE and Ofsted who make a decision if it should be seen by the National Child Safeguarding Practice Review Panel (the Panel) and will inform their deliberations about whether a national child safeguarding practice review of any of those incidents is required. 
+OFSTED will access this personal data to support their regulatory and inspection functions to achieve excellence in the care of children and young people, and in education and skills for learners of all ages.  The information required includes limited child identifiers to allow OFSTED to link incidents back to their educational provision for monitoring, safeguarding and inspection purposes. The sharing of the information is underpinned by a Memorandum of Understanding.
+"<divider>Individuals details<divider>1 - contains instant identifiers<divider>"B - contains highly sensitive data about interactions with Children’s services
+C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data"<divider>Daily<divider>No data directly supplied. Access is via an online notification system.<divider>19/02/2022<divider>"Memorandum of Understanding reviewed bi-annually.
+
+Review underway
+This is the review date."
+DS00154<divider>RCU Limited & Ipsos Mori under contract to Department for Education<divider>"The Learner Satisfaction Survey capture learners experiences of their college and training organisation.  The survey is funded by the Department for Education (DfE) and runs from November 2018 – May 2019.
+
+DfE have commissioned RCU limited and Ipsos Mori to collect and process the data for the Learner Satisfaction Survey.  At two points during the year, reports will be produced giving feedback to providers.  To enable this process, the Individual Learner Record is required to match the survey respondents to it, validate respondents and to authenticate each learner's level and age.  
+
+The public benefit of this will be to provide consistent and comparable information for learners and employers to help them make informed choices about publicly funded education and training, as well as providing consistent management information on key performance indicators 
+"<divider>Individualised Learner Record (ILR)<divider>1 - contains instant identifiers<divider>"D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>Secure file transfer directly to the organisation<divider>31/08/2022<divider>Confirming data destruction
+DS00158<divider>Pearson Education Ltd<divider>"Pearson Education Ltd needs student-level Key Stage 2 (KS2) scores annually under a Service Level Agreement (SLA) to match current GCSE and BTEC students to their prior KS2 attainment scores. These matched data allows GCSE and BTEC outcomes to be accurately predicted, based on the relationship between these variables in previous years. The predicted subject outcomes, in turn, determine the position of grade boundaries in current GCSE and BTEC examinations.
+The public benefit of this work will be that GCSE and BTEC results will be demonstrably maintained and command public confidence, and the GCSE awarding organisations are compliant with the statutory Ofqual requirement. 
+"<divider>National Pupil Database (NPD)<divider>1 - contains instant identifiers<divider>"D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>01/04/2023<divider>"Service Level Agreement reviewed annually.
+This is the review date.
+"
+DS00159<divider>"WJEC/CEBAC Ltd
+(UK awarding organisation)"<divider>"WJEC/CEBAC Ltd needs student-level Key Stage 2 (KS2) scores annually under a Service Level Agreement (SLA) in order to meet its statutory obligation (under the auspices of its regulator, Ofqual) to match current GCSE students to their prior KS2 attainment scores. These matched data allows GCSE subject outcomes to be accurately predicted, based on the relationship between these variables in previous years. The predicted subject outcomes, in turn, determine the position of grade boundaries in current GCSE examinations – a critical procedure. 
+The public benefit of this work will be that GCSE results will be demonstrably maintained and command public confidence, and the GCSE awarding organisations are compliant with the statutory Ofqual requirements. 
+"<divider>National Pupil Database (NPD)<divider>1 - contains instant identifiers<divider>"D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>01/04/2023<divider>"Service Level Agreement reviewed annually.
+This is the review date.
+"
+DS00164<divider>Institute for Fiscal Studies (IFS) contracted to Department for Education (DfE)<divider>"IFS and the Social Mobility Commission wishes to use the Longitudinal Educational Outcomes (LEO) dataset, looking at the cohort that took their GCSEs in 2002 and for which parental background information can be observed at this time and labour market earnings data that can be observed in the years 2014-2016. 
+
+With this data they will estimate intergenerational income mobility across areas in England for the first time. The analysis will also give the first national estimates of intergenerational income mobility for a cohort born in the 1980s. This will seek to replicate, insofar as possible, the work done on mobility within the United States.
+
+The public benefit of this work will be to highlight the estimate of the true persistence in incomes across generations and is claimed to be the first national intergenerational income mobility statistics in 15 years. Moreover, it will show this at a granular regional level, which is also claimed to be the first analysis of its kind.
+"<divider>"Longitudinal Educational Outcomes (LEO)
+National Pupil Database (NPD)
+Higher Education Statistics Agency (HESA)
+Individualised Learner Record (ILR)"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>N/A (re-use)<divider>N/A (re-use)<divider>30/06/2022<divider>Licence extension approved - awaiting paperwork
+DS00167<divider>London Economics Ltd on behalf of Centre for Vocational Education Research (CVER)<divider>"With the introduction of the Apprenticeship Levy, firms with a payroll  of £3,000,000 or more have to contribute ½% of the excess amount to their own apprenticeship digital service account. The Levy’s aim is to increase the level of training offered whilst ensuring a more appropriate balance of contribution between the Exchequer and employers. 
+CVER wishes to use the Individualised Learner Record,  Employer Data Service, Inter-Departmental Business Register, Apprenticeship Service and the Employer Skills Survey(2010 and 2018) data to undertake an evaluation of the Levy.  
+
+This project will establish the historical background for firms affected and not affected by the Levy.  This will then look  at the impact of the Levy on Apprentices, training volumes and quality. The information  gained will enable employers, apprentices and government to make more informed decisions and establish an evidence base for future evaluation of the impact of the Levy.
+"<divider>"Individualised Learner Record (ILR)
+Employer Data Registration Service (EDRS)"<divider>3 - contains meaningless identifiers<divider>"D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>Secure file transfer directly to the organisation<divider>31/03/2023<divider>Licence has not expired
+DS00175<divider>Institute for Fiscal Studies (IFS)<divider>"IFS wishes to use Longitudinal Educational Outcomes (LEO) and Higher Education Statistics (HESA) data for the additional years of 2016/17 and 2015/16 respectively to use alongside the HESA and LEO data they already hold under licence.
+
+With this data they will identify the causal returns to undergraduate and postgraduate education in England, controlling for selection into higher education. They will identify the returns to specific subjects and institutions, and explore how these returns vary between subgroups of the population. Including by: gender; socio-economic background; ethnicity and degree classification.
+
+The public benefit of this work will be to policymakers seeking to understand and improve the system of higher education, as well as to students making decisions regarding their future educational pursuits. 
+"<divider>"Longitudinal Educational Outcomes (LEO)
+Higher Education Statistics Agency (HESA)
+National Pupil Database (NPD)
+"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>Secure file transfer directly to the organisation<divider>31/08/2022<divider>Confirmation received data has been destroyed
+DS00178<divider>"OCR
+(UK awarding organisation)"<divider>"It is a regulatory requirement, as stated by Ofqual, that OCR must use Key Stage 2 (KS2) data to help in setting standards in GCSEs.  This is via a Service Level Agreement (SLA) reviewed on an annual basis.  This is the same methodology required by Ofqual of all three English examination boards, and is a requirement for OCR to remain compliant with Ofqual’s General Conditions of Recognition.  It is also essential in ensuring fairness for GCSE candidates across the three England exam boards.
+
+With this data they will match current GCSE students to their prior KS2 scores, thus allowing GCSE outcomes to be accurately predicted, based on the relationship between these variables in previous years. 
+
+The public benefit of this work will be that GCSE results will be demonstrably maintained and be command public confidence, and the GCSE awarding organisations are compliant with the Ofqual requirement.
+"<divider>National Pupil Database (NPD)<divider>1 - contains instant identifiers<divider>"D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>01/04/2023<divider>"Service Level Agreement reviewed annually.
+This is the review date.
+"
+DS00113<divider>Combined Authorities/Greater London Authority (GLA)<divider>"The Adult Education Budget Devolution Orders have been made and came into force on 06/11/18, at the same time the commencement regulations (the Technical and Further Education Act 2017 (Commencement No. 4) Regulations 2018) which relate to sharing of information by providers with the Secretary of State were also signed. The GLA will have functions delegated.
+
+In order for them to discharge the functions being devolved/delegated there has been a request for the various data sets which comprise of Individual Learner Participation, Allocation and Funding data. These shares will allow Mayoral Combined Authorities/Greater London Authority to commission and manage the local delivery of bespoke adult education and training. This will allow for the delivery of their Strategic Skills Plans. They will also use the data sets to plan strategically and to drive operational functions including provider payments and performance management.
+"<divider>Individualised Learner Record (ILR)<divider>2 - contains meaningful identifiers<divider>"
+C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+"<divider>Monthly<divider>Secure file transfer directly to the organisation<divider><divider>The licence end day is specific to each Local Authority and is one year from when each individual agreement is signed.
+DS00146<divider>Office of Manpower Economics (OME)<divider>"OME provides analytical support to School Teachers Review Body (STRB) and wishes to use School Workforce Census (SWC) data  to support its analysis of teachers’ pay. This is supported by a Service Level Agreement.
+
+The STRB receives an annual remit from the Secretary of State for Education requiring it to make recommendations each year on the level of teachers’ pay. It relies on various forms of evidence, including trends in teachers’ pay. OME will use the SWC data to undertake analyses of pay as to contribute to the STRB’s evidence base, helping to ensure that its recommendations to the Secretary of State are well-informed. 
+"<divider>School Workforce Census (SWC)<divider>3 - contains meaningless identifiers<divider>"D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>31/03/2023<divider>"Service Level Agreement reviewed annually.
+This is the review date.
+"
+DS00114<divider>"Department for Education (LEO team),
+Department for Work and Pensions (DWP),
+Scottish Government,
+Welsh Government."<divider>"Department of Education (DfE), Scottish Government (SG) and Welsh Government( WG) routinely match individuals from education data collections to employment, earnings and benefits data held by Department of Work and Pensions (DWP), which is shared with all parties to create the Longitudinal Education Outcomes (LEO) dataset. 
+
+This is a longitudinal dataset and requires education data from 2003/03 onwards from the following sources:
+Individualised Learner Record (“ILR”) data, Higher Education Statistics Agency (“HESA”) data and Student Loans Company (“SLC”) data and National Pupil Database (“NPD”), Initial Teacher Training Performance Profiles (“ITTPP”) data and school workforce census data (for individuals who have ever left the profession only) held by DfE (the “DfE data”)  
+
+This is in the public interest because by linking sets of data together, the Government aims to better understand pathways though learning and their links to labour market outcomes, destinations and social mobility. The linked LEO dataset will enable students and parents to make more informed choices at key decision points through education, improve the evaluation of the effectiveness of training and education and will improve institutional accountability. "<divider>Longitudinal Education Outcomes (LEO)<divider>1 - contains instant identifiers<divider>D - contains GDPR Special Category data<divider>Three times a year<divider>Secure file transfer directly to the organisation<divider>29/11/2022<divider>Data Sharing Agreement reviewed annually.
+DS00166<divider>Quality Assurance Agency (QAA) and Access Validating Agencies (AVA)<divider>QAA for Higher Education licenses the awarding bodies for Access to Higher Education(HE) courses, known as AVAs. AVAs develop, approve and monitor Access to HE courses, and work with further education colleges and other providers that deliver these courses to students.  The Individual Learner Record Data for 21/22 will allow them to  assess and safeguard  educational standards, improve the quality of UK higher education and to check that all  3 million students currently working towards a UK qualification get the highest standard of education they are entitled to.  The data will also be used to feed into QAA annual publications on Access to HE participation and achievement. <divider> Individualised Learner Record (ILR)<divider>2 - contains meaningful identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>4 times a year<divider>Secure file transfer directly to the organisation<divider><divider>The licence end day is specific to each QAA/AVA Local Authority and is one year from when each individual agreement is signed.
+DS00040<divider>Home Office (HO)<divider>HO wishes to link two years of NPD data on attainment, attendance, exclusions, special educational needs and distance travelled to school with existing monitoring data and other administrative datasets to evaluate the Vulnerable Persons and Children’s Resettlement (VPR/VCR) Schemes.  This would add significant value to monitoring activity, where HO have access to only educational attendance data during a refugee’s first 12-15 months. Data matching will take place within DfE, with HO being provided with access to pseudo-anonymised linked data within the ONS SRS for research purposes to analyse: how refugees progress on key indicators; facilitators and barriers to integration; and whether adjustments to the schemes’ delivery could improve integration outcomes. The public benefit will be an improved understanding of how this cohort fares in the UK education system which will inform policy decision-making on what more can be done within existing services to address issues they face. Draft reports including Department for Education (DfE) data will be shared with DfE prior to publication. Outputs will be used only for research purposes.<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/05/2023<divider>Licence has not expired
+DS00186 <divider>University College London (UCL)<divider>"The Department of Social Science, UCL, wishes to match school-level data derived from the Schools Workforce Census (SWC) to the Annual Survey of Hours and Earnings (ASHE).  The study will compare the school-level distribution in teacher pay pre- and post-reform, and whether this varies by school, teacher and regional characteristics.
+
+Tests will be developed to identify the schools changing their pay setting behaviour and compare them to others. The study will examine the impact of the pay reforms on the entry wages of new hires, wage progression among incumbents and teacher mobility within and across schools as teachers go in search of pay raises in an environment where incremental pay progression may be less certain but rewards for high performers may be rising.  The effects of the pay reforms on teacher retention will be considered and whether the pay reforms has changed teacher characteristics. The effect on average student attainment at the school level will be considered.
+"<divider>School Workforce Census (SWC)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>10/09/2022<divider>Confirming licence extension
+DS00194<divider>University of Chester<divider>"The Psychology Department at the University of Chester wishes to use National Pupil Database (NPD) data and children’s services data.
+
+With this data they will explore characteristics of those cases that were registered in the category ‘child abuse linked to faith or belief’ (CALFB).   This project will access data from 2016/17 & 2017/18 to explore themes and connections in the data.  
+
+This work is sponsored by the All-Party Parliamentary Group (APPG) for Safeguarding in faith communities; and funded by the Sir Halley Stewart Trust.  The public benefit of this work will be to inform prevention and intervention work, therefore enhancing the safety and wellbeing of children. 
+"<divider>"National Pupil Database (NPD)
+Children in Need (CIN)
+Children Looked After (CLA)"<divider>3 - contains meaningless identifiers<divider>"B - contains highly sensitive data about interactions with Children’s services
+C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>28/02/2023<divider>Original licence extended
+DS00196  <divider>Kantar Public on behalf of The Wellcome Trust<divider>"Kantar Public, on behalf of The Wellcome Trust, wishes to use pupil level National Pupil Database (NPD) and Individualised Learner Record (ILR) data (as well as Key Stage 2 and Key Stage 4 datasets) for 2017/18 and 2018/19. 
+
+With this data they will draw a sample of young people aged 11-18 that attend a state funded school or college in England and invite them to participate in the Science Education Tracker. This survey will give a representative picture of young people’s attitudes to science education, careers and aspirations in England. The study will also allow researchers to compare differences in attitudes and knowledge between sub-groups (for example socio-economic groups or gender) and monitor change over time.
+
+The public benefit of this work is that it will help shape priorities in Science, technology, engineering and mathematics (STEM) education. This study will also allow initiatives to be targeted to improve science education and careers advice where they are most needed.
+"<divider>"National Pupil Database (NPD)
+ Individualised Learner Record (ILR)"<divider>1 - contains instant identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>Secure file transfer directly to the organisation<divider>31/08/2022<divider>Confirmation received data has been destroyed
+DS00205<divider>Queen Mary University of London (QMUL)<divider>"QMUL requires 2018 - 2019 National Pupil Data (NPD) Spring Census and attainment data, along with re-use of the same data from 2006 already granted in the past, for a PhD research project whose goal is to evaluate the effectiveness of “Meet the parents” meetings held in Camden, London, for prospective secondary school parents. This work complements an ongoing research agenda on parental preferences for schools.
+
+This project is a scientific research in which they want to evaluate the efficacy of a school-level initiative in London. It is in the public interest because it provides evidence on the effectiveness of a programme in which Camden local authority and schools have been investing for several years. Moreover, results will increase the understanding of how school preferences are formed and how they are affected by information about and interaction with local schools and community.
+
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/05/2024<divider>Original licence extended
+DS00208<divider>Fischer Family Trust Education Ltd (FFT) - Aspire<divider>"FFT Education will use School Census, Early Years Census, Alternative Provision Census and Absence data from the National Pupil Database to develop and deliver analyses that are of benefit to the educational sector in improving both pupil and school performance and in helping schools to ensure that every pupil reaches their full potential. FFT analyses are provided to schools, local authorities, academy chains and diocese through a web based analytical service called ‘FFT Aspire’. 
+The use of data going back over a number of years and census data is valuable to statistical modelling and allows value added analyses and trends to be produced. It also brings together information to help schools to support their individual pupils. The data is used by teachers, school leaders, advisers and governors.
+"<divider>National Pupil Database (NPD)<divider>1 - contains instant identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>30/06/2022<divider>superseded by DS00715
+DS00216<divider>University of Exeter<divider>"The University of Exeter wishes to use National Pupil Database data from the annual spring School Census and Key Stages 1, 2, 4 and 5 examination results for the following academic years: 2002/03, 2006/07, 2010/11, 2013/14, 2016/17, and 2017/18.
+
+With this data they will explore the distribution of school test results for British ethnic groups across the key stages and time and link them to the socio-economic characteristics of ethnic groups at the local authority level. The project seeks to explore the evolution of the academic performance of ethnic groups in primary and secondary education in England at the national and local authority levels.
+
+The public benefit of this work will be better understanding of the differences between British ethnic groups in education that can be applied in future education policy and public decision-making. 
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/12/2023<divider>Licence has not expired
+DS00218<divider>Centre for Vocational Education Research (CVER), London School of Economics (LSE) & Political Science <divider>"CVER would like to use administrative data for the following projects: 
+
+(1) Evaluation of University Technical Colleges (UTC) on student outcomes. This involves extending the ongoing study by evaluating the impact of attending UTCs on the probability of university enrolment (Higher Education Statistics Agency (HESA) 2011/12 to 2015/16).  
+
+(2) Working While Studying.  This involves National Pupil Database (NPD)-Individualised Learner Record (ILR)-HESA data for cohorts completing GCSEs between 2001/02 to 2011/12. With this data they will investigate the extent to which young people work while they are studying and what implications this has for their future trajectories.  
+
+(3) Management practices in Further Education and Sixth form Colleges. This involves using  NPD-ILR-HESA data for cohorts completing GCSE in 2011/12 and 2012/13. By linking this to institutional data on management practices, they will explore how management practices correlate with future outcomes. The research is of public benefit because it will shed light on what works to improve further education."<divider>"National Pupil Database (NPD)
+Higher Education Statistics Agency (HESA)
+Individualised Learner Record (ILR)"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>N/A (re-use)<divider>N/A (re-use)<divider>31/03/2023<divider>Licence has not expired
+DS00219<divider>University of Exeter<divider>"The University of Exeter wishes to use Annual Spring School Census and the Key Stage 1 to 5 examination results for the six academic years (2002/03, 2006/07, 2010/11, 2013/14, 2016/17, 2017/18). 
+
+With this data, they will explore whether schools in England have become more divided along the ethnic lines in the past two decades, track the educational progress of different ethnic groups, and further examine to what extent ethnic differences in academic performance can be explained by school choice. 
+
+The public benefit of this work will be better understanding ethnic educational inequality in schools in England that will help the UK government address isolation and segregation. The project will provide empirical evidence that can be used in educational policy making. 
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>10/12/2023<divider>Licence has not expired
+DS00225<divider>Kings College London (KCL)<divider>"The REACH project is an existing research programme based at KCL which wishes to use National Pupil Database (NPD) data for the last four years. With NPD data the REACH team will adjust (apply sample weights to) existing research findings on mental health among young people from all backgrounds. This will help their findings better represent south London populations. The REACH team can then produce local estimates of the extent of common mental health problems in South London. 
+
+The public benefit of this work will be school policy makers as they will have informed research recommendations on young people’s mental health, directly relevant to the populations they serve.  
+"<divider>"National Pupil Database (NPD)
+"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/07/2022<divider>Secure environment deactivated
+DS00229<divider>University of Oxford<divider>"University of Oxford wishes to use pupil level National Pupil Database Key Stage 2 (KS2) academic achievement data. 
+
+They wish to match KS2 academic achievement data to pupil maths test outcomes collected in the Fit to Study project (www.fit-to-study.org) and to pupil data collected from schools (including cognitive-, fitness-, mental health-, age, free-school meal- and gender data). ‘Fit to Study’ is testing whether a physical activity intervention during Physical Education (PE), (in 2017/18) can improve mental health, cognition and academic performance. 
+
+The public benefit of this work will be an increased understanding of the relationships between physical activity, PE and academic attainment, and this could potentially have a major influence on education policy, and how we think in future about PE in schools.
+"<divider>"National Pupil Database (NPD)
+"<divider>3 - contains meaningless identifiers<divider>E - contains lowest sensitivity data<divider>One-off<divider>ONS Secure Research Service<divider>30/06/2022<divider>Secure environment deactivated
+DS00236 <divider>Centre for Economic Performance, London School of Economics (LSE) and Political Science <divider>"LSE wishes to use National Pupil Database data on GCSE exams, school exclusions, pupil characteristics and Key Stage 2 (KS2) outcomes to study the impact of gentrification on schooling and other socioeconomic outcomes of interest. The data used will cover all pupils in state schools in England in academic years 6-11 from the school years 2001/02 to 2014/15.
+
+With this data, the LSE team will exploit data on the sale of council houses to private owners since the 1980s in England to assess, and quantify, the impact of gentrification on educational outcomes, crime and local demographic composition across regions. The public benefit of this work will be the development of an understanding of how this policy affected English society, thus providing a solid evidence basis for the formulation of future education and housing policies.
+"<divider>"National Pupil Database (NPD)
+"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>N/A (re-use)<divider>N/A (re-use)<divider>31/07/2022<divider>Confirmation received data has been destroyed
+DS00237 <divider>University College London (UCL)<divider>"UCL wishes to use National Pupil Database (NPD) data on characteristics, attainment and absence for the four cohorts of children entering reception in 1995/96, 2001/02, 2004/05 and 2009/10. 
+
+Using administrative data collected by the health and education services, the study will address the following aims:
+• To evaluate linkage success between NPD, Personal Demographic Service (PDS) and, hospital admissions data (HES) and mortality data.
+• To evaluate the association between hospital admissions for children and adolescents with underlying chronic conditions and subsequent school achievement.
+
+The public benefit for education is to improve understanding of how health conditions impact on school achievement, special needs and school absences. The health benefits of this study will be better understanding of associations between education outcomes and subsequent use of hospital services, taking into account underlying chronic conditions.
+
+"<divider>"National Pupil Database (NPD)
+"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>30/06/2022<divider>Confirming licence extension
+DS00244<divider>Institute of Physics (IoP)<divider>"IoP Stimulating Physics Network (SPN) project wishes to use attainment data  from the National Pupil Database (NPD) (School Census, Key Stage 4 (KS4) and Key Stage (KS5)) from 2012/13 to 2017/18.  This is for a data matching request to link NPD data to SPN partner schools.
+
+With this data they will track progression between KS4 and KS5 for pupils in SPN schools to measure the impact of the SPN over the last 5 years and analyse the impact of the project over different periods of time, by looking at different cohorts of partner schools. They will also target schools for future intervention. They will support the IOP Education department’s policy positions as well, by understanding the factors which determine attainment and progression in physics. This is a Department for Education funded project.
+
+The public benefit of this work will be an improvement of SPN’s intervention in schools. 
+"<divider>"National Pupil Database (NPD)
+"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/07/2022<divider>Secure environment deactivated
+DS00247<divider>University College London (UCL)<divider>"UCL wishes to use National Pupil Database pupil characteristics, Key Stage 4 and Key Stage 5 attainment, Absence, Exclusions, Children Looked After and Children In Need data for children born between 2010 and 2017 and their mothers.
+
+With this data they will evaluate an early intervention programme called the Family Nurse Partnership (FNP), which aims to improve outcomes for teenage pregnancies. The study will use electronic records that are routinely collected as part of health, education, and social care services to compare outcomes for FNP participants with similar families who did not take part in FNP. The study will look at outcomes for children (e.g. development, referrals to social services) and mothers (e.g. continuing education after birth).  
+
+The public benefit of this work will be to help policy-makers decide whether FNP should be offered to families in their local setting. The study will provide detailed information about the effectiveness of the FNP, and will inform decisions on which types of mothers are in most need of additional support and who might benefit most from FNP.
+"<divider>"National Pupil Database (NPD)
+Children in Need (CIN)
+Children Looked After (CLA)"<divider>3 - contains meaningless identifiers<divider>"B - contains highly sensitive data about interactions with Children’s services
+C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>30/09/2022<divider>Confirming data destruction
+DS00248<divider>University of Sheffield On behalf of Centre for Vocational Education Research (CVER)<divider>"The University of Sheffield wishes to re-use matched National Pupil Database-Individualised Learner Record-Her Majesty's Revenue and Customs data from the 2001/2 to 2005/6 GCSE cohorts. 
+
+With this data they will investigate the extent to which participation in Further Education (FE) is related to family background, to determine whether those young people from more disadvantaged backgrounds are more likely to go down the FE route. In addition, they will investigate whether the returns to vocational qualifications vary by social background. Hence, putting the two parts together, the results will demonstrate the extent to which FE facilitates social mobility.
+
+The public benefit of this work will be to provide information to government policy makers, to show where attention should be directed to maximise the social mobility opportunities for those from less advantaged backgrounds.
+"<divider>"Longitudinal Educational Outcomes (LEO)
+National Pupil Database (NPD)
+Individualised Learner Record (ILR)"<divider>2 - contains meaningful identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>N/A (re-use)<divider>N/A (re-use)<divider>31/03/2023<divider>Licence has not expired
+DS00249<divider>University of Sheffield On behalf of Centre for Vocational Education Research (CVER)<divider>"The University of Sheffield wishes to use matched National Pupil Database-Individualised Learner Record-Her Majesty's Revenue and Customs data from the 2001/2 to 2005/6 GCSE cohorts. 
+
+With this data they will investigate the earnings returns associated with different combinations of vocational qualifications, and in combination with different levels of prior attainment. The many possible different combinations will be combined into groups of similar sequences. After identifying which types of sequences have the highest earnings returns, the analysis will also investigate the characteristics of individual learners that are associated with the likelihood of following, or not, the most positive sequences.
+
+The public benefit of this work will be the provision of information to both young people making education choices and to policy-makers making funding choices, showing the value of different combinations of qualifications and routes through the 16-19 education system, and how these values can vary with the characteristics of the young people. 
+
+"<divider>"Longitudinal Educational Outcomes (LEO)
+National Pupil Database (NPD)
+Individualised Learner Record (ILR)"<divider>2 - contains meaningful identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>N/A (re-use)<divider>N/A (re-use)<divider>31/03/2023<divider>Licence has not expired
+DS00250<divider>University of Sheffield On behalf of Centre for Vocational Education Research (CVER)<divider>"The University of Sheffield wishes to use matched National Pupil Database-Individualised Learner Record-Her Majesty's Revenue and Customs data from the 2001/2 to 2005/6 GCSE cohorts. 
+
+With this data they will investigate whether learners in Further Education remain in the same geographic area after completing their learning, or move to a new area to start work. The likelihood of moving or not will be related to the characteristics of the individuals and of their qualifications, to determine whether certain characteristics are more likely to be associated with mobility. Finally, the project will examine the relationship between local labour markets, vocational qualifications and mobility, to determine whether the skills acquired in Further Education match the local labour market needs, and whether those who do move areas make rational decisions in terms of whether there is a shortage of their particular skills in the areas to which they move.
+
+The public benefit of this work will be to policy-makers in terms of understanding the extent to which local skill needs are provided by Further Education, as well as to young people making decisions about which qualifications to take and where to subsequently work. 
+
+"<divider>"Longitudinal Educational Outcomes (LEO)
+National Pupil Database (NPD)
+Individualised Learner Record (ILR)"<divider>2 - contains meaningful identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>N/A (re-use)<divider>N/A (re-use)<divider>31/03/2023<divider>Licence has not expired
+DS00251<divider>University of Sheffield On behalf of Centre for Vocational Education Research (CVER)<divider>"The University of Sheffield wishes to use matched National Pupil Database-Individualised Learner Record-Her Majesty's Revenue and Customs data from the 2001/2 to 2005/6 GCSE cohorts. 
+
+With this data they will investigate gender differences in both the attainment of, and the choice to undertake, STEM (science, technology, engineering, and mathematics) subjects in post-16 education. The research will investigate the role of school, family background, and individual ability in explaining differences in both STEM subject participation and attainment. Particular focus will be given to vocational qualifications. 
+
+The public benefit of this work will be to identify the existence and extent of gender differences in participation and attainment of STEM subjects in further education, as well as the benefits from doing so. By investigating the determinants of these differences, the research will provide new evidence on how early in life they manifest and suggest potential interventions to correct them and at what stage they could be most effective. "<divider>"Longitudinal Educational Outcomes (LEO)
+National Pupil Database (NPD)
+Individualised Learner Record (ILR)"<divider>2 - contains meaningful identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>N/A (re-use)<divider>N/A (re-use)<divider>31/03/2023<divider>Licence has not expired
+DS00252<divider>University of Sheffield On behalf of Centre for Vocational Education Research (CVER)<divider>"The University of Sheffield wishes to use matched National Pupil Database-Individualised Learner Record data from the 2006/7 to 2009/10 GCSE cohorts. 
+
+With this data they will investigate the impact of (i) the introduction and (ii) subsequent withdrawal of the Education Maintenance Allowance (EMA), which was a means-tested benefit paid directly to full-time students in England aged 16-18 from 2006/07 to 2010/11 inclusive. They will compare the impact of the EMA on students’ participation and attainment by comparing these outcomes with groups of similar students who were not impacted by the EMA because they were in cohorts which pre- or post-dated the EMA. 
+
+Developing a better understanding of individuals’ education participation decisions and achievements after the end of compulsory schooling and how these may be impacted by policy interventions is clearly of major public benefit."<divider>"National Pupil Database (NPD)
+Individualised Learner Record (ILR)"<divider>2 - contains meaningful identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>N/A (re-use)<divider>N/A (re-use)<divider>31/03/2023<divider>Licence has not expired
+DS00255<divider>London School of Economics and Political Science (LSE)<divider>"LSE wishes to use National Pupil Database data covering applicants to secondary education in the Merton, Sutton and Wandsworth Councils; along with some pupil and school level data that covers the whole of England for comparability studies. 
+
+These data will be matched to information about parental preferences sourced from the three Councils, as well as the priority that students received when ranked by schools (or the Councils) to prioritise admission. This information will be used to study how families choose schools and if they take full advantage of the choices they are given. LSE will investigate whether parents apply to as many schools as possible or instead they do not exhaust all choices on the list possibly – specifically because they understate or overstate their likelihood of admission to certain schools. 
+
+At a time of increasing demand for school places, the ability to better understand how parents make decisions regarding their application preferences is particularly salient as it will enable local and national policy makers to better tailor the information provided to families. This in turn will help parents and children to better understand their options and guide them towards applications that not only meet their aspirations but also ensure that every child can attend their most suitable school - and thus fulfil their potential.
+"<divider>"National Pupil Database (NPD)
+"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/08/2022<divider>Confirming licence extension
+DS00257<divider>London School of Economics (LSE) & Political Science  and Centre for Vocational Education Research (CVER)<divider>"CVER would like to re-use National Pupil Database (NPD) consisting of Pupil Level Census, Key Stage 2, Key Stage 4 and Key Stage 5, Individual Learner Record (ILR) data and Higher Education Statistics Agency (HESA) data they already hold for a project studying the outcomes of under-matched learners.  
+
+Specifically, they would investigate whether “university bound” young people with comparable qualifications at age 16-18, who go on to choose a different post-18 path (i.e. entering technical education), experience different labour market outcomes (earnings and employment) compared to those who follow a traditional Higher Education path.  To do this, they will use the linked NPD-ILR-HESA data to trace their educational choices. 
+
+The research is of public benefit because it will shed light on what works to improve further education.
+
+"<divider>"National Pupil Database (NPD)
+Higher Education Statistics Agency (HESA)
+Individualised Learner Record (ILR)"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>N/A (re-use)<divider>N/A (re-use)<divider>31/03/2023<divider>Licence has not expired
+DS00258<divider>National Institute of Economic and Social Research (NIESR) as part of Centre for Vocational Education Research (CVER)<divider>"NIESR wishes to re-use National Pupil Database (NPD) data, Key Stage (KS) 4 full cohorts 2002/03 and 2010/11 matched to prior KS1-3, KS5 Student/Exam, School Census, Absence, Exclusions and Post-16 Learner Aims (PLAMS) linked to Individual Learner Record (ILR) and Higher Education Standards Agency (HESA) data.  NIESR will also be re-using Longitudinal Education Outcomes data that they already hold.  
+
+With these data they will look into longitudinal trajectories in the context of A) family background characteristics like Free School Meals (FSM), Index of Multiple Deprivation or similar, B) prior attainment and C) the KS4-KS5 transition. Most importantly, they would D) focus on “routes” through post-16 vocational education in order to understand more clearly the role of providers (including the context of local availability/variation) and KS5 subject choices on long-term outcomes.  This work is part of the CVER work programme.
+
+The public benefit of this work will be to produce transparent, objective and evidence-based advice for decision making in order to improve social mobility and address educational disadvantage in the United Kingdom.
+"<divider>"National Pupil Database (NPD)
+Higher Education Statistics Agency (HESA)
+Individualised Learner Record (ILR)"<divider>2 - contains meaningful identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/01/2023<divider>Licence has not expired
+DS00266 <divider>University of Oxford<divider>"The University of Oxford wishes to use National Pupil Database data from 2016/17 and 2017/18.
+
+With this data they will examine the choices that families make when filling out their child’s secondary school application form to explore how the ethnic profile of local schools link to the choices parents make. They will use advanced quantitative methods to explore how these choices vary between different ethnic groups and how such choices relate to patterns of ethnic school segregation.
+
+The public benefit of this work will be to deepen our understanding on the drivers of ethnic school segregation in England, in order to design policy responses that help schools reflect the ethnic diversity of their local area. This responds to requests made by Dame Casey in her 2016 government review on inclusion and integration in the UK in which she called for “better data and research… across a range of issues relating to integration” (2016, p. 7).
+
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>30/09/2022<divider>Confirming data destruction
+DS00267<divider>University of Birmingham<divider>"The University of Birmingham School of Education wishes to examine National Pupil Database data from the last 15 years to better understand the characteristics and outcomes of pupils who are mobile between schools. They require data on pupils’ number of school moves, characteristics (e.g. Free School Meals eligibility, ethnicity, and special educational needs), and attainment from reception to year 11. 
+
+The University will examine the relationship between school mobility and student characteristics including whether pupils with certain characteristics tend to move schools more frequently and whether this has adverse effects on school attainment or the support pupils receive (e.g. special educational needs or language support). 
+ 
+The public benefit of this work will be to inform policy and practice by identifying groups of pupils most at risk of having disjointed educational careers, understanding the links between pupil mobility patterns and attainment throughout the school lives of mobile students, and suggesting possible support measures.
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/07/2022<divider>Secure environment deactivated
+DS00273<divider>London School of Economics & Political Science (LSE), Centre for Vocational Education Research (CVER).<divider>"CVER at the LSE wishes to use the National Pupil Database (NPD), Further Education (FE) data and Higher Education (HE) linked datasets for years 2017 and 2018 linked to datasets already held. 
+
+With this data they will analyse the impact of marginally failing to get a C (now grade 4) grade in GCSE English and Maths on future educational outcomes (measured 3 to 5 years after having originally taken the GCSE exams at the age of 16).  
+
+The public benefit of this work will be providing information for students, parents, teachers and schools on how failure to achieve a C grade in the core subjects of GCSE English and Maths affects their future chances to progress within the education system. The findings will also provide evidence for public policy decision making.  
+
+"<divider>"National Pupil Database (NPD)
+Higher Education Statistics Agency (HESA)
+Individualised Learner Record (ILR)"<divider>2 - contains meaningful identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>N/A (re-use)<divider>N/A (re-use)<divider>31/03/2023<divider>Licence has not expired
+DS00274<divider>Education Policy Institute (EPI)<divider>"EPI wishes to use parental primary and secondary school preferences data 2014 to 2018 matched to National Pupil Databased (NPD) data to undertake a long-term programme of work on school choice.
+
+With this data EPI will perform a range of analyses on how school choice currently operates in order to identify issues where policy could be improved to help deliver a high quality, equitable education system. 
+
+These will be freely available in a series of published reports, exploring research questions such as: how do parents choose schools and respond to changes in school structure or quality; how does social selection arise between schools; and what is the impact of school choice on educational outcomes? 
+
+The public benefit of this work will be insights on how school choice and admissions can improve educational outcomes for the most disadvantaged and vulnerable young people in our society.
+"<divider>"National Pupil Database (NPD)
+Primary School Preference Data
+Secondary School Preference Data"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/08/2022<divider>Confirming licence extension
+DS00106<divider> University of Nottingham<divider>"This project focuses on mathematics in Further Education (FE) colleges in England with a particular emphasis on the progress of those with low attainment at GCSE.  The University of Nottingham wishes to use the Individualised Learner Record and National Pupil Database datasets from 2007/08 through to 2016/17.
+
+With this data they will map the post-16 maths education pathways of seven successive cohorts of learners in FE. This will enhance understanding of how changes in government policy on post-16 maths education over the past decade has impacted the engagement and outcomes of learners.
+
+The public benefit of this work will be to inform policy and practice leading to better maths education outcomes for post-16 FE learners. 
+"<divider>"National Pupil Database (NPD)
+Individualised Learner Record (ILR)"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/07/2022<divider>Secure environment deactivated
+DS00228<divider>IFF Research commissioned by Department for Education (DfE)<divider>"Department for Education (DfE) wishes to use the appellant data from the SEND Tribunal within the single route of redress national trial for the purpose of evaluation of the benefits of the trial. 
+
+With this data they will commission IFF Research to assess the risks, benefits and outcomes for parents, children and young people with SEND, using the Tribunal service to appeal against local authority decisions on Education and health care plans. 
+
+The public benefit of this work will be a streamlined, holistic approach to the SEND Tribunal, resulting in improved educational outcomes for children with SEND"<divider>Appellant data from the SEND Tribunal<divider>1 - contains instant identifiers<divider>"B - contains highly sensitive data about interactions with Children’s services
+C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>"31/03/2022
+"<divider>Confirmation received data has been destroyed
+DS00230<divider>"London School of Economics (LSE) & Political Science 
+Centre for Vocational Education Research (CVER)
+"<divider>"CVER based at LSE wishes to use National Pupil Database and Higher Education Statistics Agency data for the years from 2006/2007 to 2015/2016 linked to Individualised Learner Record data for the period 2007/08 to 2014/15. 
+
+With this data they will investigate three different research questions. The first studies the effect of the increase in the education participation age on youth crime. The second project looks at the medium-term effects of a large Further Education (FE) capital funding programme on FE college performance and student outcomes.  The third project assesses the effect of the introduction of study programmes into English FE by looking at how exactly the composition of learning changed after the reform, and at achievement and progression to higher levels of learning for affected students. 
+
+This work will provide important, policy-relevant insights into the effects of various recent reforms affecting mainly disadvantaged students typically attending further education in England. The research proposed will promote the wellbeing of students in England by providing a rigorous evaluation of the influence of the use of capital grants to fund improvements in the physical conditions of FE colleges, the effect of increasing the education participation age on youth crime, and the effect of introducing study programmes into further education on student achievement.
+"<divider>"National Pupil Database (NPD)
+Higher Education Statistics Agency (HESA)
+Individualised Learner Record (ILR)"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>N/A (re-use)<divider>N/A (re-use)<divider>31/03/2023<divider>Licence has not expired
+DS00259<divider>Department for Work and Pensions (DWP)<divider>"DWP wishes to use the National Pupil Database, Individualised Learner Record and Higher Education Statistics Agency data to evaluate the impact of policies and programmes that aim to help young people and DWP customers facing disadvantage in the labour market to move into employment, education and training, promote social inclusion and develop the skills of the existing and future workforce. 
+
+The data will be linked with other administrative data held by government to analyse and evaluate how education and skills outcomes affect employment outcomes for benefits claimants and those on specific programmes such as the European Social Fund and Youth Employment Initiative. 
+
+The public benefits will be increased knowledge about what works to help disadvantaged people, particularly young people not in employment, education or training to progress into work, and to develop skills policy at national and local level, including what provision DWP should fund.
+"<divider>"National Pupil Database (NPD)
+Higher Education Statistics Agency (HESA)
+Individualised Learner Record (ILR)"<divider>2 - contains meaningful identifiers<divider>"B - contains highly sensitive data about interactions with Children’s services
+C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>Secure file transfer directly to the organisation<divider>30/10/2022<divider>Licence has not expired
+DS00268<divider>Ministry of Justice (MoJ) and Department for Education (DfE)<divider>"DfE and MoJ wish to engage in a data share comprising of the educational characteristics and attainment of young people, from DfE, linked to data on their interactions with the criminal justice system, from MoJ.
+
+The share is for research and statistical purposes only with the public benefit being improved understanding of potential links between educational outcomes/characteristics and involvement or risk of involvement with the criminal justice system. This is vital in aiding Government functions such as ensuring that education builds character, resilience and well-being; understanding the trends and drivers of crime; identifying the right cohorts of individuals to support through early intervention projects and the effectiveness of such interventions; and creating a prison and probation service that reforms offenders.
+
+The value of sharing this data has previously been demonstrated by a one-off data share conducted in 2015 which underpinned a wide range of analysis, including: experimental statistics on the educational background of young offenders and young knife possession offenders; analysis in support of the Lammy and Taylor reviews; and preliminary research to inform DfE’s policy agenda on behaviour, exclusion and special educational needs reforms.  DfE and MOJ will put in place an ethics committee-based process to bring additional perspectives and oversight to thinking about how insights from this data share should be developed and exploited
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"B - contains highly sensitive data about interactions with Children’s services
+C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>"30/09/2022
+"<divider>"Memorandum of Understanding reviewed annually. 
+This is the review date.
+"
+DS00275<divider>University College London (UCL)<divider>"UCL wishes to use National Pupil Database data (Key Stage 4 Pupil for 2018/2019 with Spring School Census Key Stage 2 prior attainment) in an Education Endowment Foundation (EEF) funded, independent evaluation.  
+
+With this data they will evaluate the impact on attainment of the SMART Spaces Revision programme, aiming to improve revision in chemistry and raise GCSE science grades. The programme involves training teachers of Year 11 pupils to deliver a set of revision classes, whose design is based on evidence from cognitive science about spaced learning. The impact of this programme will be evaluated using a randomised controlled trial by comparison with a “business as usual” control group, i.e. schools conducting normal revision. 
+
+The public benefit of this work will be to understand whether SMART Spaces can help improve revision in science and, as with all EEF funded evaluations, to build evidence for “what works” in raising the attainment of disadvantaged pupils.
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/08/2023<divider>Licence has not expired
+DS00277<divider>Welsh Government<divider>"The Welsh Government wishes to use National Pupil Database data (absence data and Key Stage 4 (KS4) matched to relevant Spring School Census for 2015/16 to 2017/18, to identify those pupils who are resident in Wales but educated in England so that they may be included (along with pupils who are educated in Wales) in the calculation of indicators for the education domain of WIMD 2019. 
+
+The Welsh Index of Multiple Deprivation (WIMD) is the Welsh Government’s official measure of relative deprivation for small areas in Wales. WIMD identifies concentrations of deprivation for a variety of aspects (or ‘domains’) of deprivation, for all residents of Wales. 
+
+The public benefit of this work will be to allow the KS4 and Repeat Absenteeism indicators, that make up the Education domain of the Welsh index of Multiple deprivation, to capture all children who reside in Wales (including those who attend school in England). This will make for a more accurate representation of the relative deprivation that exists across small areas of Wales (making data comparable across all areas – including those close to the Welsh/English border). This is important because WIMD data is widely used across the public sector, for example, to assist in targeting funding to those areas that need it most. It will also allow for a more accurate picture in local area assessments.   
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>E - contains lowest sensitivity data<divider>One-off<divider>Secure file transfer directly to the organisation<divider>30/09/2022<divider>Confirmation received data has been destroyed
+DS00279<divider>University of Warwick <divider>"The Institute for Employment Research (University of Warwick) wishes to use linked School Workforce Census data for 2010 to the current date.
+
+With this data they will explore earnings and career progression differentials over time for teachers with protected characteristics (i.e. gender, ethnic group, and by age) and seek to identify the factors explaining them.
+
+The public benefit of this work will be to help identify sections of the teacher workforce in England which experience lower rates of pay, earnings growth or career progression (taking into account other structural factors) and highlight the factors which could be addressed to improve their situation.
+
+The particular interest of the project lies in identifying the causes of earnings and career progression differentials between different types of teacher. As well as descriptive analysis, multivariate statistics will be used to identify the separate influence of a range of individual and contextual factors.
+"<divider>School Workforce Census (SWC)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>ONS Secure Research Service<divider>30/09/2022<divider>Secure environment deactivated
+DS00280<divider>University of Bristol and University of Sussex<divider>"The University of Bristol and University of Sussex wish to use the National Pupil Database pupil level School Census data from 2014/15 to 2017/18, linked to parents’ school preferences for these four cohorts. 
+ 
+With this data they will explore how sensitive parents’ primary school choices are to school quality information provided by Ofsted. They will compare the school choices households make when new Ofsted information is revealed, providing new evidence on how school choices are made, conditional on where the household lives. 
+
+The public benefit of this work will be to show whether households value academic quality (as measured by Ofsted grade) and therefore whether school choice has the potential to improve education standards in England, benefitting pupils. By exploring variation in responsiveness to information about school quality across different types of households the research will inform whether school choice has the potential to benefit all or some pupils in England.
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>30/09/2024<divider>Original licence extended
+DS00286<divider>Fischer Family Trust Education Ltd (FFT)<divider>"FFT wish to use Key Stage 4 and Key Stage 5 (A-level) data from 2017/18 linked to Spring School Census data from the National Pupil Database (NPD) and Individualised Learner Record.
+
+With this data, FFT will undertake an evaluation of the Access Project, which works with bright students from disadvantaged backgrounds, providing in-school support and personalised tuition, to help them gain access to top third universities. This will be achieved through a non-experimental impact evaluation using NPD data. The GCSE and A-level outcomes of participating pupils from the 2018 cohort will be compared to those of similar pupils in similar schools. 
+
+The public benefit will be an evaluation of a project which seeks to improve outcomes for disadvantaged young people. The results will therefore be of significant interest to policymakers, schools and anyone with an interest in improving outcomes for this group.
+"<divider>"National Pupil Database (NPD)
+Individualised Learner Record (ILR)"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/10/2020<divider>Licence extension approved - awaiting paperwork
+DS00287<divider>Durham University<divider>"Durham University has requested National Pupil Database pupil and school level data from 2015-16 to 2017-18. 
+
+The requested dataset will link pupil and school level data from the School Census, absence and exclusion records, Key Stage 2 and Key Stage 4 attainment data and information from the School Level Database. 
+
+With this data they will assess whether value-added models provide a valid and predictable method of evaluating school effectiveness. Specifically they will investigate whether the year-to-year variation in Progress 8 scores can be explained by detailed information about the changes that have occurred within schools. 
+
+This research will benefit the public by helping to ensure that school policy changes and parental decisions about school choice are supported by valid and reliable data. The results may also be of interest to school-leaders, OFSTED and the Department for Education, as value-added assessments play a key role in the procedures for evaluating and funding schools.  
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>30/11/2022<divider>Licence has not expired
+DS00295<divider>Sheffield Hallam University<divider>"Sheffield Institute of Education at Sheffield Hallam University wishes to use National Pupil Database 2017/18 Key Stage 2 attainment data and pupil Free School Meals indicators to evaluate the impact of the education endowment funded Realistic Maths Education intervention (RME). 
+
+The RME project focuses on Y7 and Y8 pupils and offers specialist training for Key Stage 3 teachers which aims to develop pupils’ sense-making strategies and problem-solving abilities, raise pupil attainment and support teachers to promote a more interactive classroom culture. Materials and guidance for use in both mixed and set groups will be provided as part of this programme. This independent evaluation of RME in 119 English secondary schools will be used to establish whether RME leads to pupil gains in mathematics attainment. 
+
+There is the potential for public benefit through improvements to pupil learning, pupil engagement and teacher confidence. 
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/10/2022<divider>Original licence extended
+DS00297<divider>Institute for Fiscal Studies (IFS)<divider>"IFS wishes to use National Pupil Database data on Key Stage (KS) 4 and KS5 attainment and characteristics for cohorts of A-level students linked to their Higher Education Statistics Agency (Higher Education) data. 
+
+With this data they will evaluate the impact of the Social Mobility Foundation’s flagship programme, the Aspiring Professionals Programme, on long-run education outcomes for participants. These outcomes are participation in Higher Education, participation in a “high status” Higher Education Institute, participation in a course that facilitates access to professional occupations. 
+
+The public benefit of this work will be to understand whether programmes targeted at high-achieving students from disadvantaged backgrounds can improve education outcomes and therefore access to professional occupations to increase social mobility.
+"<divider>"National Pupil Database (NPD)
+Higher Education Statistics Agency (HESA)"<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/07/2022<divider>Licence extension approved - awaiting paperwork
+DS00298<divider>Children's Commissioner's Office (CCO)<divider>CCO has a statutory function to protect and promote the rights and interests of children in England, especially the most vulnerable. It also has a legal power (Children Act 2004, Section 2F) to access data on children in order to deliver this statutory function. CCO uses pseudonymised National Pupil Database (NPD) records (no names or addresses) for a range of quantitative data analysis projects on the outcomes and wellbeing of children. All analysis is statistical in nature and no disclosive or identifiable results are published. Projects for which NPD data has been used include the Stability Index; regional differences in educational progression; youth violence and exploitation by gangs; outcomes of children in need, children looked after and children with SEND; alternative provision and exclusions; children looked after in unregulated accommodation; home educated children; vulnerability in infancy and adolescence; and longitudinal analysis of early childhood attainment. Findings are published on the CCO website. <divider>"National Pupil Database (NPD)
+Individualised Learner Record (ILR)"<divider>1 - contains instant identifiers<divider>"B - contains highly sensitive data about interactions with Children’s services
+C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>01/07/2023<divider>"Memorandum of Understanding reviewed annually.
+This is the review date.
+"
+DS00302<divider>London School of Economics (LSE)<divider>"LSE wishes to analyse data from the National Pupil Data base; Early Years Census and Schools Census (pupil and school levels), 2007-08 to 2018-19.
+
+With this data LSE will investigate continuity and change in the take-up of funded early education by children’s background (including income, ethnicity, language, and area disadvantage), and the type of setting that children from different backgrounds attend. The study will look at the sector children attend, exposure to qualified teaching staff, and transitions from pre-school to school.  Prior research found that high quality provision and stable transitions matter, particularly for children who face more home disadvantages, and that mixed settings can be beneficial to children’s social and academic outcomes.
+
+Research also shows that policy design can affect patterns of attendance. The study will examine the impact of recent policy changes (for example, the additional 15 funded hours for children in working families), so as to improve the understanding of the relationship between policy design and outcomes. 
+
+The public benefit of the work will be a better understanding of policy impact, which will be able to inform future reforms and further improve provision for children who have most to gain from high quality early years provision. 
+"<divider>National Pupil Database (NPD)<divider>3 - contains meaningless identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+D - contains GDPR Special Category data
+E - contains lowest sensitivity data"<divider>One-off<divider>ONS Secure Research Service<divider>31/12/2022<divider>Licence has not expired
+DS00211<divider>Office For Students (OfS)<divider>"Department for Education (DfE) Secretary of State has asked OfS to use the Longitudinal Education Outcomes (LEO) data to improve the quality and value of higher education provision, and provide information that is more helpful to students. In addition, improved employment prospects is an important reason for entering higher education for many students, and LEO data will provide evidence on how this varies between different higher education courses.
+
+Specifically, OfS will use LEO data to:
+• Make earnings and employment outcomes information available to prospective students.
+• Develop measures of how well students from different universities and colleges are prepared for employment, for use in the Teaching Excellence and Student Outcomes Framework (TEF) - a national exercise to assess excellence in teaching and ensuring excellent outcomes for students.
+• Develop measures of how well students are prepared for employment, to support monitoring of higher education providers. 
+"<divider>Longitudinal Educational Outcomes (LEO)<divider>2 - contains meaningful identifiers<divider>"C - contains sensitive data not captured as a Special Category within GDPR as they are specific to education but, which DfE believe are equally sensitive,
+E - contains lowest sensitivity data"<divider>Annually<divider>Secure file transfer directly to the organisation<divider>21/04/2023<divider>"Service Level Agreement reviewed annually.
+This is the review date."

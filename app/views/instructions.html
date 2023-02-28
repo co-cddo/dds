@@ -1,0 +1,67 @@
+
+Given an html document with a <body> containing any number of <div> pairs. Each div is associated with three buttons: "edit", "save", and "cancel". The buttons and the divs are associated in the code (button x impacts div y and not div z) but are not necessarily first children of the same container. For example, each div might be in a a <td> pair in a <tr> and the second <td> in that <tr> might contain the three buttons so that each row of the table shows a div on the left and buttons on the right.
+
+My task is to manipulate the divs using javascript.
+
+Please create a function called "edit". This function does the following steps:
+
+- Accept an ID from the calling button, so for example, I could write <button onclick="edit('d3')"> to reference div id="d3". And get ready to act on the element.
+- Check if the referenced element is the first-child of an element with class="qWrapper"
+  - If true then function ends and returns 
+    // there is already an editor
+  - If false then: 
+    // no editor exists so store div contents for later and initialise quill
+    - var cancelBuffer = referenced-element.innerHTML;
+    - create a new parent for the referenced element
+    - set the class of that div to "qWrapper"
+    - initialize Quill editor on the referenced element
+    - function ends and returns
+
+
+Please create a function called "save". This function does the following steps:
+
+- Accept an ID from the calling button, so for example, I could write <button onclick="save('d3')"> to reference div id="d3". And get ready to act on the element.
+- Check if the referenced element is a child of an element with class="qWrapper"
+  - If true then:
+    // d3 has an editor instance live 
+    // so we store the latest edits before closing
+    - var saveBuffer = quill.root.innerHTML;
+    // using "root" tells quill to return 
+    // only the html of the contents, not the editor itself
+    - we create a div id="tempDiv"
+    - then we replace the div class="qWrapper" (and all its children) with div #tempDiv
+    // this removes all the editor elements from the DOM
+    - then change the id of this div from "tempDiv" to the referenced element passed to the function
+    // recreating the initially referenced element we have removed
+    - then referencedelement.innerHTML = saveBuffer
+    // the div now contains the latest version of the contents of the editor
+    funtion ends and returns
+  - If false then:
+    // there is no editor instance
+    function ends and returns
+
+
+
+Please create a function called "cancel". This function does the following steps:  
+
+- Accept an ID from the calling button, so for example, I could write <button onclick="cancel('d3')"> to reference div id="d3". And get ready to act on the element.
+- Check if the referenced element is a child of an element with class="qWrapper"
+  - If true then:
+    // d3 has an editor instance live 
+    - Create a div id="tempDiv"
+    - Replace the div class="qWrapper" (and all its children) with div #tempDiv
+    // this removes all the editor elements from the DOM
+    - then change the id of this div from "tempDiv" to the referenced element passed to the function
+    // recreating the initially referenced element we have removed
+    - then referencedelement.innerHTML = cancelBuffer
+    // the div now contains the version of the contents of the editor
+    // when the editor was first instantiated
+    funtion ends and returns
+  - If false then:
+    // there is no editor instance
+    function ends and returns
+
+Note that the variable cancelBuffer is set in the function edit() but called in the function cancel() - does this mean this variable needs to be declared globally? I would like the functions to work multiple times on the page, so we could click "edit" next to multiple divs and each div would have an editor instance. Both saveBuffer and cancelBuffer apply to specific divs so cancelBuffer('#d1') != cancelBuffer('#d2'). Can you work out how to do that?
+
+Thanks:-)
+

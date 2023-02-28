@@ -12,12 +12,24 @@
         Service name goes here x
       </h1>
 
-<!-- Include stylesheet -->
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+
+
 
 <!-- Include the Quill library -->
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
+<!-- quill loads correctly on this div -->
+
+<div class="qWrapper">
+  <div id="xx">
+    Text from div xx
+  </div>
+</div>
+
+<hr>
+
+<!-- but NOT on these -->
 
 <div id="aa">Text from div aa</div>
 
@@ -50,17 +62,12 @@
 <button onclick="save('dd')">save dd</button>
 
 
-
-
-
-
-
-    </div>
-    <div class="govuk-grid-column-one-third">
-      buttons
-    </div>
-
-
+<script type="text/javascript">
+  // Initialize Quill editor on the referenced element
+  var quill = new Quill('#xx', {
+    theme: 'snow'
+  });
+</script>
 
 
 <script type="text/javascript">
@@ -72,7 +79,7 @@ function edit(id) {
   // Get the referenced element
   var element = document.getElementById(id);
 
-  // Check if the referenced element is a child of an element with class="qWrapper"
+  // Check if the referenced element is the first-child of an element with class="qWrapper"
   if (element.parentElement.classList.contains("qWrapper")) {
     // There is already an editor
     return;
@@ -152,7 +159,6 @@ function cancel(id) {
 
 
 </script>
-
 
 
 
