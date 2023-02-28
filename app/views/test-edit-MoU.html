@@ -6,11 +6,67 @@
 
 {% block content %}
 
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Service name goes here
+      </h1>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p1">
+    <h2 class="govuk-heading-m">
+      Background context
+    </h2>
+    <p>
+    The English Housing Survey (EHS) is a national survey of people's housing circumstances and the condition and energy efficiency of housing in England. MHCLG and BEIS jointly fund the survey and both departments use the data for policy development, producing National Statistics (the English Housing Survey Headline and Annual Reports and Fuel Poverty Statistics) and for feeding into a range of work streams such as Experimental Statistics on leasehold dwellings, housing and fuel poverty measures of the Race Disparity Audit, the National Household Model, the National Energy Efficiency Data Framework etc.</p>
+    <p>
+    The collection and processing of the EHS data are carried out by external contractors. MHCLG is responsible for the day-to-day management of that process and for delivering each year’s signed off data to BEIS.</p>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p1' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p2">
+    <h2 class="govuk-heading-m">
+    Summary of agreement:
+    </h2>
+    <p>
+    (A) This Agreement between the Ministry of Housing, Communities and Local Government (MHCLG) and the Department for Business Energy and Industrial Strategy (BEIS) sets out the procedures that will be followed and the safeguards that have been put in place to ensure that the data shared between the two organisations, referred to below, complies with: (i) the GDPR and any applicable national implementing laws as amended from time to time; (ii) the DPA 2018to the extent that it relates to processing of personal data and privacy; (iii) all applicable law about the processing of personal data and privacy. This agreement will be placed in the public domain.</p>
+    <p>
+    (B) More specifically, this Agreement sets out the arrangements that both parties, and their agents, have agreed to implement in order to ensure that the data shared between them pursuant to this agreement:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>are kept secure;</li>
+      <li>are used only for research or statistical purposes;</li>
+      <li>are not disseminated or published in any way that might reveal private information relating to identifiable individuals; and</li>
+      <li>are not prematurely released before their pre-announced publication date.</li>
+    </ul>
+    <p>
+    (C) The agreement will be reviewed every two years, or sooner where substantial revisions are required, or in the event of a breach. The next review point will be in September 2022.</p>
+    <p>
+    (D) This MOU is not intended to be legally binding. IT IS NOW AGREED as follows:</p>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p2' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Service name goes here x
-      </h1>
 
 <!-- Include stylesheet -->
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">

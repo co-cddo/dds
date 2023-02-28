@@ -1,4 +1,29 @@
-<p>
-  (Editing features for this paragraph) <a href="#1">people</a> <a href="#2">comments</a> <a href="#3">actions</a> <a href="#4">status</a> <a href="#5">deadlines</a></p>
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button" onclick="edit('{{ targetDiv }}')">
+    Edit paragraph
+  </button>
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="cancel('{{ targetDiv }}')">
+    Cancel
+  </button>
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="save('{{ targetDiv }}')">
+    Save as draft
+  </button>
+</div>
 
-  
+<ul class="govuk-list">
+  <li>
+  <a class="govuk-link" href="#1">people</a> 
+  </li>
+  <li>
+  <a class="govuk-link" href="#2">comments</a> 
+  </li>
+  <li>
+  <a class="govuk-link" href="#3">actions</a> 
+  </li>
+  <li>
+  <a class="govuk-link" href="#4">status</a> 
+  </li>
+  <li>
+  <a class="govuk-link" href="#5">deadlines</a> 
+  </li>
+</ul>

@@ -5,10 +5,13 @@
     "start": "govuk-prototype-kit start"
   },
   "dependencies": {
+    "@govuk-prototype-kit/common-templates": "^1.0.0",
     "@govuk-prototype-kit/step-by-step": "^2.1.0",
+    "@govuk-prototype-kit/task-list": "^1.0.0",
     "govuk-frontend": "^4.5.0",
     "govuk-prototype-components": "^1.1.0",
     "govuk-prototype-kit": "^13.3.0",
-    "hmrc-frontend": "^5.24.0"
+    "hmrc-frontend": "^5.24.0",
+    "notifications-node-client": "^7.0.0"
   }
 }
