@@ -25,6 +25,23 @@ router.post('/check-team-skills-routes', (req, res) => {
 });
 
 
+// Handles form submissions from 'decision'
+router.post('/decision-routes', (req, res) => {
+
+  const yourDecision = req.body["your-decision"];
+  console.log("yourDecision value: ", yourDecision);
+
+  // If the checkbox is checked, redirect to agree.html
+  if (yourDecision === 'meeting') {
+    res.redirect('/khadija-authenticated/110-propose-time');
+  } 
+  if (yourDecision === 'accept') {
+    res.redirect('/khadija-authenticated/110-accept');
+  } 
+
+});
+
+
 
 module.exports = router;
 
