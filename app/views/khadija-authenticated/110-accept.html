@@ -1,0 +1,32 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">You have accepted the data sharing request.</h1>
+        <div class="govuk-panel__body">
+          A draft memorandum of understanding has been created in you shares folder.
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>
+        Your team will have much to review, discuss, and agree on before your agreement can be finalised. You may use this service to record those deliberations for auditing purposes.
+      </p>
+
+      <p>You may <a href="/khadija-authenticated/035-MoU">review your draft MoU</a> or <a href="/khadija-authenticated/035-shares">visit your data shares folder</a>.</p>
+
+      <p>If you need help with this service, please <a href="/khadija-authenticated/035-shares">contact our data exchange support team</a>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

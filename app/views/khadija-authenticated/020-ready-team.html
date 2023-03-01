@@ -1,0 +1,146 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Get your team ready</span>
+      <h1 class="govuk-heading-l">
+        Check your team has the right skills
+      </h1>
+
+      <p>One person may have multiple skills. You may be asked for contact details later.</p>
+
+<form action="/check-team-skills-routes" method="post">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Technology skills?</h2>
+    </legend>
+    <div id="changed-name-hint" class="govuk-hint">
+      For example: a technical architect, to help define data flows and requirements
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">Yes</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">No</label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Security skills?</h2>
+    </legend>
+    <div id="changed-name-hint" class="govuk-hint">
+      For example: a cybersecurity analyst
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">Yes</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">No</label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Data protection skills?</h2>
+    </legend>
+    <div id="changed-name-hint" class="govuk-hint">
+      For example: a data protection officer
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">Yes</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">No</label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Legal skills?</h2>
+    </legend>
+    <div id="changed-name-hint" class="govuk-hint">
+      For example: a lawyer
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">Yes</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">No</label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Data governance skills?</h2>
+    </legend>
+    <div id="changed-name-hint" class="govuk-hint">
+      For example: an information manager
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">Yes</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">No</label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Business ownership skills?</h2>
+    </legend>
+    <div id="changed-name-hint" class="govuk-hint">
+      For example: a product owner or delivery manager
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">Yes</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">No</label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

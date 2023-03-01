@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form" action="/khadija-authenticated/110-propose-time" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <span class="govuk-caption-l">Review your data sharing request</span>
+      <h1 class="govuk-fieldset__heading">
+        What is your decision?
+      </h1>
+    </legend>
+    <div id="sign-in-hint" class="govuk-hint">
+      Based on your decision we'll notify the other party and set up document templates as required.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+Set up a meeting to discuss further
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+They have supplied enough information to proceed.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+Return with comments
+        </label>
+        <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+Some information is lacking. You cannot make a decision without it.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-3" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-3-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-3">
+Reject data share request
+        </label>
+        <div id="sign-in-3-item-hint" class="govuk-hint govuk-radios__hint">
+There are fundamental problems with this request that cannot be fixed.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-4" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-4-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-4">
+Accept data share request
+        </label>
+        <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+Proceed and start creating memorandum of understanding.
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

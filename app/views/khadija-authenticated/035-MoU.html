@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Data shares – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">In progress agreements</span>
+    <style type="text/css">
+      .center {
+        width: 130%;
+        margin:0 0 0 -13px;
+        padding:0;
+        }
+      img {
+        width: 100%;
+        }
+    </style>
+
+    <div class="center">
+      <a href="/khadija-authenticated/035-shares"><img src="/public/images/grabs/mou.jpg"></a> 
+    </div>
+
+  </div>
+</div>
+
+
+
+{% endblock %}
+
