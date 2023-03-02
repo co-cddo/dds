@@ -32,11 +32,20 @@ router.post('/decision-routes', (req, res) => {
   console.log("yourDecision value: ", yourDecision);
 
   // If the checkbox is checked, redirect to agree.html
+  if (yourDecision === undefined) {
+    res.redirect('/khadija-authenticated/110-propose-time');
+  } 
   if (yourDecision === 'meeting') {
     res.redirect('/khadija-authenticated/110-propose-time');
   } 
   if (yourDecision === 'accept') {
     res.redirect('/khadija-authenticated/110-accept');
+  } 
+  if (yourDecision === 'comment') {
+    res.redirect('/khadija-authenticated/110-comment');
+  } 
+  if (yourDecision === 'reject') {
+    res.redirect('/khadija-authenticated/110-reject');
   } 
 
 });
