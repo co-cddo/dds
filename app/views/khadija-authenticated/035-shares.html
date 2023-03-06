@@ -11,11 +11,23 @@
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-l">Your data shares</span>
+      <h1 class="govuk-heading-l">Manage your data shares</h1>
+
+      <p>
+        If you've received a request for your department's data, or have started writing a request for data, these in progress arrangements are listed here. Completed and active requests are listed below. 
+      </p>
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h2 class="govuk-heading-m">Open requests and data-shares being established</h2>
+
 
       <table class="govuk-table" style="font-size: 18px;">
-        <caption class="govuk-table__caption govuk-table__caption--l">Data shares being established</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="col" style="width:15%;"> Request / agreement </th>
@@ -127,15 +139,14 @@
   </tbody>
 </table>
 
+<h2 class="govuk-heading-m">Active data shares</h2>
 
-      <table class="govuk-table" style="font-size: 14px;">
-        <caption class="govuk-table__caption govuk-table__caption--l">Active data shares</caption>
-        <thead class="govuk-table__head">
-          <tr id="table-header"></tr>
-        </thead>
-        <tbody class="govuk-table__body" id="table-body-active">
-        </tbody>
-      </table>
+
+<table class="govuk-table" style="font-size: 14px;">
+  <tr id="table-header"></tr>
+</thead>
+<tbody class="govuk-table__body" id="table-body-active"></tbody>
+</table>
 
 
 
