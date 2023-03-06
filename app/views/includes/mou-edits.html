@@ -1,29 +1,13 @@
-<div class="govuk-button-group">
-  <button class="govuk-button" data-module="govuk-button" onclick="edit('{{ targetDiv }}')">
-    Edit paragraph
-  </button>
-  <button class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="cancel('{{ targetDiv }}')">
-    Cancel
-  </button>
-  <button class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="save('{{ targetDiv }}')">
-    Save as draft
-  </button>
-</div>
 
+<button class="govuk-button" data-module="govuk-button" onclick="edit('{{ targetDiv }}')">
+  Edit paragraph
+</button>
 <ul class="govuk-list">
-  <li>
-  <a class="govuk-link" href="#1">people</a> 
-  </li>
-  <li>
-  <a class="govuk-link" href="#2">comments</a> 
-  </li>
-  <li>
-  <a class="govuk-link" href="#3">actions</a> 
-  </li>
-  <li>
-  <a class="govuk-link" href="#4">status</a> 
-  </li>
-  <li>
-  <a class="govuk-link" href="#5">deadlines</a> 
-  </li>
+  <li><a href="#save" class="govuk-link--no-visited-state" onclick="save('{{ targetDiv }}')">Save as draft</a></li>
+  <li><a href="#edit" class="govuk-link--no-visited-state" onclick="edit('{{ targetDiv }}')">Add note</a></li>
+  <li><a href="#cancel" class="govuk-link--no-visited-state" onclick="cancel('{{ targetDiv }}')">Cancel</a></li>
 </ul>
+
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="">+ Section</button>
+
+

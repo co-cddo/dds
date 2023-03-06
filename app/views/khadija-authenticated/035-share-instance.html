@@ -1,0 +1,116 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  DS 13992 - Data share request and response
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header-khadija.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">In progress agreements</span>
+      <h1 class="govuk-heading-l">
+        Data share request and response - DS 13992
+      </h1>
+
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-m">
+        Advisers and colleagues
+      </h2>
+      <p>
+        <a class="govuk-link" href="/khadija-authenticated/035-collaborators">Colleagues who have agreed to help with this data share</a>
+      </p>
+      <p>
+        Manage the colleagues that you have asked to help negotiate this data share.
+      </p>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">
+        Documents
+      </h2>
+
+      <ul class="govuk-list">
+        <li>
+          <img src="/public/images/html.png" style="width: 20%; float: left; margin: 0 1em 0 0;">
+          <a class="govuk-link" href="/khadija-authenticated/200-review-request">Request for data from department X</a>
+          <p>
+            This is the request posted by the representative who needs access to a data set. It is an HTML document with links to share line items with collaborators.
+          </p>
+          <p style="clear: both;"></p>
+        </li>
+        <li>
+          <img src="/public/images/html.png" style="width: 20%; float: left; margin: 0 1em 0 0;">
+          <a class="govuk-link" href="/khadija-authenticated/035-MoU">Draft checklist of issues to agree</a>
+          <p>
+            This is the request posted by the representative who needs access to a data set.</p>
+          <p>
+            This is an HTML document but it includes editing capabilities and links to share line items with collaborators.
+          </p>
+          <p style="clear: both;"></p>
+        </li>
+        <li>
+          <img src="/public/images/opendoc.png" style="width: 20%; float: left; margin: 0 1em 0 0;">
+          <a class="govuk-link" href="/khadija-authenticated/035-MoU">Department X required boilerplate items</a>
+          <p>
+            This is the boilerplate text the requestor would like to include in a future agreement.</p>
+          <p>
+            This is an Opentext editable document.
+          </p>
+          <p style="clear: both;"></p>
+        </li>
+        <li>
+          <img src="/public/images/pdf.png" style="width: 20%; float: left; margin: 0 1em 0 0;">
+          <a class="govuk-link" href="/khadija-authenticated/035-MoU">GDPR impact assessment forms</a>
+          <p>
+            Should this team decide the share includes personal data(PII) then these form may be used to agree the GDPR requirements.</p>
+          <p>
+            This is a PDF document which contains editable forms.
+          </p>
+          <p style="clear: both;"></p>
+        </li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+        Attach required files
+      </h2>
+      <p>
+        They will be stored securely by CDDO alongside the texts in this draft agreement.
+      </p>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+  {% include "includes/khadija-instance-nav.html" %}
+    </div>
+
+</div>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

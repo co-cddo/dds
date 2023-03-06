@@ -18,13 +18,14 @@
 
   <div class="govuk-grid-row" style="border-top:none;padding-top:0;">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-l">In progress agreements</span>
+      <span class="govuk-caption-l">Review sharing request</span>
       <h1 class="govuk-heading-l">
         Review Department X's request to access clinically vulnerable patient data 
       </h1>
     </div>
     <div class="govuk-grid-column-one-third">
-      {% include "includes/khadija-instance-nav.html" %}
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Please review this request</h2>
+      <p>On the next screen you'll decide what you want to do about it.</p>
     </div>
   </div>
   <div class="govuk-grid-row">
@@ -84,7 +85,7 @@
           not provided by lawyer
         </strong>
       </div>
-      {% if (data['jasmanCommonLaw'] == undefined) %}<p>Common law</p>{% else %}<p>{{data['jasmanCommonLaw']}}</p>{% endif %}
+      {% if (data['jasmanLegalBasis'] == undefined) %}<p>Common law</p>{% else %}<p>{{data['jasmanCommonLaw']}}</p>{% endif %}
     </div>
     <div class="govuk-grid-column-one-third">
       {% include "includes/mou-comments.html" %}
@@ -246,7 +247,7 @@
       <p>16 July 2023</p>
 
 
-<a href="/khadija-authenticated/035-share-instance" class="govuk-button">Return to share index</a>
+<a href="/khadija-authenticated/200-has-team-reviewed" class="govuk-button">Continue</a>
 
 
     </div>

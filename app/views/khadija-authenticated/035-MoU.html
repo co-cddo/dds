@@ -11,62 +11,450 @@
 
 {% block content %}
 
+<!-- bits needed to simulate the in-page edit functionality -->
+
+<style type="text/css">
+  h1, h2, h3, h4, h5 {
+    font-family: "GDS Transport";
+    font-weight: 700;
+  }
+  li, ul, ol, span, div {
+    font-family: "GDS Transport";
+  }
+</style>
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+<!-- bits end -->
+
+
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
     <span class="govuk-caption-l">In progress agreements</span>
-    <style type="text/css">
-      .center {
-        width: 130%;
-        margin:0 0 0 -13px;
-        padding:0;
-        }
-      img {
-        width: 100%;
-        }
-    </style>
+    <h1 class="govuk-heading-l">Checklist for discussion. Data share request - DS 13992</h1>
 
-    <div class="center">
-      <a href="/khadija-authenticated/035-shares"><img src="/public/images/grabs/mou.jpg"></a> 
-    </div>
+<h2 class="govuk-heading-m">Contents of this document</h2>
+
+<ol>
+  <li><p style="margin-bottom:0.25em;">Who are the parties to the agreement?</p></li>
+  <li><p style="margin-bottom:0.25em;">What is the purpose of the data sharing initiative?</p></li>
+  <li><p style="margin-bottom:0.25em;">Which other organisations will be involved in the data sharing?</p></li>
+  <li><p style="margin-bottom:0.25em;">Are we sharing data along with another controller?</p></li>
+  <li><p style="margin-bottom:0.25em;">What data items are we going to share?</p></li>
+  <li><p style="margin-bottom:0.25em;">What is our lawful basis for sharing?</p></li>
+  <li><p style="margin-bottom:0.25em;">Legal power under which you are allowed to share the data.</p></li>
+  <li><p style="margin-bottom:0.25em;">Is there any special category data, sensitive data or criminal offence data?</p></li>
+  <li><p style="margin-bottom:0.25em;">What about access and individual rights?</p></li>
+  <li><p style="margin-bottom:0.25em;">What information governance arrangements should we have?</p></li>
+  <li>
+      <p>Annex</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><p style="margin-bottom:0.25em;">A summary of the key legislative and other legal provisions, for example relevant sections of the DPA 2018, any law which provides your legal power for data sharing and links to any authoritative professional guidance</p></li>
+        <li><p style="margin-bottom:0.25em;">A model form for seeking individuals’ consent for data sharing, where that is the lawful basis</p></li>
+        <li><p style="margin-bottom:0.25em;">A diagram to show how to decide whether to share data</p></li>
+      </ul>
+  </li>
+</ol>
 
 
-<nav class="govuk-pagination" role="navigation" aria-label="results">
-  <div class="govuk-pagination__prev">
-    <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-      </svg>
-      <span class="govuk-pagination__link-title">Previous</span></a>
+
   </div>
-  <ul class="govuk-pagination__list">
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
-        1
-      </a>
-    </li>
-    <li class="govuk-pagination__item govuk-pagination__item--current">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
-        2
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-        3
-      </a>
-    </li>
-  </ul>
-  <div class="govuk-pagination__next">
-    <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-      </svg></a>
-  </div>
-</nav>
-
-
+  <div class="govuk-grid-column-one-third">
+    {% include "includes/khadija-instance-nav.html" %}
   </div>
 </div>
 
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p1">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Legal basis:</h2>
+      <p>
+        The Requester has stated that there is a legal basis for her department to access the data. She has stated this legal basis is {% if (data['jasmanLegalBasis'] == undefined) %}"public task"{% else %}"{{data['jasmanLegalBasis']}}"{% endif %}
+      </p>
+      <p>
+        <em>Note: Request states that this statement of legal basis was not provided by lawyer</em>
+      </p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+    <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p1' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p2">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Legal power:</h2>
+      <p>
+        The Requester has stated that a legal power applies to this request to access data. She has stated this legal power is {% if (data['jasmanCommonLaw'] == undefined) %}"Common law"{% else %}"{{data['jasmanCommonLaw']}}"{% endif %}
+      </p>
+      <p>
+        <em>Note: Request states that this statement of legal power was not provided by lawyer</em>
+      </p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+    <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p2' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p3">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Justification for legal gateway:</h2>
+      <p>
+      Requester has posted the following justification for legal gateway.</p>
+      <p>
+      Under Regulation 3 of The Health Service (Control of Patient Information), patient data can be lawfully processed with a view to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>diagnosing communicable diseases and other risks to public health</li>
+        <li>recognising trends in such diseases and risks</li>
+        <li>controlling and preventing the spread of such diseases and risks</li>
+        <li>
+          monitoring and managing:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>outbreaks of communicable disease</li>
+            <li>incidents of exposure to communicable disease</li>
+            <li>the delivery, efficacy and safety of immunisation programmes</li>
+            <li>adverse reactions to vaccines and medicines</li>
+            <li>risks of infection acquired from food or the environment (including water supplies)</li>
+            <li>the giving of information to persons about the diagnosis of communicable disease and risks of acquiring such disease.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <em>Note: Request states that this statement of justification for legal gateway was not provided by lawyer</em>
+      </p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+    <div class="govuk-grid-column-one-third">
+  {% set targetDiv = 'p3' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p4">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Use of data across country borders / geographical usage of data:</h2>
+      <p>
+        Request states that the data will travel outside UK to these countries: United States of America
+      </p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+    <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p4' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p5">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Data subjects:</h2>
+      <p>
+      <p>Request states that the data subjects will be clinically extremely vulnerable patients.</p>
+      <p>This project aims to benefit them directly.</p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+    <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p5' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p6">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Aim of the project:</h2>
+      <p>
+      We want to provide targeted support to vulnerable people while they shield. We want to provide a way for these people to request social care support, food and supplies.</p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p6' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p7">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">How data will help reach this aim:</h2>
+      <p>
+      We cannot identify who needs support without access to a data set about who in the UK is clinically vulnerable.</p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p7' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p8">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Public benefits of project:</h2>
+      <h3 class="govuk-heading-s">Evidence for public service delivery</h3>
+      <p>
+      This data will allow us to identify both who to help and the number of people we need to help.</p>
+      <h3 class="govuk-heading-s">Evidence for decisions which are likely to benefit people in the UK</h3>
+      <p>
+      Depending on the number of people involved, this data could be used to support similar programs in the future.</p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p8' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p9">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Role of parties:</h2>
+      <p>The Requester has stated that their role in this exchange of data will be: Processor</p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p9' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p10">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Required data:</h2>
+      <h3 class="govuk-heading-s">Data item</h3>
+      <p>List of vulnerable people's names and contact details</p>
+      <h3 class="govuk-heading-s">Data type</h3>
+      <p>Personal data</p>
+      <h3 class="govuk-heading-s">How often it will be moved</h3>
+      <p>Every day, until the project ends</p>
+      <h3 class="govuk-heading-s">Why they need it</h3>
+      <p>To identify who to help</p>
+      <h3 class="govuk-heading-s">What they will do with it</h3>
+      <p>Use it to contact them for support</p>
+      <h3 class="govuk-heading-s">How long they need it</h3>
+      <p>Until the project ends</p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p10' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p11">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">How it will impact the project if they don't get the data:</h2>
+      <p>The project will be impossible to complete. We are reliant on this data and have no alternatives.</p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p11' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p12">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Destruction of data:</h2>
+      <p>Store CSV files in a secure sever and delete all files at end of project.</p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p12' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p13">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">How it will impact the project if they don't get the data:</h2>
+      <p>The project will be impossible to complete. We are reliant on this data and have no alternatives.</p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p13' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="p14">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Data required by date:</h2>
+      <p>Requester has stated that access to the data is required by 16 July 2023</p>
+      {% include "includes/mou-edits-addpara.html" %}
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% set targetDiv = 'p14' %}
+    {% include "includes/mou-edits.html" %}
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<h2 class="govuk-heading-m">ANNEX</h2>
+
+
+<h3 class="govuk-heading-s">ANNEX A – EHS DATA REQUIREMENTS</h3>
+
+<p>
+See separate Excel workbook</p>
+
+<h3 class="govuk-heading-s">ANNEX B – References</h3>
+
+<ol class="govuk-list govuk-list--number">
+  <li>Data Protection Act 2018
+<a href="http://www.legislation.gov.uk/ukpga/2018/12/contents/enacted">http://www.legislation.gov.uk/ukpga/2018/12/contents/enacted</a></li>
+  <li>General Data Protection Regulation 2016
+<a href="https://gdpr-info.eu/">https://gdpr-info.eu/</a></li>
+  <li>Pre-release Access to Official Statistics Order 2008
+<a href="http://www.legislation.gov.uk/uksi/2008/2998/contents/made">http://www.legislation.gov.uk/uksi/2008/2998/contents/made</a></li>
+  <li>Information Commissioner Code of Practice on Data Sharing
+<a href="http://www.ico.gov.uk/for_organisations/data_protection/topic_guides/data_sharing.aspx">http://www.ico.gov.uk/for_organisations/data_protection/topic_guides/data_sharing.aspx</a></li>
+  <li>Code of Practice for Official Statistics
+<a href="http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html">http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html</a></li>
+  <li>National Statistician's Guidance: Confidentiality of Official Statistics
+<a href="http://www.statisticsauthority.gov.uk/national-statistician/ns-reports--reviews-andguidance/national-statistician-s-guidance/index.html">http://www.statisticsauthority.gov.uk/national-statistician/ns-reports--reviews-andguidance/national-statistician-s-guidance/index.html</a></li>
+</ol>
+
+
+<!-- Quill manipulation scripts -->
+<script type="text/javascript">
+  
+// Declare a global variable to store cancelBuffer values for each div
+var cancelBufferMap = {};
+
+function edit(id) {
+  // Get the referenced element
+  var element = document.getElementById(id);
+
+  // Check if the referenced element is a child of an element with class="qWrapper"
+  if (element.parentElement.classList.contains("qWrapper")) {
+    // There is already an editor
+    return;
+  } else {
+    // No editor exists so store div contents for later and initialise quill
+    cancelBufferMap[id] = element.innerHTML;
+
+    // Create a new parent for the referenced element
+    var wrapper = document.createElement("div");
+    wrapper.classList.add("qWrapper");
+    element.parentNode.insertBefore(wrapper, element);
+    wrapper.appendChild(element);
+
+    // Initialize Quill editor on the referenced element
+    var quill = new Quill(element, {
+      theme: 'snow'
+    });
+  }
+}
+
+
+function save(id) {
+  // Get the referenced element
+  var element = document.getElementById(id);
+
+  // Check if the referenced element is a child of an element with class="qWrapper"
+  if (element.parentElement.classList.contains("qWrapper")) {
+
+  // d3 has an editor instance live so we store the latest edits before closing
+    var quill = element.parentElement.querySelector(".ql-editor");
+    var saveBuffer = quill.innerHTML;
+
+    // So create a fresh div#id
+    var tempDiv = document.createElement("div");
+    tempDiv.id = id;
+
+    // copy the initial content into it
+    tempDiv.innerHTML = saveBuffer;
+    
+    // attach it to the dom just after qWrapper
+    element.parentElement.after(tempDiv);
+    // remove the old qWrapper and contents
+    element.parentElement.remove();
+  } else {
+    // There is no editor instance
+    return;
+  }
+}
+
+function cancel(id) {
+  // Get the referenced element
+  var element = document.getElementById(id);
+
+  // Check if the referenced element is a child of an element with class="qWrapper"
+  if (element.parentElement.classList.contains("qWrapper")) {
+  // d3 has an editor instance live...
+    // So create a fresh div#id
+    var tempDiv = document.createElement("div");
+    tempDiv.id = id;
+    // copy the initial content into it
+    tempDiv.innerHTML = cancelBufferMap[id];
+    // attach it to the dom just after qWrapper
+    element.parentElement.after(tempDiv);
+    // remove the old qWrapper and contents
+    element.parentElement.remove();
+  } else {
+    // There is no editor instance
+    return;
+  }
+}
+
+</script>
 
 
 {% endblock %}

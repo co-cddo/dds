@@ -33,10 +33,10 @@ router.post('/review-team-skills-routes', (req, res) => {
 
   // If the checkbox is checked, redirect to agree.html
   if (haveSkills === 'yes') {
-    res.redirect('/khadija-authenticated/200-review-request.html');
+    res.redirect('/khadija-authenticated/200-review-request-wizard.html');
   } else {
     // If the checkbox is not checked, redirect to not-agree.html
-    res.redirect('/khadija-authenticated/200-review-request.html');
+    res.redirect('/khadija-authenticated/200-review-request-wizard.html');
   }
 });
 
