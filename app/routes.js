@@ -61,17 +61,23 @@ router.post('/check-team-skills-routes', (req, res) => {
 
 
 // Handles form submissions from 'reviewer-team-skills.html'
+
+
 router.post('/review-team-skills-routes', (req, res) => {
 
-  const haveSkills = req.body["have-skills"];
-  console.log("haveSkills value: ", haveSkills);
+  const technologySkills = req.body["technology"];
+  const securitySkills = req.body["security"];
+  const dpSkills = req.body["DP"];
+  const legalSkills = req.body["legal"];
+  const governanceSkills = req.body["governance"];
+  const businessSkills = req.body["business"];
 
-  // If the checkbox is checked, redirect to agree.html
-  if (haveSkills === 'yes') {
+  // If the checkbox is checked, redirect to view request
+  if (technologySkills === 'yes' && securitySkills === 'yes' && dpSkills === 'yes' && legalSkills === 'yes' && governanceSkills === 'yes' && businessSkills === 'yes') {
     res.redirect('/khadija-authenticated/200-review-request-wizard.html');
   } else {
-    // If the checkbox is not checked, redirect to not-agree.html
-    res.redirect('/khadija-authenticated/200-review-request-wizard.html');
+    // One skill is missing, redirect to risks
+    res.redirect('/khadija-authenticated/200-potential-risks.html');
   }
 });
 
