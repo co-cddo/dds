@@ -1,0 +1,42 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header-khadija.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
+      <h1 class="govuk-heading-l">Potential risks</h1>
+
+  <p>
+  As a data controller or owner in government, it is essential to carefully consider any request to share personal data from another government department. There are several risks involved in starting to negotiate a data agreement without first consulting your subject matter experts, including:</p>
+
+  <p>
+  Legal compliance risks: If you share personal data without ensuring compliance with data protection laws and regulations, you may be at risk of violating privacy laws, which can lead to legal penalties.</p>
+
+  <p>
+  Security risks: Sharing personal data without proper security measures in place can result in data breaches, which can compromise the confidentiality, integrity, and availability of personal data.</p>
+
+  <div class="govuk-checkboxes__item">
+    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+    <label class="govuk-label govuk-checkboxes__label" for="waste">
+      I confirm I have read and understood the risks
+    </label>
+  </div>
+
+  <a href="/khadija-authenticated/030-confirmation-request-sent-cat" class="govuk-button govuk-!-static-margin-top-6" data-module="govuk-button">Continue</a>
+
+
+    </div>
+  </div>
+
+{% endblock %}

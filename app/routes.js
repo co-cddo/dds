@@ -14,6 +14,19 @@ const router = govukPrototypeKit.requests.setupRouter()
 // 230 = Refine what special category data do you need?
 // 240 = Route based on georgraphy
 // 250 = Will other orgs?
+// 260 = Last question?
+
+
+// notes
+router.post('/260', (req, res) => {
+
+  const willLeave = req.body["reviewed"];
+
+  // other orgs deed data
+  if (willLeave === 'yes') {res.redirect('/khadija-authenticated/030-confirmation-request-sent-cat.html');} 
+  else {res.redirect('/khadija-authenticated/030-last-warning-cat.html');} 
+
+});
 
 
 // notes
@@ -29,7 +42,6 @@ router.post('/250', (req, res) => {
     res.redirect('/khadija-authenticated/030-what-data-no-cat.html');
   }
 });
-
 
 
 // Handles form submissions from 'What type of data do you need which is part of the acquirer wizard
