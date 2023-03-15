@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header-khadija.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Prepare to request a data share</span>
+      <h1 class="govuk-heading-l">
+        Request clinically vulnerable patient data
+      </h1>
+
+      <p class="govuk-body">You will be asked several questions, to make sure...</p>
+
+      <h2 class="govuk-heading-m">
+        Before you start
+      </h2>
+
+      <p class="govuk-body">You need a team with these skills:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>technology</li>
+        <li>data security</li>
+        <li>data protection</li>
+        <li>legal</li>
+        <li>data governance</li>
+        <li>business ownership</li>
+      </ul>
+
+      <a href="/khadija-authenticated/020-tasks-cat" class="govuk-button" data-module="govuk-button">Continue</a>
+
+    </div>
+  </div>
+
+{% endblock %}
+

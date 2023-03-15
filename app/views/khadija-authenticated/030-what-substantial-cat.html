@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header-khadija.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form action="/khadija-authenticated/030-what-gateway-cat" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="specialCatBasis-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
+      <h1 class="govuk-fieldset__heading">
+        What is the substantial public interest for requesting special category data under UK GDPR??
+      </h1>
+    </legend>
+    <div id="specialCatBasis-hint" class="govuk-hint">
+      You may need help from a data protection specialist.
+    </div>
+
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="specialCatBasis" name="specialCatBasis" type="checkbox" value="substantial">
+        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis">
+Statutory and government purposes 
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="specialCatBasis-2" name="specialCatBasis" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
+Administration of justice and parliamentary purposes
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="specialCatBasis-3" name="specialCatBasis" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-3">
+Equality of opportunity or treatment
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="specialCatBasis-4" name="specialCatBasis" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
+Preventing or detecting unlawful acts
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="specialCatBasis-5" name="specialCatBasis" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
+Protecting the public
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="specialCatBasis-6" name="specialCatBasis" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
+(others TBC? - James?)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
+        </label>
+      </div>
+
+
+    </div>
+  </fieldset>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+</form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

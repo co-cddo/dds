@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header-khadija.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form action="/khadija-authenticated/030-how-receive-cat" method="post">
+
+<div class="govuk-form-group">
+  <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+What countries will the data travel through?
+    </label>
+  </h1>
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
+</div>
+
+<p class="govuk-body"><a href="#" class="govuk-link">Add another country</a>.</p>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

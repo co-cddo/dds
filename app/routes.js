@@ -8,6 +8,28 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
 
+// 200 = Do you have access to these skills? cat search sequence
+// 210 = Do you have the legal power to request this data? cat search sequence
+// 220 = What type of data do you need?
+// 230 = Refine what special category data do you need?
+// 240 = Route based on georgraphy
+// 250 = Will other orgs?
+
+
+// notes
+router.post('/250', (req, res) => {
+
+  const willLeave = req.body["otherOrgs"];
+
+  // other orgs deed data
+  if (willLeave.includes('yes')) {
+    res.redirect('/khadija-authenticated/030-what-data-yes-cat.html');
+  } else {
+    // just me
+    res.redirect('/khadija-authenticated/030-what-data-no-cat.html');
+  }
+});
+
 
 
 // Handles form submissions from 'What type of data do you need which is part of the acquirer wizard
@@ -22,6 +44,102 @@ router.post('/check-for-no-need', (req, res) => {
     res.redirect('/khadija-authenticated/020-lawful-basis.html');
   }
 });
+
+
+// notes
+router.post('/240', (req, res) => {
+
+  const willLeave = req.body["leaveUK"];
+
+  // data will be exported
+  if (willLeave.includes('yes')) {
+    res.redirect('/khadija-authenticated/030-what-countries-cat.html');
+  } else {
+    // data stays in uk
+    res.redirect('/khadija-authenticated/030-how-receive-cat.html');
+  }
+});
+
+
+
+// notes
+router.post('/230', (req, res) => {
+
+  const legalPower = req.body["specialCatBasis"];
+
+  // clicked don't know or do not have power
+  if (legalPower.includes('substantial')) {
+    res.redirect('/khadija-authenticated/030-what-substantial-cat.html');
+  } else {
+    // They have the power
+    res.redirect('/khadija-authenticated/030-what-gateway-cat.html');
+  }
+});
+
+
+router.post('/220', (req, res) => {
+
+  const typeNeeded = req.body["typeOfData"];
+
+  // personal was checked
+  if (typeNeeded.includes('personal')) {
+    // special was also checked
+    if (typeNeeded.includes('special')) {
+      res.redirect('/khadija-authenticated/030-legal-basis-both-cat.html');
+    } else {
+      res.redirect('/khadija-authenticated/030-legal-basis-personal-cat.html');
+    }
+  } else {
+    if (typeNeeded.includes('special')) {
+      res.redirect('/khadija-authenticated/030-legal-basis-special-cat.html');
+    } else {
+      res.redirect('/khadija-authenticated/035-shares.html');
+    }
+  }
+
+  console.log("typeOfData value: ", typeNeeded);
+
+});
+
+
+
+// notes
+router.post('/210', (req, res) => {
+
+  const legalPower = req.body["haveLegalPower"];
+
+  // clicked don't know or do not have power
+  if (legalPower === undefined || legalPower === 'donthavepower' || legalPower === 'dontknow') {
+    res.redirect('/khadija-authenticated/020-talk-to-lawyer-cat.html');
+  } else {
+    // They have the power
+    res.redirect('/khadija-authenticated/030-what-type-data-cat.html');
+  }
+});
+
+
+// Handles form submissions from 'check-team-skills.html' which is part of the acquirer wizard
+router.post('/200', (req, res) => {
+
+  const technologySkills = req.body["technology"];
+  const securitySkills = req.body["security"];
+  const dpSkills = req.body["dp"];
+  const legalSkills = req.body["legal"];
+  const governanceSkills = req.body["governance"];
+  const businessSkills = req.body["business"];
+
+  console.log("technologySkills value: ", technologySkills);
+
+  // If one of the 'yes' radios is checked redirect to what-type-data.html
+  if (technologySkills === 'yes' || securitySkills === 'yes' || dpSkills === 'yes' || legalSkills === 'yes' || governanceSkills === 'yes' || businessSkills === 'yes') {
+    res.redirect('/khadija-authenticated/030-have-legal-power-cat');
+  } else {
+    // no radios checked, redirect to potential-risks.html
+    res.redirect('/khadija-authenticated/020-potential-risks-cat.html');
+  }
+});
+
+// typeNeeded.includes('special')
 
 
 // Handles form submissions from 'check-team-skills.html' which is part of the acquirer wizard
