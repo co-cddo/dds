@@ -12,7 +12,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 // 210 = Do you have the legal power to request this data? cat search sequence
 // 220 = What type of data do you need?
 // 230 = Refine what special category data do you need?
-// 240 = Route based on georgraphy
+// 240 = Route based on geography
 // 250 = Will other orgs?
 // 260 = Last question?
 
@@ -35,7 +35,7 @@ router.post('/250', (req, res) => {
   const willLeave = req.body["otherOrgs"];
 
   // other orgs deed data
-  if (willLeave.includes('yes')) {
+  if (willLeave == 'yes') {
     res.redirect('/khadija-authenticated/030-what-data-yes-cat.html');
   } else {
     // just me
@@ -64,7 +64,7 @@ router.post('/240', (req, res) => {
   const willLeave = req.body["leaveUK"];
 
   // data will be exported
-  if (willLeave.includes('yes')) {
+  if (willLeave == 'yes') {
     res.redirect('/khadija-authenticated/030-what-countries-cat.html');
   } else {
     // data stays in uk
