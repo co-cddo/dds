@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds" id="skip-target">
+    <span class="govuk-caption-l">Request a data share</span>
+    <h1 class="govuk-heading-l">Provide owner contact details</h1>
+
+    <form action="/gg-login-cat" method="POST" id="loginForm">
+
+<div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="event-name">
+      Who is in charge of sharing?
+    </label>
+  </h2>
+  <input class="govuk-input govuk-!-width-three-quarters" id="event-name" name="event-name" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="event-name">
+      Role or title?
+    </label>
+  </h2>
+  <input class="govuk-input govuk-!-width-three-quarters" id="event-name" name="event-name" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="event-name">
+      Email address of responsible officer
+    </label>
+  </h2>
+  <input class="govuk-input govuk-!-width-three-quarters" id="event-name" name="event-name" type="text">
+</div>
+
+
+
+      <button type="submit" id="continue" class="govuk-button">Continue</button>
+    </form>
+
+
+
+ </div>
+</div>
+
+
+{% endblock %}
