@@ -38,7 +38,8 @@ The flow is designed to test the actions of acquirers, suppliers, and subject ma
 
 The following diagram shows the data flows supported in the current version of the prototype:
 
-![User flows across prototype](/public/images/Review-wizards-and-collaborate-UI.jpg)
+![User flows across prototype](https://github.com/co-cddo/dds/blob/7e460729caf68a31fc517f83b414721930949408/app/assets/images/Review-wizards-and-collaborate-UI.jpg)
+
 
 ## User journeys for testing
 
