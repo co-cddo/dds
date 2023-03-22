@@ -1,4 +1,4 @@
-# Design a Data Share protoptype
+# Design a Data Share prototype
 Prototypes of the Design a Data Share tools and services. These include journeys for both acquirer and supplier personas and may eventually be merged with other prototypes in this repo.
 
 ## Stack details
@@ -27,7 +27,7 @@ The prototype acts as stimulus for user research. It was designed to test the fo
 
 - "What if we created an online community hub where the data community could learn about sharing best practise, search for data sets, and find contact details of relevant data owners"
 - "What if we didn't build an end-to-end service, but instead provided wizards that helped data acquirers and data suppliers write better responses and better requests? What would happen if those wizards positioned the information that is most often missing nearer the start of the flow?"
-- "What if we took the impact assessment and the contract that are normally handled at the conclusion of the negotiation process, and moved them to the start in starter-for-ten format? How would civil servants react to that"
+- "What if we took the impact assessment and the contract that are normally handled at the conclusion of the negotiation process, and moved them to the beginning in a starter-for-ten format? How would civil servants react to that?"
 - "What if we created a space that would allow supplier and acquirer to collaborate and manage their documentation in one, secure, shared space? Specifically, would the benefits of an audit trail, centralised storage etc. outweigh the cost of complexity and the overhead of learning a new system?"
 
 The research is currently ongoing.
@@ -38,7 +38,7 @@ The flow is designed to test the actions of acquirers, suppliers, and subject ma
 
 The following diagram shows the data flows supported in the current version of the prototype:
 
-<img src="https://github.com/co-cddo/dds/blob/7e460729caf68a31fc517f83b414721930949408/app/assets/images/Review-wizards-and-collaborate-UI.jpg" alt="User flows across prototype" style="width: 100%;">
+<a href=""><img src="https://github.com/co-cddo/dds/blob/7e460729caf68a31fc517f83b414721930949408/app/assets/images/Review-wizards-and-collaborate-UI.jpg" alt="User flows across prototype" style="width: 100%;"></a>
 
 
 ## User journeys for testing
