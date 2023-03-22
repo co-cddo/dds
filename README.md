@@ -1,5 +1,5 @@
 # Design a Data Share protoptype
-Prototypes of the Design a Data Share tools and services. These include journeys for both acquirer and supplier personas and may eventually be merged with other prototypes in this repo
+Prototypes of the Design a Data Share tools and services. These include journeys for both acquirer and supplier personas and may eventually be merged with other prototypes in this repo.
 
 ## Stack details
 
@@ -42,9 +42,7 @@ The following diagram shows the data flows supported in the current version of t
 
 ## User journeys for testing
 
-The prototype currently supports testing four user journeys.
-
-Current journeys for testing
+The prototype currently supports testing four user journeys:
 
 1. Acquirer has found data in catalogue
 (starts from the catalogue)
@@ -54,6 +52,7 @@ Current journeys for testing
 (starts from notification email)
 4. Supplier checks the progress of the requests she had responded to.
 (starts from public portal - then clicks "review your request")
+
 
 
 
