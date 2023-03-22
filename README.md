@@ -21,7 +21,7 @@ This build was created in order to test design speculations during an Alpha phas
 
 The speculations were ideated after reviewing discovery phase outputs and performing initial rounds of user research in the current phase. The "what if" design speculations build on the central "How might we" user need which is:
 
-> In order to better meet my service users needs, I need to include data that is not managed by my department in my service 
+> In order to better meet my service users' needs, I need to include data that is not managed by my department in my service 
 
 The prototype acts as stimulus for user research. It was designed to test the following speculations:
 
