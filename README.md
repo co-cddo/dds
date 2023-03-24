@@ -38,8 +38,7 @@ The flow is designed to test the actions of acquirers, suppliers, and subject ma
 
 The following diagram shows the data flows supported in the current version of the prototype:
 
-<a href="https://github.com/co-cddo/dds/blob/69edc59ebef35a2661ed14c61cc09c581c9e9c5a/app/assets/images/coordinated-journey-flows-r3.pdf"><img src="https://github.com/co-cddo/dds/blob/69edc59ebef35a2661ed14c61cc09c581c9e9c5a/app/assets/images/coordinated-journey-flows-r3.jpg" alt="User flows across prototype" style="width: 100%;"></a>
-
+<a href="https://github.com/co-cddo/dds/blob/69edc59ebef35a2661ed14c61cc09c581c9e9c5a/app/assets/images/coordinated-journey-flows-r3.pdf"><img src="https://github.com/co-cddo/dds/blob/e85ccad5383292166b488bce38af765395704ca5/app/assets/images/coordinated-journey-flows-r3.jpg" alt="User flows across prototype" style="width: 100%;"></a>
 
 ## User journeys for testing
 
