@@ -142,8 +142,8 @@ router.post('/200', (req, res) => {
 
   console.log("technologySkills value: ", technologySkills);
 
-  // If one of the 'yes' radios is checked redirect to what-type-data.html
-  if (technologySkills === 'yes' || securitySkills === 'yes' || dpSkills === 'yes' || legalSkills === 'yes' || governanceSkills === 'yes' || businessSkills === 'yes') {
+  // If all of the 'yes' radios are checked redirect to what-type-data.html
+  if (technologySkills === 'yes' && securitySkills === 'yes' && dpSkills === 'yes' && legalSkills === 'yes' && governanceSkills === 'yes' && businessSkills === 'yes') {
     res.redirect('/khadija-authenticated/030-have-legal-power-cat');
   } else {
     // no radios checked, redirect to potential-risks.html
