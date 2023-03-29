@@ -241,21 +241,26 @@ router.post('/decision-routes', (req, res) => {
 // Handles form submissions from 'has team reviewed'
 router.post('/team-decision-routes', (req, res) => {
 
-  const yourDecision = req.body["team-has-reviewed"];
-  console.log("yourDecision value: ", yourDecision);
+  const technologySkills = req.body["technology"];
+  const securitySkills = req.body["security"];
+  const dpSkills = req.body["DP"];
+  const legalSkills = req.body["legal"];
+  const governanceSkills = req.body["governance"];
+  const businessSkills = req.body["business"];
 
-  // If the checkbox is checked, redirect to agree.html
-  if (yourDecision === undefined) {
-    res.redirect('/khadija-authenticated/100-decision');
-  } 
-  if (yourDecision === 'Yes') {
-    res.redirect('/khadija-authenticated/100-decision');
-  } 
-  if (yourDecision === 'No') {
-    res.redirect('/khadija-authenticated/100-potential-risks');
-  } 
-
+  // If the checkbox is checked, redirect to view request
+  if (technologySkills === 'yes' && securitySkills === 'yes' && dpSkills === 'yes' && legalSkills === 'yes' && governanceSkills === 'yes' && businessSkills === 'yes') {
+    res.redirect('/khadija-authenticated/100-decision.html');
+  } else {
+    // One skill is missing, redirect to risks
+    res.redirect('/khadija-authenticated/100-potential-risks.html');
+  }
 });
+
+
+
+
+
 
 
 

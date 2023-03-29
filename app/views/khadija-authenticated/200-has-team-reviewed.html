@@ -14,33 +14,118 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-<form class="form" action="/team-decision-routes" method="post">
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="team-has-reviewed-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <span class="govuk-caption-l">Review your data sharing request</span>
-      <h1 class="govuk-fieldset__heading">
-        Has your team reviewed these answers?
+      <span class="govuk-caption-l">Review sharing request</span>
+      <h1 class="govuk-heading-l">
+        Have people with these skills reviewed this request?
       </h1>
+<form action="/team-decision-routes" method="post">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="technology-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Technology</h2>
     </legend>
-
-    <div class="govuk-radios" data-module="govuk-radios">
-
+    <div id="technology-hint" class="govuk-hint">
+      For example: a technical architect, to help define data flows and requirements
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="team-has-reviewed" name="team-has-reviewed" type="radio" value="Yes" aria-describedby="team-has-reviewed-item-hint">
-        <label class="govuk-label govuk-radios__label" for="team-has-reviewed">
-Yes
-        </label>
+        <input class="govuk-radios__input" id="technology" name="technology" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="technology">Yes</label>
       </div>
-
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="team-has-reviewed-2" name="team-has-reviewed" type="radio" value="No" aria-describedby="team-has-reviewed-2-item-hint">
-        <label class="govuk-label govuk-radios__label" for="team-has-reviewed-2">
-No
-        </label>
+        <input class="govuk-radios__input" id="technology-2" name="technology" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="technology-2">No</label>
       </div>
-
+    </div>
+  </fieldset>
+  <fieldset class="govuk-fieldset" aria-describedby="security-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Security</h2>
+    </legend>
+    <div id="security-hint" class="govuk-hint">
+      For example: a cybersecurity analyst
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="security" name="security" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="security">Yes</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="security-2" name="security" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="security-2">No</label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="govuk-fieldset" aria-describedby="DP-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Data protection</h2>
+    </legend>
+    <div id="DP-hint" class="govuk-hint">
+      For example: a data protection officer
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="DP" name="DP" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="DP">Yes</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="DP-2" name="DP" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="DP-2">No</label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="govuk-fieldset" aria-describedby="legal-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Legal</h2>
+    </legend>
+    <div id="legal-hint" class="govuk-hint">
+      For example: a lawyer
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="legal" name="legal" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="legal">Yes</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="legal-2" name="legal" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="legal-2">No</label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="govuk-fieldset" aria-describedby="governance-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Data governance</h2>
+    </legend>
+    <div id="governance-hint" class="govuk-hint">
+      For example: an information manager
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="governance" name="governance" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="governance">Yes</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="governance-2" name="governance" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="governance-2">No</label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="govuk-fieldset" aria-describedby="business-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">Business ownership</h2>
+    </legend>
+    <div id="business-hint" class="govuk-hint">
+      For example: a product owner or delivery manager
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="business" name="business" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="business">Yes</label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="business-2" name="business" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="business-2">No</label>
+      </div>
     </div>
   </fieldset>
 </div>
@@ -50,6 +135,8 @@ No
 </button>
 
 </form>
+
+
 
 
     </div>
