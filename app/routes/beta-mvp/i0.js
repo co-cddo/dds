@@ -1,95 +1,74 @@
-//
-// For guidance on how to create routes see:
-// https://prototype-kit.service.gov.uk/docs/create-routes
-//
+// #################################################
+// Stage: Beta, MVP
+// Iteration: 0
+// #################################################
 
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
-// Add your routes here
 
-// 200 = Do you have access to these skills? cat search sequence
-// 210 = Do you have the legal power to request this data? cat search sequence
-// 220 = What type of data do you need?
-// 230 = Refine what special category data do you need?
-// 240 = Route based on geography
-// 250 = Will other orgs?
-// 260 = Last question?
-
-
-// notes
-router.post('/260', (req, res) => {
+router.post('bMVP_i0/260', (req, res) => {
 
   const willLeave = req.body["reviewed"];
 
   // other orgs deed data
-  if (willLeave === 'yes') {res.redirect('/khadija-authenticated/030-confirmation-request-sent-cat.html');} 
-  else {res.redirect('/khadija-authenticated/030-last-warning-cat.html');} 
+  if (willLeave === 'yes') {res.redirect('beta-mvp/0/acquirer/030-confirmation-request-sent-cat.html');} 
+  else {res.redirect('beta-mvp/0/acquirer/030-last-warning-cat.html');} 
 
 });
 
-
-// notes
-router.post('/250', (req, res) => {
+router.post('bMVP_i0/250', (req, res) => {
 
   const willLeave = req.body["otherOrgs"];
 
   // other orgs deed data
   if (willLeave == 'yes') {
-    res.redirect('/khadija-authenticated/030-what-data-yes-cat.html');
+    res.redirect('beta-mvp/0/acquirer/030-what-data-yes-cat.html');
   } else {
     // just me
-    res.redirect('/khadija-authenticated/030-what-data-no-cat.html');
+    res.redirect('beta-mvp/0/acquirer/030-what-data-no-cat.html');
   }
 });
 
-
 // Handles form submissions from 'What type of data do you need which is part of the acquirer wizard
-router.post('/check-for-no-need', (req, res) => {
+router.post('bMVP_i0/check-for-no-need', (req, res) => {
 
   const dataTypes = req.body["countries"];
 
   // If none is selected exit to no agreement required
   if (dataTypes === 'none') {
-    res.redirect('/khadija-authenticated/020-may-not-need.html');
+    res.redirect('beta-mvp/0/acquirer/020-may-not-need.html');
   } else {
-    res.redirect('/khadija-authenticated/020-lawful-basis.html');
+    res.redirect('beta-mvp/0/acquirer/020-lawful-basis.html');
   }
 });
-
-
-// notes
-router.post('/240', (req, res) => {
+router.post('bMVP_i0/240', (req, res) => {
 
   const willLeave = req.body["leaveUK"];
 
   // data will be exported
   if (willLeave == 'yes') {
-    res.redirect('/khadija-authenticated/030-what-countries-cat.html');
+    res.redirect('beta-mvp/0/acquirer/030-what-countries-cat.html');
   } else {
     // data stays in uk
-    res.redirect('/khadija-authenticated/030-how-receive-cat.html');
+    res.redirect('beta-mvp/0/acquirer/030-how-receive-cat.html');
   }
 });
 
-
-
-// notes
-router.post('/230', (req, res) => {
+router.post('bMVP_i0/230', (req, res) => {
 
   const legalPower = req.body["specialCatBasis"];
 
   // clicked don't know or do not have power
   if (legalPower.includes('substantial')) {
-    res.redirect('/khadija-authenticated/030-what-substantial-cat.html');
+    res.redirect('beta-mvp/0/acquirer/030-what-substantial-cat.html');
   } else {
     // They have the power
-    res.redirect('/khadija-authenticated/030-what-gateway-cat.html');
+    res.redirect('beta-mvp/0/acquirer/030-what-gateway-cat.html');
   }
 });
 
-
-router.post('/220', (req, res) => {
+router.post('bMVP_i0/220', (req, res) => {
 
   const typeNeeded = req.body["typeOfData"];
 
@@ -97,15 +76,15 @@ router.post('/220', (req, res) => {
   if (typeNeeded.includes('personal')) {
     // special was also checked
     if (typeNeeded.includes('special')) {
-      res.redirect('/khadija-authenticated/030-legal-basis-both-cat.html');
+      res.redirect('beta-mvp/0/acquirer/030-legal-basis-both-cat.html');
     } else {
-      res.redirect('/khadija-authenticated/030-legal-basis-personal-cat.html');
+      res.redirect('beta-mvp/0/acquirer/030-legal-basis-personal-cat.html');
     }
   } else {
     if (typeNeeded.includes('special')) {
-      res.redirect('/khadija-authenticated/030-legal-basis-special-cat.html');
+      res.redirect('beta-mvp/0/acquirer/030-legal-basis-special-cat.html');
     } else {
-      res.redirect('/khadija-authenticated/035-shares.html');
+      res.redirect('beta-mvp/0/acquirer/035-shares.html');
     }
   }
 
@@ -113,25 +92,22 @@ router.post('/220', (req, res) => {
 
 });
 
-
-
-// notes
-router.post('/210', (req, res) => {
+router.post('bMVP_i0/210', (req, res) => {
 
   const legalPower = req.body["haveLegalPower"];
 
   // clicked don't know or do not have power
   if (legalPower === undefined || legalPower === 'donthavepower' || legalPower === 'dontknow') {
-    res.redirect('/khadija-authenticated/020-talk-to-lawyer-cat.html');
+    res.redirect('beta-mvp/0/acquirer/020-talk-to-lawyer-cat.html');
   } else {
     // They have the power
-    res.redirect('/khadija-authenticated/030-what-type-data-cat.html');
+    res.redirect('beta-mvp/0/acquirer/030-what-type-data-cat.html');
   }
 });
 
 
 // Handles form submissions from 'check-team-skills.html' which is part of the acquirer wizard
-router.post('/200', (req, res) => {
+router.post('bMVP_i0/200', (req, res) => {
 
   const technologySkills = req.body["technology"];
   const securitySkills = req.body["security"];
@@ -144,10 +120,10 @@ router.post('/200', (req, res) => {
 
   // If all of the 'yes' radios are checked redirect to what-type-data.html
   if (technologySkills === 'yes' && securitySkills === 'yes' && dpSkills === 'yes' && legalSkills === 'yes' && governanceSkills === 'yes' && businessSkills === 'yes') {
-    res.redirect('/khadija-authenticated/030-have-legal-power-cat');
+    res.redirect('beta-mvp/0/acquirer/030-have-legal-power-cat');
   } else {
     // no radios checked, redirect to potential-risks.html
-    res.redirect('/khadija-authenticated/020-potential-risks-cat.html');
+    res.redirect('beta-mvp/0/acquirer/020-potential-risks-cat.html');
   }
 });
 
@@ -155,7 +131,7 @@ router.post('/200', (req, res) => {
 
 
 // Handles form submissions from 'check-team-skills.html' which is part of the acquirer wizard
-router.post('/6-Mar-check-team-skills-routes', (req, res) => {
+router.post('bMVP_i0/6-Mar-check-team-skills-routes', (req, res) => {
 
   const technologySkills = req.body["technology"];
   const securitySkills = req.body["security"];
@@ -166,16 +142,16 @@ router.post('/6-Mar-check-team-skills-routes', (req, res) => {
 
   // If one of the 'yes' radios is checked redirect to what-type-data.html
   if (technologySkills === 'yes' || securitySkills === 'yes' || dpSkills === 'yes' || legalSkills === 'yes' || governanceSkills === 'yes' || businessSkills === 'yes') {
-    res.redirect('/khadija-authenticated/020-what-type-data.html');
+    res.redirect('beta-mvp/0/acquirer/020-what-type-data.html');
   } else {
     // no radios checked, redirect to potential-risks.html
-    res.redirect('/khadija-authenticated/020-potential-risks.html');
+    res.redirect('beta-mvp/0/acquirer/020-potential-risks.html');
   }
 });
 
 
 // Handles form submissions from 'check-team-skills.html'
-router.post('/check-team-skills-routes', (req, res) => {
+router.post('bMVP_i0/check-team-skills-routes', (req, res) => {
 
   const haveSkills = req.body["have-skills"];
   console.log("haveSkills value: ", haveSkills);
@@ -193,7 +169,7 @@ router.post('/check-team-skills-routes', (req, res) => {
 // Handles form submissions from 'reviewer-team-skills.html'
 
 
-router.post('/review-team-skills-routes', (req, res) => {
+router.post('bMVP_i0/review-team-skills-routes', (req, res) => {
 
   const technologySkills = req.body["technology"];
   const securitySkills = req.body["security"];
@@ -204,42 +180,42 @@ router.post('/review-team-skills-routes', (req, res) => {
 
   // If the checkbox is checked, redirect to view request
   if (technologySkills === 'yes' && securitySkills === 'yes' && dpSkills === 'yes' && legalSkills === 'yes' && governanceSkills === 'yes' && businessSkills === 'yes') {
-    res.redirect('/khadija-authenticated/200-review-request-wizard.html');
+    res.redirect('beta-mvp/0/acquirer/200-review-request-wizard.html');
   } else {
     // One skill is missing, redirect to risks
-    res.redirect('/khadija-authenticated/200-potential-risks.html');
+    res.redirect('beta-mvp/0/acquirer/200-potential-risks.html');
   }
 });
 
 
 // Handles form submissions from 'decision'
-router.post('/decision-routes', (req, res) => {
+router.post('bMVP_i0/decision-routes', (req, res) => {
 
   const yourDecision = req.body["your-decision"];
   console.log("yourDecision value: ", yourDecision);
 
   // If the checkbox is checked, redirect to agree.html
   if (yourDecision === undefined) {
-    res.redirect('/khadija-authenticated/110-propose-time');
+    res.redirect('beta-mvp/0/acquirer/110-propose-time');
   } 
   if (yourDecision === 'meeting') {
-    res.redirect('/khadija-authenticated/110-propose-time');
+    res.redirect('beta-mvp/0/acquirer/110-propose-time');
   } 
   if (yourDecision === 'accept') {
-    res.redirect('/khadija-authenticated/110-accept');
+    res.redirect('beta-mvp/0/acquirer/110-accept');
   } 
   if (yourDecision === 'comment') {
-    res.redirect('/khadija-authenticated/110-comment');
+    res.redirect('beta-mvp/0/acquirer/110-comment');
   } 
   if (yourDecision === 'reject') {
-    res.redirect('/khadija-authenticated/110-reject');
+    res.redirect('beta-mvp/0/acquirer/110-reject');
   } 
 
 });
 
 
 // Handles form submissions from 'has team reviewed'
-router.post('/team-decision-routes', (req, res) => {
+router.post('bMVP_i0/team-decision-routes', (req, res) => {
 
   const technologySkills = req.body["technology"];
   const securitySkills = req.body["security"];
@@ -250,27 +226,12 @@ router.post('/team-decision-routes', (req, res) => {
 
   // If the checkbox is checked, redirect to view request
   if (technologySkills === 'yes' && securitySkills === 'yes' && dpSkills === 'yes' && legalSkills === 'yes' && governanceSkills === 'yes' && businessSkills === 'yes') {
-    res.redirect('/khadija-authenticated/100-decision.html');
+    res.redirect('beta-mvp/0/acquirer/100-decision.html');
   } else {
     // One skill is missing, redirect to risks
-    res.redirect('/khadija-authenticated/100-potential-risks.html');
+    res.redirect('beta-mvp/0/acquirer/100-potential-risks.html');
   }
 });
-
-
-// #################################################
-// Stage: Beta, MVP
-// Iteration: 0
-// #################################################
-
-const bMVP_i0 = require('./routes/beta-mvp/0.js')
-router.use('', bMVP_i0);
-
-module.exports = router
-
-
-
-
 
 module.exports = router;
 

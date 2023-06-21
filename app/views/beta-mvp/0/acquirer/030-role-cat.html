@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header-khadija.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+<form action="/khadija-authenticated/030-others-cat" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
+
+      <h1 class="govuk-fieldset__heading">
+What do you think the role of your organisation will be?
+      </h1>
+    </legend>
+
+    <div class="govuk-radios" data-module="govuk-radios">
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="leaveUK-1" name="leaveUK" type="radio" value="controller">
+        <label class="govuk-label govuk-radios__label" for="leaveUK-1">
+Controller
+        </label>
+        <div id="leaveUK-1-hint" class="govuk-hint govuk-radios__hint">
+We want to exercise overall control over why and how this data is processed.
+        </div>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="leaveUK-2" name="leaveUK" type="radio" value="joint">
+        <label class="govuk-label govuk-radios__label" for="leaveUK-2">
+Joint controller
+         </label>
+        <div id="leaveUK-2-hint" class="govuk-hint govuk-radios__hint">
+We want to share responsibility with another department.
+        </div>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="leaveUK-3" name="leaveUK" type="radio" value="processor">
+        <label class="govuk-label govuk-radios__label" for="leaveUK-3">
+Processor
+        </label>
+        <div id="leaveUK-3-hint" class="govuk-hint govuk-radios__hint">
+We will follow instructions from another department about using this data.
+        </div>
+      </div>
+
+      <div class="govuk-radios__divider">or</div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="leaveUK-4" name="leaveUK" type="radio" value="dontknow">
+        <label class="govuk-label govuk-radios__label" for="leaveUK-4">
+I don't know
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

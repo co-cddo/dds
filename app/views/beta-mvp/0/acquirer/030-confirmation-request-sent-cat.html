@@ -1,0 +1,43 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header-khadija.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+        aria-labelledby="govuk-notification-banner-title"
+        data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Your request to share data has been sent.
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h3 class="govuk-notification-banner__heading">
+            Your <a href="200-review-request-cat">request DS 13992</a> has been saved in anticipation of your future negotiations with the other depatment.
+          </h3>
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>
+        Your team will have much to review, discuss, and agree on before your agreement can be finalised. You may use this service to record those deliberations for auditing purposes.
+      </p>
+
+      <p>If you need help with this service, please <a href="035-shares">contact our data exchange support team</a>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header-khadija.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
+      <h1 class="govuk-heading-l">Talk to your lawyer</h1>
+      <p>
+      Lorem ipsum dolor sin amet.</p>
+
+      <a href="035-shares" class="govuk-button govuk-!-static-margin-top-6" data-module="govuk-button">Continue</a>
+
+    </div>
+  </div>
+
+{% endblock %}
