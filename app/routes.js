@@ -263,14 +263,8 @@ router.post('/team-decision-routes', (req, res) => {
 // Iteration: 0
 // #################################################
 
-const bMVP_i0 = require('./routes/beta-mvp/0.js')
+const bMVP_i0 = require('./routes/beta-mvp/i0.js')
 router.use('', bMVP_i0);
-
-module.exports = router
-
-
-
-
 
 module.exports = router;
 

@@ -7,7 +7,7 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
 
-router.post('bMVP_i0/260', (req, res) => {
+router.post('/bMVP_i0--260', (req, res) => {
 
   const willLeave = req.body["reviewed"];
 
@@ -17,7 +17,7 @@ router.post('bMVP_i0/260', (req, res) => {
 
 });
 
-router.post('bMVP_i0/250', (req, res) => {
+router.post('/bMVP_i0--250', (req, res) => {
 
   const willLeave = req.body["otherOrgs"];
 
@@ -31,7 +31,7 @@ router.post('bMVP_i0/250', (req, res) => {
 });
 
 // Handles form submissions from 'What type of data do you need which is part of the acquirer wizard
-router.post('bMVP_i0/check-for-no-need', (req, res) => {
+router.post('/bMVP_i0--check-for-no-need', (req, res) => {
 
   const dataTypes = req.body["countries"];
 
@@ -42,7 +42,7 @@ router.post('bMVP_i0/check-for-no-need', (req, res) => {
     res.redirect('beta-mvp/0/acquirer/020-lawful-basis.html');
   }
 });
-router.post('bMVP_i0/240', (req, res) => {
+router.post('/bMVP_i0--240', (req, res) => {
 
   const willLeave = req.body["leaveUK"];
 
@@ -55,7 +55,7 @@ router.post('bMVP_i0/240', (req, res) => {
   }
 });
 
-router.post('bMVP_i0/230', (req, res) => {
+router.post('/bMVP_i0--230', (req, res) => {
 
   const legalPower = req.body["specialCatBasis"];
 
@@ -68,7 +68,7 @@ router.post('bMVP_i0/230', (req, res) => {
   }
 });
 
-router.post('bMVP_i0/220', (req, res) => {
+router.post('/bMVP_i0--220', (req, res) => {
 
   const typeNeeded = req.body["typeOfData"];
 
@@ -92,7 +92,7 @@ router.post('bMVP_i0/220', (req, res) => {
 
 });
 
-router.post('bMVP_i0/210', (req, res) => {
+router.post('/bMVP_i0--210', (req, res) => {
 
   const legalPower = req.body["haveLegalPower"];
 
@@ -107,7 +107,7 @@ router.post('bMVP_i0/210', (req, res) => {
 
 
 // Handles form submissions from 'check-team-skills.html' which is part of the acquirer wizard
-router.post('bMVP_i0/200', (req, res) => {
+router.post('/bMVP_i0--200', (req, res) => {
 
   const technologySkills = req.body["technology"];
   const securitySkills = req.body["security"];
@@ -131,7 +131,7 @@ router.post('bMVP_i0/200', (req, res) => {
 
 
 // Handles form submissions from 'check-team-skills.html' which is part of the acquirer wizard
-router.post('bMVP_i0/6-Mar-check-team-skills-routes', (req, res) => {
+router.post('/bMVP_i0--6-Mar-check-team-skills-routes', (req, res) => {
 
   const technologySkills = req.body["technology"];
   const securitySkills = req.body["security"];
@@ -151,7 +151,7 @@ router.post('bMVP_i0/6-Mar-check-team-skills-routes', (req, res) => {
 
 
 // Handles form submissions from 'check-team-skills.html'
-router.post('bMVP_i0/check-team-skills-routes', (req, res) => {
+router.post('/bMVP_i0--check-team-skills-routes', (req, res) => {
 
   const haveSkills = req.body["have-skills"];
   console.log("haveSkills value: ", haveSkills);
@@ -169,7 +169,7 @@ router.post('bMVP_i0/check-team-skills-routes', (req, res) => {
 // Handles form submissions from 'reviewer-team-skills.html'
 
 
-router.post('bMVP_i0/review-team-skills-routes', (req, res) => {
+router.post('/bMVP_i0--review-team-skills-routes', (req, res) => {
 
   const technologySkills = req.body["technology"];
   const securitySkills = req.body["security"];
@@ -189,7 +189,7 @@ router.post('bMVP_i0/review-team-skills-routes', (req, res) => {
 
 
 // Handles form submissions from 'decision'
-router.post('bMVP_i0/decision-routes', (req, res) => {
+router.post('/bMVP_i0--decision-routes', (req, res) => {
 
   const yourDecision = req.body["your-decision"];
   console.log("yourDecision value: ", yourDecision);
@@ -215,7 +215,7 @@ router.post('bMVP_i0/decision-routes', (req, res) => {
 
 
 // Handles form submissions from 'has team reviewed'
-router.post('bMVP_i0/team-decision-routes', (req, res) => {
+router.post('/bMVP_i0--team-decision-routes', (req, res) => {
 
   const technologySkills = req.body["technology"];
   const securitySkills = req.body["security"];
