@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header-khadija.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+        aria-labelledby="govuk-notification-banner-title"
+        data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            You have accepted the data sharing request.
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h3 class="govuk-notification-banner__heading">
+            A <a href="035-MoU">draft checklist of issues to agree</a> has been created in your shares folder.
+          </h3>
+          <p class="govuk-body">Contact the requestor <a class="govuk-notification-banner__link" href="#">jasman.smith@department.gov.uk</a> to start discussions.</p>
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>
+        Your team will have much to review, discuss, and agree on before your agreement can be finalised. You may use this service to record those deliberations for auditing purposes.
+      </p>
+
+      <p>You may <a href="035-MoU">review your checklist</a> of issues to agree (these may form the basis for a draft MoU). or <a href="035-shares">visit your data shares folder</a>.</p>
+
+      <p>If you need help with this service, please <a href="035-shares">contact our data exchange support team</a>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

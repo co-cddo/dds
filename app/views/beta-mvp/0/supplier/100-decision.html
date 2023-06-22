@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/account-header-khadija.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form" action="/bMVP_i0--decision-routes" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="your-decision-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <span class="govuk-caption-l">Review your data sharing request</span>
+      <h1 class="govuk-fieldset__heading">
+        What is your decision?
+      </h1>
+    </legend>
+    <div id="your-decision-hint" class="govuk-hint">
+      Based on your decision we'll notify the other party and set up document templates as required.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="your-decision" name="your-decision" type="radio" value="meeting" aria-describedby="your-decision-item-hint">
+        <label class="govuk-label govuk-radios__label" for="your-decision">
+Set up a meeting to discuss further
+        </label>
+        <div id="your-decision-item-hint" class="govuk-hint govuk-radios__hint">
+They have supplied enough information to proceed.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="your-decision-2" name="your-decision" type="radio" value="comment" aria-describedby="your-decision-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="your-decision-2">
+Return with comments
+        </label>
+        <div id="your-decision-2-item-hint" class="govuk-hint govuk-radios__hint">
+Some information is lacking. You cannot make a decision without it.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="your-decision-3" name="your-decision" type="radio" value="reject" aria-describedby="your-decision-3-item-hint">
+        <label class="govuk-label govuk-radios__label" for="your-decision-3">
+Reject data share request
+        </label>
+        <div id="your-decision-3-item-hint" class="govuk-hint govuk-radios__hint">
+There are fundamental problems with this request that cannot be fixed.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="your-decision-4" name="your-decision" type="radio" value="accept" aria-describedby="your-decision-4-item-hint">
+        <label class="govuk-label govuk-radios__label" for="your-decision-4">
+Accept data share request
+        </label>
+        <div id="your-decision-4-item-hint" class="govuk-hint govuk-radios__hint">
+Proceed and start creating memorandum of understanding.
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

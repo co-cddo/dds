@@ -6,6 +6,9 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
+// #################################################
+// Acquirer
+// #################################################
 
 router.post('/bMVP_i0--260', (req, res) => {
 
@@ -16,17 +19,6 @@ router.post('/bMVP_i0--260', (req, res) => {
   else {res.redirect('beta-mvp/0/acquirer/030-last-warning-cat.html');} 
 
 });
-
-// router.post('/bMVP_i0--250', (req, res) => {
-
-//   const willLeave = req.body["otherOrgs"];
-
-//   if (willLeave == 'yes') {
-//     res.redirect('beta-mvp/0/acquirer/030-what-data-yes-cat.html');
-//   } else {
-//     res.redirect('beta-mvp/0/acquirer/030-what-data-no-cat.html');
-//   }
-// });
 
 // Handles form submissions from 'What type of data do you need which is part of the acquirer wizard
 router.post('/bMVP_i0--check-for-no-need', (req, res) => {
@@ -66,30 +58,6 @@ router.post('/bMVP_i0--230', (req, res) => {
   }
 });
 
-// router.post('/bMVP_i0--220', (req, res) => {
-
-//   const typeNeeded = req.body["typeOfData"];
-
-//   // personal was checked
-//   if (typeNeeded.includes('personal')) {
-//     // special was also checked
-//     if (typeNeeded.includes('special')) {
-//       res.redirect('beta-mvp/0/acquirer/030-legal-basis-both-cat.html');
-//     } else {
-//       res.redirect('beta-mvp/0/acquirer/030-legal-basis-personal-cat.html');
-//     }
-//   } else {
-//     if (typeNeeded.includes('special')) {
-//       res.redirect('beta-mvp/0/acquirer/030-legal-basis-special-cat.html');
-//     } else {
-//       res.redirect('beta-mvp/0/acquirer/035-shares.html');
-//     }
-//   }
-
-//   console.log("typeOfData value: ", typeNeeded);
-
-// });
-
 router.post('/bMVP_i0--210', (req, res) => {
 
   const legalPower = req.body["haveLegalPower"];
@@ -125,49 +93,11 @@ router.post('/bMVP_i0--200', (req, res) => {
   }
 });
 
-// typeNeeded.includes('special')
+// #################################################
+// Supplier
+// #################################################
 
-
-// Handles form submissions from 'check-team-skills.html' which is part of the acquirer wizard
-router.post('/bMVP_i0--6-Mar-check-team-skills-routes', (req, res) => {
-
-  const technologySkills = req.body["technology"];
-  const securitySkills = req.body["security"];
-  const dpSkills = req.body["dp"];
-  const legalSkills = req.body["legal"];
-  const governanceSkills = req.body["governance"];
-  const businessSkills = req.body["business"];
-
-  // If one of the 'yes' radios is checked redirect to what-type-data.html
-  if (technologySkills === 'yes' || securitySkills === 'yes' || dpSkills === 'yes' || legalSkills === 'yes' || governanceSkills === 'yes' || businessSkills === 'yes') {
-    res.redirect('beta-mvp/0/acquirer/020-what-type-data.html');
-  } else {
-    // no radios checked, redirect to potential-risks.html
-    res.redirect('beta-mvp/0/acquirer/020-potential-risks.html');
-  }
-});
-
-
-// Handles form submissions from 'check-team-skills.html'
-router.post('/bMVP_i0--check-team-skills-routes', (req, res) => {
-
-  const haveSkills = req.body["have-skills"];
-  console.log("haveSkills value: ", haveSkills);
-
-  // If the checkbox is checked, redirect to agree.html
-  if (haveSkills === 'yes') {
-    res.redirect('/jasman/check-team-skills-yes.html');
-  } else {
-    // If the checkbox is not checked, redirect to not-agree.html
-    res.redirect('/jasman/check-team-skills-no.html');
-  }
-});
-
-
-// Handles form submissions from 'reviewer-team-skills.html'
-
-
-router.post('/bMVP_i0--review-team-skills-routes', (req, res) => {
+router.post('/bMVP_i0--team-decision-routes-supplier', (req, res) => {
 
   const technologySkills = req.body["technology"];
   const securitySkills = req.body["security"];
@@ -178,13 +108,12 @@ router.post('/bMVP_i0--review-team-skills-routes', (req, res) => {
 
   // If the checkbox is checked, redirect to view request
   if (technologySkills === 'yes' && securitySkills === 'yes' && dpSkills === 'yes' && legalSkills === 'yes' && governanceSkills === 'yes' && businessSkills === 'yes') {
-    res.redirect('beta-mvp/0/acquirer/200-review-request-wizard.html');
+    res.redirect('beta-mvp/0/supplier/100-decision.html');
   } else {
     // One skill is missing, redirect to risks
-    res.redirect('beta-mvp/0/acquirer/200-potential-risks.html');
+    res.redirect('beta-mvp/0/supplier/100-potential-risks.html');
   }
 });
-
 
 // Handles form submissions from 'decision'
 router.post('/bMVP_i0--decision-routes', (req, res) => {
@@ -194,41 +123,21 @@ router.post('/bMVP_i0--decision-routes', (req, res) => {
 
   // If the checkbox is checked, redirect to agree.html
   if (yourDecision === undefined) {
-    res.redirect('beta-mvp/0/acquirer/110-propose-time');
+    res.redirect('beta-mvp/0/supplier/110-propose-time');
   } 
   if (yourDecision === 'meeting') {
-    res.redirect('beta-mvp/0/acquirer/110-propose-time');
+    res.redirect('beta-mvp/0/supplier/110-propose-time');
   } 
   if (yourDecision === 'accept') {
-    res.redirect('beta-mvp/0/acquirer/110-accept');
+    res.redirect('beta-mvp/0/supplier/110-accept');
   } 
   if (yourDecision === 'comment') {
-    res.redirect('beta-mvp/0/acquirer/110-comment');
+    res.redirect('beta-mvp/0/supplier/110-comment');
   } 
   if (yourDecision === 'reject') {
-    res.redirect('beta-mvp/0/acquirer/110-reject');
+    res.redirect('beta-mvp/0/supplier/110-reject');
   } 
 
-});
-
-
-// Handles form submissions from 'has team reviewed'
-router.post('/bMVP_i0--team-decision-routes', (req, res) => {
-
-  const technologySkills = req.body["technology"];
-  const securitySkills = req.body["security"];
-  const dpSkills = req.body["DP"];
-  const legalSkills = req.body["legal"];
-  const governanceSkills = req.body["governance"];
-  const businessSkills = req.body["business"];
-
-  // If the checkbox is checked, redirect to view request
-  if (technologySkills === 'yes' && securitySkills === 'yes' && dpSkills === 'yes' && legalSkills === 'yes' && governanceSkills === 'yes' && businessSkills === 'yes') {
-    res.redirect('beta-mvp/0/acquirer/100-decision.html');
-  } else {
-    // One skill is missing, redirect to risks
-    res.redirect('beta-mvp/0/acquirer/100-potential-risks.html');
-  }
 });
 
 module.exports = router;
