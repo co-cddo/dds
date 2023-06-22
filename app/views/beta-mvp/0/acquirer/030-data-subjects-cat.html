@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-   – {{ serviceName }}
+   {{ serviceName }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,32 +11,44 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="030-aims-cat" method="post">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
+          <label class="govuk-label govuk-label--l" for="more-detail">
+            Who are the data subjects?
+          </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+          Be as specific as possible. For example, small business owners aged between 45 and 55.
+        </div>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Data subject definition and examples
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>Data subjects are the people whose data you are requesting.</p> 
 
-<form action="030-aims-cat" method="post">
-
-
-<div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper">
-      <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
-    <label class="govuk-label govuk-label--l" for="more-detail">
-      Who are the data subjects?
-    </label>
-  </h1>
-  <div id="more-detail-hint" class="govuk-hint">
-Be as specific as possible. For example, small business owners aged between 45 and 55.
+        <p>For example:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Small business owners aged between 45 and 55.</li>
+          <li>All people using Universal Credit with children.</li>
+        </ul>
+        <p>Data subjects should be specific to the purpose of your data request.</p>
+      </div>
+    </details>
   </div>
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
 
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-</form>
-
-    </div>
-  </div>
 
 {% endblock %}

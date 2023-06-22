@@ -17,18 +17,16 @@ router.post('/bMVP_i0--260', (req, res) => {
 
 });
 
-router.post('/bMVP_i0--250', (req, res) => {
+// router.post('/bMVP_i0--250', (req, res) => {
 
-  const willLeave = req.body["otherOrgs"];
+//   const willLeave = req.body["otherOrgs"];
 
-  // other orgs deed data
-  if (willLeave == 'yes') {
-    res.redirect('beta-mvp/0/acquirer/030-what-data-yes-cat.html');
-  } else {
-    // just me
-    res.redirect('beta-mvp/0/acquirer/030-what-data-no-cat.html');
-  }
-});
+//   if (willLeave == 'yes') {
+//     res.redirect('beta-mvp/0/acquirer/030-what-data-yes-cat.html');
+//   } else {
+//     res.redirect('beta-mvp/0/acquirer/030-what-data-no-cat.html');
+//   }
+// });
 
 // Handles form submissions from 'What type of data do you need which is part of the acquirer wizard
 router.post('/bMVP_i0--check-for-no-need', (req, res) => {
@@ -51,7 +49,7 @@ router.post('/bMVP_i0--240', (req, res) => {
     res.redirect('beta-mvp/0/acquirer/030-what-countries-cat.html');
   } else {
     // data stays in uk
-    res.redirect('beta-mvp/0/acquirer/030-how-receive-cat.html');
+    res.redirect('beta-mvp/0/acquirer/030-role-cat.html');
   }
 });
 
@@ -64,33 +62,33 @@ router.post('/bMVP_i0--230', (req, res) => {
     res.redirect('beta-mvp/0/acquirer/030-what-substantial-cat.html');
   } else {
     // They have the power
-    res.redirect('beta-mvp/0/acquirer/030-what-gateway-cat.html');
+    res.redirect('beta-mvp/0/acquirer/030-data-subjects-cat.html');
   }
 });
 
-router.post('/bMVP_i0--220', (req, res) => {
+// router.post('/bMVP_i0--220', (req, res) => {
 
-  const typeNeeded = req.body["typeOfData"];
+//   const typeNeeded = req.body["typeOfData"];
 
-  // personal was checked
-  if (typeNeeded.includes('personal')) {
-    // special was also checked
-    if (typeNeeded.includes('special')) {
-      res.redirect('beta-mvp/0/acquirer/030-legal-basis-both-cat.html');
-    } else {
-      res.redirect('beta-mvp/0/acquirer/030-legal-basis-personal-cat.html');
-    }
-  } else {
-    if (typeNeeded.includes('special')) {
-      res.redirect('beta-mvp/0/acquirer/030-legal-basis-special-cat.html');
-    } else {
-      res.redirect('beta-mvp/0/acquirer/035-shares.html');
-    }
-  }
+//   // personal was checked
+//   if (typeNeeded.includes('personal')) {
+//     // special was also checked
+//     if (typeNeeded.includes('special')) {
+//       res.redirect('beta-mvp/0/acquirer/030-legal-basis-both-cat.html');
+//     } else {
+//       res.redirect('beta-mvp/0/acquirer/030-legal-basis-personal-cat.html');
+//     }
+//   } else {
+//     if (typeNeeded.includes('special')) {
+//       res.redirect('beta-mvp/0/acquirer/030-legal-basis-special-cat.html');
+//     } else {
+//       res.redirect('beta-mvp/0/acquirer/035-shares.html');
+//     }
+//   }
 
-  console.log("typeOfData value: ", typeNeeded);
+//   console.log("typeOfData value: ", typeNeeded);
 
-});
+// });
 
 router.post('/bMVP_i0--210', (req, res) => {
 
@@ -101,7 +99,7 @@ router.post('/bMVP_i0--210', (req, res) => {
     res.redirect('beta-mvp/0/acquirer/020-talk-to-lawyer-cat.html');
   } else {
     // They have the power
-    res.redirect('beta-mvp/0/acquirer/030-what-type-data-cat.html');
+    res.redirect('beta-mvp/0/acquirer/030-what-gateway-cat.html');
   }
 });
 
