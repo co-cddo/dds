@@ -4,7 +4,7 @@ Prototypes of the Design a Data Share tools and services. These include journeys
 ## Stack details
 
 - This was built on GOV.UK Prototype Kit v13.3.0
-- As of 22 March 2023, an instance is running on CDDO Heroku: https://dds-e2e.herokuapp.com (password: "datacat")
+- As of 22 March 2023, an instance is running on CDDO Heroku: https://dds-e2e.herokuapp.com
 - The build makes use of plugins. These are:
   - GOV.UK Prototype Components  1.1.0
   - GOV.UK Frontend  4.5.0  
