@@ -17,18 +17,23 @@
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
-          <label class="govuk-label govuk-label--l" for="more-detail">
+          <label class="govuk-label govuk-label--l" for="legal-gateway">
             What legal gateway allows the Department for Work & Pensions to share this data with you?
           </label>
         </h1>
-        <div id="more-detail-hint" class="govuk-hint">
+        <div id="legal-gateway-hint" class="govuk-hint">
           Be as specific as possible. You may need support from a legal advisor.
         </div>
-        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        <textarea class="govuk-textarea" id="legal-gateway" name="legal-gateway" rows="5" aria-describedby="legal-gateway-hint"></textarea>
       </div>
-      <button class="govuk-button" data-module="govuk-button">
-        Continue
-      </button>
+      <div class="govuk-button-group">
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
+          Save and return
+        </button>
+      </div>
     </form>
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">

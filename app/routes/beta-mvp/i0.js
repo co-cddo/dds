@@ -50,7 +50,7 @@ router.post('/bMVP_i0--230', (req, res) => {
   const legalPower = req.body["specialCatBasis"];
 
   // clicked don't know or do not have power
-  if (legalPower.includes('substantial')) {
+  if (legalPower.includes('Reasons of substantial public interest (with a basis in law)')) {
     res.redirect('beta-mvp/0/acquirer/030-what-substantial-cat.html');
   } else {
     // They have the power

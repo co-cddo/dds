@@ -5,6 +5,12 @@
 
 // Add extra styles here
 
+.custom-task-list__section-hint {
+    @include govuk-media-query($from: tablet) {
+        padding-left:30px;
+    }
+}
+
 
 // chevron-card list 
 

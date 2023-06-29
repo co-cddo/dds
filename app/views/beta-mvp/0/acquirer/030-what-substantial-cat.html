@@ -11,211 +11,203 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-<form action="030-data-subjects-cat" method="post">
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="specialCatBasis-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
-      <h1 class="govuk-fieldset__heading">
-        What is the substantial public interest for requesting special category data under UK GDPR??
-      </h1>
-    </legend>
-    <div id="specialCatBasis-hint" class="govuk-hint">
-      You may need help from a data protection specialist.
-    </div>
-
-
-    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis" name="specialCatBasis" type="checkbox" value="substantial">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis">
-Statutory and government purposes 
-        </label>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="030-geography-cat" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="substantial-public-interest-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
+            <h1 class="govuk-fieldset__heading">
+              What is the substantial public interest for requesting special category data under UK GDPR?
+            </h1>
+          </legend>
+          <div id="substantial-public-interest-hint" class="govuk-hint">
+            You may need help from a data protection specialist.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest" name="substantial-public-interest" type="checkbox" value="Statutory and government purposes">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest">
+                Statutory and government purposes
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-2" name="substantial-public-interest" type="checkbox" value="Administration of justice and parliamentary purposes">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Administration of justice and parliamentary purposes
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-3" name="substantial-public-interest" type="checkbox" value="Equality of opportunity or treatment">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-3">
+                Equality of opportunity or treatment
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-4" name="substantial-public-interest" type="checkbox" value="Preventing or detecting unlawful acts">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Preventing or detecting unlawful acts
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-5" name="substantial-public-interest" type="checkbox" value="Protecting the public">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Protecting the public
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-6" name="substantial-public-interest" type="checkbox" value="Statutory and government purposes">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Statutory and government purposes
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Administration of justice and parliamentary purposes">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Administration of justice and parliamentary purposes
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Equality of opportunity or treatment">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Equality of opportunity or treatment
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Racial and ethnic diversity at senior levels">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Racial and ethnic diversity at senior levels
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Preventing or detecting unlawful acts">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Preventing or detecting unlawful acts
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Protecting the public">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Protecting the public
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Regulatory requirements">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Regulatory requirements
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Journalism, academia, art and literature">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Journalism, academia, art and literature
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Preventing fraud">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Preventing fraud
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Suspicion of terrorist financing or money laundering">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Suspicion of terrorist financing or money laundering
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Support for individuals with a particular disability or medical condition">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Support for individuals with a particular disability or medical condition
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Counselling">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Counselling
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Safeguarding of children and individuals at risk">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Safeguarding of children and individuals at risk
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Safeguarding of economic well-being of certain individuals">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Safeguarding of economic well-being of certain individuals
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Insurance">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Insurance
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Occupational pensions">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Occupational pensions
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Political parties">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Political parties
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Elected representatives responding to requests">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Elected representatives responding to requests
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Disclosure to elected representatives">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Disclosure to elected representatives
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Informing elected representatives about prisoners">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Informing elected representatives about prisoners
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Publication of legal judgments">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Publication of legal judgments
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Anti-doping in sport">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Anti-doping in sport
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="substantial-public-interest-7" name="substantial-public-interest" type="checkbox" value="Standards of behaviour in sport">
+              <label class="govuk-label govuk-checkboxes__label" for="substantial-public-interest-2">
+                Standards of behaviour in sport
+              </label>
+            </div>
+          </div>
+        </fieldset>
       </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-2" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Administration of justice and parliamentary purposes
-        </label>
+      <div class="govuk-button-group">
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
+          Save and return
+        </button>
       </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-3" name="specialCatBasis" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-3">
-Equality of opportunity or treatment
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-4" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Preventing or detecting unlawful acts
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-5" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Protecting the public
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-6" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Statutory and government purposes
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Administration of justice and parliamentary purposes
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Equality of opportunity or treatment
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Racial and ethnic diversity at senior levels
-
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Preventing or detecting unlawful acts
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Protecting the public
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Regulatory requirements
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Journalism, academia, art and literature
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-
-Preventing fraud
-
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Suspicion of terrorist financing or money laundering
-
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Support for individuals with a particular disability or medical condition
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Counselling
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Safeguarding of children and individuals at risk
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Safeguarding of economic well-being of certain individuals
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Insurance
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Occupational pensions
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Political parties
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Elected representatives responding to requests
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Disclosure to elected representatives
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Informing elected representatives about prisoners
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Publication of legal judgments
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Anti-doping in sport
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="specialCatBasis-7" name="specialCatBasis" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="specialCatBasis-2">
-Standards of behaviour in sport
-        </label>
-      </div>
-
-    </div>
-  </fieldset>
+    </form>
+  </div>
 </div>
 
-
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-</form>
-
-
-    </div>
-  </div>
 
 {% endblock %}

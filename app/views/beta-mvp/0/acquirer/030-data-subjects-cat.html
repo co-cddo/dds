@@ -17,18 +17,23 @@
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
-          <label class="govuk-label govuk-label--l" for="more-detail">
+          <label class="govuk-label govuk-label--l" for="data-subject">
             Who are the data subjects?
           </label>
         </h1>
-        <div id="more-detail-hint" class="govuk-hint">
+        <div id="data-subject-hint" class="govuk-hint">
           Be as specific as possible. For example, small business owners aged between 45 and 55.
         </div>
-        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        <textarea class="govuk-textarea" id="data-subject" name="data-subject" rows="5" aria-describedby=""></textarea>
       </div>
-      <button class="govuk-button" data-module="govuk-button">
-        Continue
-      </button>
+      <div class="govuk-button-group">
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
+          Save and return
+        </button>
+      </div>
     </form>
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">

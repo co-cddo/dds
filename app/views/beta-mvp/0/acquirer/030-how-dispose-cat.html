@@ -11,34 +11,32 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-<form action="020-tasks-cat-1-2-3-4-complete" method="post">
-
-
-<div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper">
-    <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
-    <label class="govuk-label govuk-label--l" for="more-detail">
-How will you dispose of the data when your project finishes?
-    </label>
-  </h1>
-  <div id="more-detail-hint" class="govuk-hint">
-    Be as specific as possible.
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="020-tasks-cat-1-2-3-4-complete" method="post">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
+          <label class="govuk-label govuk-label--l" for="data-disposal">
+            How will you dispose of the data when your project finishes?
+          </label>
+        </h1>
+        <div id="data-disposal-hint" class="govuk-hint">
+          Be as specific as possible.
+        </div>
+        <textarea class="govuk-textarea" id="data-disposal" name="data-disposal" rows="5" aria-describedby="data-disposal-hint"></textarea>
+      </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
+          Save and return
+        </button>
+      </div>
+    </form>
   </div>
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
 
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-</form>
-
-
-
-    </div>
-  </div>
 
 {% endblock %}

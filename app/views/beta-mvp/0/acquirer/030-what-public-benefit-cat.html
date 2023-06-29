@@ -11,173 +11,161 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-<form action="030-others-cat" method="post">
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="public-benefit-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
-      <h1 class="govuk-fieldset__heading">
-        What public benefit will your project provide?
-      </h1>
-    </legend>
-    <div id="public-benefit-hint" class="govuk-hint">
-      Select all options that are relevant to you.
-    </div>
-    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="public-benefit" name="public-benefit" type="checkbox" value="email" data-aria-controls="conditional-public-benefit">
-        <label class="govuk-label govuk-checkboxes__label" for="public-benefit">
-          Evidence for public policy decision-making
-        </label>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="030-others-cat" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="public-benefit-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
+            <h1 class="govuk-fieldset__heading">
+              What public benefit will your project provide?
+            </h1>
+          </legend>
+          <div id="public-benefit-hint" class="govuk-hint">
+            Select all options that are relevant to you.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="public-benefit" name="public-benefit-1[title]" type="checkbox" value="Evidence for public policy decision-making" data-aria-controls="conditional-public-benefit">
+              <label class="govuk-label govuk-checkboxes__label" for="public-benefit">
+                Evidence for public policy decision-making
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="public-benefit-by-email">
+                  How will your project do this?
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-email" name="public-benefit-1[detail]" type="text">
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="public-benefit-2" name="public-benefit-2[title]" type="checkbox" value="Evidence for public service delivery" data-aria-controls="conditional-public-benefit-2">
+              <label class="govuk-label govuk-checkboxes__label" for="public-benefit-2">
+                Evidence for public service delivery
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="public-benefit-by-phone">
+                  How will your project do this?
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-phone" name="public-benefit-2[detail]" type="text">
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="public-benefit-3" name="public-benefit-3[title]" type="checkbox" value="Evidence for decisions which are likely to benefit people in the UK" data-aria-controls="conditional-public-benefit-3">
+              <label class="govuk-label govuk-checkboxes__label" for="public-benefit-3">
+                Evidence for decisions which are likely to benefit people in the UK
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="public-benefit-by-text">
+                  How will your project do this?
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-3[detail]" type="text">
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="public-benefit-4" name="public-benefit-4[title]" type="checkbox" value="Evidence for decisions about how to allocate and evaluate funding" data-aria-controls="conditional-public-benefit-4">
+              <label class="govuk-label govuk-checkboxes__label" for="public-benefit-4">
+                Evidence for decisions about how to allocate and evaluate funding
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-4">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="public-benefit-by-text">
+                  How will your project do this?
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-4[detail]" type="text">
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="public-benefit-5" name="public-benefit-5[title]" type="checkbox" value="Help understand social or economic trends" data-aria-controls="conditional-public-benefit-5">
+              <label class="govuk-label govuk-checkboxes__label" for="public-benefit-5">
+                Help understand social or economic trends
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-5">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="public-benefit-by-text">
+                  How will your project do this?
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-5[detail]" type="text">
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="public-benefit-6" name="public-benefit-6[title]" type="checkbox" value="Help understand the needs of the public" data-aria-controls="conditional-public-benefit-6">
+              <label class="govuk-label govuk-checkboxes__label" for="public-benefit-6">
+                Help understand the needs of the public
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-6">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="public-benefit-by-text">
+                  How will your project do this?
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-6[detail]" type="text">
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="public-benefit-7" name="public-benefit-7[title]" type="checkbox" value="Improve existing statistical information" data-aria-controls="conditional-public-benefit-7">
+              <label class="govuk-label govuk-checkboxes__label" for="public-benefit-7">
+                Improve existing statistical information
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-7">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="public-benefit-by-text">
+                  How will your project do this?
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-7[detail]" type="text">
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="public-benefit-8" name="public-benefit-8[title]" type="checkbox" value="Challenge or validate existing research or statistics" data-aria-controls="conditional-public-benefit-8">
+              <label class="govuk-label govuk-checkboxes__label" for="public-benefit-8">
+                Challenge or validate existing research or statistics
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-8">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="public-benefit-by-text">
+                  How will your project do this?
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-8[detail]" type="text">
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="public-benefit-9" name="public-benefit-9[title]" type="checkbox" value="Something else" data-aria-controls="conditional-public-benefit-9">
+              <label class="govuk-label govuk-checkboxes__label" for="public-benefit-9">
+                Something else
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-9">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="public-benefit-by-text">
+                  Please describe in detail, explaining how will your project do this?
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-9[detail]" type="text">
+              </div>
+            </div>
+          </div>
+        </fieldset>
       </div>
-      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="public-benefit-by-email">
-            How will your project do this?
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-email" name="public-benefit-by-email" type="text">
-        </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
+          Save and return
+        </button>
       </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="public-benefit-2" name="public-benefit" type="checkbox" value="phone" data-aria-controls="conditional-public-benefit-2">
-        <label class="govuk-label govuk-checkboxes__label" for="public-benefit-2">
-          Evidence for public service delivery
-        </label>
-      </div>
-      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-2">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="public-benefit-by-phone">
-            How will your project do this?
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-phone" name="public-benefit-by-phone" type="text">
-        </div>
-      </div>
-
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="public-benefit-3" name="public-benefit" type="checkbox" value="text message" data-aria-controls="conditional-public-benefit-3">
-        <label class="govuk-label govuk-checkboxes__label" for="public-benefit-3">
-          Evidence for decisions which are likely to benefit people in the UK
-        </label>
-      </div>
-      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-3">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="public-benefit-by-text">
-            How will your project do this?
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-by-text" type="text">
-        </div>
-      </div>
-
-
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="public-benefit-4" name="public-benefit" type="checkbox" value="text message" data-aria-controls="conditional-public-benefit-4">
-        <label class="govuk-label govuk-checkboxes__label" for="public-benefit-4">
-Evidence for decisions about how to allocate and evaluate funding
-        </label>
-      </div>
-      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-4">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="public-benefit-by-text">
-            How will your project do this?
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-by-text" type="text">
-        </div>
-      </div>
-
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="public-benefit-5" name="public-benefit" type="checkbox" value="text message" data-aria-controls="conditional-public-benefit-5">
-        <label class="govuk-label govuk-checkboxes__label" for="public-benefit-5">
-Help understand social or economic trends
-        </label>
-      </div>
-      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-5">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="public-benefit-by-text">
-            How will your project do this?
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-by-text" type="text">
-        </div>
-      </div>
-
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="public-benefit-6" name="public-benefit" type="checkbox" value="text message" data-aria-controls="conditional-public-benefit-6">
-        <label class="govuk-label govuk-checkboxes__label" for="public-benefit-6">
-Help understand the needs of the public
-        </label>
-      </div>
-      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-6">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="public-benefit-by-text">
-            How will your project do this?
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-by-text" type="text">
-        </div>
-      </div>
-
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="public-benefit-7" name="public-benefit" type="checkbox" value="text message" data-aria-controls="conditional-public-benefit-7">
-        <label class="govuk-label govuk-checkboxes__label" for="public-benefit-7">
-Improve existing statistical information
-        </label>
-      </div>
-      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-7">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="public-benefit-by-text">
-            How will your project do this?
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-by-text" type="text">
-        </div>
-      </div>
-
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="public-benefit-8" name="public-benefit" type="checkbox" value="text message" data-aria-controls="conditional-public-benefit-8">
-        <label class="govuk-label govuk-checkboxes__label" for="public-benefit-8">
-Challenge or validate existing research or statistics
-        </label>
-      </div>
-      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-8">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="public-benefit-by-text">
-            How will your project do this?
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-by-text" type="text">
-        </div>
-      </div>
-
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="public-benefit-9" name="public-benefit" type="checkbox" value="text message" data-aria-controls="conditional-public-benefit-9">
-        <label class="govuk-label govuk-checkboxes__label" for="public-benefit-9">
-Something else
-        </label>
-      </div>
-      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-public-benefit-9">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="public-benefit-by-text">
-Please describe in detail, explaining how will your project do this?
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="public-benefit-by-text" name="public-benefit-by-text" type="text">
-        </div>
-      </div>
-
-
-
-
-    </div>
-  </fieldset>
+    </form>
+  </div>
 </div>
 
-
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-</form>
-
-    </div>
-  </div>
 
 {% endblock %}

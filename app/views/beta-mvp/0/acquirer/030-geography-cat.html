@@ -11,53 +11,47 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-
-
-<form action="/bMVP_i0--240" method="post">
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
-
-      <h1 class="govuk-fieldset__heading">
-Will any of this data leave the UK?
-      </h1>
-    </legend>
-    <div id="contact-hint" class="govuk-hint">
-This includes third-party software that may host or transfer the data using international servers.
-    </div>
-    <div class="govuk-radios" data-module="govuk-radios">
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="leaveUK-2" name="leaveUK" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="leaveUK-2">
-No, the data will only travel through the UK.
-        </label>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/bMVP_i0--240" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
+            <h1 class="govuk-fieldset__heading">
+              Will any of this data leave the UK?
+            </h1>
+          </legend>
+          <div id="contact-hint" class="govuk-hint">
+            This includes third-party software that may host or transfer the data using international servers.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leaveUK-2" name="leaveUK" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="leaveUK-2">
+                No, the data will only travel through the UK.
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="leaveUK-3" name="leaveUK" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="leaveUK-3">
+                Yes, it will leave the UK
+              </label>
+            </div>
+          </div>
+        </fieldset>
       </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="leaveUK-3" name="leaveUK" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="leaveUK-3">
-Yes, it will leave the UK
-        </label>
+      <div class="govuk-button-group">
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
+          Save and return
+        </button>
       </div>
-
-    </div>
-  </fieldset>
+    </form>
+  </div>
 </div>
 
-<button class="govuk-button" data-module="govuk-button">
-  Save and continue
-</button>
-
-</form>
-
-
-    </div>
-  </div>
 
 {% endblock %}
