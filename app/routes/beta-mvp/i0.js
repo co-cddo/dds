@@ -10,6 +10,21 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Acquirer
 // #################################################
 
+router.post('/bMVP_i0--270', (req, res) => {
+
+  const dataType = req.session.data['typeOfData'];
+
+  // other orgs deed data
+  if (dataType === 'personal') {
+    res.redirect('beta-mvp/0/acquirer/030-legal-basis-personal-cat.html');
+  } 
+  else if (dataType === 'special') {
+    res.redirect('beta-mvp/0/acquirer/030-legal-basis-special-cat.html');
+  } else {
+    res.redirect('beta-mvp/0/acquirer/020-tasks-cat-1-2-complete.html');
+  }
+});
+
 router.post('/bMVP_i0--260', (req, res) => {
 
   const willLeave = req.body["reviewed"];
@@ -91,6 +106,23 @@ router.post('/bMVP_i0--200', (req, res) => {
     // no radios checked, redirect to potential-risks.html
     res.redirect('beta-mvp/0/acquirer/020-potential-risks-cat.html');
   }
+});
+
+router.post('/bMVP_i0--updateCountryList', (req, res) => {
+  var newData = req.body['newList'];
+  req.session.data['data-travel-countrieslist'] = newData;
+  req.session.save(function(err) {
+    console.log('Data travel countries list update');
+  })
+});
+
+router.post('/bMVP_i0--addCountryToArray', (req, res) => {
+
+  if (req.body['data-travel-country'].length > 0) { 
+    req.session.data['data-travel-countrieslist'].push(req.body['data-travel-country']);
+  }
+
+  res.redirect('beta-mvp/0/acquirer/030-role-cat.html');
 });
 
 // #################################################

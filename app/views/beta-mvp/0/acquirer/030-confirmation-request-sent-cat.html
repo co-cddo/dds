@@ -6,7 +6,6 @@
 
 {% block beforeContent %}
   {% include "includes/account-header-khadija.html" %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +13,17 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Data share request sent
+        </h1>
+        <div class="govuk-panel__body">
+          Your request number<br><strong>DS 13992</strong>
+        </div>
+      </div>
+      <p class="govuk-body">We have sent you a confirmation email.</p>
+
+<!--       <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
         aria-labelledby="govuk-notification-banner-title"
         data-module="govuk-notification-banner">
         <div class="govuk-notification-banner__header">
@@ -27,16 +36,32 @@
             Your <a href="200-review-request-cat">request DS 13992</a> has been saved in anticipation of your future negotiations with the other depatment.
           </h3>
         </div>
-      </div>
+      </div> -->
 
       <h2 class="govuk-heading-m">What happens next</h2>
 
-      <p>
-        Your team will have much to review, discuss, and agree on before your agreement can be finalised. You may use this service to record those deliberations for auditing purposes.
-      </p>
+      <p>Department of Work and Pensions will review your request.</p> 
+      <p>It can take up to X working days for them to reply. You can track the status of your request when you <a href="">manage data shares</a>.</p>
+      <p>If you have any problems, you can also contact the data owner.</p>
 
-      <p>If you need help with this service, please <a href="035-shares">contact our data exchange support team</a>.</p>
+      <h3 class="govuk-heading-m">Data asset owner</h3>
+      <ul class="govuk-list">
+        <li class="govuk-body govuk-!-margin-bottom-4">
+          <span class="govuk-body govuk-!-font-weight-bold">Name</span>
+          <br>
+          Jane Smith
+        </li>
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">Email</span>
+          <br>
+          <a href="#">jane.smith@dwp.gov.uk</a>
+        </li>
+      </ul>
 
+      <h3 class="govuk-heading-m">Data asset owner</h3>
+      <ul class="govuk-list">
+        <li class="govuk-link"><a href="#1">Set up a data share arrangement in government: step by step</a></li>
+      </ul>
     </div>
   </div>
 

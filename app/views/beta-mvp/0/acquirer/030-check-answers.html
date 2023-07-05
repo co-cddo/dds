@@ -11,6 +11,7 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
+      <span class="govuk-caption-l">{% include "includes/cat-search-label.html" %}</span>
       <h1 class="govuk-heading-xl">Check your answers before sending your request</h1>
     </div>
 
@@ -227,7 +228,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="max-width:20%;">
-            Data required
+            Date required
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
             {{ data['data-issued-day'] }}/{{ data['data-issued-month'] }}/{{ data['data-issued-year'] }}
@@ -235,7 +236,7 @@
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> Data required</span>
+              <span class="govuk-visually-hidden"> Date required</span>
             </a>
           </dd>
         </div>
@@ -275,7 +276,7 @@
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> licence type</span>
+              <span class="govuk-visually-hidden"> Legal gateway</span>
             </a>
           </dd>
         </div>
@@ -329,6 +330,18 @@
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
             {{ data['leaveUK'] }}
+
+            {% if data['leaveUK'] == 'yes' %}
+              <br>
+              <br>
+              <p>Countries:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                {% for item in data['data-travel-countrieslist'] %}
+                  <li>{{item}}</li>
+                {% endfor %}
+                <!-- {% if data['data-travel-country'] %}<li>{{ data['data-travel-country'] }}</li>{% endif %} -->
+              </ul>
+            {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -409,10 +422,14 @@
 
         <input type="hidden" name="answers-checked" value="true">
 
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-
+        <div class="govuk-button-group">
+          <button class="govuk-button" type="submit" data-module="govuk-button">
+            Save and continue
+          </button>
+          <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
+            Save and return
+          </button>
+        </div>
       </form>
 
     </div>
