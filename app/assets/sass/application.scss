@@ -8,9 +8,9 @@
 @import 'overrides/navigation';
 
 //Override styles when creating screengrabs
-.govuk-main-wrapper  a:visited, .govuk-main-wrapper .govuk-link:visited {
-    color:  #1d70b8!important;
-}
+// .govuk-main-wrapper  a:visited, .govuk-main-wrapper .govuk-link:visited {
+//     color:  #1d70b8!important;
+// }
 
 .custom-task-list__section-hint {
     @include govuk-media-query($from: tablet) {
