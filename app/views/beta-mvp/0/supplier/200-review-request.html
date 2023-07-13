@@ -28,32 +28,6 @@
   </div>
 </div>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds" style="background:red!important">
-    <h2 class="govuk-heading-m">Skills on their team</h2>
-    <p>Their teams has these skills:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      {% if (data['technology'] == 'yes') %}<li>Technology</li>{% endif %}
-      {% if (data['security'] == 'yes') %}<li>Security</li>{% endif %}
-      {% if (data['DP'] == 'yes') %}<li>Data protection</li>{% endif %}
-      {% if (data['legal'] == 'yes') %}<li>Legal</li>{% endif %}
-      {% if (data['governance'] == 'yes') %}<li>Governance</li>{% endif %}
-      {% if (data['business'] == 'yes') %}<li>Business ownership</li>{% endif %}
-    </ul>
-    <p>They do not have these skills:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      {% if (data['technology'] != 'yes') %}<li>Technology</li>{% endif %}
-      {% if (data['security'] != 'yes') %}<li>Security</li>{% endif %}
-      {% if (data['DP'] != 'yes') %}<li>Data protection</li>{% endif %}
-      {% if (data['legal'] != 'yes') %}<li>Legal</li>{% endif %}
-      {% if (data['governance'] != 'yes') %}<li>Governance</li>{% endif %}
-      {% if (data['business'] != 'yes') %}<li>Business ownership</li>{% endif %}
-    </ul>
-  </div>
-  <div class="govuk-grid-column-one-third">
-    {% include "includes/mou-comments.html" %}
-  </div>
-</div>
-<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-m">Legal basis</h2>
     <!--       <div class="govuk-warning-text govuk-!-static-margin-bottom-2">
@@ -239,21 +213,30 @@
     <h2 class="govuk-heading-m">When they need it</h2>
     <p>16 July 2023</p>
   </div>
+  <div class="govuk-grid-column-one-third">
+    {% include "includes/mou-comments.html" %}
+  </div>
 </div>
-<div class="govuk-grid-row" style="background:pink;">
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-m">Data type</h2>
     <p>Personal data</p>
   </div>
+  <div class="govuk-grid-column-one-third">
+    {% include "includes/mou-comments.html" %}
+  </div>
 </div>
-<div class="govuk-grid-row" style="background:pink;">
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-m">Data accessed by other organisations</h2>
     <p>Yes</p>
   </div>
+  <div class="govuk-grid-column-one-third">
+    {% include "includes/mou-comments.html" %}
+  </div>
 </div>
 
-<a href="200-has-team-reviewed" class="govuk-button">Continue</a>
+<a href="100-decision" class="govuk-button">Continue</a>
 
 
 {% endblock %}

@@ -10,6 +10,18 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Acquirer
 // #################################################
 
+router.post('/bMVP_i0--280', (req, res) => {
+  
+  const otherOrgs = req.body['otherOrgs'];
+
+  if (otherOrgs === 'no') {
+    res.redirect('beta-mvp/0/acquirer/030-how-impact-cat.html');
+  } 
+  else if (otherOrgs === 'yes') {
+    res.redirect('beta-mvp/0/acquirer/030-what-other-orgs.html');
+  }
+});
+
 router.post('/bMVP_i0--270', (req, res) => {
 
   const dataType = req.session.data['typeOfData'];
@@ -21,7 +33,7 @@ router.post('/bMVP_i0--270', (req, res) => {
   else if (dataType === 'special') {
     res.redirect('beta-mvp/0/acquirer/030-legal-basis-special-cat.html');
   } else {
-    res.redirect('beta-mvp/0/acquirer/020-tasks-cat-1-2-complete.html');
+    res.redirect('beta-mvp/0/acquirer/020-tasks-cat.html');
   }
 });
 
@@ -82,7 +94,7 @@ router.post('/bMVP_i0--210', (req, res) => {
     res.redirect('beta-mvp/0/acquirer/020-talk-to-lawyer-cat.html');
   } else {
     // They have the power
-    res.redirect('beta-mvp/0/acquirer/030-what-gateway-cat.html');
+    res.redirect('beta-mvp/0/acquirer/030-legal-gateway-belief.html');
   }
 });
 
@@ -117,11 +129,9 @@ router.post('/bMVP_i0--updateCountryList', (req, res) => {
 });
 
 router.post('/bMVP_i0--addCountryToArray', (req, res) => {
-
   if (req.body['data-travel-country'].length > 0) { 
     req.session.data['data-travel-countrieslist'].push(req.body['data-travel-country']);
   }
-
   res.redirect('beta-mvp/0/acquirer/030-role-cat.html');
 });
 
@@ -129,21 +139,13 @@ router.post('/bMVP_i0--addCountryToArray', (req, res) => {
 // Supplier
 // #################################################
 
-router.post('/bMVP_i0--team-decision-routes-supplier', (req, res) => {
+router.post('/bMVP_i0--decision-after-declaration', (req, res) => {
+  var decision = req.session.data["your-decision"];
 
-  const technologySkills = req.body["technology"];
-  const securitySkills = req.body["security"];
-  const dpSkills = req.body["DP"];
-  const legalSkills = req.body["legal"];
-  const governanceSkills = req.body["governance"];
-  const businessSkills = req.body["business"];
-
-  // If the checkbox is checked, redirect to view request
-  if (technologySkills === 'yes' && securitySkills === 'yes' && dpSkills === 'yes' && legalSkills === 'yes' && governanceSkills === 'yes' && businessSkills === 'yes') {
-    res.redirect('beta-mvp/0/supplier/100-decision.html');
+  if (decision == 'accept') {
+    res.redirect('beta-mvp/0/supplier/110-accept');
   } else {
-    // One skill is missing, redirect to risks
-    res.redirect('beta-mvp/0/supplier/100-potential-risks.html');
+    res.redirect('beta-mvp/0/supplier/110-comment');
   }
 });
 
@@ -155,16 +157,16 @@ router.post('/bMVP_i0--decision-routes', (req, res) => {
 
   // If the checkbox is checked, redirect to agree.html
   if (yourDecision === undefined) {
-    res.redirect('beta-mvp/0/supplier/110-propose-time');
+    res.redirect('beta-mvp/0/supplier/110-proceeding');
   } 
   if (yourDecision === 'meeting') {
-    res.redirect('beta-mvp/0/supplier/110-propose-time');
+    res.redirect('beta-mvp/0/supplier/110-proceeding');
   } 
   if (yourDecision === 'accept') {
-    res.redirect('beta-mvp/0/supplier/110-accept');
+    res.redirect('beta-mvp/0/supplier/030-declaration-cat');
   } 
   if (yourDecision === 'comment') {
-    res.redirect('beta-mvp/0/supplier/110-comment');
+    res.redirect('beta-mvp/0/supplier/030-declaration-cat');
   } 
   if (yourDecision === 'reject') {
     res.redirect('beta-mvp/0/supplier/110-reject');

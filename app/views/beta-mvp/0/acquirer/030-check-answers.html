@@ -214,7 +214,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="max-width:20%;">
-            Impact
+            Impact if data not given
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
             {{ data['neg-impact'] }}
@@ -222,7 +222,7 @@
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> Impact</span>
+              <span class="govuk-visually-hidden"> Impact if data not given</span>
             </a>
           </dd>
         </div>
@@ -280,6 +280,20 @@
             </a>
           </dd>
         </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Checked by X
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
+            {{ data['checked-with-legal'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Checked by X</span>
+            </a>
+          </dd>
+        </div>
       </dl>
 
       <h2 class="govuk-heading-m">Data protection</h2>
@@ -326,7 +340,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="max-width:20%;">
-            Data travel
+            Data travel outside UK
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
             {{ data['leaveUK'] }}
@@ -361,6 +375,20 @@
             <a href="#">
               Change
               <span class="govuk-visually-hidden"> Role of organisation</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Checked by Y
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
+            {{ data['confirm-answers-data-protection'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Checked by Y</span>
             </a>
           </dd>
         </div>
@@ -413,6 +441,20 @@
             <a href="#">
               Change
               <span class="govuk-visually-hidden"> Disposal of data</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Checked by Z
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
+            {{ data['confirm-answers-data-gov-sec-tech'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Checked by Y</span>
             </a>
           </dd>
         </div>
