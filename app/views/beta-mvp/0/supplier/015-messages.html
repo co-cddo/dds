@@ -1,14 +1,17 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Messages inbox – {{ serviceName }}
+  {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
-  {% include "includes/account-header-khadija.html" %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
-
 
 {% block content %}
 

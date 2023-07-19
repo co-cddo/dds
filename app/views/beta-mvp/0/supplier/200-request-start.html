@@ -1,7 +1,7 @@
 {% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
 
 {% block pageTitle %}
-  Data sharing home page – {{ serviceName }}
+  {{ serviceName }}
 {% endblock %}
 
 {% block pageScripts %}
@@ -11,8 +11,12 @@
   </script>
 {% endblock %}
 
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
 {% block beforeContent %}
-  {% include "includes/account-header-khadija.html" %}  
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
@@ -50,8 +54,30 @@
       </strong>
     </div>
     <a href="200-review-request" class="govuk-button">Continue</a>
+
+    <h2 class="govuk-heading-m">Helpful links</h2>
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Your decision options
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>You're about to review a data share request. You'll need to decide if it meets your requirements so you can draft a Memorandum of Understanding (MoU) with ((acquirer-name)).</p>
+
+        <p>When you've reviewed the request, you can choose to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li> Accept the request.</li>
+          <li> Arrange meeting to discuss further.</li>
+          <li> Reject the request as you do not have enough information.</li>
+          <li> Reject the request as it does not meet your requirements.</li>
+        </ul>
+      </div>
+    </details>
   </div>
 </div>
+
+
 
 
 {% endblock %}

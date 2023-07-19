@@ -4,9 +4,13 @@
   {{ serviceName }}
 {% endblock %}
 
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
 {% block beforeContent %}
-  {% include "includes/account-header-khadija.html" %}
-  <!-- <a class="govuk-back-link" href="javascript:window.history.back()">Back</a> -->
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -117,12 +121,12 @@
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
             </li>
-<!--             <li class="govuk-prototype-kit-task-list__item">
+            <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
                   Checked by X
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
-            </li> -->
+            </li>
           </ul>
         </li>
 
@@ -155,12 +159,12 @@
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
             </li>
-<!--             <li class="govuk-prototype-kit-task-list__item">
+            <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
                   Checked by Y
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
-            </li> -->
+            </li>
           </ul>
         </li>
 
@@ -185,7 +189,7 @@
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
             </li>
-<!--             <li class="govuk-prototype-kit-task-list__item">
+            <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
                 <a href="030-how-dispose-cat.html" aria-describedby="">
                   Disposal of data
@@ -198,7 +202,7 @@
                   Checked by Z
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
-            </li> -->
+            </li>
           </ul>
         </li>
 

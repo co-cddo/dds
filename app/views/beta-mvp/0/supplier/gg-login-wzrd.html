@@ -1,11 +1,15 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Login using GG – {{serviceName}}
+  {{serviceName}}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block content %}
-
 
     <div class="govuk-grid-row">
      <div class="govuk-grid-column-two-thirds" id="skip-target">

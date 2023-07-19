@@ -4,8 +4,12 @@
    {{ serviceName }}
 {% endblock %}
 
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
 {% block beforeContent %}
-  {% include "includes/account-header-khadija.html" %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
@@ -64,7 +68,7 @@
       </div>
       <br />
       <br />
-      <h2 class="govuk-heading-m">Helpful links</h2>
+      <h2 class="govuk-heading-m">More information</h2>
       <ul class="govuk-list">
         <li class="govuk-link"><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/personal-information-what-is-it/what-is-personal-data/what-is-personal-data/" target="_blank">What is personal data? (opens in new tab)</a></li>
         <li class="govuk-link"><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/" target="_blank">What is special category data? (opens in new tab)</a></li>
