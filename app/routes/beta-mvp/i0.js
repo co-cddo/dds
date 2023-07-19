@@ -166,7 +166,7 @@ router.post('/bMVP_i0--decision-routes', (req, res) => {
     res.redirect('beta-mvp/0/supplier/030-declaration-cat');
   } 
   if (yourDecision === 'comment') {
-    res.redirect('beta-mvp/0/supplier/030-declaration-cat');
+    res.redirect('beta-mvp/0/supplier/110-comment');
   } 
   if (yourDecision === 'reject') {
     res.redirect('beta-mvp/0/supplier/110-reject');
