@@ -1,0 +1,74 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    var $element = document.querySelector('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
+  </script>
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Request ID: RR147</span>
+    <h1 class="govuk-heading-xl">
+      Request outcome
+    </h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Decision</h2>
+    <p>Accepted</p>
+
+    <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Decision made on</h2>
+    <p>22 July 2023</p>
+
+    <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Feedback provided</h2>
+    <p>We will need to discuss the correct legal gateway</p>
+
+    <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Notes</h2>
+    <p>I spoke to George Heatherfield from legal who highlighted the use of an incorrect legal gateway.</p>
+
+
+    <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">What happens next</h2>
+    <p>The Department of Education have been told that this request was accepted.</p>
+    <p>If you have not already, contact <a href="#1">data-team@department-x.gov.uk</a> to discuss the creation of a data share arrangement.</p>
+
+    <div class="govuk-button-group govuk-!-static-margin-top-9">
+      <a href="received-requests" class="govuk-button">Return to received requests</a>
+      <a href="#1" class="govuk-link">View request</a>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-s govuk-!-static-margin-bottom-1">Request owner</h2>
+    <p>Department of Education</p>
+
+    <h2 class="govuk-heading-s govuk-!-static-margin-bottom-1">Dataset</h2>
+    <p>Inline-core_reporting-and-location</p>
+
+    <h2 class="govuk-heading-s govuk-!-static-margin-bottom-1">Received</h2>
+    <p>18 June 2023</p>
+
+    <h2 class="govuk-heading-s govuk-!-static-margin-bottom-1">Needed by</h2>
+    <p>2 November 2023</p>
+  </div>
+</div>
+
+{% endblock %}
+
