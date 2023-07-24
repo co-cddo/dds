@@ -276,7 +276,20 @@
             Legal gateway
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['legal-gateway'] }}
+            {% if data['legal-gateway-belief'] == "Yes" %}
+              <p style="text-transform:capitalize;">{{ data['legal-gateway-belief'] }}</p>
+              <p class="govuk-body-s" style="color:#505a5f">
+                {{ data['yes-gateway'] }}
+              </p>
+            {% elseif data['legal-gateway-belief'] == "Other" %}
+              <p>No - Other legal grounds</p>
+              <p class="govuk-body-s" style="color:#505a5f">
+                {{ data['other-legal-grounds'] }}
+              </p>
+            {% else %}
+              <p style="text-transform:capitalize;">No</p>
+            {% endif %}
+
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">

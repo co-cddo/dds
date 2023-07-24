@@ -132,7 +132,7 @@ router.post('/bMVP_i0--addCountryToArray', (req, res) => {
   // if (req.body['data-travel-country'].length > 0) { 
   //   req.session.data['data-travel-countrieslist'].push(req.body['data-travel-country']);
   // }
-  res.redirect('beta-mvp/0/acquirer/030-how-impact-cat.html');
+  res.redirect('beta-mvp/0/acquirer/030-role-cat.html');
 });
 
 // #################################################
