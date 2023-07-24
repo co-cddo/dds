@@ -28,22 +28,30 @@
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="data-recieve-format-1" name="data-recieve-format" type="radio" value="no">
+              <input class="govuk-radios__input" id="data-recieve-format-1" name="data-recieve-format" type="radio" value="Through secure third-party software">
               <label class="govuk-label govuk-radios__label" for="data-recieve-format-1">
                 Through secure third-party software
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="data-recieve-format-2" name="data-recieve-format" type="radio" value="no">
+              <input class="govuk-radios__input" id="data-recieve-format-2" name="data-recieve-format" type="radio" value="Physical delivery">
               <label class="govuk-label govuk-radios__label" for="data-recieve-format-2">
                 Physical delivery
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="data-recieve-format-3" name="data-recieve-format" type="radio" value="yes">
+              <input class="govuk-radios__input" id="data-recieve-format-3" name="data-recieve-format" type="radio" value="else" data-aria-controls="something-else">
               <label class="govuk-label govuk-radios__label" for="data-recieve-format-3">
                 Something else
               </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="something-else">
+              <div class="govuk-form-group">
+<!--                 <label class="govuk-label" for="receive-data_other">
+                  How?
+                </label> -->
+                <input class="govuk-input govuk-!-width-two-thirds" id="data-recieve-format_else" name="data-recieve-format_else" spellcheck="false">
+              </div>
             </div>
           </div>
         </fieldset>

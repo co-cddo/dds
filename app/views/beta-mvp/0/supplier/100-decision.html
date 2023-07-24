@@ -32,6 +32,23 @@
           <br>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="your-decision-2" name="your-decision" type="radio" value="comment" aria-describedby="your-decision-2-item-hint" data-aria-controls="conditional-return">
+              <label class="govuk-label govuk-radios__label" for="your-decision-2">
+                <strong>Return with comments</strong>
+              </label>
+              <div id="your-decision-2-item-hint" class="govuk-hint govuk-radios__hint">
+                Some details are missing. A decision cannot be made without them. If they provide this information, you will progress this request.
+              </div>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-return">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  <strong>Comments</strong>
+                </label>
+                <textarea class="govuk-textarea" id="feedback_return" name="feedback-for-acquirer" spellcheck="false" rows="6"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="your-decision-4" name="your-decision" type="radio" value="accept" aria-describedby="your-decision-4-item-hint" data-aria-controls="conditional-accept">
               <label class="govuk-label govuk-radios__label" for="your-decision-4">
                 <strong>Accept data share request</strong>
@@ -43,26 +60,9 @@
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-accept">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="contact-by-email">
-                  <strong>Feedback</strong>
+                  <strong>Comments</strong>
                 </label>
                 <textarea class="govuk-textarea" id="feedback_accept" name="feedback-for-acquirer"spellcheck="false" rows="6"></textarea>
-              </div>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="your-decision-2" name="your-decision" type="radio" value="comment" aria-describedby="your-decision-2-item-hint" data-aria-controls="conditional-return">
-              <label class="govuk-label govuk-radios__label" for="your-decision-2">
-                <strong>Return with comments</strong>
-              </label>
-              <div id="your-decision-2-item-hint" class="govuk-hint govuk-radios__hint">
-                Some details are missing. A decision cannot be made without them.
-              </div>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-return">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-email">
-                  <strong>Feedback</strong>
-                </label>
-                <textarea class="govuk-textarea" id="feedback_return" name="feedback-for-acquirer" spellcheck="false" rows="6"></textarea>
               </div>
             </div>
             <div class="govuk-radios__item">
@@ -77,7 +77,7 @@
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reject">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="contact-by-email">
-                  <strong>Feedback</strong>
+                  <strong>Comments</strong>
                 </label>
                 <textarea class="govuk-textarea" id="feedback_reject" name="feedback-for-acquirer" spellcheck="false" rows="6"></textarea>
               </div>

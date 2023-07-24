@@ -407,7 +407,11 @@
             Data delivery
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
-            {{ data['data-recieve-format'] }}
+            {% if data['data-format'] == "else" %}
+              {{ data['data-recieve-format_else'] }}
+            {% else %}
+              {{ data['data-recieve-format'] }}
+            {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -422,7 +426,7 @@
           </dt>
           <dd class="govuk-summary-list__value">
             {% if data['data-format'] == "else" %}
-              <span style="text-transform: capitalize;">{{ data['data-format'] }}</span>
+              <span style="text-transform: capitalize;">{{ data['data-format_else'] }}</span>
             {% else %}
               <span style="text-transform: uppercase;">{{ data['data-format'] }}</span>
             {% endif %} 
