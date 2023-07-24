@@ -36,6 +36,13 @@
     .rr-tag_rejected::after {
       content: 'Rejected';
     }
+    .rr-tag_returned {
+      color: #383f43;
+      background: #eeefef;
+    }
+    .rr-tag_returned::after {
+      content: 'Returned';
+    }
   </style>
 {% endblock %}
 
@@ -117,6 +124,27 @@
               </strong>
             </td>
           </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="#1">RR221 - View</a>
+            </td>
+            <td class="govuk-table__cell">
+              HM Revenue and Customs
+            </td>
+            <td class="govuk-table__cell">
+              tax-rate-change_brackets
+            </td>
+            <td class="govuk-table__cell">
+              2 Jul 2023
+            </td>
+            <td class="govuk-table__cell">
+              2 Nov 2023
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag rr-tag_returned">
+              </strong>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -135,8 +163,8 @@
             <th class="govuk-table__header" scope="col">From</th>
             <th class="govuk-table__header" scope="col">Dataset</th>
             <th class="govuk-table__header" scope="col">Received</th>
-            <th class="govuk-table__header" scope="col">Decision</th>
             <th class="govuk-table__header" scope="col">Completed</th>
+            <th class="govuk-table__header" scope="col">Decision</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -154,11 +182,11 @@
               18 Apr 2023
             </td>
             <td class="govuk-table__cell">
-              <strong class="rr-tag_accepted">
-              </strong>
+              2 May 2023
             </td>
             <td class="govuk-table__cell">
-              2 May 2023
+              <strong class="rr-tag_accepted">
+              </strong>
             </td>
           </tr>
           <tr class="govuk-table__row">
@@ -175,11 +203,11 @@
               2 Apr 2023
             </td>
             <td class="govuk-table__cell">
-              <strong class="rr-tag_rejected">
-              </strong>
+              2 May 2023
             </td>
             <td class="govuk-table__cell">
-              2 May 2023
+              <strong class="rr-tag_rejected">
+              </strong>
             </td>
           </tr>
         </tbody>
