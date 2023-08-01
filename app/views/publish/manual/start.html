@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        {% if data['method'] %}
+          {{ data['method'] }}
+        {% else %}
+        Manually add data asset metadata
+        {% endif %}
+      </h1>
+
+      <p>You will be asked to enter details from all of the attributes in the metadata model.</p>
+      <p>Details include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Name</li>
+        <li>Description</li>
+        <li>Summary</li>
+        <li>Version history</li>
+        <li>TODO: Add the rest of the metadata items</li>
+      </ul>
+
+      <p>See our <a href="#" class="govuk-link">metadata guidance</a> for more information on what to enter.</p>
+
+      <a href="/publish/manual/title" class="govuk-button" data-module="govuk-button">
+        Add metadata
+      </a>
+
+     
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Distribution
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        
+      </h1>
+
+      <form class="form" action="/publish/manual/distribution-summary-2" method="post">
+
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+          label: {
+            text: "Distribution",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          id: "metadataDistribution2",
+          name: "metadataDistribution2",
+          hint: {
+            text: "An available distribution of the dataset. This is a file, for example an CVS or XLS document."
+          },
+          value: data['metadataDistribution2']
+        }) }}
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        name: "metadataDistributionFiletype2",
+        fieldset: {
+          legend: {
+            text: "Filetype",
+            isPageHeading: false
+          }
+        },
+        items: [
+          {
+            value: "csv",
+            text: "csv"
+          },
+          {
+            value: "xls",
+            text: "xls"
+          }
+        ],
+        value: data['metadataDistributionFiletype2']
+      }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

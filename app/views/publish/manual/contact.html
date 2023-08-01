@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Contact
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Main contact
+      </h1>
+
+      <form class="form" action="/publish/manual/version" method="post">
+
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+          label: {
+            text: "Contact Name",
+            classes: "govuk-label--l",
+            isPageHeading: false
+          },
+          id: "metadataContact",
+          name: "metadataContact",
+          hint: {
+            text: "Enter a contact name for the team or person responsible for the data asset."
+          },
+          value: data['metadataContact']
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Contact email address",
+            classes: "govuk-label--l",
+            type: email,
+            isPageHeading: false
+          },
+          id: "metadataContactEmail",
+          name: "metadataContactEmail",
+          hint: {
+            text: "Enter an email address for the team or person responsible for the data asset."
+          },
+          value: data['metadataContactEmail']
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
