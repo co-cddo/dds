@@ -98,28 +98,6 @@ router.post('/bMVP_i0--210', (req, res) => {
   }
 });
 
-
-// Handles form submissions from 'check-team-skills.html' which is part of the acquirer wizard
-router.post('/bMVP_i0--200', (req, res) => {
-
-  const technologySkills = req.body["technology"];
-  const securitySkills = req.body["security"];
-  const dpSkills = req.body["dp"];
-  const legalSkills = req.body["legal"];
-  const governanceSkills = req.body["governance"];
-  const businessSkills = req.body["business"];
-
-  console.log("technologySkills value: ", technologySkills);
-
-  // If all of the 'yes' radios are checked redirect to what-type-data.html
-  if (technologySkills === 'yes' && securitySkills === 'yes' && dpSkills === 'yes' && legalSkills === 'yes' && governanceSkills === 'yes' && businessSkills === 'yes') {
-    res.redirect('beta-mvp/0/acquirer/030-have-legal-power-cat');
-  } else {
-    // no radios checked, redirect to potential-risks.html
-    res.redirect('beta-mvp/0/acquirer/020-potential-risks-cat.html');
-  }
-});
-
 router.post('/bMVP_i0--updateCountryList', (req, res) => {
   var newData = req.body['newList'];
   req.session.data['data-travel-countrieslist'] = newData;
@@ -133,6 +111,15 @@ router.post('/bMVP_i0--addCountryToArray', (req, res) => {
   //   req.session.data['data-travel-countrieslist'].push(req.body['data-travel-country']);
   // }
   res.redirect('beta-mvp/0/acquirer/030-role-cat.html');
+});
+
+router.post('/bMVP_i0--legalGateway', (req, res) => {
+  const legalGateway = req.body["legal-gateway-belief"];
+  if (legalGateway === undefined || legalGateway === 'Yes' || legalGateway === 'Other') {
+    res.redirect('beta-mvp/0/acquirer/030-confirm-legal-answers.html');
+  } else {
+    res.redirect('beta-mvp/0/acquirer/020-talk-to-lawyer-cat_legal-gateway.html');
+  }
 });
 
 // #################################################

@@ -17,13 +17,13 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="030-confirm-legal-answers" method="post">
+    <form action="/bMVP_i0--legalGateway" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="legal-gateway-belief-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <span class="govuk-caption-l">{% include "includes/request-id.html" %}</span>
             <h1 class="govuk-fieldset__heading">
-              Do you believe there is a 'legal gateway' for acquiring this data?
+              Is there a 'legal gateway' for acquiring this data?
             </h1>
           </legend>
           <br>
@@ -34,7 +34,7 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="legal-gateway-belief" name="legal-gateway-belief" type="radio" value="Yes" data-aria-controls="conditional-yes-gateway">
               <label class="govuk-label govuk-radios__label" for="legal-gateway-belief">
-                Yes, we believe there is a legal gateway for acquiring this data
+                Yes, there is a legal gateway for acquiring this data
               </label>
               <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
                 For example, names or addresses
@@ -43,7 +43,7 @@
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes-gateway">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="yes-gateway">
-                  What legal gateway?
+                  What is the legal gateway for acquiring this data?
                 </label>
                 <textarea class="govuk-textarea" id="yes-gateway" name="yes-gateway" type="email" spellcheck="true" rows="5"></textarea>
               </div>
@@ -51,7 +51,7 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="legal-gateway-belief-2" name="legal-gateway-belief" type="radio" value="Other" data-aria-controls="conditional-other-legal-grounds">
               <label class="govuk-label govuk-radios__label" for="legal-gateway-belief-2">
-                We believe we have other legal grounds for acquiring this data
+                We have other legal grounds for acquiring this data
               </label>
               <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
                 For example, data about health or religious beliefs.
@@ -60,7 +60,7 @@
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other-legal-grounds">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="other-legal-grounds">
-                  What legal grounds?
+                  What other legal grounds do you have for acquiring this data?
                 </label>
                 <textarea class="govuk-textarea" id="other-legal-grounds" name="other-legal-grounds" type="email" spellcheck="true" rows="5"></textarea>
               </div>
