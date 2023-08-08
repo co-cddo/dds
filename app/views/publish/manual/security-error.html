@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Distribution
+  Security Classification
 {% endblock %}
 
 {% block header %}
@@ -27,15 +27,18 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        How is the dataset distributed?
+        You cannot add this {{ data['method'] }}
       </h1>
-      <p>An available distribution of the dataset. This is a file, for example an CVS or XLS document.</p>
-      <form class="form" action="/publish/manual/distribution-identifier" method="post">
+      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
-        <button class="govuk-button" data-module="govuk-button">Add a distribution</button>
+      {{ govukWarningText({
+        text: "Resources classified as secret or top secret are not available for sharing in the Data Marketplace.",
+        iconFallbackText: "Warning"
+      }) }}
 
-      </form>
+      <P class="govuk-body">Only resources classified as official will be accepted for sharing as this covers most of the day-to-day business of government, service delivery, commercial activity and policy development.</P>
 
+      <a href="/publish/manual/security-classification" class="govuk-link">Return to security classification</a>
     </div>
   </div>
 

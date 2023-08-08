@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,25 +26,23 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        
-      </h1>
 
-      <form class="form" action="/publish/manual/data-served" method="post">
+
+      <form class="form" action="/publish/manual/service-type" method="post">
 
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "Endpoint URL",
+            text: "What is the endpoint URL?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "metadataEndpointUrl",
           name: "metadataEndpointUrl",
           hint: {
-            text: "Hint text."
+            text: "Provide the root location or primary endpoint of the service."
           },
           value: data['metadataEndpointUrl']
         }) }}

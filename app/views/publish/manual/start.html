@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+Manually add data asset metadata
 {% endblock %}
 
 {% block header %}
@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -27,27 +27,29 @@
 
       <h1 class="govuk-heading-l">
         {% if data['method'] %}
-          {{ data['method'] }}
+        Add the {{ data['method'] }} description
         {% else %}
-        Manually add data asset metadata
+        Add the data asset description
         {% endif %}
       </h1>
 
-      <p>You will be asked to enter details from all of the attributes in the metadata model.</p>
+      <p>You will be asked to enter some information about the {{ data['method'] }}.</p>
       <p>Details include:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>Name</li>
+        <li>Title</li>
         <li>Description</li>
         <li>Summary</li>
+        <li>Theme</li>
         <li>Version history</li>
-        <li>TODO: Add the rest of the metadata items</li>
+        <li>etc</li>
       </ul>
 
-      <p>See our <a href="#" class="govuk-link">metadata guidance</a> for more information on what to enter.</p>
+
+      <p>See our <a href="https://alasdairgray.github.io/data-catalogue-schemas/" target="_blank" class="govuk-link">guidance</a> for more information on what to enter.</p>
 
       <a href="/publish/manual/title" class="govuk-button" data-module="govuk-button">
-        Add metadata
+        Continue
       </a>
 
      

@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Identifier
+  Distribution
 {% endblock %}
 
 {% block header %}
@@ -26,26 +26,27 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-
-
-      <form class="form" action="/publish/manual/created" method="post">
+      <span class="govuk-caption-l">How is the dataset distributed?</span>
+      <form class="form" action="/publish/manual/distribution-description" method="post">
 
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "What are the existing identifiers for the " + data['method'] + "?",
+            text: "What is the download URL? (optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "metadataIdentifier",
-          name: "metadataIdentifier",
+          id: "distributionUrl",
+          name: "distributionUrl",
+          value: data['distributionUrl'],
           hint: {
-            text: "Provide details of the identifiers by which this " + data['method'] + " is known within your organisation."
-          },
-          value: data['metadataIdentifier']
+            text: "Provide URL in a given format. For example, CSV or RDF file."
+          }
         }) }}
+
+        <p class="govuk-body"><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="govuk-link">See iana media types</a></p>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

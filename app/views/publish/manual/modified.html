@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Modified
+  Date modified
 {% endblock %}
 
 {% block header %}
@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,38 +26,48 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        
-      </h1>
 
-      <form class="form" action="/modified-answer" method="post">
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      <form class="form" action="/publish/manual/related" method="post">
 
-        {{ govukRadios({
-          name: "MetadataModified",
-          fieldset: {
-            legend: {
-              text: "Has the data been modified since creation?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
-            }
-          },
-          items: [
-            {
-              value: "Yes",
-              text: "Yes"
-            },
-            {
-              value: "No",
-              text: "No"
-            }
-          ],
-          hint: {
-            text: "Hint text."
-          },
-          value: data['MetadataModified']
-        }) }}
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                When was the {{data['method']}} last modified?
+              </h1>
+            </legend>
+            <div id="passport-issued-hint" class="govuk-hint">
+              Provide most recent date on which the resource was changed, updated or modified dd/mm/yyyy.
+            </div>
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="metadataModifiedDay">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="metadataModifiedDay" name="metadataModifiedDay" type="text" inputmode="numeric" value="{{ data['metadataModifiedDay'] }}">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="metadataModifiedMonth">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="metadataModifiedMonth" name="metadataModifiedMonth" type="text" inputmode="numeric" value="{{ data['metadataModifiedMonth'] }}">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="metadataModifiedYear">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="metadataModifiedYear" name="metadataModifiedYear" type="text" inputmode="numeric" value="{{ data['metadataModifiedYear'] }}">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

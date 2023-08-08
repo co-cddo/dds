@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -40,11 +40,11 @@
           },
           items: [
             {
-              value: "Manually add dataset metadata",
+              value: "dataset",
               text: "Manually add dataset metadata"
             },
             {
-              value: "Manually add data service (API) metadata",
+              value: "data service",
               text: "Manually add data service (API) metadata"
             },
             {

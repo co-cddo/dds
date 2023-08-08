@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Identifier
+  Distribution
 {% endblock %}
 
 {% block header %}
@@ -25,26 +25,24 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">How is the dataset distributed?</span>
+      <form class="form" action="/publish/manual/distribution-size" method="post">
 
 
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-      <form class="form" action="/publish/manual/created" method="post">
-
-
-        {% from "govuk/components/input/macro.njk" import govukInput %}
-
-        {{ govukInput({
+        {{ govukTextarea({
           label: {
-            text: "What are the existing identifiers for the " + data['method'] + "?",
+            text: "What is the access service? (Optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "metadataIdentifier",
-          name: "metadataIdentifier",
+          id: "DistributionService",
+          name: "DistributionService",
           hint: {
-            text: "Provide details of the identifiers by which this " + data['method'] + " is known within your organisation."
+            text: "Provide the data service that gives access to the distribution of the dataset, if applicable. paste URIs to each service, seperated by commas"
           },
-          value: data['metadataIdentifier']
+          value: data['DistributionService']
         }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

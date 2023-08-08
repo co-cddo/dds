@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,9 +26,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        
-      </h1>
+
 
       <form class="form" action="/publish/manual/alternative-title" method="post">
 
@@ -37,14 +35,14 @@
 
         {{ govukInput({
           label: {
-            text: "Title",
+            text: "What is the title of the " + data['method'] + "?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "metadataTitle",
           name: "metadataTitle",
           hint: {
-            text: "The name given to the resource.."
+            text: "Provide the full and formal name given to the " + data['method'] + ". This is not the same as alternative title, identifier, or series title."
           },
           value: data['metadataTitle']
         }) }}

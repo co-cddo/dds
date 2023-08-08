@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,11 +26,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        
-      </h1>
 
-      <form class="form" action="/publish/manual/endpoint-url" method="post">
+
+      <form class="form" action="/publish/manual/endpoint-description" method="post">
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -38,27 +36,47 @@
           name: "MetadataServiceStatus",
           fieldset: {
             legend: {
-              text: "Service status",
+              text: "What is the service status?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
           items: [
             {
-              value: "Status 1",
-              text: "Status 1"
+              value: "Discovery",
+              text: "Discovery"
             },
             {
-              value: "Status 2",
-              text: "Status 2"
+              value: "Alpha",
+              text: "Alpha"
             },
             {
-              value: "Status 3",
-              text: "Status 3"
+              value: "Beta",
+              text: "Beta"
+            },
+            {
+              value: "Private beta",
+              text: "Private beta"
+            },
+            {
+              value: "Public beta",
+              text: "Public beta"
+            },
+            {
+              value: "Live",
+              text: "Live"
+            },
+            {
+              value: "Depreciated",
+              text: "Depreciated"
+            },
+            {
+              value: "Withdrawn",
+              text: "Withdrawn"
             }
           ],
           hint: {
-            text: "Hint text."
+            text: "Select the status of the data service in the context of a particular workflow process."
           },
           value: data['MetadataServiceStatus']
         }) }}

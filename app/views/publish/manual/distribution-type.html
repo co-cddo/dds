@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Identifier
+  Distribution
 {% endblock %}
 
 {% block header %}
@@ -26,26 +26,29 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-
-
-      <form class="form" action="/publish/manual/created" method="post">
+      <h1 class="govuk-heading-l">
+        How is the dataset distributed?
+      </h1>
+      <form class="form" action="/publish/manual/distribution-description" method="post">
 
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "What are the existing identifiers for the " + data['method'] + "?",
-            classes: "govuk-label--l",
-            isPageHeading: true
+            text: "What is the media type?",
+            classes: "govuk-label--m",
+            isPageHeading: false
           },
-          id: "metadataIdentifier",
-          name: "metadataIdentifier",
+          id: "distributionType",
+          name: "distributionType",
+          value: data['distributionType'],
           hint: {
-            text: "Provide details of the identifiers by which this " + data['method'] + " is known within your organisation."
-          },
-          value: data['metadataIdentifier']
+            text: "Provide the media type of the distribution as defined by IANA [IANA-MEDIA-TYPES]."
+          }
         }) }}
+
+        <p class="govuk-body"><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="govuk-link">See iana media types</a></p>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

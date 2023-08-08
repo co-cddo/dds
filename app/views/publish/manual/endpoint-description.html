@@ -18,28 +18,28 @@ Endpoint Description
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/publish/manual/service-type" method="post">
+      <form class="form" action="/publish/manual/data-served" method="post">
 
 
         {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-        {{ govukTextarea({
+        {{ govukInput({
           label: {
-            text: "Endpoint Description",
+            text: "What is the endpoint documentation link?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "metadataEndpointDescription",
           name: "metadataEndpointDescription",
           hint: {
-            text: "A description of the services available via the end-points, including their operations, parameters etc."
+            text: "Provide a link to documentation page for the service that details the operations available, their parameters, and return objects"
           },
           value: data['metadataEndpointDescription']
         }) }}

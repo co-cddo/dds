@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Identifier
+  Distribution
 {% endblock %}
 
 {% block header %}
@@ -26,25 +26,25 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-
-
-      <form class="form" action="/publish/manual/created" method="post">
+      <span class="govuk-caption-l">How is the dataset distributed?</span>
+      <form class="form" action="/publish/manual/distribution-service" method="post">
 
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "What are the existing identifiers for the " + data['method'] + "?",
+            text: "What is the distribution identifier?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "metadataIdentifier",
-          name: "metadataIdentifier",
+          id: "distributionIdentifier",
+          name: "distributionIdentifier",
           hint: {
-            text: "Provide details of the identifiers by which this " + data['method'] + " is known within your organisation."
+            text: "This is a unique number, code, or reference value assigned to an information resource within a given context.
+            "
           },
-          value: data['metadataIdentifier']
+          value: data['distributionIdentifier']
         }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

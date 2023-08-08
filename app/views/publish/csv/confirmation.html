@@ -1,9 +1,8 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Distribution
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
-
 {% block header %}
   {{ super() }}
   {% include "includes/mvp-nav_sign-out.html" %}
@@ -18,7 +17,6 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,15 +24,20 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        How is the dataset distributed?
-      </h1>
-      <p>An available distribution of the dataset. This is a file, for example an CVS or XLS document.</p>
-      <form class="form" action="/publish/manual/distribution-identifier" method="post">
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">CSV file uploaded</h1>
+      </div>
 
-        <button class="govuk-button" data-module="govuk-button">Add a distribution</button>
+      <p>
+        Your data asset descriptions have been uploaded to the metadata catalogue.
+      </p>
+      <p>
+        They are now available to be found by other government organisations searching for a data asset.
+      </p>
 
-      </form>
+      <a href="/publish/publish-dashboard" class="govuk-button" data-module="govuk-button">
+        Return to dashboard
+      </a>
 
     </div>
   </div>

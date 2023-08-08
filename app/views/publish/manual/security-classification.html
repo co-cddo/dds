@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,11 +26,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        
-      </h1>
 
-      <form class="form" action="/publish/manual/creator" method="post">
+
+      <form class="form" action="/security-answer" method="post">
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -38,7 +36,7 @@
           name: "MetadataSecurity",
           fieldset: {
             legend: {
-              text: "Security Classification",
+              text: "What is the Security Classification?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
@@ -57,9 +55,6 @@
               text: "Secret"
             }
           ],
-          hint: {
-            text: "Hint text."
-          },
           value: data['MetadataSecurity']
         }) }}
 

@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,9 +26,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        
-      </h1>
+
 
       <form class="form" action="/publish/manual/identifier" method="post">
 
@@ -36,7 +34,7 @@
 
         {{ govukSelect({
           label: {
-            text: "Creator",
+            text: "Who is the organisation that created the " + data['method'] + "?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
@@ -117,14 +115,15 @@
     }
   ],
   hint: {
-    text: "The entity responsible for producing the resource."
+    text: "The creator is the organisation responsible for producing the resource."
   },
   value: data['metadataCreator']
 
         }) }}
 
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Add another organisation</button>
         <button class="govuk-button" data-module="govuk-button">Continue</button>
-
+          <p class="govuk-visually-hidden">TODO: make autocomplte search, TODO: add other option</p>
       </form>
 
     </div>

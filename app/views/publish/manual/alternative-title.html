@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -32,18 +32,19 @@
 
         {{ govukInput({
           label: {
-            text: "Alternative title",
+            text: "Does the " + data['method'] + " have an alternative title? (optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "metadataAltTitle",
           name: "metadataAltTitle",
           hint: {
-            text: "Hint text."
+            text: "Provide any alternative names that the " + data['method'] + " is known by."
           },
           value: data['metadataAltTitle']
         }) }}
 
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Add another alternative title</button>
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>

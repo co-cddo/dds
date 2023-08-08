@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,9 +26,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        
-      </h1>
+
 
       <form class="form" action="/publish/manual/check-answers" method="post">
 
@@ -37,14 +35,14 @@
 
         {{ govukInput({
           label: {
-            text: "Data served",
+            text: "What is the data in the Data Marketplace that is served?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "metadatadataServed",
           name: "metadatadataServed",
           hint: {
-            text: "A collection of data that this data service can distribute."
+            text: "Provide the collection of data that this data service can distribute. Paste a link to the data served here."
           },
           value: data['metadatadataServed']
         }) }}

@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}}
 
 {% block content %}
@@ -26,9 +26,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        
-      </h1>
+
 
       <form class="form" action="/publish/manual/distribution" method="post">
 
@@ -38,7 +36,7 @@
           name: "metadataFrequency",
           fieldset: {
             legend: {
-              text: "Update frequency",
+              text: "How often is the dataset updated?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
@@ -49,25 +47,30 @@
               text: "Daily"
             },
             {
-              value: "Bi-weekly",
-              text: "Bi-weekly"
-            },
-            {
               value: "Weekly",
               text: "Weekly"
             },
             {
-              value: "Fortnightly",
-              text: "Fortnightly"
-            },
-            {
               value: "Monthly",
               text: "Monthly"
+            },
+            {
+              value: "Quarterly",
+              text: "Quarterly"
+            },
+            {
+              value: "Yearly",
+              text: "Yearly"
+            },
+            {
+              value: "Continuous",
+              text: "Continuous"
+            },
+            {
+              value: "Irregular",
+              text: "Irregular"
             }
           ],
-          hint: {
-            text: "Hint text."
-          },
           value: data['metadataFrequency']
         }) }}
 

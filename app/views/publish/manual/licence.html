@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,9 +26,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        
-      </h1>
+
 
       <form class="form" action="/publish/manual/security-classification" method="post">
 
@@ -48,9 +46,12 @@
 
         {{ govukRadios({
           name: "metadataLicence",
+          hint: {
+            text: "Select an option. If 'other' selected, add an URL link to the licence."
+          },
           fieldset: {
             legend: {
-              text: "Licence",
+              text: "What licence will be used to allow the data to be shared?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
@@ -61,12 +62,20 @@
               text: "Open Governemnt Licence"
             },
             {
-              value: "CC0 licence",
-              text: "CC0 licence"
+              value: "CC0",
+              text: "CC0 (No rights reserved, public domain)"
             },
             {
-              value: "CC-BY licence",
-              text: "CC-BY licence"
+              value: "CC-BY",
+              text: "CC-BY (Attribution)"
+            },
+            {
+              value: "CC BY-SA",
+              text: "CC BY-SA (Attribution-ShareAlike)"
+            },
+            {
+              value: "CC BY-NC",
+              text: "CC BY-NC (Attribution-NonCommercial)"
             },
             {
               value: "Other",
@@ -76,9 +85,6 @@
               }
             }
           ],
-          hint: {
-            text: "A legal document under which the resource is made available."
-          },
           value: data['metadataLicence']
         }) }}
 

@@ -49,23 +49,20 @@
 
 
 
-      <form class="form" action="/publish/manual/related-summary" method="post">
+      <form class="form" action="/publish/manual/related-summary-2" method="post">
 
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "Are there any related datasets or data services? (optional)",
+            text: "Add another related dataset or data service",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "metadataRelated",
-          name: "metadataRelated",
-          hint: {
-            text: "This could be another dataset or data service which is related to the one you are adding. Paste a link to the related asset here."
-          },
-          value: data['metadataRelated']
+          id: "metadataRelated2",
+          name: "metadataRelated2",
+          value: data['metadataRelated2']
         }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

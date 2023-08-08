@@ -18,7 +18,7 @@ Summary
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -32,14 +32,14 @@ Summary
 
         {{ govukTextarea({
           label: {
-            text: "Summary",
+            text: "What is the " + data['method'] + " summary? (optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "metadataSummary",
           name: "metadataSummary",
           hint: {
-            text: "Hint text."
+            text: "Provide a short textual summary of the " + data['method'] + " with a maximum length of 250 characters."
           },
           value: data['metadataSummary']
         }) }}

@@ -2,7 +2,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {% block pageTitle %}
-  {{ resource.title }} - Sprint 1
+{{ data['metadataTitle'] }}
 {% endblock %}
 
 {% block header %}
@@ -19,11 +19,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
-{% endblock %}
-
-{% block beforeContent %}
-  <a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -41,27 +37,24 @@
     
     <p class="govuk-caption-m"> Last updated:<strong>
       {% if data['metadataModified'] == "Yes" %}
-      <span class="">Maodified date here</span>
+      <span class="">{{ data['metadataModifiedDay'] }} {{ data['metadataModifiedDay'] }} {{ data['metadataModifiedDay'] }}</span>
       {% else %}
-      <span class="">created date here</span>
+      <span class="">{{ data['metadataCreatedDay'] }} {{ data['metadataCreatedMonth'] }} {{ data['metadataCreatedYear'] }}</span>
       {% endif %}
     </strong></p>
 
     <p class="govuk-!-margin-bottom-5">
-      {% if data['metadataType'] == "Dataset" %}
+      {% if data['method'] == "dataset" %}
       <span class="">Dataset | Filetypes: 
-        <strong class="govuk-tag govuk-tag--grey">{{ data['metadataDistributionFiletype'] }}</strong>
-        {% if data['metadataDistributionFiletype2'] %}
-        <strong class="govuk-tag govuk-tag--grey">{{ data['metadataDistributionFiletype2'] }}</strong>
+        <strong class="govuk-tag govuk-tag--grey">{{ data['distributionType'] }}</strong>
+        {% if data['DistributionType'] %}
+        <strong class="govuk-tag govuk-tag--grey">{{ data['distributionType'] }}</strong>
       {% endif %}
       </span>
       {% else %}
       <span class="">Data service | API: <strong class="govuk-tag govuk-tag--grey">{{ data['MetadataServiceType'] }}</strong></span>
       {% endif %}
 
-      {% for distribution in resource.distributions %}
-          <strong class="govuk-tag govuk-tag--grey">{{ distribution }}</strong>
-      {% endfor %}
     </p>
     <div class="result-list__limit-height">
       <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-0" >
@@ -76,7 +69,7 @@
   <div class="govuk-grid-column-two-thirds-from-desktop govuk-!-margin-bottom-8">
     <div class="additional-info govuk-!-margin-bottom-8">
 
-    {% if data['metadataType'] == "Dataset" %}
+    {% if data['method'] == "dataset" %}
     <h2 class="govuk-heading-l">Request this dataset</h2>
     {% else %}
     <h2 class="govuk-heading-l">Request this data service</h2>
@@ -122,7 +115,7 @@
     </p>
   </div>
 
-  {% if data['metadataType'] == "Dataset" %}
+  {% if data['method'] == "dataset" %}
     <h2 class="govuk-heading-l">Data available</h2>
     <p class="govuk-body">The following files are available as part of this dataset. </p>
 
@@ -143,15 +136,15 @@
       
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">{{ data['metadataDistribution'] }}</th>
-          <td class="govuk-table__cell">25 July 2023</td>
-          <td class="govuk-table__cell">{{ data['metadataDistributionFiletype'] }}</td>
+          <th scope="row" class="govuk-table__header">{{ data['distributionIdentifier'] }}</th>
+          <td class="govuk-table__cell">{{ data['DistributionModifiedDay'] }} {{ data['DistributionModifiedMonth'] }} {{ data['DistributionModifiedYear'] }}</td>
+          <td class="govuk-table__cell">{{ data['distributionType'] }}</td>
         </tr>
         {% if data['metadataDistribution2'] %}
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">{{ data['metadataDistribution2'] }}</th>
-          <td class="govuk-table__cell">25 July 2023</td>
-          <td class="govuk-table__cell">{{ data['metadataDistributionFiletype2'] }}</td>
+          <th scope="row" class="govuk-table__header">{{ data['distributionIdentifier2'] }}</th>
+          <td class="govuk-table__cell">{{ data['distributionModified2'] }}</td>
+          <td class="govuk-table__cell">{{ data['distributionType2'] }}</td>
         </tr>
       {% endif %}
       </tbody>
@@ -255,6 +248,7 @@
       <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-related_items-ae81accd">
         <ul class="gem-c-related-navigation__link-list">
           <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="#">{{ data['metadataRelated'] }}</a></li>
+          <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="#">{{ data['metadataRelated2'] }}</a></li>
         </ul>
       </nav>
 

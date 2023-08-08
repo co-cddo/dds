@@ -5,29 +5,8 @@
 {% endblock %}
 
 {% block header %}
-{{ govukHeader({
-  homepageUrl: "/",
-  serviceName: serviceName,
-  serviceUrl: "/",
-  containerClasses: "govuk-width-container"
-}) }}
-    <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
-      <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
-      <ul class="app-navigation__list app-width-container">
-        <li class="app-navigation__list-item ">
-          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/publish/start-logged-in">
-            Home
-          </a>
-        </li>
-          </li>
-          <li class="app-navigation__list-item app-navigation__list-item--right">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/publish/start">
-              Sign out
-            </a>
-          </li>
-      </ul>
-    </nav>
-
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -39,17 +18,14 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
-
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        
-      </h1>
+
 
       <form class="form" action="/publish/manual/access-rights" method="post">
 
@@ -58,14 +34,14 @@
 
         {{ govukInput({
           label: {
-            text: "Version",
+            text: "What is the version of this " + data['method'] + "?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "metadataVersion",
           name: "metadataVersion",
           hint: {
-            text: "Use your interal versioning method."
+            text: "For example: V1.0, V2.0, V3.0 or release date. If this is the first or only version, list V1.0 or the date of release dd/mm/yyyy"
           },
           value: data['metadataVersion']
         }) }}

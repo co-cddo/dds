@@ -18,7 +18,7 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="{{ backLink }}">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -27,9 +27,11 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Main contact
+        Who is the main point of  contact for this {{ data['method'] }}
       </h1>
-
+      <p class="govuk-body">Provide the team name and email address who will respond to requests for this dataset.</p>
+        <p class="govuk-body">If there is not a team name, then supply an individual's name and address.</p>
+      
       <form class="form" action="/publish/manual/version" method="post">
 
 
@@ -37,30 +39,24 @@
 
         {{ govukInput({
           label: {
-            text: "Contact Name",
-            classes: "govuk-label--l",
+            text: "Who is the point of contact for this dataset?",
+            classes: "govuk-label--m",
             isPageHeading: false
           },
           id: "metadataContact",
           name: "metadataContact",
-          hint: {
-            text: "Enter a contact name for the team or person responsible for the data asset."
-          },
           value: data['metadataContact']
         }) }}
 
         {{ govukInput({
           label: {
             text: "Contact email address",
-            classes: "govuk-label--l",
+            classes: "govuk-label--m",
             type: email,
             isPageHeading: false
           },
           id: "metadataContactEmail",
           name: "metadataContactEmail",
-          hint: {
-            text: "Enter an email address for the team or person responsible for the data asset."
-          },
           value: data['metadataContactEmail']
         }) }}
 
