@@ -1,0 +1,133 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Themes
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/publish/manual/contact" method="post">
+
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {% set otherHtml %}
+        {{ govukInput({
+          id: "metadataThemesOther",
+          name: "metadataThemesOther",
+          type: "text",
+          label: {
+            text: "Enter URI to theme"
+          }
+        }) }}
+        {% endset -%}
+
+        {{ govukCheckboxes({
+          name: "metadataThemes",
+          fieldset: {
+            legend: {
+              text: "What are the " + data['method'] + " themes? (optional)",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Provide the main category of the " + data['method'] + ". A dataset can have multiple themes. Select all that apply."
+          },
+          items: [
+            {
+              value: "Business and economy",
+              text: "Business and economy"
+            },
+            {
+              value: "Crime and justice",
+              text: "Crime and justice"
+            },
+            {
+              value: "Defence",
+              text: "Defence"
+            },
+            {
+              value: "Education",
+              text: "Education"
+            },
+            {
+              value: "Environment",
+              text: "Environment"
+            },
+            {
+              value: "Government",
+              text: "Government"
+            },
+            {
+              value: "Government spending",
+              text: "Government spending"
+            },
+            {
+              value: "Health",
+              text: "Health"
+            },
+            {
+              value: "Mapping",
+              text: "Mapping"
+            },
+            {
+              value: "Society",
+              text: "Society"
+            },
+            {
+              value: "Towns and cities",
+              text: "Towns and cities"
+            },
+            {
+              value: "Transport",
+              text: "Transport"
+            },
+            {
+              value: "Digital service performance",
+              text: "Digital service performance"
+            },
+            {
+              value: "Government reference data",
+              text: "Government reference data"
+            },
+            {
+              value: "Other",
+              text: "Other",
+              conditional: {
+                html: otherHtml
+              }
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/bMVP_i0--addCountryToArray" method="post">
+      <div class="govuk-form-group">
+        <span class="govuk-caption-l">{% include "includes/request-id.html" %}</span>
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="data-travel-countries">
+            What other organisations will access the data?
+          </label>
+        </h1>
+        <div class="govuk-hint">
+          List all the organisations you will be sharing the data with.
+        </div>
+        <input class="govuk-input govuk-input--width-20" id="other-orgs" name="other-orgs" type="text">
+      </div>
+      <p class="govuk-body"><a href="#" class="govuk-link" id="addMoreOrgs">Add another organisation</a></p>
+      <br>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
+          Save and return
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <script type="text/javascript"></script> -->
+
+{% endblock %}

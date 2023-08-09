@@ -1,0 +1,91 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Service status
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/publish/manual/endpoint-description" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "MetadataServiceStatus",
+          fieldset: {
+            legend: {
+              text: "What is the service status?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "Discovery",
+              text: "Discovery"
+            },
+            {
+              value: "Alpha",
+              text: "Alpha"
+            },
+            {
+              value: "Beta",
+              text: "Beta"
+            },
+            {
+              value: "Private beta",
+              text: "Private beta"
+            },
+            {
+              value: "Public beta",
+              text: "Public beta"
+            },
+            {
+              value: "Live",
+              text: "Live"
+            },
+            {
+              value: "Depreciated",
+              text: "Depreciated"
+            },
+            {
+              value: "Withdrawn",
+              text: "Withdrawn"
+            }
+          ],
+          hint: {
+            text: "Select the status of the data service in the context of a particular workflow process."
+          },
+          value: data['MetadataServiceStatus']
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

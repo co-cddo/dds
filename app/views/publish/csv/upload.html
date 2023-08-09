@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Upload
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Upload csv file
+      </h1>
+      <p class="govuk-body">Upload the CSV file containing your data asset descriptions.</p>
+
+      {{ govukWarningText({
+        text: "You must get permission from the department that owns the data before uploading the file.",
+        iconFallbackText: "Warning"
+      }) }}
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="file-upload-1">
+            Upload a file
+          </label>
+
+          <div id="appUpload" class="app-upload">
+            <button class="app-upload__button">Choose file</button>
+            <span id="appUploadText" class="app-upload__text govuk-body">No file chosen</span>
+          </div>
+
+          <div id="appBrowse" class="app-browse">
+            <div class="app-browse__box" style="background-image: url(/public/images/browser.png);">
+              <button id="errorButton" class="app-browse__button app-browse__button--error">my_data_file_with_error.csv</button>
+              <button id="noErrorButton" class="app-browse__button app-browse__button--no-error">my_data_file_without_errors.csv</button>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- Placeholder button -->
+        <a id="noNavigate" class="govuk-button"  data-module="govuk-button" href="#">Continue</a>
+        <!-- Button if error -->
+        <a id="errorNavigate" class="govuk-button"  data-module="govuk-button" href="/publish/csv/upload-summary-error">Continue</a>
+        <!-- Button if no error -->
+        <a id="noErrorNavigate" class="govuk-button"  data-module="govuk-button" href="/publish/csv/upload-summary">Continue</a>
+
+
+    </div>
+  </div>
+
+{% endblock %}

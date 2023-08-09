@@ -5,4 +5,26 @@
 
 window.GOVUKPrototypeKit.documentReady(() => {
   // Add JavaScript here
+  if ( document.getElementById('appUpload') ) {
+    document.getElementById('appUpload').addEventListener('click', function() {
+      document.getElementById('appBrowse').classList.add('active');
+    });
+
+    document.getElementById('errorButton').addEventListener('click', function() {
+      document.getElementById('noNavigate').style.display = 'none';
+      document.getElementById('noErrorNavigate').style.display = 'none';
+      document.getElementById('errorNavigate').style.display = 'inline-block';
+      document.getElementById('appBrowse').classList.remove('active');
+      document.getElementById('appUploadText').textContent = 'my_data_file_with_error.csv';
+    });
+
+    document.getElementById('noErrorButton').addEventListener('click', function() {
+      document.getElementById('noNavigate').style.display = 'none';
+      document.getElementById('errorNavigate').style.display = 'none';
+      document.getElementById('noErrorNavigate').style.display = 'inline-block';
+      document.getElementById('appBrowse').classList.remove('active');
+      document.getElementById('appUploadText').textContent = 'my_data_file_without_errors.csv';
+    });
+  }
+
 })
