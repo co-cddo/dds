@@ -1,3 +1,6 @@
+const govukPrototypeKit = require('govuk-prototype-kit')
+const router = govukPrototypeKit.requests.setupRouter()
+
 // Publisher journey
 router.post('/method-answer', function(request, response) {
 
@@ -106,14 +109,4 @@ router.post('/dist-size-answer', function(request, response) {
     }
 })
 
-router.post('/signin-route', function(request, response) {
-
-    var signinRoute = request.session.data['signinRoute']
-    if (signinRoute == "Find"){
-        response.redirect("/find/find")
-    } else if (signinRoute == "Manage") {
-        response.redirect("/manage-shares/")
-    } else {
-        response.redirect("/publish/publish-dashboard")
-    }
-})
+module.exports = router;

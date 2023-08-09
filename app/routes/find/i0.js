@@ -1,3 +1,28 @@
+const govukPrototypeKit = require('govuk-prototype-kit')
+const router = govukPrototypeKit.requests.setupRouter()
+const { promises: fs } = require("fs");
+
+const got = require('got');
+let cache = {};
+let itemsjs;
+let items;
+
+let global = {};
+
+const init =  async function() {
+   global.organisations = await helpers.getData('./app/data/organisations.json');
+   global.topics = await helpers.getData('./app/data/topics.json');
+   global.types = await helpers.getData('./app/data/asset-types.json');
+   global.resources = [];
+   const catalogue = await helpers.getData('./app/data/catalogue.json');
+   const mappedCatalogue = helpers.mapLiveSchemaToSpec(catalogue);
+   const nhs = await helpers.getData('./app/data/nhs.json');
+   const mappedNhs = await helpers.mapLiveSchemaToSpec(nhs.apis, 'nhs-digital', 'health');
+   global.resources =  await global.resources.concat(mappedCatalogue);
+
+   global.index = searchSetup(global.resources);
+}
+
 // Search and result workings
 
 sprint = 'find';
@@ -469,3 +494,5 @@ const helpers = {
 }
 
 init();
+
+module.exports = router;
