@@ -31,45 +31,45 @@ router.post('/signin-route', function(request, response) {
 // Find (Acquirer)
 // #################################################
 
-const find_i0 = require('./routes/find/i0.js')
-router.use('', find_i0);
+const find_ur = require('./routes/find/ur.js')
+router.use('', find_ur);
 
 // #################################################
 // Request (Acquirer)
 // #################################################
 
-const request_i0 = require('./routes/request/i0.js')
-router.use('', request_i0);
+const request_ur = require('./routes/request/ur.js')
+router.use('', request_ur);
 
 // Iteration: 1
-const request_i1 = require('./routes/request/i1.js')
-router.use('', request_i1);
+const request_wip = require('./routes/request/wip.js')
+router.use('', request_wip);
 
 
 // #################################################
 // Publish (Supplier) 
 // #################################################
 
-const publish_i0 = require('./routes/publish/i0.js')
-router.use('', publish_i0);
+const publish_ur = require('./routes/publish/ur.js')
+router.use('', publish_ur);
 
 
 // #################################################
 // Review request (Supplier)
 // #################################################
 
-const reviewRequest_i0 = require('./routes/review-request/i0.js')
-router.use('', reviewRequest_i0);
+const reviewRequest_ur = require('./routes/review-request/ur.js')
+router.use('', reviewRequest_ur);
 
 // Iteration: 1
-const reviewRequest_i1 = require('./routes/review-request/i1.js')
-router.use('', reviewRequest_i1);
+const reviewRequest_wip = require('./routes/review-request/wip.js')
+router.use('', reviewRequest_wip);
 
 // #################################################
 // Manage-shares 
 // #################################################
 
-const manageShares_i0 = require('./routes/manage-shares/i0.js')
-router.use('', manageShares_i0);
+const manageShares_ur = require('./routes/manage-shares/ur.js')
+router.use('', manageShares_ur);
 
 module.exports = router;

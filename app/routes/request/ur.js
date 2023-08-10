@@ -110,15 +110,15 @@ router.post('/bMVP_i0--addCountryToArray', (req, res) => {
   // if (req.body['data-travel-country'].length > 0) { 
   //   req.session.data['data-travel-countrieslist'].push(req.body['data-travel-country']);
   // }
-  res.redirect('beta-mvp/0/acquirer/030-role-cat.html');
+  res.redirect('request/030-role-cat.html');
 });
 
 router.post('/bMVP_i0--legalGateway', (req, res) => {
   const legalGateway = req.body["legal-gateway-belief"];
   if (legalGateway === undefined || legalGateway === 'Yes' || legalGateway === 'Other') {
-    res.redirect('beta-mvp/0/acquirer/030-confirm-legal-answers.html');
+    res.redirect('request/030-confirm-legal-answers.html');
   } else {
-    res.redirect('beta-mvp/0/acquirer/020-talk-to-lawyer-cat_legal-gateway.html');
+    res.redirect('request/020-talk-to-lawyer-cat_legal-gateway.html');
   }
 });
 

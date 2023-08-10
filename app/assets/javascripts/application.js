@@ -3,6 +3,8 @@
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 //
 
+//TO DO - Create seperate JS files (with prefixes) for each sub-service and import them into this file
+
 window.GOVUKPrototypeKit.documentReady(() => {
   // Add JavaScript here
   if ( document.getElementById('appUpload') ) {

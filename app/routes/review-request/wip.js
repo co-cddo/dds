@@ -14,9 +14,9 @@ router.post('/bMVP_i1--decision-after-declaration', (req, res) => {
   var decision = req.session.data["your-decision"];
 
   if (decision == 'accept') {
-    res.redirect('beta-mvp/0/supplier/110-accept');
+    res.redirect('wip/adam/review-request/110-accept');
   } else {
-    res.redirect('beta-mvp/0/supplier/110-comment');
+    res.redirect('wip/adam/review-request/110-comment');
   }
 });
 
@@ -28,19 +28,19 @@ router.post('/bMVP_i1--decision-routes', (req, res) => {
 
   // If the checkbox is checked, redirect to agree.html
   if (yourDecision === undefined) {
-    res.redirect('beta-mvp/0/supplier/110-proceeding');
+    res.redirect('wip/adam/review-request/110-proceeding');
   } 
   if (yourDecision === 'meeting') {
-    res.redirect('beta-mvp/0/supplier/110-proceeding');
+    res.redirect('wip/adam/review-request/110-proceeding');
   } 
   if (yourDecision === 'accept') {
-    res.redirect('beta-mvp/0/supplier/030-declaration-cat');
+    res.redirect('wip/adam/review-request/030-declaration-cat');
   } 
   if (yourDecision === 'comment') {
-    res.redirect('beta-mvp/0/supplier/110-comment');
+    res.redirect('wip/adam/review-request/110-comment');
   } 
   if (yourDecision === 'reject') {
-    res.redirect('beta-mvp/0/supplier/110-reject');
+    res.redirect('wip/adam/review-request/110-reject');
   } 
 
 });
