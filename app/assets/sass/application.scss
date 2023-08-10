@@ -20,11 +20,6 @@
 @import "overrides/navigation";
 @import "finder_frontend/expander";
 
-//Override styles when creating screengrabs
-// .govuk-main-wrapper a:visited, .govuk-main-wrapper .govuk-link:visited {
-//     color:  #1d70b8!important;
-// }
-
 // ----------------------------------------------
 // Request
 // ----------------------------------------------
@@ -39,6 +34,11 @@
 // Global
 // ----------------------------------------------
 
+//Override styles when creating screengrabs
+// .govuk-main-wrapper a:visited, .govuk-main-wrapper .govuk-link:visited {
+//     color:  #1d70b8!important;
+// }
+
 .govuk-warning-text__icon {
     border: 3px solid #666;
     color: #666;
@@ -51,47 +51,47 @@
 // Find
 // ----------------------------------------------
 
-// .align-items-center {
-//     align-items: center;
-// }
-// .moj-pagination__results {
-//     text-align: left;
-//     display: block;
-// }
+.align-items-center {
+    align-items: center;
+}
+.moj-pagination__results {
+    text-align: left;
+    display: block;
+}
 
 //PROB - Unwant global overrides
 .govuk-pagination {
     margin-bottom: 10px;
 }
 
-// .result-list__item {
-//     padding: 0 0 15px;
-//     margin: 0 0 15px!important;
-//     border-bottom: 1px solid #b1b4b6;
-// }
+.result-list__item {
+    padding: 0 0 15px;
+    margin: 0 0 15px!important;
+    border-bottom: 1px solid #b1b4b6;
+}
 
 .result-list__limit-height {
     max-height: 1.3157894737em * 4;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-// .result-list__limit-height.theres-no-limit {
-//     max-height: fit-content;
-// }
+.result-list__limit-height.theres-no-limit {
+    max-height: fit-content;
+}
 .js-enabled .govuk-accordion__section-toggle {
     cursor: pointer;
 }
-// .datacat-color-white {
-//     color: white !important;
-// }
-// .data-cat-masthead__aside {
-//     color: white;
-//     border: 1px solid white;
-//     padding: 20px;
-//     *, a {
-//         color: white;
-//     }
-// }
+.datacat-color-white {
+    color: white !important;
+}
+.data-cat-masthead__aside {
+    color: white;
+    border: 1px solid white;
+    padding: 20px;
+    *, a {
+        color: white;
+    }
+}
 .datacat-row-of-threes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -305,9 +305,9 @@
     overflow: auto;
 }
 
-// .moj-override--selected-tags .moj-filter__selected-heading {
-//     display: none;
-// }
+.moj-override--selected-tags .moj-filter__selected-heading {
+    display: none;
+}
 
 .moj-override--selected-tags .moj-filter__heading-title {
     display: none;

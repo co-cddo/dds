@@ -10,7 +10,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Acquirer - Request
 // #################################################
 
-router.post('/bMVP_i1--280', (req, res) => {
+router.post('/bMVP_wip--280', (req, res) => {
   
   const otherOrgs = req.body['otherOrgs'];
 
@@ -22,7 +22,7 @@ router.post('/bMVP_i1--280', (req, res) => {
   }
 });
 
-router.post('/bMVP_i1--270', (req, res) => {
+router.post('/bMVP_wip--270', (req, res) => {
 
   const dataType = req.session.data['typeOfData'];
 
@@ -37,7 +37,7 @@ router.post('/bMVP_i1--270', (req, res) => {
   }
 });
 
-router.post('/bMVP_i1--260', (req, res) => {
+router.post('/bMVP_wip--260', (req, res) => {
 
   const willLeave = req.body["reviewed"];
 
@@ -48,7 +48,7 @@ router.post('/bMVP_i1--260', (req, res) => {
 });
 
 // Handles form submissions from 'What type of data do you need which is part of the acquirer wizard
-router.post('/bMVP_i1--check-for-no-need', (req, res) => {
+router.post('/bMVP_wip--check-for-no-need', (req, res) => {
 
   const dataTypes = req.body["countries"];
 
@@ -59,7 +59,7 @@ router.post('/bMVP_i1--check-for-no-need', (req, res) => {
     res.redirect('wip/adam/request/020-lawful-basis.html');
   }
 });
-router.post('/bMVP_i1--240', (req, res) => {
+router.post('/bMVP_wip--240', (req, res) => {
 
   const willLeave = req.body["leaveUK"];
 
@@ -72,7 +72,7 @@ router.post('/bMVP_i1--240', (req, res) => {
   }
 });
 
-router.post('/bMVP_i1--230', (req, res) => {
+router.post('/bMVP_wip--230', (req, res) => {
 
   const legalPower = req.body["specialCatBasis"];
 
@@ -85,7 +85,7 @@ router.post('/bMVP_i1--230', (req, res) => {
   }
 });
 
-router.post('/bMVP_i1--210', (req, res) => {
+router.post('/bMVP_wip--210', (req, res) => {
 
   const legalPower = req.body["haveLegalPower"];
 
@@ -98,7 +98,7 @@ router.post('/bMVP_i1--210', (req, res) => {
   }
 });
 
-router.post('/bMVP_i1--updateCountryList', (req, res) => {
+router.post('/bMVP_wip--updateCountryList', (req, res) => {
   var newData = req.body['newList'];
   req.session.data['data-travel-countrieslist'] = newData;
   req.session.save(function(err) {
@@ -106,14 +106,14 @@ router.post('/bMVP_i1--updateCountryList', (req, res) => {
   })
 });
 
-router.post('/bMVP_i1--addCountryToArray', (req, res) => {
+router.post('/bMVP_wip--addCountryToArray', (req, res) => {
   // if (req.body['data-travel-country'].length > 0) { 
   //   req.session.data['data-travel-countrieslist'].push(req.body['data-travel-country']);
   // }
   res.redirect('wip/adam/request/030-role-cat.html');
 });
 
-router.post('/bMVP_i1--legalGateway', (req, res) => {
+router.post('/bMVP_wip--legalGateway', (req, res) => {
   const legalGateway = req.body["legal-gateway-belief"];
   if (legalGateway === undefined || legalGateway === 'Yes' || legalGateway === 'Other') {
     res.redirect('wip/adam/request/030-confirm-legal-answers.html');

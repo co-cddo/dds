@@ -17,7 +17,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="/bMVP_i1--addCountryToArray" method="post">
+    <form action="/bMVP_wip--addCountryToArray" method="post">
       <div class="govuk-form-group">
         <span class="govuk-caption-l">{% include "includes/request/request-id.html" %}</span>
         <h1 class="govuk-label-wrapper">
@@ -85,7 +85,7 @@
     function updateCountriesList(data) {
       console.log(data);
       $.ajax({
-        url: '/bMVP_i1--updateCountryList',
+        url: '/bMVP_wip--updateCountryList',
         type: 'POST',
         data: { newList: data },
         dataType: 'json',

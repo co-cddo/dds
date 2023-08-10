@@ -10,7 +10,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Supplier
 // #################################################
 
-router.post('/bMVP_i0--decision-after-declaration', (req, res) => {
+router.post('/bMVP_ur--decision-after-declaration', (req, res) => {
   var decision = req.session.data["your-decision"];
 
   if (decision == 'accept') {
@@ -21,7 +21,7 @@ router.post('/bMVP_i0--decision-after-declaration', (req, res) => {
 });
 
 // Handles form submissions from 'decision'
-router.post('/bMVP_i0--decision-routes', (req, res) => {
+router.post('/bMVP_ur--decision-routes', (req, res) => {
 
   const yourDecision = req.body["your-decision"];
   console.log("yourDecision value: ", yourDecision);
