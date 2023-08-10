@@ -14,9 +14,9 @@ router.post('/bMVP_ur--decision-after-declaration', (req, res) => {
   var decision = req.session.data["your-decision"];
 
   if (decision == 'accept') {
-    res.redirect('supplier/110-accept');
+    res.redirect('review-request/110-accept');
   } else {
-    res.redirect('supplier/110-comment');
+    res.redirect('review-request/110-comment');
   }
 });
 
@@ -28,19 +28,19 @@ router.post('/bMVP_ur--decision-routes', (req, res) => {
 
   // If the checkbox is checked, redirect to agree.html
   if (yourDecision === undefined) {
-    res.redirect('supplier/110-proceeding');
+    res.redirect('review-request/110-proceeding');
   } 
   if (yourDecision === 'meeting') {
-    res.redirect('supplier/110-proceeding');
+    res.redirect('review-request/110-proceeding');
   } 
   if (yourDecision === 'accept') {
-    res.redirect('supplier/030-declaration-cat');
+    res.redirect('review-request/030-declaration-cat');
   } 
   if (yourDecision === 'comment') {
-    res.redirect('supplier/110-comment');
+    res.redirect('review-request/110-comment');
   } 
   if (yourDecision === 'reject') {
-    res.redirect('supplier/110-reject');
+    res.redirect('review-request/110-reject');
   } 
 
 });
