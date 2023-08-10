@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Distribution
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        How is the dataset distributed?
+      </h1>
+      <form class="form" action="/publish/manual/distribution-description" method="post">
+
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+          label: {
+            text: "What is the media type?",
+            classes: "govuk-label--m",
+            isPageHeading: false
+          },
+          id: "distributionType",
+          name: "distributionType",
+          value: data['distributionType'],
+          hint: {
+            text: "Provide the media type of the distribution as defined by IANA [IANA-MEDIA-TYPES]."
+          }
+        }) }}
+
+        <p class="govuk-body"><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="govuk-link">See iana media types</a></p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

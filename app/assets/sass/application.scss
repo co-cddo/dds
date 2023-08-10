@@ -3,14 +3,26 @@
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 // 
 
+//TO DO - Create seperate SCSS files (with prefixes) for each sub-service and import them into this file
+
 // Add extra styles here
 
-@import 'overrides/navigation';
+@import "functions/image-url";
+@import "govuk_publishing_components/components/helpers/brand-colours";
+@import "govuk_publishing_components/components/organisation-logo";
+@import "govuk_publishing_components/components/cards";
+@import "govuk_publishing_components/components/document-list";
+@import "finder_frontend/option-select";
+@import "node_modules/@ministryofjustice/frontend/moj/components/filter/filter";
+@import "node_modules/@ministryofjustice/frontend/moj/objects/filter-layout";
+@import "overrides/moj-filter";
+@import "overrides/inverted-button";
+@import "overrides/navigation";
+@import "finder_frontend/expander";
 
-//Override styles when creating screengrabs
-// .govuk-main-wrapper a:visited, .govuk-main-wrapper .govuk-link:visited {
-//     color:  #1d70b8!important;
-// }
+// ----------------------------------------------
+// Request
+// ----------------------------------------------
 
 .custom-task-list__section-hint {
     @include govuk-media-query($from: tablet) {
@@ -18,440 +30,14 @@
     }
 }
 
-
-// chevron-card list 
-
-
-.homepage-services-and-info__list {
-    display: -ms-grid;
-    display: grid;
-    grid-auto-flow: row;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    list-style: none;
-    margin: 0 -15px;
-    padding:0
-}
-
-.homepage-services-and-info__list > li:nth-child(1) {
-    -ms-grid-column: 1;
-    -ms-grid-row:1
-}
-
-.homepage-services-and-info__list > li:nth-child(2) {
-    -ms-grid-column: 1;
-    -ms-grid-row:2
-}
-
-.homepage-services-and-info__list > li:nth-child(3) {
-    -ms-grid-column: 1;
-    -ms-grid-row:3
-}
-
-.homepage-services-and-info__list > li:nth-child(4) {
-    -ms-grid-column: 1;
-    -ms-grid-row:4
-}
-
-.homepage-services-and-info__list > li:nth-child(5) {
-    -ms-grid-column: 1;
-    -ms-grid-row:5
-}
-
-.homepage-services-and-info__list > li:nth-child(6) {
-    -ms-grid-column: 1;
-    -ms-grid-row:6
-}
-
-.homepage-services-and-info__list > li:nth-child(7) {
-    -ms-grid-column: 1;
-    -ms-grid-row:7
-}
-
-.homepage-services-and-info__list > li:nth-child(8) {
-    -ms-grid-column: 1;
-    -ms-grid-row:8
-}
-
-.homepage-services-and-info__list > li:nth-child(9) {
-    -ms-grid-column: 1;
-    -ms-grid-row:9
-}
-
-.homepage-services-and-info__list > li:nth-child(10) {
-    -ms-grid-column: 1;
-    -ms-grid-row:10
-}
-
-.homepage-services-and-info__list > li:nth-child(11) {
-    -ms-grid-column: 1;
-    -ms-grid-row:11
-}
-
-.homepage-services-and-info__list > li:nth-child(12) {
-    -ms-grid-column: 1;
-    -ms-grid-row:12
-}
-
-.homepage-services-and-info__list > li:nth-child(13) {
-    -ms-grid-column: 1;
-    -ms-grid-row:13
-}
-
-.homepage-services-and-info__list > li:nth-child(14) {
-    -ms-grid-column: 1;
-    -ms-grid-row:14
-}
-
-.homepage-services-and-info__list > li:nth-child(15) {
-    -ms-grid-column: 1;
-    -ms-grid-row:15
-}
-
-.homepage-services-and-info__list > li:nth-child(16) {
-    -ms-grid-column: 1;
-    -ms-grid-row:16
-}
-
-.homepage-services-and-info__list > li:nth-child(17) {
-    -ms-grid-column: 1;
-    -ms-grid-row:17
-}
-
-@media (min-width: 40.0625em) {
-    .homepage-services-and-info__list {
-        display: -ms-grid;
-        display: grid;
-        grid-auto-flow: row;
-        -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-    }
-
-    .homepage-services-and-info__list > li:nth-child(1) {
-        -ms-grid-column: 1;
-        -ms-grid-row:1
-    }
-
-    .homepage-services-and-info__list > li:nth-child(2) {
-        -ms-grid-column: 2;
-        -ms-grid-row:1
-    }
-
-    .homepage-services-and-info__list > li:nth-child(3) {
-        -ms-grid-column: 1;
-        -ms-grid-row:2
-    }
-
-    .homepage-services-and-info__list > li:nth-child(4) {
-        -ms-grid-column: 2;
-        -ms-grid-row:2
-    }
-
-    .homepage-services-and-info__list > li:nth-child(5) {
-        -ms-grid-column: 1;
-        -ms-grid-row:3
-    }
-
-    .homepage-services-and-info__list > li:nth-child(6) {
-        -ms-grid-column: 2;
-        -ms-grid-row:3
-    }
-
-    .homepage-services-and-info__list > li:nth-child(7) {
-        -ms-grid-column: 1;
-        -ms-grid-row:4
-    }
-
-    .homepage-services-and-info__list > li:nth-child(8) {
-        -ms-grid-column: 2;
-        -ms-grid-row:4
-    }
-
-    .homepage-services-and-info__list > li:nth-child(9) {
-        -ms-grid-column: 1;
-        -ms-grid-row:5
-    }
-
-    .homepage-services-and-info__list > li:nth-child(10) {
-        -ms-grid-column: 2;
-        -ms-grid-row:5
-    }
-
-    .homepage-services-and-info__list > li:nth-child(11) {
-        -ms-grid-column: 1;
-        -ms-grid-row:6
-    }
-
-    .homepage-services-and-info__list > li:nth-child(12) {
-        -ms-grid-column: 2;
-        -ms-grid-row:6
-    }
-
-    .homepage-services-and-info__list > li:nth-child(13) {
-        -ms-grid-column: 1;
-        -ms-grid-row:7
-    }
-
-    .homepage-services-and-info__list > li:nth-child(14) {
-        -ms-grid-column: 2;
-        -ms-grid-row:7
-    }
-
-    .homepage-services-and-info__list > li:nth-child(15) {
-        -ms-grid-column: 1;
-        -ms-grid-row:8
-    }
-
-    .homepage-services-and-info__list > li:nth-child(16) {
-        -ms-grid-column: 2;
-        -ms-grid-row:8
-    }
-
-    .homepage-services-and-info__list > li:nth-child(17) {
-        -ms-grid-column: 1;
-        -ms-grid-row:9
-    }
-}
-
-@media (min-width: 48.0625em) {
-    .homepage-services-and-info__list {
-        display: -ms-grid;
-        display: grid;
-        grid-auto-flow: row;
-        -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr
-    }
-
-    .homepage-services-and-info__list > li:nth-child(1) {
-        -ms-grid-column: 1;
-        -ms-grid-row:1
-    }
-
-    .homepage-services-and-info__list > li:nth-child(2) {
-        -ms-grid-column: 2;
-        -ms-grid-row:1
-    }
-
-    .homepage-services-and-info__list > li:nth-child(3) {
-        -ms-grid-column: 3;
-        -ms-grid-row:1
-    }
-
-    .homepage-services-and-info__list > li:nth-child(4) {
-        -ms-grid-column: 1;
-        -ms-grid-row:2
-    }
-
-    .homepage-services-and-info__list > li:nth-child(5) {
-        -ms-grid-column: 2;
-        -ms-grid-row:2
-    }
-
-    .homepage-services-and-info__list > li:nth-child(6) {
-        -ms-grid-column: 3;
-        -ms-grid-row:2
-    }
-
-    .homepage-services-and-info__list > li:nth-child(7) {
-        -ms-grid-column: 1;
-        -ms-grid-row:3
-    }
-
-    .homepage-services-and-info__list > li:nth-child(8) {
-        -ms-grid-column: 2;
-        -ms-grid-row:3
-    }
-
-    .homepage-services-and-info__list > li:nth-child(9) {
-        -ms-grid-column: 3;
-        -ms-grid-row:3
-    }
-
-    .homepage-services-and-info__list > li:nth-child(10) {
-        -ms-grid-column: 1;
-        -ms-grid-row:4
-    }
-
-    .homepage-services-and-info__list > li:nth-child(11) {
-        -ms-grid-column: 2;
-        -ms-grid-row:4
-    }
-
-    .homepage-services-and-info__list > li:nth-child(12) {
-        -ms-grid-column: 3;
-        -ms-grid-row:4
-    }
-
-    .homepage-services-and-info__list > li:nth-child(13) {
-        -ms-grid-column: 1;
-        -ms-grid-row:5
-    }
-
-    .homepage-services-and-info__list > li:nth-child(14) {
-        -ms-grid-column: 2;
-        -ms-grid-row:5
-    }
-
-    .homepage-services-and-info__list > li:nth-child(15) {
-        -ms-grid-column: 3;
-        -ms-grid-row:5
-    }
-
-    .homepage-services-and-info__list > li:nth-child(16) {
-        -ms-grid-column: 1;
-        -ms-grid-row:6
-    }
-
-    .homepage-services-and-info__list > li:nth-child(17) {
-        -ms-grid-column: 2;
-        -ms-grid-row:6
-    }
-}
-
-.homepage-section__government-activity .homepage-services-and-info__list {
-    display: -ms-grid;
-    display: grid;
-    grid-auto-flow: row;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin-bottom:20px
-}
-
-.homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(1) {
-    -ms-grid-column: 1;
-    -ms-grid-row:1
-}
-
-.homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(2) {
-    -ms-grid-column: 1;
-    -ms-grid-row:2
-}
-
-.homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(3) {
-    -ms-grid-column: 1;
-    -ms-grid-row:3
-}
-
-.homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(4) {
-    -ms-grid-column: 1;
-    -ms-grid-row:4
-}
-
-.homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(5) {
-    -ms-grid-column: 1;
-    -ms-grid-row:5
-}
-
-.homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(6) {
-    -ms-grid-column: 1;
-    -ms-grid-row:6
-}
-
-@media (min-width: 40.0625em) {
-    .homepage-section__government-activity .homepage-services-and-info__list {
-        display: -ms-grid;
-        display: grid;
-        grid-auto-flow: row;
-        -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        margin-bottom:0
-    }
-
-    .homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(1) {
-        -ms-grid-column: 1;
-        -ms-grid-row:1
-    }
-
-    .homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(2) {
-        -ms-grid-column: 2;
-        -ms-grid-row:1
-    }
-
-    .homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(3) {
-        -ms-grid-column: 1;
-        -ms-grid-row:2
-    }
-
-    .homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(4) {
-        -ms-grid-column: 2;
-        -ms-grid-row:2
-    }
-
-    .homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(5) {
-        -ms-grid-column: 1;
-        -ms-grid-row:3
-    }
-
-    .homepage-section__government-activity .homepage-services-and-info__list > li:nth-child(6) {
-        -ms-grid-column: 2;
-        -ms-grid-row:3
-    }
-}
-
-
-
-
-// govuk chevron-card
-
-.chevron-card {
-    border-top: 1px solid #b1b4b6;
-    margin: 0 15px;
-    padding: 5px 0 20px 0;
-}
-
-.chevron-card__wrapper {
-    padding: 10px 30px 10px 0;
-    position:relative
-}
-
-.chevron-card__description {
-    margin:0 -30px 0 0
-}
-
-.chevron-card__link:after {
-    bottom: 0;
-    content: "";
-    display: block;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top:0
-}
-
-.chevron-card__link:before {
-    border-right: 3px solid #1d70b8;
-    border-top: 3px solid #1d70b8;
-    content: "";
-    display: block;
-    height: 7px;
-    position: absolute;
-    right: 5px;
-    top: 15px;
-    -webkit-transform: translateY(0) rotate(45deg) scale(1);
-    -ms-transform: translateY(0) rotate(45deg) scale(1);
-    transform: translateY(0) rotate(45deg) scale(1);
-    width:7px
-}
-
-.chevron-card__link:hover:before {
-    border-color:#003078
-}
-
-.chevron-card__link:focus:before {
-    border-color:#0b0c0c
-}
-
-
+// ----------------------------------------------
+// Global
+// ----------------------------------------------
+
+//Override styles when creating screengrabs
+// .govuk-main-wrapper a:visited, .govuk-main-wrapper .govuk-link:visited {
+//     color:  #1d70b8!important;
+// }
 
 .govuk-warning-text__icon {
     border: 3px solid #666;
@@ -460,4 +46,744 @@
     font-size: 26px;
     line-height: 30px;
 }
+
+// ----------------------------------------------
+// Find
+// ----------------------------------------------
+
+.align-items-center {
+    align-items: center;
+}
+.moj-pagination__results {
+    text-align: left;
+    display: block;
+}
+
+//PROB - Unwant global overrides
+.govuk-pagination {
+    margin-bottom: 10px;
+}
+
+.result-list__item {
+    padding: 0 0 15px;
+    margin: 0 0 15px!important;
+    border-bottom: 1px solid #b1b4b6;
+}
+
+.result-list__limit-height {
+    max-height: 1.3157894737em * 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.result-list__limit-height.theres-no-limit {
+    max-height: fit-content;
+}
+.js-enabled .govuk-accordion__section-toggle {
+    cursor: pointer;
+}
+.datacat-color-white {
+    color: white !important;
+}
+.data-cat-masthead__aside {
+    color: white;
+    border: 1px solid white;
+    padding: 20px;
+    *, a {
+        color: white;
+    }
+}
+.datacat-row-of-threes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+}
+.datacat-row-of-two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.datacat-row-of-two > * {
+    width: 48%;
+}
+
+.gem-c-search {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .gem-c-search__label {
+    .js-enabled & {
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      bottom: 2px;
+      padding-left: govuk-spacing(3);
+      z-index: 1;
+      color: $govuk-secondary-text-colour;
+      background: govuk-colour("white");
+    }
+  // match label colour with the label component colour
+  // when javascript is enabled and inline_label option  is set to false
+  .js-enabled .gem-c-search--separate-label & {
+    color: $govuk-text-colour;
+  }
+}
+.gem-c-search__input[type="search"]:focus,.gem-c-search__input.focus[type="search"] {
+    z-index: 2
+}
+@media (min-width: 40.0625em) {
+    .gem-c-search__label {
+        font-size:19px;
+        line-height: 2.1052631579
+    }
+}
+.gem-c-search__item-wrapper {
+    display: table;
+    width: 100%;
+    background: #fff
+}
+
+.gem-c-search__item {
+    position: relative;
+    display: table-cell;
+    vertical-align: top
+}
+
+.gem-c-search__submit {
+    border: 0;
+    cursor: pointer;
+    border-radius: 0;
+    position: relative;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    text-indent: -5000px;
+    overflow: hidden
+}
+
+.gem-c-search__submit .gem-c-search__icon {
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    left: 10px
+}
+
+.gem-c-search--on-govuk-blue {
+    .gem-c-search__input {
+        border-width: 0
+    }
+    
+    .gem-c-search__input:focus {
+        box-shadow: none
+    }
+    
+    .gem-c-search__submit {
+        background-color: #0b0c0c;
+        color: #fff
+    }
+     .gem-c-search__submit:hover {
+        background-color: #171919
+    }
+    .gem-c-search__item-wrapper {
+        background: transparent;
+    }
+}
+
+
+.js-enabled .gem-c-search--on-govuk-blue .gem-c-search__label {
+    color: #505a5f
+}
+
+.gem-c-search--on-white .gem-c-search__submit {
+    background-color: #1d70b8;
+    color: #fff
+}
+
+.gem-c-search--on-white .gem-c-search__submit:hover {
+    background-color: #207dce
+}
+
+.gem-c-search--on-white .gem-c-search__input[type="search"] {
+    border-right-width: 0
+}
+
+.gem-c-search--on-white .gem-c-search__input[type="search"]:focus {
+    border-right-width: 2px
+}
+
+.gem-c-search--no-border .gem-c-search__input[type="search"] {
+    border: 0
+}
+.organisations-list__item {
+    list-style-type: none;
+    margin-bottom: 15px!important;
+    border-bottom: 1px solid #b1b4b6;
+    padding-bottom: 15px;
+}
+.datacat-org-logos-img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    img {
+        max-width: 100%;
+    }
+}
+
+.result-info {
+    margin: 0 0 20px 0;
+    border-bottom: solid 1px #0b0c0c
+}
+
+.sort-options .sort-options__label {
+    padding-right: 5px;
+    display: inline-block;
+    margin-bottom: 15px
+}
+
+@media (min-width: 40.0625em) {
+    .sort-options .sort-options__label {
+        font-size:16px
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .sort-options .sort-options__select {
+        font-size:16px
+    }
+}
+
+.moj-override .moj-filter {
+    box-shadow: none;
+}
+
+.moj-override .moj-filter__header {
+    border: none;
+    padding: 0;
+    height: 0;
+}
+
+.moj-override .moj-filter__selected {
+    display: none;
+}
+
+.moj-override .moj-filter__options {
+    padding: 0;
+}
+
+.moj-override .app-c-option-select__container {
+    height: auto;
+    max-height: none;
+}
+
+.moj-override .app-c-expander:last-child {
+    border-bottom: 1px solid #b1b4b6;
+}
+
+.moj-override .govuk-button {
+    margin: 20px 0px 20px;
+    display: none;
+}
+
+.moj-override--selected-tags .moj-filter {
+    box-shadow: none;
+}
+
+.moj-override--selected-tags .moj-filter__header {
+    display: none;
+}
+
+.moj-override--selected-tags .moj-filter__options {
+    display: none;
+}
+
+.moj-override--selected-tags .moj-filter__selected {
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+.moj-override--selected-tags .moj-filter__selected-heading {
+    display: none;
+}
+
+.moj-override--selected-tags .moj-filter__heading-title {
+    display: none;
+}
+
+.moj-override--selected-tags p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.moj-override--selected-tags .moj-filter__selected > h3 {
+    margin-right: 10px;
+    padding-top: 8px;
+}
+
+.moj-override--selected-tags .moj-filter__tag {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    padding: 0.5em;
+    border-radius: 0.3125em;
+}
+
+.moj-override--selected-tags .moj-filter__tag:hover {
+    background: #b1b4b6;
+    color: black;
+}
+
+.moj-override--selected-tags .moj-filter__tag:hover:after {
+    background-image: url(/public/images/icon-tag-remove-cross.svg) !important;
+}
+
+.moj-override--selected-tags .moj-filter__tag:focus {
+    -webkit-box-shadow: inset 0 0 0 2px;
+    box-shadow: inset 0 0 0 2px;
+    border: solid 1px #0b0c0c;
+    outline: 3px solid #fd0;
+}
+
+.result-list__limit-height {
+    max-height: 3.1em;
+  }
+
+  .gem-c-related-navigation {
+    color: #0b0c0c;
+    border-top: 2px solid #1d70b8;
+    margin-bottom: 60px
+}
+
+@media print {
+    .gem-c-related-navigation {
+        color: #000
+    }
+}
+
+.gem-c-related-navigation__main-heading {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+
+@media print {
+    .gem-c-related-navigation__main-heading {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__main-heading {
+        font-size:19px;
+        font-size: 1.1875rem;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .gem-c-related-navigation__main-heading {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.gem-c-related-navigation__sub-heading {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.1428571429;
+    border-top: 1px solid #b1b4b6;
+    margin: 0;
+    padding-top: 15px
+}
+
+@media print {
+    .gem-c-related-navigation__sub-heading {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__sub-heading {
+        font-size:16px;
+        font-size: 1rem;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-related-navigation__sub-heading {
+        font-size: 14pt;
+        line-height: 1.2
+    }
+}
+
+.gem-c-related-navigation__sub-heading--footer {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+
+@media print {
+    .gem-c-related-navigation__sub-heading--footer {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__sub-heading--footer {
+        font-size:19px;
+        font-size: 1.1875rem;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .gem-c-related-navigation__sub-heading--footer {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.gem-c-related-navigation__main-heading+.gem-c-related-navigation__sub-heading {
+    border-top: 0;
+    padding-top: 0
+}
+
+.gem-c-related-navigation__sub-heading--other {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    border-top: 0;
+    padding-top: 0
+}
+
+@media print {
+    .gem-c-related-navigation__sub-heading--other {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__sub-heading--other {
+        font-size:19px;
+        font-size: 1.1875rem;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .gem-c-related-navigation__sub-heading--other {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.gem-c-related-navigation__nav-section {
+    margin-bottom: 30px
+}
+
+.gem-c-related-navigation__link {
+    list-style-type: none;
+    margin-top: 15px;
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.45
+}
+
+@media print {
+    .gem-c-related-navigation__link {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__link {
+        font-size:16px;
+        font-size: 1rem;
+        line-height: 1.45
+    }
+}
+
+@media print {
+    .gem-c-related-navigation__link {
+        font-size: 14pt;
+        line-height: 1.45
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__link {
+        line-height:1.28
+    }
+}
+
+.gem-c-related-navigation__link:focus,.gem-c-related-navigation__link:active:focus,.gem-c-related-navigation__link:link:focus,.gem-c-related-navigation__link:visited:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: #0b0c0c !important
+}
+
+.gem-c-related-navigation__link--truncated-links {
+    margin-top: 10px
+}
+
+.gem-c-related-navigation__toggle {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline;
+    text-decoration-thickness: max(1px, .0625rem);
+    text-underline-offset: .1578em;
+    display: none
+}
+
+@media print {
+    .gem-c-related-navigation__toggle {
+        font-family: sans-serif
+    }
+}
+
+.gem-c-related-navigation__toggle:hover {
+    text-decoration-thickness: max(3px, .1875rem, .12em);
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    -webkit-text-decoration-skip: none;
+    text-decoration-skip: none
+}
+
+.gem-c-related-navigation__toggle:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone
+}
+
+.gem-c-related-navigation__toggle:link {
+    color: #1d70b8
+}
+
+.gem-c-related-navigation__toggle:visited {
+    color: #1d70b8
+}
+
+.gem-c-related-navigation__toggle:hover {
+    color: #003078
+}
+
+.gem-c-related-navigation__toggle:active {
+    color: #0b0c0c
+}
+
+.gem-c-related-navigation__toggle:focus {
+    color: #0b0c0c
+}
+
+.js-enabled .gem-c-related-navigation__toggle {
+    display: inline-block
+}
+
+.gem-c-related-navigation__section-link {
+    font-weight: bold
+}
+
+.gem-c-related-navigation__section-link:focus,.gem-c-related-navigation__section-link:active:focus,.gem-c-related-navigation__section-link:link:focus,.gem-c-related-navigation__section-link:visited:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: #0b0c0c !important
+}
+
+.gem-c-related-navigation__section-link--other {
+    font-weight: normal
+}
+
+.gem-c-related-navigation__section-link--other:focus,.gem-c-related-navigation__section-link--other:active:focus,.gem-c-related-navigation__section-link--other:link:focus,.gem-c-related-navigation__section-link--other:visited:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: #0b0c0c !important
+}
+
+.gem-c-related-navigation__section-link--footer:focus,.gem-c-related-navigation__section-link--footer:active:focus,.gem-c-related-navigation__section-link--footer:link:focus,.gem-c-related-navigation__section-link--footer:visited:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: #0b0c0c !important
+}
+
+.gem-c-related-navigation__section-link--inline {
+    line-height: 1.45
+}
+
+.gem-c-related-navigation__link-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 1.25em
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__toggle-more .gem-c-related-navigation__section-link {
+        line-height:1.45
+    }
+}
+
+.js-enabled .gem-c-related-navigation__toggle-more.js-hidden {
+    display: none
+}
+
+// Publish and find
+
+.additional-info {
+    background: #f8f8f8;
+    padding: 25px 30px 15px 30px;
+}
+
+.moj-override .app-c-option-select__container {
+    position: relative;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+@media (min-width: 48.0625em) {
+    .moj-override .app-c-option-select__container::-webkit-scrollbar {
+        -webkit-appearance:none;
+        width: 7px
+    }
+
+    .moj-override .app-c-option-select__container::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0,0,0,0.5);
+        -webkit-box-shadow: 0 0 1px rgba(255,255,255,0.87)
+    }
+}
+
+// Navigation
+
+li.app-navigation__list-item.app-navigation__list-item--right {
+    float: right;
+    padding-right: 0;
+    margin-right: -15px;
+}
+
+// PROB - Global 
+.govuk-table {
+    a {
+        overflow-wrap: anywhere;
+    }
+}
+
+.app-upload__button {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+}
+
+.app-browse {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.2);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    display: none;
+}
+
+.app-browse.active {
+    display: flex;
+}
+
+.app-browse__box {
+    border: 1px solid #acacac;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    width: 600px;
+    height: 310px;
+    background-size: 100%;
+    position: relative;
+}
+
+.app-browse__button {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.app-browse__button--error {
+    top: 82px;
+}
+
+.app-browse__button--no-error {
+    top: 104px;
+}
+
+#errorNavigate {
+    display: none;
+}
+
+#noErrorNavigate {
+    display: none;
+}
+
 

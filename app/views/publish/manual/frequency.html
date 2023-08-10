@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Update frequency
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/publish/manual/distribution" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "metadataFrequency",
+          fieldset: {
+            legend: {
+              text: "How often is the dataset updated?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "Daily",
+              text: "Daily"
+            },
+            {
+              value: "Weekly",
+              text: "Weekly"
+            },
+            {
+              value: "Monthly",
+              text: "Monthly"
+            },
+            {
+              value: "Quarterly",
+              text: "Quarterly"
+            },
+            {
+              value: "Yearly",
+              text: "Yearly"
+            },
+            {
+              value: "Continuous",
+              text: "Continuous"
+            },
+            {
+              value: "Irregular",
+              text: "Irregular"
+            }
+          ],
+          value: data['metadataFrequency']
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

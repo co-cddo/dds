@@ -1,0 +1,501 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <span class="govuk-caption-l">{% include "includes/request/request-id.html" %}</span>
+      <h1 class="govuk-heading-xl">Check your answers before sending your request</h1>
+    </div>
+
+    <div class="govuk-grid-column-full"> 
+      <h2 class="govuk-heading-m">Purpose of the data share</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data type
+          </dt>
+          <dd class="govuk-summary-list__value">
+          {% if data['typeOfData'] == 'personal' %}
+            Personal data
+          {% elif data['typeOfData'] == 'special' %}
+            Special category data
+          {% else %}
+            Other
+          {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Data type</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data subjects
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['data-subject'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> data subjects</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Project aims
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>
+              {{ data ['data-use-aim']}}
+            </p>
+            <p>
+              {{ data ['data-use-aim-achieve']}}
+            </p>
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Project aims</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data required
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['what-data'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Data required</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Benefit to public
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">  
+            {% if data['public-benefit-1']['title'] %}
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom:5px;">
+                  {{ data['public-benefit-1']['title'] }}
+                </p>
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f;">
+                  {{ data['public-benefit-1']['detail'] }}
+                </p>
+              </li>
+            {% endif %}
+
+            {% if data['public-benefit-2']['title'] %}
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom:5px;">
+                  {{ data['public-benefit-2']['title'] }}
+                </p>
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
+                  {{ data['public-benefit-2']['detail'] }}
+                </p>
+              </li>
+            {% endif %} 
+
+            {% if data['public-benefit-3']['title'] %}
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom:5px;">
+                  {{ data['public-benefit-3']['title'] }}
+                </p>
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
+                  {{ data['public-benefit-3']['detail'] }}
+                </p>
+              </li>
+            {% endif %} 
+
+            {% if data['public-benefit-4']['title'] %}
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom:5px;">
+                  {{ data['public-benefit-4']['title'] }}
+                </p>
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
+                  {{ data['public-benefit-4']['detail'] }}
+                </p>
+              </li>
+            {% endif %} 
+
+            {% if data['public-benefit-5']['title'] %}
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom:5px;">
+                  {{ data['public-benefit-5']['title'] }}
+                </p>
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
+                  {{ data['public-benefit-5']['detail'] }}
+                </p>
+              </li>
+            {% endif %} 
+
+            {% if data['public-benefit-6']['title'] %}
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom:5px;">
+                  {{ data['public-benefit-6']['title'] }}
+                </p>
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
+                  {{ data['public-benefit-6']['detail'] }}
+                </p>
+              </li>
+            {% endif %}
+
+            {% if data['public-benefit-7']['title'] %}
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom:5px;">
+                  {{ data['public-benefit-7']['title'] }}
+                </p>
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
+                  {{ data['public-benefit-7']['detail'] }}
+                </p>
+              </li>
+            {% endif %} 
+
+            {% if data['public-benefit-8']['title'] %}
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom:5px;">
+                  {{ data['public-benefit-8']['title'] }}
+                </p>
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
+                  {{ data['public-benefit-8']['detail'] }}
+                </p>
+              </li>
+            {% endif %} 
+
+            {% if data['public-benefit-9']['title'] %}
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom:5px;">
+                  {{ data['public-benefit-9']['title'] }}
+                </p>
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
+                  {{ data['public-benefit-9']['detail'] }}
+                </p>
+              </li>
+            {% endif %} 
+            </ul> 
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Benefit to public</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Other organisations accessing data
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            {{ data['otherOrgs'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Other organisations accessing data</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Impact if data not given
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            {{ data['neg-impact'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Impact if data not given</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Date required
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            {{ data['data-issued-day'] }}/{{ data['data-issued-month'] }}/{{ data['data-issued-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Date required</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Legal power and gateway</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Legal power
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['haveLegalPower'] == "havepower" %}
+              <p>Yes</p>
+              <p class="govuk-body-s" style="color:#505a5f">
+                {{ data['haveLegalPower-detail'] }}
+              </p>
+            {% else %}
+              <p>No</p>
+            {% endif %} 
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> legal power</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Legal gateway
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['legal-gateway-belief'] == "Yes" %}
+              <p style="text-transform:capitalize;">{{ data['legal-gateway-belief'] }}</p>
+              <p class="govuk-body-s" style="color:#505a5f">
+                {{ data['yes-gateway'] }}
+              </p>
+            {% elseif data['legal-gateway-belief'] == "Other" %}
+              <p>No - Other legal grounds</p>
+              <p class="govuk-body-s" style="color:#505a5f">
+                {{ data['other-legal-grounds'] }}
+              </p>
+            {% else %}
+              <p style="text-transform:capitalize;">No</p>
+            {% endif %}
+
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Legal gateway</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Legal review
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
+            {{ data['checked-with-legal'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Legal review</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Data protection</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Lawful basis
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['lawfulBasis'] %}
+              <ul class="govuk-list">
+              {% for item in data['lawfulBasis'] %}
+                <li class="govuk-!-padding-bottom-3">{{item}}</li>
+              {% endfor %}
+              </ul>
+            {% elif data['specialCatBasis'] %}
+              <ul class="govuk-list">
+                {% for item in data['specialCatBasis'] %}
+                  <li class="govuk-!-padding-bottom-3">
+                    <p style="margin-bottom: 5px;">
+                      {{ item }}{% if item == "Reasons of substantial public interest (with a basis in law)" %}, specifically:{% endif %}
+                    </p>
+                    {% if item == "Reasons of substantial public interest (with a basis in law)" %}
+                      <ul class="govuk-list govuk-list--bullet govuk-body-s" style="margin: 0px;color:#505a5f;">
+                        {% for item in data['substantial-public-interest'] %}
+                          <li>{{ item }}</li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              Undefined
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Lawful basis</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data travel outside UK
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            {{ data['leaveUK'] }}
+
+            {% if data['leaveUK'] == 'yes' %}
+              <br>
+              <br>
+              <p>Countries:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                {% for item in data['data-travel-countrieslist'] %}
+                  <li>{{item}}</li>
+                {% endfor %}
+                <!-- {% if data['data-travel-country'] %}<li>{{ data['data-travel-country'] }}</li>{% endif %} -->
+              </ul>
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Data travel</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Role of organisation
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            {{ data['GDPR-role'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Role of organisation</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data protection review
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
+            {{ data['confirm-answers-data-protection'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Data protection review</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Data governance, security and technology</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data delivery
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            {% if data['data-format'] == "else" %}
+              {{ data['data-recieve-format_else'] }}
+            {% else %}
+              {{ data['data-recieve-format'] }}
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Data delivery</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data format
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['data-format'] == "else" %}
+              <span style="text-transform: capitalize;">{{ data['data-format_else'] }}</span>
+            {% else %}
+              <span style="text-transform: uppercase;">{{ data['data-format'] }}</span>
+            {% endif %} 
+            
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Data format</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Disposal of data
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            {{ data['data-disposal'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Disposal of data</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data security review
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
+            {{ data['confirm-answers-data-gov-sec-tech'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Data security review</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <form action="030-declaration-cat" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" type="submit" data-module="govuk-button">
+            Save and continue
+          </button>
+          <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
+            Save and return
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

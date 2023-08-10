@@ -1,0 +1,148 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/bMVP_ur--addCountryToArray" method="post">
+      <div class="govuk-form-group">
+        <span class="govuk-caption-l">{% include "includes/request/request-id.html" %}</span>
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="data-travel-countries">
+            What countries will the data travel through?
+          </label>
+        </h1>
+        <input class="govuk-input govuk-input--width-20" id="data-travel-country" name="data-travel-country" type="text">
+      </div>
+      <p class="govuk-body"><a href="#" class="govuk-link" id="addMoreCountries">Add another country</a></p>
+      <br>
+
+      <table class="govuk-table" id="country-table" style="display: none;">
+        <caption class="govuk-table__caption govuk-table__caption--m">Countries added</caption>
+        <tbody class="govuk-table__body" id="country-table__body">        
+        </tbody>
+      </table>
+      <br>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
+          Save and return
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <script type="text/javascript">
+
+  oldListArray = [];
+  newListArray = [];
+  countryTable = document.getElementById("country-table");
+
+  console.log("{{data['data-travel-countrieslist']}}")
+
+  window.onload = function() {
+    init = function() {
+      {% for item in data['data-travel-countrieslist']%} 
+        oldListArray.push("{{item}}");
+      {% endfor %}
+    }
+
+    removeRow = function(event) {
+
+      var countryTable = document.getElementById("country-table");
+      var rowIndex = $(event.target).parent().parent().index();
+
+      $(event.target).parent().parent().remove();
+
+      // Check if table is empty
+      if (countryTable.rows.length < 1) {
+        countryTable.style.display = "none";
+      }
+
+      // Manage array of the countries entered
+      newListArray.splice(rowIndex, 1);
+      updateCountriesList(newListArray);
+    }
+
+    // Send to server
+    function updateCountriesList(data) {
+      console.log(data);
+      $.ajax({
+        url: '/bMVP_ur--updateCountryList',
+        type: 'POST',
+        data: { newList: data },
+        dataType: 'json',
+        success: function(data){
+          console.log('Updated country data successful');
+        }
+      });
+    }
+
+    function addRow(country){
+      // 1. build row
+      var newRow = countryTable.insertRow();
+      newRow.classList.add("govuk-table__row");
+      var newCellOne = newRow.insertCell();
+      newCellOne.classList.add("govuk-table__cell");
+      newCellOne.innerHTML = country;
+      var newCellTwo = newRow.insertCell();
+      newCellTwo.classList.add("govuk-table__cell");
+      newCellTwo.innerHTML = '<a class="remove-row" href="#1" onClick="removeRow(event);">Remove</a>';
+      newCellTwo.style.textAlign = "right";
+
+      countryTable.style.display = "table";
+
+      // Manage an array of the countries entered
+      newListArray.push(country);
+      updateCountriesList(newListArray);
+    }
+
+    function initTable() {
+      var oldListArrayLength = oldListArray.length;
+      for (var i = 0; i < oldListArrayLength; i++) {
+        console.log(oldListArray[i])
+        addRow(oldListArray[i]);
+      }
+    }
+
+    init();
+    initTable();
+
+    // Add country to row when user clicks "add another country"
+    document.getElementById("addMoreCountries").addEventListener("click", function (event) {
+      var countryEntered = document.getElementById("data-travel-country").value;
+      addRow(countryEntered);
+
+      // Delete input and move user focus back to it so they can enter another country
+      document.getElementById("data-travel-country").value = "";
+      document.getElementById("data-travel-country").focus();
+    });
+  }
+</script> -->
+
+{% endblock %}

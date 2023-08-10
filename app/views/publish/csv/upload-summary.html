@@ -1,0 +1,98 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+  <style>
+    .rr-tag_error {
+      color: #942514;
+      background: #f6d7d2;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Upload summary</h1>
+      <p class="govuk-body">File: <strong>my_data_file_without_errors.csv</strong></p>
+      <p class="govuk-body">All data asset descriptions passed validation. Please review the records to ensure that they are correct. If you are happy then click Publish otherwise click on upload new CSV file</p>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table" style="font-size: 18px;">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Data asset</th>
+            <th class="govuk-table__header" scope="col">Asset type</th>
+            <th class="govuk-table__header" scope="col">Status</th>
+            
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="#">Record 1</a>
+            </td>
+            <td class="govuk-table__cell">
+              Dataset
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag">Pass </strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="#">Record 2</a>
+            </td>
+            <td class="govuk-table__cell">
+              Dataset
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag">Pass</strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="#">Record 3</a>
+            </td>
+            <td class="govuk-table__cell">
+              Dataset
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag">Pass </strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="#">Record 4</a>
+            </td>
+            <td class="govuk-table__cell">
+              Data service
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag">Pass </strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a class="govuk-button" data-module="govuk-button" href="/publish/csv/confirmation">Publish data asset description</a>
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/publish/csv/upload">Upload new CSV file</a>
+    </div>
+  </div>
+
+{% endblock %}
+
