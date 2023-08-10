@@ -46,46 +46,50 @@
 }
 
 // ----------------------------------------------
-// ???
+// Find
 // ----------------------------------------------
 
-.align-items-center {
-    align-items: center;
-}
-.moj-pagination__results {
-    text-align: left;
-    display: block;
-}
+// .align-items-center {
+//     align-items: center;
+// }
+// .moj-pagination__results {
+//     text-align: left;
+//     display: block;
+// }
+
+//PROB - Unwant global overrides
 .govuk-pagination {
     margin-bottom: 10px;
 }
-.result-list__item {
-    padding: 0 0 15px;
-    margin: 0 0 15px!important;
-    border-bottom: 1px solid #b1b4b6;
-}
+
+// .result-list__item {
+//     padding: 0 0 15px;
+//     margin: 0 0 15px!important;
+//     border-bottom: 1px solid #b1b4b6;
+// }
+
 .result-list__limit-height {
     max-height: 1.3157894737em * 4;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.result-list__limit-height.theres-no-limit {
-    max-height: fit-content;
-}
+// .result-list__limit-height.theres-no-limit {
+//     max-height: fit-content;
+// }
 .js-enabled .govuk-accordion__section-toggle {
     cursor: pointer;
 }
-.datacat-color-white {
-    color: white !important;
-}
-.data-cat-masthead__aside {
-    color: white;
-    border: 1px solid white;
-    padding: 20px;
-    *, a {
-        color: white;
-    }
-}
+// .datacat-color-white {
+//     color: white !important;
+// }
+// .data-cat-masthead__aside {
+//     color: white;
+//     border: 1px solid white;
+//     padding: 20px;
+//     *, a {
+//         color: white;
+//     }
+// }
 .datacat-row-of-threes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -99,6 +103,7 @@
 .datacat-row-of-two > * {
     width: 48%;
 }
+
 .gem-c-search {
     position: relative;
     margin-bottom: 30px;
@@ -676,15 +681,11 @@
     display: none
 }
 
+// Publish and find
+
 .additional-info {
     background: #f8f8f8;
     padding: 25px 30px 15px 30px;
-}
-
-li.app-navigation__list-item.app-navigation__list-item--right {
-    float: right;
-    padding-right: 0;
-    margin-right: -15px;
 }
 
 .moj-override .app-c-option-select__container {
@@ -708,6 +709,15 @@ li.app-navigation__list-item.app-navigation__list-item--right {
     }
 }
 
+// Navigation
+
+li.app-navigation__list-item.app-navigation__list-item--right {
+    float: right;
+    padding-right: 0;
+    margin-right: -15px;
+}
+
+// PROB - Global 
 .govuk-table {
     a {
         overflow-wrap: anywhere;
