@@ -1,3 +1,3 @@
 module.exports = {
-  // Insert values here
+  'shareTitle':'citizen-relationships'
 }
