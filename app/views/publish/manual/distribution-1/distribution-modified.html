@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Date modified
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Distribution 1</span>
+
+      <form class="form" action="distribution-identifier" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                When was the distribution modified? (optional)
+              </h1>
+            </legend>
+            <div id="passport-issued-hint" class="govuk-hint">
+              Provide most recent date on which the distribution was changed, updated or modified dd/mm/yyyy.
+            </div>
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="DistributionModifiedDay">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="DistributionModifiedDay" name="DistributionModifiedDay" type="text" inputmode="numeric" value="{{ data['DistributionModifiedDay'] }}">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="DistributionModifiedMonth">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="DistributionModifiedMonth" name="DistributionModifiedMonth" type="text" inputmode="numeric" value="{{ data['DistributionModifiedMonth'] }}">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="DistributionModifiedYear">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="DistributionModifiedYear" name="DistributionModifiedYear" type="text" inputmode="numeric" value="{{ data['DistributionModifiedYear'] }}">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -25,50 +25,25 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-
-
-      <form class="form" action="/publish/manual/distribution-summary-2" method="post">
+      <span class="govuk-caption-l">Distribution 1</span>
+      <form class="form" action="/dist-url-question" method="post">
 
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "Distribution",
+            text: "What is the access service? (Optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "metadataDistribution2",
-          name: "metadataDistribution2",
+          id: "DistributionService",
+          name: "DistributionService",
           hint: {
-            text: "An available distribution of the dataset. This is a file, for example an CVS or XLS document."
+            text: "Provide the data service that gives access to the distribution of the dataset, if applicable."
           },
-          value: data['metadataDistribution2']
+          value: data['DistributionService']
         }) }}
-
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-      {{ govukRadios({
-        name: "metadataDistributionFiletype2",
-        fieldset: {
-          legend: {
-            text: "Filetype",
-            isPageHeading: false
-          }
-        },
-        items: [
-          {
-            value: "csv",
-            text: "csv"
-          },
-          {
-            value: "xls",
-            text: "xls"
-          }
-        ],
-        value: data['metadataDistributionFiletype2']
-      }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

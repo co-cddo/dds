@@ -26,8 +26,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <span class="govuk-caption-l">How is the dataset distributed?</span>
-      <form class="form" action="/publish/manual/distribution-modified" method="post">
+      <span class="govuk-caption-l">Distribution 2</span>
+      <form class="form" action="distribution-modified" method="post">
 
 
         {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
@@ -38,9 +38,12 @@
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "DistributionDescription",
-          name: "DistributionDescription",
-          value: data['DistributionDescription']
+          hint: {
+            text: "Provide a free-text account of the distribution."
+          },
+          id: "DistributionDescription2",
+          name: "DistributionDescription2",
+          value: data['DistributionDescription2']
         }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

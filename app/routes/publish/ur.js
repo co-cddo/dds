@@ -6,9 +6,9 @@ router.post('/method-answer', function(request, response) {
 
     var method = request.session.data['method']
     if (method == "dataset"){
-        response.redirect("/publish/manual/start")
+        response.redirect("/publish/manual/title")
     } else if (method == "data service") {
-        response.redirect("/publish/manual/start")
+        response.redirect("/publish/manual/title")
     } else if (method == "Upload a CSV file of metadata") {
         response.redirect("/publish/csv/start")
     } else {
@@ -70,26 +70,13 @@ router.post('/distribution-answer', function(request, response) {
 
     var addAnother = request.session.data['addAnotherDistribution']
     if (addAnother == "Yes"){
-        response.redirect("/publish/manual/distribution-2")
+        response.redirect("/publish/manual/distribution-2/distribution-title")
     } else {
         response.redirect("/publish/manual/check-answers")
     }
 })
 
 router.post('/related-answer', function(request, response) {
-
-    var addAnotherRelated = request.session.data['addAnotherRelated']
-    var relatedMethod = request.session.data['method']
-    if (addAnotherRelated == "Yes"){
-        response.redirect("/publish/manual/related-2")
-    } else if (relatedMethod == "dataset"){
-            response.redirect("/publish/manual/frequency")
-    } else {
-        response.redirect("/publish/manual/endpoint-url")
-    }
-})
-
-router.post('/related-answer-2', function(request, response) {
 
     var relatedMethod = request.session.data['method']
     if (relatedMethod == "dataset"){
@@ -99,13 +86,23 @@ router.post('/related-answer-2', function(request, response) {
     }
 })
 
-router.post('/dist-size-answer', function(request, response) {
+router.post('/dist-url-question', function(request, response) {
 
     var classification = request.session.data['metadataAccessRights']
-    if (classification == "Official"){
-            response.redirect("/publish/manual/distribution-url")
+    if (classification == "Open"){
+            response.redirect("/publish/manual/distribution-1/distribution-url")
     } else {
-        response.redirect("/publish/manual/distribution-type")
+        response.redirect("/publish/manual/distribution-1/distribution-type")
+    }
+})
+
+router.post('/dist-url-question2', function(request, response) {
+
+    var classification = request.session.data['metadataAccessRights']
+    if (classification == "Open"){
+            response.redirect("/publish/manual/distribution-2/distribution-url")
+    } else {
+        response.redirect("/publish/manual/distribution-2/distribution-type")
     }
 })
 

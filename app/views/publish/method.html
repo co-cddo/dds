@@ -28,38 +28,59 @@
 
       <form class="form" action="/method-answer" method="post">
 
-        {{ govukRadios({
-          name: "method",
-          value: data['method'],
-          fieldset: {
-            legend: {
-              text: "What do you want to do?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
-            }
-          },
-          items: [
-            {
-              value: "dataset",
-              text: "Manually add dataset metadata"
-            },
-            {
-              value: "data service",
-              text: "Manually add data service (API) metadata"
-            },
-            {
-              value: "Upload a CSV file of metadata",
-              text: "Upload a CSV file of metadata"
-            },
-            {
-              value: "Establish a data harvester connection",
-              text: "Establish a data harvester connection"
-            }
-          ]
-        }) }}
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-heading-xl">
+                How do you want to add your data description?
+              </h1>
+              <p class="govuk-body">Choose how you want to add your dataset or data service descriptions so they can be found by other government organisations.</p>
+
+              {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+              {{ govukDetails({
+                summaryText: "What's a Dataset?",
+                text: "A collection of data, published or curated by a single agent, available for access, or download in one or more serialisations or formats."
+              }) }}
+
+              {{ govukDetails({
+                summaryText: "What's a Data service?",
+                text: "A collection of operations providing access to one or more datasets or data processing functions."
+              }) }}
+
+              <p class="govuk-body">To add a data description and data service description manually, you'll need to <a href="#" class="govuk-link">answer these questions</a>.</p>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="method-1" name="method" type="radio" value="dataset">
+                <label class="govuk-label govuk-radios__label" for="method-1">
+                  Add a dataset description manually
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="method-2" name="method" type="radio" value="data service">
+                <label class="govuk-label govuk-radios__label" for="method-2">
+                  Add a data service description manually
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="method-3" name="method" type="radio" value="wales">
+                <label class="govuk-label govuk-radios__label" for="method-3">
+                  Upload a CSV file of data asset descriptions
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="method-4" name="method" type="radio" value="Connect a data harvester">
+                <label class="govuk-label govuk-radios__label" for="method-4">
+                  Connect a data harvester
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
         
         {{ govukButton({
-          text: "Continue"
+          text: "Start now"
         }) }}
         
         </form>

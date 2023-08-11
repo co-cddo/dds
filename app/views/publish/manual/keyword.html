@@ -26,29 +26,35 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-
+      <h1 class="govuk-heading-l">What are the keywords associated with the {{ data['method'] }}? (optional)</h1>
+      <p class="govuk-hint">Enter a few words (keywords) which are associated with the dataset.</p>
 
       <form class="form" action="/publish/manual/theme" method="post">
+        {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
+        {%- from "govuk/components/input/macro.njk" import govukInput -%}
 
+        <div data-module="moj-add-another">
+            {% call govukFieldset({
+              classes: 'moj-add-another__item'
+            }) %}
+            {{ govukInput({
+              id: 'metadataKeyword[0]',
+              name: 'metadataKeyword[0]',
+              label: {
+                html: 'Keyword',
+                classes: 'govuk-visually-hidden'
+              },
+              attributes: {
+                'data-name': 'metadataKeyword[%index%]',
+                'data-id': 'metadataKeyword[%index%]'
+              },
+              value: data['metadataKeyword']
+            }) }}
+            {% endcall %}
 
-        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-        {{ govukTextarea({
-          label: {
-            text: "What are the keywords associated with the " + data['method'] + "? (optional)",
-            classes: "govuk-label--l",
-            isPageHeading: true
-          },
-          id: "metadataKeyword",
-          name: "metadataKeyword",
-          hint: {
-            text: "Enter a few words, separated by commas, which are associated with the " + data['method'] + "."
-          },
-          value: data['metadataKeyword']
-        }) }}
-
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-
+            <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">Add another keyword</button>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
       </form>
 
     </div>

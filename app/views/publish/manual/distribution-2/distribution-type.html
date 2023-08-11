@@ -25,25 +25,28 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-l">How is the dataset distributed?</span>
-      <form class="form" action="/publish/manual/distribution-size" method="post">
+
+      <span class="govuk-caption-l">Distribution 2</span>
+      <form class="form" action="distribution-size" method="post">
 
 
-        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
 
-        {{ govukTextarea({
+        {{ govukInput({
           label: {
-            text: "What is the access service? (Optional)",
+            text: "What is the media type?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "DistributionService",
-          name: "DistributionService",
+          id: "distributionType2",
+          name: "distributionType2",
+          value: data['distributionType2'],
           hint: {
-            text: "Provide the data service that gives access to the distribution of the dataset, if applicable. paste URIs to each service, seperated by commas"
-          },
-          value: data['DistributionService']
+            text: "Provide the media type of the distribution as defined by IANA [IANA-MEDIA-TYPES]."
+          }
         }) }}
+
+        <p class="govuk-body"><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="govuk-link">See iana media types</a></p>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

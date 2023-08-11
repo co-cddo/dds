@@ -26,27 +26,27 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <span class="govuk-caption-l">How is the dataset distributed?</span>
-      <form class="form" action="/publish/manual/distribution-service" method="post">
+      <span class="govuk-caption-l">Distribution 1</span>
+      <form class="form" action="distribution-type" method="post">
 
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "What is the distribution identifier?",
+            text: "What is the download URL? (optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "distributionIdentifier",
-          name: "distributionIdentifier",
+          id: "distributionUrl",
+          name: "distributionUrl",
+          value: data['distributionUrl'],
           hint: {
-            text: "This is a unique number, code, or reference value assigned to an information resource within a given context.
-            "
-          },
-          value: data['distributionIdentifier']
+            text: "Provide URL in a given format. For example, CSV or RDF file."
+          }
         }) }}
 
+        
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>

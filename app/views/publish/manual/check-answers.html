@@ -25,9 +25,12 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-xl">Check your answers before submitting this metadata record</h1>
-      <h2 class="govuk-heading-l">Data description</h2>
-
+      <h1 class="govuk-heading-xl">Check your answers before submitting your data</h1>
+      {% if data['method'] == "dataset" %}
+      <h2 class="govuk-heading-l">Dataset description</h2>
+      {% else %}
+      <h2 class="govuk-heading-l">Data service description</h2>
+      {% endif %}
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         
         <div class="govuk-summary-list__row">
@@ -88,7 +91,7 @@
         </div>        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Keyword
+            Keywords
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['metadataKeyword'] }}
@@ -116,10 +119,11 @@
         </div>        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Contact
+            Point of Contact
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataContact'] }}
+            {{ data['metadataContact'] }}<br>
+            {{ data['metadataContactEmail'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/publish/manual/contact">
@@ -200,7 +204,7 @@
         </div>        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            identifier
+            Existing identifier
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['metadataIdentifier'] }}
@@ -214,7 +218,7 @@
         </div>        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Date Created
+            Date Issued
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['metadataCreatedDay'] }} {{ data['metadataCreatedMonth'] }} {{ data['metadataCreatedYear'] }}
@@ -228,7 +232,7 @@
         </div>        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Modified
+            Date Modified
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['metadataModifiedDay'] }} {{ data['metadataModifiedDay'] }} {{ data['metadataModifiedDay'] }}
@@ -242,7 +246,7 @@
         </div>        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Related data assets 
+            Related data 
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['metadataRelated'] }}
@@ -282,159 +286,7 @@
             </a>
           </dd>
         </div>
-      </dl>
-
-      {% if data['method'] == "dataset" %}
-      <h2 class="govuk-heading-m">Distribution 1</h2>
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9"> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Identifier
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionIdentifier'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution">
-              Change
-              <span class="govuk-visually-hidden"> Identifier</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Access servce
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['DistributionService'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution">
-              Change
-              <span class="govuk-visually-hidden"> access service</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            File size
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionSize'] }} {{ data['distributionSizeUnit'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution">
-              Change
-              <span class="govuk-visually-hidden"> size</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Download URL
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionUrl'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution">
-              Change
-              <span class="govuk-visually-hidden"> url</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Media type
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionType'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution">
-              Change
-              <span class="govuk-visually-hidden"> type</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Description
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['DistributionDescription'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution">
-              Change
-              <span class="govuk-visually-hidden"> description</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Modified
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['DistributionModifiedDay'] }} {{ data['DistributionModifiedMonth'] }} {{ data['DistributionModifiedYear'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/modified">
-              Change
-              <span class="govuk-visually-hidden"> date modified</span>
-            </a>
-          </dd>
-        </div>  
-      </dl>
-
-      
-
-        {% else %}
-
-        <h2 class="govuk-heading-m">Data service</h2>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Endpoint description
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['metadataEndpointDescription'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/endpoint-description">
-              Change
-              <span class="govuk-visually-hidden"> endpoint description</span>
-            </a>
-          </dd>
-        </div>        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Service Type
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['MetadataServiceType'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/service-type">
-              Change
-              <span class="govuk-visually-hidden"> service type</span>
-            </a>
-          </dd>
-        </div>        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Service status
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['MetadataServiceStatus'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/service-status">
-              Change
-              <span class="govuk-visually-hidden"> service status</span>
-            </a>
-          </dd>
-        </div>        
+        {% if data['method'] == "data service" %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Endpoint URL
@@ -448,7 +300,50 @@
               <span class="govuk-visually-hidden"> endpoint url</span>
             </a>
           </dd>
-        </div>        
+        </div>  
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Service Type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['MetadataServiceType'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/service-type">
+              Change
+              <span class="govuk-visually-hidden"> service type</span>
+            </a>
+          </dd>
+        </div> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Service status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['MetadataServiceStatus'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/service-status">
+              Change
+              <span class="govuk-visually-hidden"> service status</span>
+            </a>
+          </dd>
+        </div>    
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Documentation URL
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['metadataEndpointDescription'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/endpoint-description">
+              Change
+              <span class="govuk-visually-hidden"> endpoint description</span>
+            </a>
+          </dd>
+        </div>              
+           
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Data served
@@ -465,21 +360,254 @@
         </div>
         {% endif %}
 
-
-        
-
       </dl>
 
-      <h2 class="govuk-heading-m">Now submit your record</h2>
+      {% if data['method'] == "dataset" %}
+      <h2 class="govuk-heading-l">Distributions</h2>
+      <h3 class="govuk-heading-m">Distribution 1</h3>
 
-      <p>By submitting this form you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9"> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Title
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['distributionTitle'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-title">
+              Change
+              <span class="govuk-visually-hidden"> Title</span>
+            </a>
+          </dd>
+        </div> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Description
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['DistributionDescription'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-description">
+              Change
+              <span class="govuk-visually-hidden"> description</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Modified
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['DistributionModifiedDay'] }} {{ data['DistributionModifiedMonth'] }} {{ data['DistributionModifiedYear'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-modified">
+              Change
+              <span class="govuk-visually-hidden"> date modified</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Identifier
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['distributionIdentifier'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-identifier">
+              Change
+              <span class="govuk-visually-hidden"> date modified</span>
+            </a>
+          </dd>
+        </div> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Access servce
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['DistributionService'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-service">
+              Change
+              <span class="govuk-visually-hidden"> access service</span>
+            </a>
+          </dd>
+        </div> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            URL
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['distributionUrl'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-url">
+              Change
+              <span class="govuk-visually-hidden"> url</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['distributionType'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-type">
+              Change
+              <span class="govuk-visually-hidden"> type</span>
+            </a>
+          </dd>
+        </div> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Size
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['distributionSize'] }} {{ data['distributionSizeUnit'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-size">
+              Change
+              <span class="govuk-visually-hidden"> size</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      {% if data['distributionTitle2'] %}
+      <h3 class="govuk-heading-m">Distribution 2</h3>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9"> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Title
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['distributionTitle2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-title">
+              Change
+              <span class="govuk-visually-hidden"> Title</span>
+            </a>
+          </dd>
+        </div> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Description
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['DistributionDescription2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-description">
+              Change
+              <span class="govuk-visually-hidden"> description</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Modified
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['DistributionModifiedDay2'] }} {{ data['DistributionModifiedMonth2'] }} {{ data['DistributionModifiedYear2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-modified">
+              Change
+              <span class="govuk-visually-hidden"> date modified</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Identifier
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['distributionIdentifier2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-identifier">
+              Change
+              <span class="govuk-visually-hidden"> date modified</span>
+            </a>
+          </dd>
+        </div> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Access servce
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['DistributionService2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-service">
+              Change
+              <span class="govuk-visually-hidden"> access service</span>
+            </a>
+          </dd>
+        </div> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            URL
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['distributionUrl2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-url">
+              Change
+              <span class="govuk-visually-hidden"> url</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['distributionType2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-type">
+              Change
+              <span class="govuk-visually-hidden"> type</span>
+            </a>
+          </dd>
+        </div> 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Size
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['distributionSize2'] }} {{ data['distributionSizeUnit2'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/distribution-1/distribution-size">
+              Change
+              <span class="govuk-visually-hidden"> size</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+        {% endif %}
+        {% endif %}
+        
 
       <form action="/publish/manual/confirmation" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
         <button type="submit" class="govuk-button" data-module="govuk-button">
-          Accept and submit
+          Submit
         </button>
 
       </form>

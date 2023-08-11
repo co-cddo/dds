@@ -25,28 +25,25 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-      <span class="govuk-caption-l">How is the dataset distributed?</span>
-      <form class="form" action="/publish/manual/distribution-description" method="post">
+      <span class="govuk-caption-l">Distribution 2</span>
+      <form class="form" action="/dist-url-question2" method="post">
 
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "What is the download URL? (optional)",
+            text: "What is the access service? (Optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "distributionUrl",
-          name: "distributionUrl",
-          value: data['distributionUrl'],
+          id: "DistributionService2",
+          name: "DistributionService2",
           hint: {
-            text: "Provide URL in a given format. For example, CSV or RDF file."
-          }
+            text: "Provide the data service that gives access to the distribution of the dataset, if applicable."
+          },
+          value: data['DistributionService2']
         }) }}
-
-        <p class="govuk-body"><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="govuk-link">See iana media types</a></p>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

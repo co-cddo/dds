@@ -1,7 +1,7 @@
-<{% extends "layouts/main.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Description
+  Distribution
 {% endblock %}
 
 {% block header %}
@@ -25,23 +25,25 @@ Description
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/publish/manual/summary" method="post">
+
+      <span class="govuk-caption-l">Distribution 1</span>
+      <form class="form" action="distribution-description" method="post">
 
 
-        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
 
-        {{ govukTextarea({
+        {{ govukInput({
           label: {
-            text: "What does the  " + data['method'] + " include?",
+            text: "What is the title of the distribution?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "metadataDescription",
-          name: "metadataDescription",
+          id: "distributionTitle",
+          name: "distributionTitle",
           hint: {
-            text: "Provide a concise narrative of the content of a " + data['method'] + ". Markdown descriptions can be used."
+            text: "Provide the full and formal name given to the distribution. This is not the same as alternative title, identifier, or series title."
           },
-          value: data['metadataDescription']
+          value: data['distributionTitle']
         }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

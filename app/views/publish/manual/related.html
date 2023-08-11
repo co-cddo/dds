@@ -46,31 +46,37 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Are there any related datasets or data services? (optional)</h1>
+      <p class="govuk-hint">This could be another dataset or data service which is related to the one you are adding. Paste a link to the related asset here.</p>
 
+      <form class="form" action="/related-answer" method="post">
+        {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
+        {%- from "govuk/components/input/macro.njk" import govukInput -%}
 
+        <div data-module="moj-add-another">
+            {% call govukFieldset({
+              classes: 'moj-add-another__item'
+            }) %}
+            {{ govukInput({
+              id: 'metadataRelated[0]',
+              name: 'metadataRelated[0]',
+              label: {
+                html: 'Related Item',
+                classes: 'govuk-visually-hidden'
+              },
+              attributes: {
+                'data-name': 'metadataRelated[%index%]',
+                'data-id': 'metadataRelated[%index%]'
+              },
+              value: data['metadataRelated']
+            }) }}
+            {% endcall %}
 
-      <form class="form" action="/publish/manual/related-summary" method="post">
-
-
-        {% from "govuk/components/input/macro.njk" import govukInput %}
-
-        {{ govukInput({
-          label: {
-            text: "Are there any related datasets or data services? (optional)",
-            classes: "govuk-label--l",
-            isPageHeading: true
-          },
-          id: "metadataRelated",
-          name: "metadataRelated",
-          hint: {
-            text: "This could be another dataset or data service which is related to the one you are adding. Paste a link to the related asset here."
-          },
-          value: data['metadataRelated']
-        }) }}
-
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-
+            <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">Add another related data asset</button>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
       </form>
+
 
     </div>
   </div>

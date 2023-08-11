@@ -27,33 +27,69 @@
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Does the {{ data['method'] }} have an alternative title? (optional)</h1>
       <p class="govuk-hint">Provide any alternative names that the {{ data['method'] }} is known by.</p>
-      
       <form class="form" action="/publish/manual/description" method="post">
+
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+          label: {
+            text: "Does the " + data['method'] + " have an alternative title? (optional)",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          id: "metadataAltTitle",
+          name: "metadataAltTitle",
+          hint: {
+            text: "Provide any alternative names that the " + data['method'] + " is known by."
+          },
+          value: data['metadataAltTitle']
+        }) }}
+
+
+        {%- from "govuk/components/button/macro.njk" import govukButton -%}
         {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
         {%- from "govuk/components/input/macro.njk" import govukInput -%}
 
         <div data-module="moj-add-another">
+          <form method="post">
+
             {% call govukFieldset({
               classes: 'moj-add-another__item'
             }) %}
+
             {{ govukInput({
-              id: 'metadataAltTitle[0]',
-              name: 'metadataAltTitle[0]',
+              id: 'person[0][first_name]',
+              name: 'person[0][first_name]',
               label: {
-                html: 'Alternative name',
-                classes: 'govuk-visually-hidden'
+                html: 'First name',
+                classes: 'govuk-!-font-weight-bold'
               },
               attributes: {
-                'data-name': 'metadataAltTitle[%index%]',
-                'data-id': 'metadataAltTitle[%index%]'
-              },
-              value: data['metadataAltTitle']
+                'data-name': 'person[%index%][first_name]',
+                'data-id': 'person[%index%][first_name]'
+              }
             }) }}
+
+
             {% endcall %}
 
-            <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">Add another alternative title</button>
+            <div class="">
+              {{ govukButton({
+                text: 'Add another person',
+                classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+              }) }}
+            </div>
+
             <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+          </form>
+
         </div>
+
+
+
+
       </form>
 
     </div>

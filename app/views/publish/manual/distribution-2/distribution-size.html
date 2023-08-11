@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Distribution
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Distribution 2</span>
+      <form class="form" action="distribution-summary" method="post">
+
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+          label: {
+            text: "What is the file size? (optional)",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          id: "distributionSize2",
+          name: "distributionSize2",
+          value: data['distributionSize2'],
+          hint: {
+            text: "Provide the size of the distribution in bytes, kb, mb or gb."
+          }
+        }) }}
+        
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "distributionSizeUnit",
+  fieldset: {
+    legend: {
+      text: "Unit"
+    }
+  },
+  items: [
+    {
+      value: "bytes",
+      text: "bytes"
+    },
+    {
+      value: "kb",
+      text: "kb"
+    },
+    {
+      value: "mb",
+      text: "mb"
+    },
+    {
+      value: "gb",
+      text: "gb"
+    }
+  ]
+}) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
