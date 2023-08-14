@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Security Classification
+  Distribution
 {% endblock %}
 
 {% block header %}
@@ -26,41 +26,30 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-
+      <span class="govuk-caption-l">Distribution 2</span>
       {% if data['check-answers'] == "true" %}
       <form class="form" action="/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/security-answer" method="post">
+      <form class="form" action="distribution-modified" method="post">
       {% endif %}
       
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-        {{ govukRadios({
-          name: "MetadataSecurity",
-          fieldset: {
-            legend: {
-              text: "What is the Security Classification?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
-            }
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+        {{ govukTextarea({
+          label: {
+            text: "What is the distribution description? (Optional)",
+            classes: "govuk-label--l",
+            isPageHeading: true
           },
-          items: [
-            {
-              value: "Offical",
-              text: "Offical"
-            },
-            {
-              value: "Secret",
-              text: "Secret"
-            },
-            {
-              value: "Top Secret",
-              text: "Top Secret"
-            }
-          ],
-          value: data['MetadataSecurity']
+          hint: {
+            text: "Provide a free-text account of the distribution."
+          },
+          id: "DistributionDescription2",
+          name: "DistributionDescription2",
+          value: data['DistributionDescription2']
         }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

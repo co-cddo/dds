@@ -711,6 +711,17 @@
     }
 }
 
+.moj-add-another__remove-button {
+    position: relative;
+    margin-top: -20px;
+    top: auto;
+    left: auto;
+}
+
+.moj-add-another__item {
+    margin-top: 0;
+}
+
 // Navigation
 
 li.app-navigation__list-item.app-navigation__list-item--right {

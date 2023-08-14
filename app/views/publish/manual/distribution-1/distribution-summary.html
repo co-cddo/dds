@@ -25,7 +25,7 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-xl">You have added 1 related asset</h1>
+      <h1 class="govuk-heading-xl">You have added 1 distibution</h1>
 
       {% from "govuk/components/table/macro.njk" import govukTable %}
 
@@ -34,34 +34,34 @@
         firstCellIsHeader: true,
         head: [
           {
-            text: "URL to asset"
+            text: "Title"
           },
           {
-            text: "Asset type"
+            text: "filetype"
           }
         ],
         rows: [
           [
             {
-              text: data['metadataRelated']
+              text: data['distributionTitle']
             },
             {
-              text: "Dataset"
+              text: data['distributionType']
             }
           ]
         ]
       }) }}
 
-      <form action="/related-answer" method="post" novalidate>
+      <form action="/distribution-answer" method="post" novalidate>
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
         {{ govukRadios({
           classes: "govuk-radios--inline",
-          name: "addAnotherRelated",
+          name: "addAnotherDistribution",
           fieldset: {
             legend: {
-              text: "Would you like to add another related asset?",
+              text: "Would you like to add another distibution?",
               isPageHeading: false,
               classes: "govuk-fieldset__legend--m"
             }

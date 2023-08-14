@@ -26,49 +26,60 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-
-
-      <form class="form" action="/publish/manual/distribution-summary-2" method="post">
+      <span class="govuk-caption-l">Distribution 2</span>
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
+      <form class="form" action="distribution-summary" method="post">
+      {% endif %}
+      
 
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "Distribution",
+            text: "What is the file size? (optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "metadataDistribution2",
-          name: "metadataDistribution2",
+          id: "distributionSize2",
+          name: "distributionSize2",
+          value: data['distributionSize2'],
           hint: {
-            text: "An available distribution of the dataset. This is a file, for example an CVS or XLS document."
-          },
-          value: data['metadataDistribution2']
+            text: "Provide the size of the distribution in bytes, kb, mb or gb."
+          }
         }) }}
-
+        
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-      {{ govukRadios({
-        name: "metadataDistributionFiletype2",
-        fieldset: {
-          legend: {
-            text: "Filetype",
-            isPageHeading: false
-          }
-        },
-        items: [
-          {
-            value: "csv",
-            text: "csv"
-          },
-          {
-            value: "xls",
-            text: "xls"
-          }
-        ],
-        value: data['metadataDistributionFiletype2']
-      }) }}
+{{ govukRadios({
+  name: "distributionSizeUnit",
+  fieldset: {
+    legend: {
+      text: "Unit"
+    }
+  },
+  items: [
+    {
+      value: "bytes",
+      text: "bytes"
+    },
+    {
+      value: "kb",
+      text: "kb"
+    },
+    {
+      value: "mb",
+      text: "mb"
+    },
+    {
+      value: "gb",
+      text: "gb"
+    }
+  ]
+}) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

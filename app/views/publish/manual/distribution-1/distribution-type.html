@@ -26,27 +26,33 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <span class="govuk-caption-l">How is the dataset distributed?</span>
-      <form class="form" action="/publish/manual/distribution-description" method="post">
+      <span class="govuk-caption-l">Distribution 1</span>
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
+      <form class="form" action="distribution-size" method="post">
+      {% endif %}
+      
 
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "What is the download URL? (optional)",
+            text: "What is the media type?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "distributionUrl",
-          name: "distributionUrl",
-          value: data['distributionUrl'],
+          id: "distributionType",
+          name: "distributionType",
+          value: data['distributionType'],
           hint: {
-            text: "Provide URL in a given format. For example, CSV or RDF file."
+            text: "Provide the media type of the distribution as defined by IANA [IANA-MEDIA-TYPES]."
           }
         }) }}
 
-        <p class="govuk-body"><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="govuk-link">See iana media types</a></p>
+        <p class="govuk-body"><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="govuk-link">See IANA media types</a></p>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

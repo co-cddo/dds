@@ -25,24 +25,25 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-l">How is the dataset distributed?</span>
-      <form class="form" action="/publish/manual/distribution-size" method="post">
+
+      <span class="govuk-caption-l">Distribution 1</span>
+      <form class="form" action="distribution-modified" method="post">
 
 
         {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
         {{ govukTextarea({
           label: {
-            text: "What is the access service? (Optional)",
+            text: "What is the distribution description? (Optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "DistributionService",
-          name: "DistributionService",
           hint: {
-            text: "Provide the data service that gives access to the distribution of the dataset, if applicable. paste URIs to each service, seperated by commas"
+            text: "Provide a free-text account of the distribution."
           },
-          value: data['DistributionService']
+          id: "DistributionDescription",
+          name: "DistributionDescription",
+          value: data['DistributionDescription']
         }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
