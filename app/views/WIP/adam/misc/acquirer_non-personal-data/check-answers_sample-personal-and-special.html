@@ -28,13 +28,10 @@
             Data type
           </dt>
           <dd class="govuk-summary-list__value">
-          {% if data['typeOfData'] == 'personal' %}
-            Personal data
-          {% elif data['typeOfData'] == 'special' %}
-            Special category data
-          {% else %}
-            Other
-          {% endif %}
+            <ul class="govuk-list">
+              <li class="govuk-!-padding-bottom-3">Personal data</li>
+              <li class="govuk-!-padding-bottom-3">Special category data</li>
+            </ul>
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -48,7 +45,7 @@
             Data subjects
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['data-subject'] }}
+            Clinically extremely vulnerable patients.
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -63,10 +60,10 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p>
-              {{ data ['data-use-aim']}}
+              To assess claims and provide the correct level of support to vulnerable people based on their declared family relationships.
             </p>
             <p>
-              {{ data ['data-use-aim-achieve']}}
+              We cannot identify who needs support without access to a data set about who in the UK is clinically vulnerable.
             </p>
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
@@ -81,7 +78,7 @@
             Data required
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['what-data'] }}
+            List of vulnerable people's names and contact details
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -96,104 +93,22 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <ul class="govuk-list">  
-            {% if data['public-benefit-1']['title'] %}
               <li class="govuk-!-padding-bottom-3">
                 <p style="margin-bottom:5px;">
-                  {{ data['public-benefit-1']['title'] }}
+                  Evidence for public service delivery
                 </p>
                 <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f;">
-                  {{ data['public-benefit-1']['detail'] }}
+                  This data will allow us to identify both who to help and the number of people we need to help.
                 </p>
               </li>
-            {% endif %}
-
-            {% if data['public-benefit-2']['title'] %}
               <li class="govuk-!-padding-bottom-3">
                 <p style="margin-bottom:5px;">
-                  {{ data['public-benefit-2']['title'] }}
+                  Evidence for decisions which are likely to benefit people in the UK
                 </p>
-                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
-                  {{ data['public-benefit-2']['detail'] }}
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f;">
+                  Depending on the number of people involved, this data could be used to support similar programs in the future.
                 </p>
-              </li>
-            {% endif %} 
-
-            {% if data['public-benefit-3']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
-                <p style="margin-bottom:5px;">
-                  {{ data['public-benefit-3']['title'] }}
-                </p>
-                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
-                  {{ data['public-benefit-3']['detail'] }}
-                </p>
-              </li>
-            {% endif %} 
-
-            {% if data['public-benefit-4']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
-                <p style="margin-bottom:5px;">
-                  {{ data['public-benefit-4']['title'] }}
-                </p>
-                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
-                  {{ data['public-benefit-4']['detail'] }}
-                </p>
-              </li>
-            {% endif %} 
-
-            {% if data['public-benefit-5']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
-                <p style="margin-bottom:5px;">
-                  {{ data['public-benefit-5']['title'] }}
-                </p>
-                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
-                  {{ data['public-benefit-5']['detail'] }}
-                </p>
-              </li>
-            {% endif %} 
-
-            {% if data['public-benefit-6']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
-                <p style="margin-bottom:5px;">
-                  {{ data['public-benefit-6']['title'] }}
-                </p>
-                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
-                  {{ data['public-benefit-6']['detail'] }}
-                </p>
-              </li>
-            {% endif %}
-
-            {% if data['public-benefit-7']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
-                <p style="margin-bottom:5px;">
-                  {{ data['public-benefit-7']['title'] }}
-                </p>
-                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
-                  {{ data['public-benefit-7']['detail'] }}
-                </p>
-              </li>
-            {% endif %} 
-
-            {% if data['public-benefit-8']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
-                <p style="margin-bottom:5px;">
-                  {{ data['public-benefit-8']['title'] }}
-                </p>
-                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
-                  {{ data['public-benefit-8']['detail'] }}
-                </p>
-              </li>
-            {% endif %} 
-
-            {% if data['public-benefit-9']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
-                <p style="margin-bottom:5px;">
-                  {{ data['public-benefit-9']['title'] }}
-                </p>
-                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f">
-                  {{ data['public-benefit-9']['detail'] }}
-                </p>
-              </li>
-            {% endif %} 
+              </li> 
             </ul> 
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
@@ -207,9 +122,14 @@
           <dt class="govuk-summary-list__key" style="max-width:20%;">
             Other organisations accessing data
           </dt>
-          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
-            {{ data['otherOrgs'] }}
+          <dd class="govuk-summary-list__value">
+            <p>Yes</p>
+            <p class="govuk-body-s" style="color:#505a5f">Organisations:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li class="govuk-body-s" style="color:#505a5f">NHS</li>
+            </ul>
           </dd>
+
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
               Change
@@ -221,8 +141,8 @@
           <dt class="govuk-summary-list__key" style="max-width:20%;">
             Impact if data not given
           </dt>
-          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
-            {{ data['neg-impact'] }}
+          <dd class="govuk-summary-list__value">
+            The project will be impossible to complete. We are reliant on this data and have no alternatives.
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -236,7 +156,7 @@
             Date required
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
-            {{ data['data-issued-day'] }}/{{ data['data-issued-month'] }}/{{ data['data-issued-year'] }}
+            16/03/2024
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -255,14 +175,10 @@
             Legal power
           </dt>
           <dd class="govuk-summary-list__value">
-            {% if data['haveLegalPower'] == "havepower" %}
-              <p>Yes</p>
-              <p class="govuk-body-s" style="color:#505a5f">
-                {{ data['haveLegalPower-detail'] }}
-              </p>
-            {% else %}
-              <p>No</p>
-            {% endif %} 
+            <p>Yes</p>
+            <p class="govuk-body-s" style="color:#505a5f">
+              Common law
+            </p>
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -276,20 +192,22 @@
             Legal gateway
           </dt>
           <dd class="govuk-summary-list__value">
-            {% if data['legal-gateway-belief'] == "Yes" %}
-              <p style="text-transform:capitalize;">{{ data['legal-gateway-belief'] }}</p>
-              <p class="govuk-body-s" style="color:#505a5f">
-                {{ data['yes-gateway'] }}
-              </p>
-            {% elseif data['legal-gateway-belief'] == "Other" %}
-              <p>No - Other legal grounds</p>
-              <p class="govuk-body-s" style="color:#505a5f">
-                {{ data['other-legal-grounds'] }}
-              </p>
-            {% else %}
-              <p style="text-transform:capitalize;">No</p>
-            {% endif %}
-
+            <p style="text-transform:capitalize;">Yes</p>
+            <p class="govuk-body-s" style="color:#505a5f">
+              Under Regulation 3 of The Health Service (Control of Patient Information), patient data can be lawfully processed with a view to:
+              <br>
+              <br>
+              * diagnosing communicable diseases and other risks to public health.<br>
+              * recognising trends in such diseases and risks.<br>
+              * controlling and preventing the spread of such diseases and risks.<br>
+              * monitoring and managing:<br>
+              ** outbreaks of communicable disease.<br>
+              ** incidents of exposure to communicable disease.<br>
+              ** the delivery, efficacy and safety of immunisation programmes.<br>
+              ** adverse reactions to vaccines and medicines.<br>
+              ** risks of infection acquired from food or the environment (including water supplies).<br>
+              ** the giving of information to persons about the diagnosis of communicable disease and risks of acquiring such disease.<br>
+            </p>
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -303,7 +221,7 @@
             Legal review
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
-            {{ data['checked-with-legal'] }}
+            No
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -322,32 +240,32 @@
             Lawful basis
           </dt>
           <dd class="govuk-summary-list__value">
-            {% if data['lawfulBasis'] %}
-              <ul class="govuk-list">
-              {% for item in data['lawfulBasis'] %}
-                <li class="govuk-!-padding-bottom-3">{{item}}</li>
-              {% endfor %}
-              </ul>
-            {% elif data['specialCatBasis'] %}
-              <ul class="govuk-list">
-                {% for item in data['specialCatBasis'] %}
-                  <li class="govuk-!-padding-bottom-3">
-                    <p style="margin-bottom: 5px;">
-                      {{ item }}{% if item == "Reasons of substantial public interest (with a basis in law)" %}, specifically:{% endif %}
-                    </p>
-                    {% if item == "Reasons of substantial public interest (with a basis in law)" %}
-                      <ul class="govuk-list govuk-list--bullet govuk-body-s" style="margin: 0px;color:#505a5f;">
-                        {% for item in data['substantial-public-interest'] %}
-                          <li>{{ item }}</li>
-                        {% endfor %}
-                      </ul>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
-            {% else %}
-              Undefined
-            {% endif %}
+
+            <p class="govuk-!-padding-bottom-3 govuk-heading-s" style="margin-bottom: 5px;">Personal data</p>
+
+            <ul class="govuk-list">
+              <li class="govuk-!-padding-bottom-3">Public task</li>
+              <li class="govuk-!-padding-bottom-3">Contract</li>
+            </ul>
+
+            <p class="govuk-!-padding-bottom-3 govuk-heading-s" style="margin-bottom: 5px;">Special category data</p>
+            
+            <ul class="govuk-list">
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom: 5px;">
+                  Reasons of substantial public interest (with a basis in law)
+                </p>
+                <ul class="govuk-list govuk-list--bullet govuk-body-s" style="margin: 0px;color:#505a5f;">
+                  <li>Protecting the public</li>
+                  <li>Safeguarding of children and individuals at risk</li>
+                </ul>
+              </li>
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom: 5px;">
+                  Public health (with a basis in law)
+                </p>
+              </li>
+            </ul>
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -361,19 +279,13 @@
             Data travel outside UK
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
-            {{ data['leaveUK'] }}
-
-            {% if data['leaveUK'] == 'yes' %}
-              <br>
-              <br>
-              <p>Countries:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                {% for item in data['data-travel-countrieslist'] %}
-                  <li>{{item}}</li>
-                {% endfor %}
-                <!-- {% if data['data-travel-country'] %}<li>{{ data['data-travel-country'] }}</li>{% endif %} -->
-              </ul>
-            {% endif %}
+            Yes
+            <br>
+            <br>
+            <p class="govuk-body-s" style="color:#505a5f">Countries:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li class="govuk-body-s" style="color:#505a5f">United States of America</li>
+            </ul>
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -387,7 +299,7 @@
             Role of organisation
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
-            {{ data['GDPR-role'] }}
+            Processor
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -401,7 +313,7 @@
             Data protection review
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
-            {{ data['confirm-answers-data-protection'] }}
+            Yes
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -420,11 +332,7 @@
             Data delivery
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
-            {% if data['data-format'] == "else" %}
-              {{ data['data-recieve-format_else'] }}
-            {% else %}
-              {{ data['data-recieve-format'] }}
-            {% endif %}
+            Through secure third-party software
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -438,12 +346,7 @@
             Data format
           </dt>
           <dd class="govuk-summary-list__value">
-            {% if data['data-format'] == "else" %}
-              <span style="text-transform: capitalize;">{{ data['data-format_else'] }}</span>
-            {% else %}
-              <span style="text-transform: uppercase;">{{ data['data-format'] }}</span>
-            {% endif %} 
-            
+            <span style="text-transform: capitalize;">CSV file</span> 
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -457,7 +360,7 @@
             Disposal of data
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
-            {{ data['data-disposal'] }}
+            Store CSV files in a secure sever and delete all files at end of project.
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -471,7 +374,7 @@
             Data security review
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
-            {{ data['confirm-answers-data-gov-sec-tech'] }}
+            Yes
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
