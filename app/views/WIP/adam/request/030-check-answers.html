@@ -209,6 +209,18 @@
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
             {{ data['otherOrgs'] }}
+
+            {% if data['otherOrgs'] == 'yes' %}
+              <br>
+              <br>
+              <p class="govuk-body-s" style="color:#505a5f;">Organisations:</p>
+              <ul class="govuk-list govuk-list--bullet govuk-body-s" style="color:#505a5f;">
+                {% for item in data['other-orgs-list'] %}
+                  <li>{{item}}</li>
+                {% endfor %}
+                <!-- {% if data['data-travel-country'] %}<li>{{ data['data-travel-country'] }}</li>{% endif %} -->
+              </ul>
+            {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -366,8 +378,8 @@
             {% if data['leaveUK'] == 'yes' %}
               <br>
               <br>
-              <p>Countries:</p>
-              <ul class="govuk-list govuk-list--bullet">
+              <p class="govuk-body-s" style="color:#505a5f;">Countries:</p>
+              <ul class="govuk-list govuk-list--bullet govuk-body-s" style="color:#505a5f;">
                 {% for item in data['data-travel-countrieslist'] %}
                   <li>{{item}}</li>
                 {% endfor %}
