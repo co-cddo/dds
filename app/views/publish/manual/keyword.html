@@ -28,8 +28,13 @@
 
       <h1 class="govuk-heading-l">What are the keywords associated with the {{ data['method'] }}? (optional)</h1>
       <p class="govuk-hint">Enter a few words (keywords) which are associated with the dataset.</p>
-
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
       <form class="form" action="/publish/manual/theme" method="post">
+      {% endif %}
+      
         {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
         {%- from "govuk/components/input/macro.njk" import govukInput -%}
 
@@ -46,9 +51,9 @@
               },
               attributes: {
                 'data-name': 'metadataKeyword[%index%]',
-                'data-id': 'metadataKeyword[%index%]'
-              },
-              value: data['metadataKeyword']
+                'data-id': 'metadataKeyword[%index%]',
+                'data-value': 'metadataKeyword[%index%]'
+              }
             }) }}
             {% endcall %}
 

@@ -29,7 +29,13 @@
       <h1 class="govuk-heading-l">Which organisation(s) have created the {{ data['method'] }}?</h1>
       <p class="govuk-hint">The creator is the organisation responsible for producing the {{ data['method'] }}.</p>
 
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
       <form class="form" action="/publish/manual/identifier" method="post">
+      {% endif %}
+      
         {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
         {%- from "govuk/components/input/macro.njk" import govukInput -%}
         {% from "govuk/components/select/macro.njk" import govukSelect %}
@@ -125,9 +131,7 @@
                   value: "Wales Office",
                   text: "Wales Office"
                 }
-              ],
-
-              value: data['metadataCreator']
+              ]
     
             }) }}
 

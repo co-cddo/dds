@@ -32,7 +32,6 @@
       <h2 class="govuk-heading-l">Data service description</h2>
       {% endif %}
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Title
@@ -41,7 +40,7 @@
             {{ data['metadataTitle'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/title">
+            <a href="/publish/manual/title?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> title</span>
             </a>
@@ -55,7 +54,7 @@
             {{ data['metadataAltTitle'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/alternative-title">
+            <a href="/publish/manual/alternative-title?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> alternative title</span>
             </a>
@@ -69,7 +68,7 @@
             {{ data['metadataDescription'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/description">
+            <a href="/publish/manual/description?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> description</span>
             </a>
@@ -83,7 +82,7 @@
             {{ data['metadataSummary'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/summary">
+            <a href="/publish/manual/summary?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> summary</span>
             </a>
@@ -97,7 +96,7 @@
             {{ data['metadataKeyword'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/keyword">
+            <a href="/publish/manual/keyword?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> keyword</span>
             </a>
@@ -111,7 +110,7 @@
             {{ data['metadataThemes'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/theme">
+            <a href="/publish/manual/theme?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> themes</span>
             </a>
@@ -126,7 +125,7 @@
             {{ data['metadataContactEmail'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/contact">
+            <a href="/publish/manual/contact?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> contact</span>
             </a>
@@ -140,7 +139,7 @@
             {{ data['metadataVersion'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/version">
+            <a href="/publish/manual/version?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> version</span>
             </a>
@@ -154,7 +153,7 @@
             {{ data['metadataAccessRights'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/access-rights">
+            <a href="/publish/manual/access-rights?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> name</span>
             </a>
@@ -168,7 +167,7 @@
             {{ data['metadataLicence'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/licence">
+            <a href="/publish/manual/licence?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> licence</span>
             </a>
@@ -182,7 +181,7 @@
             {{ data['MetadataSecurity'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/security-classification">
+            <a href="/publish/manual/security-classification?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> Security Classification</span>
             </a>
@@ -196,7 +195,7 @@
             {{ data['metadataCreator'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/creator">
+            <a href="/publish/manual/creator?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> creator</span>
             </a>
@@ -210,7 +209,7 @@
             {{ data['metadataIdentifier'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/identifier">
+            <a href="/publish/manual/identifier?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> identifier</span>
             </a>
@@ -221,10 +220,10 @@
             Date Issued
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataCreatedDay'] }} {{ data['metadataCreatedMonth'] }} {{ data['metadataCreatedYear'] }}
+            {{ data['metadataCreatedYear'] }} {{ data['metadataCreatedMonth'] }} {{ data['metadataCreatedDay'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/created">
+            <a href="/publish/manual/created?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> date created</span>
             </a>
@@ -235,10 +234,10 @@
             Date Modified
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataModifiedDay'] }} {{ data['metadataModifiedDay'] }} {{ data['metadataModifiedDay'] }}
+            {{ data['metadataModifiedYear'] }} {{ data['metadataModifiedMonth'] }} {{ data['metadataModifiedDay'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/modified">
+            <a href="/publish/manual/modified?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> date modified</span>
             </a>
@@ -252,7 +251,7 @@
             {{ data['metadataRelated'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/related">
+            <a href="/publish/manual/related?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> Related data assets</span>
             </a>
@@ -266,7 +265,7 @@
             {{ data['method'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/asset-type">
+            <a href="/publish/manual/asset-type?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> asset type</span>
             </a>
@@ -280,7 +279,7 @@
             {{ data['metadataFrequency'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/frequency">
+            <a href="/publish/manual/frequency?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> update frequency</span>
             </a>
@@ -295,7 +294,7 @@
             {{ data['metadataEndpointUrl'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/endpoint-url">
+            <a href="/publish/manual/endpoint-url?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> endpoint url</span>
             </a>
@@ -309,7 +308,7 @@
             {{ data['MetadataServiceType'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/service-type">
+            <a href="/publish/manual/service-type?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> service type</span>
             </a>
@@ -323,7 +322,7 @@
             {{ data['MetadataServiceStatus'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/service-status">
+            <a href="/publish/manual/service-status?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> service status</span>
             </a>
@@ -337,7 +336,7 @@
             {{ data['metadataEndpointDescription'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/endpoint-description">
+            <a href="/publish/manual/endpoint-description?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> endpoint description</span>
             </a>
@@ -352,7 +351,7 @@
             {{ data['metadatadataServed'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/data-served">
+            <a href="/publish/manual/data-served?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> data served</span>
             </a>
@@ -375,7 +374,7 @@
             {{ data['distributionTitle'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-title">
+            <a href="/publish/manual/distribution-1/distribution-title?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> Title</span>
             </a>
@@ -389,7 +388,7 @@
             {{ data['DistributionDescription'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-description">
+            <a href="/publish/manual/distribution-1/distribution-description?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> description</span>
             </a>
@@ -400,10 +399,10 @@
             Modified
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['DistributionModifiedDay'] }} {{ data['DistributionModifiedMonth'] }} {{ data['DistributionModifiedYear'] }}
+            {{ data['DistributionModifiedYear'] }} {{ data['DistributionModifiedMonth'] }} {{ data['DistributionModifiedDay'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-modified">
+            <a href="/publish/manual/distribution-1/distribution-modified?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> date modified</span>
             </a>
@@ -417,7 +416,7 @@
             {{ data['distributionIdentifier'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-identifier">
+            <a href="/publish/manual/distribution-1/distribution-identifier?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> date modified</span>
             </a>
@@ -431,7 +430,7 @@
             {{ data['DistributionService'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-service">
+            <a href="/publish/manual/distribution-1/distribution-service?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> access service</span>
             </a>
@@ -445,7 +444,7 @@
             {{ data['distributionUrl'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-url">
+            <a href="/publish/manual/distribution-1/distribution-url?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> url</span>
             </a>
@@ -459,7 +458,7 @@
             {{ data['distributionType'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-type">
+            <a href="/publish/manual/distribution-1/distribution-type?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> type</span>
             </a>
@@ -473,7 +472,7 @@
             {{ data['distributionSize'] }} {{ data['distributionSizeUnit'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-size">
+            <a href="/publish/manual/distribution-1/distribution-size?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> size</span>
             </a>
@@ -493,7 +492,7 @@
             {{ data['distributionTitle2'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-title">
+            <a href="/publish/manual/distribution-1/distribution-title?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> Title</span>
             </a>
@@ -507,7 +506,7 @@
             {{ data['DistributionDescription2'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-description">
+            <a href="/publish/manual/distribution-1/distribution-description?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> description</span>
             </a>
@@ -518,10 +517,10 @@
             Modified
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['DistributionModifiedDay2'] }} {{ data['DistributionModifiedMonth2'] }} {{ data['DistributionModifiedYear2'] }}
+            {{ data['DistributionModifiedYear2'] }} {{ data['DistributionModifiedMonth2'] }} {{ data['DistributionModifiedDay2'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-modified">
+            <a href="/publish/manual/distribution-1/distribution-modified?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> date modified</span>
             </a>
@@ -535,7 +534,7 @@
             {{ data['distributionIdentifier2'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-identifier">
+            <a href="/publish/manual/distribution-1/distribution-identifier?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> date modified</span>
             </a>
@@ -549,7 +548,7 @@
             {{ data['DistributionService2'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-service">
+            <a href="/publish/manual/distribution-1/distribution-service?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> access service</span>
             </a>
@@ -563,7 +562,7 @@
             {{ data['distributionUrl2'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-url">
+            <a href="/publish/manual/distribution-1/distribution-url?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> url</span>
             </a>
@@ -577,7 +576,7 @@
             {{ data['distributionType2'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-type">
+            <a href="/publish/manual/distribution-1/distribution-type?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> type</span>
             </a>
@@ -591,7 +590,7 @@
             {{ data['distributionSize2'] }} {{ data['distributionSizeUnit2'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-size">
+            <a href="/publish/manual/distribution-1/distribution-size?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> size</span>
             </a>

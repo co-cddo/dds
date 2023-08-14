@@ -32,11 +32,11 @@
       {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
       {{ govukWarningText({
-        text: "Resources classified as secret or top secret are not available for sharing in the Data Marketplace.",
+        text: "{{data['method']}}s classified as secret or top secret are not available for sharing in the Data Marketplace.",
         iconFallbackText: "Warning"
       }) }}
 
-      <P class="govuk-body">Only resources classified as official will be accepted for sharing as this covers most of the day-to-day business of government, service delivery, commercial activity and policy development.</P>
+      <P class="govuk-body">Only {{data['method']}}s classified as official will be accepted for sharing as this covers most of the day-to-day business of government, service delivery, commercial activity and policy development.</P>
 
       <a href="/publish/manual/security-classification" class="govuk-link">Return to security classification</a>
     </div>

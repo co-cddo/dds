@@ -28,8 +28,13 @@
 
       <h1 class="govuk-heading-l">What are the existing identifiers for the {{ data['method'] }}?</h1>
       <p class="govuk-hint">Provide details of the identifiers by which this {{ data['method'] }} is known within your organisation.</p>
-
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
       <form class="form" action="/publish/manual/created" method="post">
+      {% endif %}
+      
         {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
         {%- from "govuk/components/input/macro.njk" import govukInput -%}
 
@@ -47,8 +52,7 @@
               attributes: {
                 'data-name': 'metadataIdentifier[%index%]',
                 'data-id': 'metadataIdentifier[%index%]'
-              },
-              value: data['metadataIdentifier']
+              }
             }) }}
             {% endcall %}
 

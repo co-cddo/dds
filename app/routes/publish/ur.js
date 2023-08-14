@@ -106,4 +106,8 @@ router.post('/dist-url-question2', function(request, response) {
     }
 })
 
+// router.post('/skip-to-check', function(request, response) {
+//     response.redirect("/publish/manual/check-answers")
+// })
+
 module.exports = router;
