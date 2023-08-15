@@ -28,13 +28,19 @@
             Data type
           </dt>
           <dd class="govuk-summary-list__value">
-          {% if data['typeOfData'] == 'personal' %}
-            Personal data
-          {% elif data['typeOfData'] == 'special' %}
-            Special category data
-          {% else %}
-            Other
-          {% endif %}
+          <ul class="govuk-list request_cya-custom-list">
+          {% for item in data['typeOfData'] %}
+            {% if item == 'personal' %}
+              <li>Personal data</li>
+            {% elif item == 'special' %}
+              <li>Special category data</li>
+            {% elif item == 'non-personal' %}
+              <li>Anonymous data</li>
+            {% else %}
+              <li>Undefined</li>
+            {% endif %} 
+          {% endfor %}
+          </ul>
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -48,13 +54,21 @@
             Data subjects
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['data-subject'] }}
+            {% if 'non-personal' in data['typeOfData'] %}
+              <span style="color: #b1b4b6">Not required</span>
+            {% else %}
+              {{ data['data-subject'] }}
+            {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> data subjects</span>
-            </a>
+            {% if 'non-personal' in data['typeOfData'] %}
+              <!-- Do nothing -->
+            {% else %}
+              <a href="#">
+                Change
+                <span class="govuk-visually-hidden"> data subjects</span>
+              </a>
+            {% endif %}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -95,9 +109,9 @@
             Benefit to public
           </dt>
           <dd class="govuk-summary-list__value">
-            <ul class="govuk-list">  
+            <ul class="govuk-list request_cya-custom-list">  
             {% if data['public-benefit-1']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
+              <li>
                 <p style="margin-bottom:5px;">
                   {{ data['public-benefit-1']['title'] }}
                 </p>
@@ -108,7 +122,7 @@
             {% endif %}
 
             {% if data['public-benefit-2']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
+              <li>
                 <p style="margin-bottom:5px;">
                   {{ data['public-benefit-2']['title'] }}
                 </p>
@@ -119,7 +133,7 @@
             {% endif %} 
 
             {% if data['public-benefit-3']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
+              <li>
                 <p style="margin-bottom:5px;">
                   {{ data['public-benefit-3']['title'] }}
                 </p>
@@ -130,7 +144,7 @@
             {% endif %} 
 
             {% if data['public-benefit-4']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
+              <li>
                 <p style="margin-bottom:5px;">
                   {{ data['public-benefit-4']['title'] }}
                 </p>
@@ -141,7 +155,7 @@
             {% endif %} 
 
             {% if data['public-benefit-5']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
+              <li>
                 <p style="margin-bottom:5px;">
                   {{ data['public-benefit-5']['title'] }}
                 </p>
@@ -152,7 +166,7 @@
             {% endif %} 
 
             {% if data['public-benefit-6']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
+              <li>
                 <p style="margin-bottom:5px;">
                   {{ data['public-benefit-6']['title'] }}
                 </p>
@@ -163,7 +177,7 @@
             {% endif %}
 
             {% if data['public-benefit-7']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
+              <li>
                 <p style="margin-bottom:5px;">
                   {{ data['public-benefit-7']['title'] }}
                 </p>
@@ -174,7 +188,7 @@
             {% endif %} 
 
             {% if data['public-benefit-8']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
+              <li>
                 <p style="margin-bottom:5px;">
                   {{ data['public-benefit-8']['title'] }}
                 </p>
@@ -185,7 +199,7 @@
             {% endif %} 
 
             {% if data['public-benefit-9']['title'] %}
-              <li class="govuk-!-padding-bottom-3">
+              <li>
                 <p style="margin-bottom:5px;">
                   {{ data['public-benefit-9']['title'] }}
                 </p>
@@ -209,6 +223,18 @@
           </dt>
           <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
             {{ data['otherOrgs'] }}
+
+            {% if data['otherOrgs'] == 'yes' %}
+              <br>
+              <br>
+              <p class="govuk-body-s" style="color:#505a5f;">Organisations:</p>
+              <ul class="govuk-list govuk-list--bullet govuk-body-s" style="color:#505a5f;">
+<!--                 {% for item in data['other-orgs-list'] %}
+                  <li>{{item}}</li>
+                {% endfor %} -->
+                {% if data['other-orgs-list'] %}<li>{{ data['other-orgs-list'] }}</li>{% endif %}
+              </ul>
+            {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
             <a href="#">
@@ -319,41 +345,71 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key" style="max-width:20%;">
-            Lawful basis
+            Lawful basis for personal data
           </dt>
           <dd class="govuk-summary-list__value">
-            {% if data['lawfulBasis'] %}
-              <ul class="govuk-list">
-              {% for item in data['lawfulBasis'] %}
-                <li class="govuk-!-padding-bottom-3">{{item}}</li>
-              {% endfor %}
-              </ul>
-            {% elif data['specialCatBasis'] %}
-              <ul class="govuk-list">
-                {% for item in data['specialCatBasis'] %}
-                  <li class="govuk-!-padding-bottom-3">
-                    <p style="margin-bottom: 5px;">
-                      {{ item }}{% if item == "Reasons of substantial public interest (with a basis in law)" %}, specifically:{% endif %}
-                    </p>
-                    {% if item == "Reasons of substantial public interest (with a basis in law)" %}
-                      <ul class="govuk-list govuk-list--bullet govuk-body-s" style="margin: 0px;color:#505a5f;">
-                        {% for item in data['substantial-public-interest'] %}
-                          <li>{{ item }}</li>
-                        {% endfor %}
-                      </ul>
-                    {% endif %}
-                  </li>
+            {% if 'non-personal' in data['typeOfData'] %}
+              <span style="color: #b1b4b6">Not required</span>
+            {% elif 'personal' in data['typeOfData'] %}
+              {% if data['lawfulBasis'] %}
+                <ul class="govuk-list request_cya-custom-list">
+                {% for item in data['lawfulBasis'] %}
+                  <li>{{item}}</li>
                 {% endfor %}
-              </ul>
+                </ul>
+              {% endif %}
             {% else %}
-              Undefined
+              <span style="color: #b1b4b6">Not required</span>
             {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> Lawful basis</span>
-            </a>
+            {% if 'personal' in data['typeOfData'] %}
+              <a href="#">
+                Change
+                <span class="govuk-visually-hidden"> Lawful basis for personal data</span>
+              </a>
+            {% endif %}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Lawful basis for special category data
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if 'non-personal' in data['typeOfData'] %}
+              <span style="color: #b1b4b6">Not required</span>
+            {% elif 'special' in data['typeOfData'] %}
+              {% if data['specialCatBasis'] %}
+                <ul class="govuk-list request_cya-custom-list">
+                  {% for item in data['specialCatBasis'] %}
+                    <li>
+                      <p style="margin-bottom: 5px;">
+                        {{ item }}{% if item == "Reasons of substantial public interest (with a basis in law)" %}, specifically:{% endif %}
+                      </p>
+                      {% if item == "Reasons of substantial public interest (with a basis in law)" %}
+                        <ul class="govuk-list govuk-list--bullet govuk-body-s" style="margin: 0px;color:#505a5f;">
+                          {% for item in data['substantial-public-interest'] %}
+                            <li>{{ item }}</li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% else %}
+                Undefined
+              {% endif %}
+            {% else %}
+              <span style="color: #b1b4b6">Not required</span>
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            {% if 'special' in data['typeOfData'] %}
+              <a href="#">
+                Change
+                <span class="govuk-visually-hidden"> Lawful basis for special category data</span>
+              </a>
+            {% endif %}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -366,12 +422,12 @@
             {% if data['leaveUK'] == 'yes' %}
               <br>
               <br>
-              <p>Countries:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                {% for item in data['data-travel-countrieslist'] %}
+              <p class="govuk-body-s" style="color:#505a5f;">Countries:</p>
+              <ul class="govuk-list govuk-list--bullet govuk-body-s" style="color:#505a5f;">
+                <!-- {% for item in data['data-travel-countrieslist'] %}
                   <li>{{item}}</li>
-                {% endfor %}
-                <!-- {% if data['data-travel-country'] %}<li>{{ data['data-travel-country'] }}</li>{% endif %} -->
+                {% endfor %} -->
+                {% if data['data-travel-country'] %}<li>{{ data['data-travel-country'] }}</li>{% endif %}
               </ul>
             {% endif %}
           </dd>
@@ -386,14 +442,22 @@
           <dt class="govuk-summary-list__key" style="max-width:20%;">
             Role of organisation
           </dt>
-          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
-            {{ data['GDPR-role'] }}
+          <dd class="govuk-summary-list__value" >
+            {% if 'non-personal' in data['typeOfData'] %}
+              <span style="color: #b1b4b6">Not required</span>
+            {% else %}
+              <span style="text-transform: capitalize;">{{ data['GDPR-role'] }}</span>
+            {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            {% if 'non-personal' in data['typeOfData'] %}
+              <!-- Do nothing -->
+            {% else %}
             <a href="#">
               Change
               <span class="govuk-visually-hidden"> Role of organisation</span>
             </a>
+            {% endif %}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
