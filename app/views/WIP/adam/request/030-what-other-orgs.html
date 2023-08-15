@@ -17,18 +17,18 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="/bMVP_wip--addCountryToArray" method="post">
+    <form action="030-how-impact-cat" method="post">
       <div class="govuk-form-group">
         <span class="govuk-caption-l">{% include "includes/request/request-id.html" %}</span>
         <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--l" for="data-travel-countries">
+          <label class="govuk-label govuk-label--l" for="other-orgs">
             What other organisations will access the data?
           </label>
         </h1>
         <div class="govuk-hint">
           List all the organisations you will be sharing the data with.
         </div>
-        <input class="govuk-input govuk-input--width-20" id="other-orgs" name="other-orgs" type="text">
+        <input class="govuk-input govuk-input--width-20" id="other-orgs" name="other-orgs-list" type="text">
       </div>
       <p class="govuk-body"><a href="#" class="govuk-link" id="addMoreOrgs">Add another organisation</a></p>
       <br>
@@ -44,7 +44,5 @@
     </form>
   </div>
 </div>
-
-<!-- <script type="text/javascript"></script> -->
 
 {% endblock %}

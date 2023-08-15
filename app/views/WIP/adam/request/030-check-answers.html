@@ -229,10 +229,10 @@
               <br>
               <p class="govuk-body-s" style="color:#505a5f;">Organisations:</p>
               <ul class="govuk-list govuk-list--bullet govuk-body-s" style="color:#505a5f;">
-                {% for item in data['other-orgs-list'] %}
+<!--                 {% for item in data['other-orgs-list'] %}
                   <li>{{item}}</li>
-                {% endfor %}
-                <!-- {% if data['data-travel-country'] %}<li>{{ data['data-travel-country'] }}</li>{% endif %} -->
+                {% endfor %} -->
+                {% if data['other-orgs-list'] %}<li>{{ data['other-orgs-list'] }}</li>{% endif %}
               </ul>
             {% endif %}
           </dd>
@@ -424,10 +424,10 @@
               <br>
               <p class="govuk-body-s" style="color:#505a5f;">Countries:</p>
               <ul class="govuk-list govuk-list--bullet govuk-body-s" style="color:#505a5f;">
-                {% for item in data['data-travel-countrieslist'] %}
+                <!-- {% for item in data['data-travel-countrieslist'] %}
                   <li>{{item}}</li>
-                {% endfor %}
-                <!-- {% if data['data-travel-country'] %}<li>{{ data['data-travel-country'] }}</li>{% endif %} -->
+                {% endfor %} -->
+                {% if data['data-travel-country'] %}<li>{{ data['data-travel-country'] }}</li>{% endif %}
               </ul>
             {% endif %}
           </dd>

@@ -37,7 +37,7 @@ router.post('/bMVP_wip--270', (req, res) => {
     } else if (dataType.includes("non-personal") === true) {
       res.redirect('wip/adam/request/030-geography-cat.html');
     } else{
-      res.redirect('wip/adam/request/020-tasks-cat.html');
+      res.redirect('wip/adam/request/030-geography-cat.html');
     }
   // } else if (dataType === "personal") {
   //   res.redirect('wip/adam/request/030-legal-basis-personal-cat.html');
@@ -46,7 +46,7 @@ router.post('/bMVP_wip--270', (req, res) => {
   // } else if (dataType === 'non-personal') {
   //   res.redirect('wip/adam/request/030-geography-cat.html');
   } else{
-    res.redirect('wip/adam/request/020-tasks-cat.html');
+    res.redirect('wip/adam/request/030-geography-cat.html');
   }
 });
 
@@ -75,13 +75,23 @@ router.post('/bMVP_wip--check-for-no-need', (req, res) => {
 router.post('/bMVP_wip--240', (req, res) => {
 
   const willLeave = req.body["leaveUK"];
+  const dataType = req.session.data['typeOfData'];
 
   // data will be exported
   if (willLeave == 'yes') {
     res.redirect('wip/adam/request/030-what-countries-cat.html');
   } else {
     // data stays in uk
-    res.redirect('wip/adam/request/030-role-cat.html');
+    if (Array.isArray(dataType) === true) {
+      if (dataType.includes('non-personal') === true) {
+        res.redirect('wip/adam/request/030-confirm-data-protection-answers.html');
+      } else {
+        res.redirect('wip/adam/request/030-role-cat.html');
+      }
+    } else {
+      //undefined
+      res.redirect('wip/adam/request/030-confirm-data-protection-answers.html');
+    }
   }
 });
 
@@ -120,10 +130,20 @@ router.post('/bMVP_wip--updateCountryList', (req, res) => {
 });
 
 router.post('/bMVP_wip--addCountryToArray', (req, res) => {
+  const dataType = req.session.data['typeOfData'];
   // if (req.body['data-travel-country'].length > 0) { 
   //   req.session.data['data-travel-countrieslist'].push(req.body['data-travel-country']);
   // }
-  res.redirect('wip/adam/request/030-role-cat.html');
+  if (Array.isArray(dataType) === true) {
+    if (dataType.includes('non-personal') === true) {
+      res.redirect('wip/adam/request/030-confirm-data-protection-answers.html');
+    } else {
+      res.redirect('wip/adam/request/030-role-cat.html');
+    }
+  } else {
+    //undefined
+    res.redirect('wip/adam/request/030-confirm-data-protection-answers.html');
+  }
 });
 
 router.post('/bMVP_wip--legalGateway', (req, res) => {
@@ -137,10 +157,31 @@ router.post('/bMVP_wip--legalGateway', (req, res) => {
 
 router.post('/bMVP_wip--checkSpecialCatGDPR', (req, res) => {
   const dataType = req.session.data['typeOfData'];
-  if (dataType === 'special' || dataType.includes("special") === true) {
+  if (dataType.includes("special") === true) {
     res.redirect('wip/adam/request/030-legal-basis-special-cat.html');
   } else {
     res.redirect('wip/adam/request/030-geography-cat.html');
+  }
+});
+
+router.post('/bMVP_wip--DataSubjectSkip', (req, res) => {
+  const dataType = req.session.data['typeOfData'];
+  if (dataType.includes('non-personal') === true) {
+    res.redirect('wip/adam/request/030-aims-cat.html');
+  } else {
+    res.redirect('wip/adam/request/030-data-subjects-cat.html');
+  }
+});
+
+router.post('/bMVP_wip--ReadyForCYA', (req, res) => {
+  const dataType = req.session.data['typeOfData'];
+
+  console.log(dataType);
+
+  if (Array.isArray(dataType) === true) {
+    res.redirect('wip/adam/request/030-check-answers.html');
+  } else {
+    res.redirect('wip/adam/request/020-tasks-cat.html');
   }
 });
 
