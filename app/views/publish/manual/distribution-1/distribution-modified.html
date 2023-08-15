@@ -43,16 +43,15 @@
               </h1>
             </legend>
             <div id="passport-issued-hint" class="govuk-hint">
-              Provide most recent date on which the distribution was changed, updated or modified dd/mm/yyyy.
+              Provide most recent date on which the distribution was changed, updated or modified.
             </div>
             <div class="govuk-date-input" id="passport-issued">
-
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="DistributionModifiedYear">
-                    Year
+                  <label class="govuk-label govuk-date-input__label" for="DistributionModifiedDay">
+                    Day
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="DistributionModifiedYear" name="DistributionModifiedYear" type="text" inputmode="numeric" value="{{ data['DistributionModifiedYear'] }}">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="DistributionModifiedDay" name="DistributionModifiedDay" type="text" inputmode="numeric" value="{{ data['DistributionModifiedDay'] }}">
                 </div>
               </div>
               <div class="govuk-date-input__item">
@@ -65,10 +64,10 @@
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="DistributionModifiedDay">
-                    Day
+                  <label class="govuk-label govuk-date-input__label" for="DistributionModifiedYear">
+                    Year
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="DistributionModifiedDay" name="DistributionModifiedDay" type="text" inputmode="numeric" value="{{ data['DistributionModifiedDay'] }}">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="DistributionModifiedYear" name="DistributionModifiedYear" type="text" inputmode="numeric" value="{{ data['DistributionModifiedYear'] }}">
                 </div>
               </div>
             </div>

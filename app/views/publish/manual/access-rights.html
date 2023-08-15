@@ -40,7 +40,7 @@
         {{ govukRadios({
           name: "metadataAccessRights",
           hint: {
-            text: "This is information about who can access the {{data['method']}} or an indication of its security status."
+            text: "This is information about who can access the " + data['method'] + " or an indication of its security status."
          },
           fieldset: {
             legend: {

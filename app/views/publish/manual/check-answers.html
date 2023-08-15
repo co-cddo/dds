@@ -220,7 +220,7 @@
             Date Issued
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataCreatedYear'] }} {{ data['metadataCreatedMonth'] }} {{ data['metadataCreatedDay'] }}
+            {{ data['metadataCreatedDay'] }} {{ data['metadataCreatedMonth'] }} {{ data['metadataCreatedYear'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/publish/manual/created?check-answers=true">
@@ -234,7 +234,7 @@
             Date Modified
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataModifiedYear'] }} {{ data['metadataModifiedMonth'] }} {{ data['metadataModifiedDay'] }}
+            {{ data['metadataModifiedDay'] }} {{ data['metadataModifiedMonth'] }} {{ data['metadataModifiedYear'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/publish/manual/modified?check-answers=true">
@@ -257,20 +257,6 @@
             </a>
           </dd>
         </div>        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Asset Type
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['method'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/asset-type?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> asset type</span>
-            </a>
-          </dd>
-        </div> 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Update frequency
@@ -399,7 +385,7 @@
             Modified
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['DistributionModifiedYear'] }} {{ data['DistributionModifiedMonth'] }} {{ data['DistributionModifiedDay'] }}
+            {{ data['DistributionModifiedDay'] }} {{ data['DistributionModifiedMonth'] }} {{ data['DistributionModifiedYear'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/publish/manual/distribution-1/distribution-modified?check-answers=true">
@@ -424,7 +410,7 @@
         </div> 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Access servce
+            Access service
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['DistributionService'] }}
@@ -438,7 +424,7 @@
         </div> 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            URL
+            Download URL
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['distributionUrl'] }}
@@ -452,7 +438,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Type
+            Media type
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['distributionType'] }}
@@ -466,7 +452,7 @@
         </div> 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Size
+            File size
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['distributionSize'] }} {{ data['distributionSizeUnit'] }}
@@ -517,7 +503,7 @@
             Modified
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['DistributionModifiedYear2'] }} {{ data['DistributionModifiedMonth2'] }} {{ data['DistributionModifiedDay2'] }}
+            {{ data['DistributionModifiedDay2'] }} {{ data['DistributionModifiedMonth2'] }} {{ data['DistributionModifiedYear2'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/publish/manual/distribution-1/distribution-modified?check-answers=true">
@@ -542,7 +528,7 @@
         </div> 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Access servce
+            Access service
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['DistributionService2'] }}
@@ -570,7 +556,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Type
+            Media type
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['distributionType2'] }}
@@ -584,7 +570,7 @@
         </div> 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Size
+            File size
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['distributionSize2'] }} {{ data['distributionSizeUnit2'] }}

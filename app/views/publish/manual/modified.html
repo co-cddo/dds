@@ -27,8 +27,13 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
       <form class="form" action="/publish/manual/related" method="post">
+      {% endif %}
+      
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
@@ -38,15 +43,15 @@
               </h1>
             </legend>
             <div id="passport-issued-hint" class="govuk-hint">
-              Provide most recent date on which the {{data['method']}} was changed, updated or modified dd/mm/yyyy.
+              Provide most recent date on which the {{data['method']}} was changed, updated or modified.
             </div>
             <div class="govuk-date-input" id="passport-issued">
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="metadataModifiedYear">
-                    Year
+                  <label class="govuk-label govuk-date-input__label" for="metadataModifiedDay">
+                    Day
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="metadataModifiedYear" name="metadataModifiedYear" type="text" inputmode="numeric" value="{{ data['metadataModifiedYear'] }}">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="metadataModifiedDay" name="metadataModifiedDay" type="text" inputmode="numeric" value="{{ data['metadataModifiedDay'] }}">
                 </div>
               </div>
               <div class="govuk-date-input__item">
@@ -59,10 +64,10 @@
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="metadataModifiedDay">
-                    Day
+                  <label class="govuk-label govuk-date-input__label" for="metadataModifiedYear">
+                    Year
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="metadataModifiedDay" name="metadataModifiedDay" type="text" inputmode="numeric" value="{{ data['metadataModifiedDay'] }}">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="metadataModifiedYear" name="metadataModifiedYear" type="text" inputmode="numeric" value="{{ data['metadataModifiedYear'] }}">
                 </div>
               </div>
               
