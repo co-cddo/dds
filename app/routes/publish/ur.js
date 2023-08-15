@@ -106,8 +106,15 @@ router.post('/dist-url-question2', function(request, response) {
     }
 })
 
-// router.post('/skip-to-check', function(request, response) {
-//     response.redirect("/publish/manual/check-answers")
-// })
+router.post('/upload-error', function(request, response) {
+
+    var error = request.session.data['error']
+    if (error == "yes"){
+            response.redirect("/publish/csv/upload-summary-error")
+    } else {
+        response.redirect("/publish/csv/upload-summary")
+    }
+})
+
 
 module.exports = router;

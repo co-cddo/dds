@@ -722,6 +722,25 @@
     margin-top: 0;
 }
 
+.app-summary-list__row--error {
+    position: relative;
+}
+
+.app-summary-list__row--error .govuk-summary-list__key {
+    padding-left: 20px;
+}
+
+.app-summary-list__row--error .govuk-summary-list__key:before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: calc(100% - 20px);
+    background: #d4351c;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
 // Navigation
 
 li.app-navigation__list-item.app-navigation__list-item--right {

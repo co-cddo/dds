@@ -1,0 +1,286 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-xl">Local Authority District Summaries-lower-tier</h1>
+    
+    <h2 class="govuk-heading-l">Dataset description</h2>
+    
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Local Authority District Summaries-lower-tier
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Alternative title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          LAD-summaries
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Description
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Deprivation statistics grouped by Local Authority District.
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Summary
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Keywords
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Deprivation,LAD,Population,Levelling up
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Themes
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Government spending,Mapping,Society
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Point of Contact
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Ellott Phillips<br>
+          ellott.phillips@levellingup.gov.uk
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Version
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1.1
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Access rights
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Internal
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Licence
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Open Governemnt Licence
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Security Classification
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Offical
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Creator
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Department for Levelling Up, Housing & Communities
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Existing identifier
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1234-5678
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date Issued
+        </dt>
+        <dd class="govuk-summary-list__value">
+          01 01 2021
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date Modified
+        </dt>
+        <dd class="govuk-summary-list__value">
+          02 02 2022
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Related data 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          datamarketplace/data/lsoa-deprivation
+        </dd>
+        
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Update frequency
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Weekly
+        </dd>
+        
+      </div>
+      
+
+    </dl>
+
+    
+    <h2 class="govuk-heading-l">Distributions</h2>
+    <h3 class="govuk-heading-m">Distribution 1</h3>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9"> 
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Local Authority District Summaries-lower-tier
+        </dd>
+        
+      </div> 
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Description
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Deprivation statistics grouped by Local Authority District.
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Modified
+        </dt>
+        <dd class="govuk-summary-list__value">
+          03 03 2023
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Identifier
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1234-5678
+        </dd>
+        
+      </div> 
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Access service
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+        
+      </div> 
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Download URL
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Media type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          CSV
+        </dd>
+        
+      </div> 
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          File size
+        </dt>
+        <dd class="govuk-summary-list__value">
+          3.4 mb
+        </dd>
+        
+      </div>
+    </dl>
+
+    
+      
+      
+
+    <form action="/upload-error" method="post" novalidate="">
+
+      <input type="hidden" name="answers-checked" value="true">
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Return to summary
+      </button>
+
+    </form>
+
+  </div>
+</div>
+{% endblock %}
