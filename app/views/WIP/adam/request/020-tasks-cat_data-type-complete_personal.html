@@ -20,7 +20,7 @@
 
       <span class="govuk-caption-l">{% include "includes/request/request-id.html" %}</span>
       <h1 class="govuk-heading-xl">
-        citizen-relationships data
+        {{ data['shareTitle'] }} data
       </h1>
 
       <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Request incomplete</h2>
@@ -142,6 +142,14 @@
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
+            </li>
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <!-- <a href="030-legal-basis-special-cat" aria-describedby=""> -->
+                  Lawful basis for special category data
+                <!-- </a> -->
+              </span>
+              <strong class="govuk-tag govuk-tag--blue govuk-prototype-kit-task-list__tag" id="">Not required</strong>
             </li>
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">

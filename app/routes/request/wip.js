@@ -26,13 +26,26 @@ router.post('/bMVP_wip--270', (req, res) => {
 
   const dataType = req.session.data['typeOfData'];
 
+  console.log(dataType);
+
   // other orgs deed data
-  if (dataType === 'personal') {
-    res.redirect('wip/adam/request/030-legal-basis-personal-cat.html');
-  } 
-  else if (dataType === 'special') {
-    res.redirect('wip/adam/request/030-legal-basis-special-cat.html');
-  } else {
+  if(Array.isArray(dataType) === true) {
+    if (dataType.length > 1 && dataType.includes("personal") === true || dataType.length === 1 && dataType.includes("personal") === true) {
+      res.redirect('wip/adam/request/030-legal-basis-personal-cat.html');
+    } else if (dataType.includes("special") === true) {
+      res.redirect('wip/adam/request/030-legal-basis-special-cat.html');
+    } else if (dataType.includes("non-personal") === true) {
+      res.redirect('wip/adam/request/030-geography-cat.html');
+    } else{
+      res.redirect('wip/adam/request/020-tasks-cat.html');
+    }
+  // } else if (dataType === "personal") {
+  //   res.redirect('wip/adam/request/030-legal-basis-personal-cat.html');
+  // } else if (dataType === "special") {
+  //   res.redirect('wip/adam/request/030-legal-basis-special-cat.html');
+  // } else if (dataType === 'non-personal') {
+  //   res.redirect('wip/adam/request/030-geography-cat.html');
+  } else{
     res.redirect('wip/adam/request/020-tasks-cat.html');
   }
 });
@@ -81,7 +94,7 @@ router.post('/bMVP_wip--230', (req, res) => {
     res.redirect('wip/adam/request/030-what-substantial-cat.html');
   } else {
     // They have the power
-    res.redirect('wip/adam/request/030-data-subjects-cat.html');
+    res.redirect('wip/adam/request/030-geography-cat.html');
   }
 });
 
@@ -119,6 +132,15 @@ router.post('/bMVP_wip--legalGateway', (req, res) => {
     res.redirect('wip/adam/request/030-confirm-legal-answers.html');
   } else {
     res.redirect('wip/adam/request/020-talk-to-lawyer-cat_legal-gateway.html');
+  }
+});
+
+router.post('/bMVP_wip--checkSpecialCatGDPR', (req, res) => {
+  const dataType = req.session.data['typeOfData'];
+  if (dataType === 'special' || dataType.includes("special") === true) {
+    res.redirect('wip/adam/request/030-legal-basis-special-cat.html');
+  } else {
+    res.redirect('wip/adam/request/030-geography-cat.html');
   }
 });
 
