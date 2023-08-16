@@ -181,7 +181,7 @@ router.post('/bMVP_wip--ReadyForCYA', (req, res) => {
   if (Array.isArray(dataType) === true) {
     res.redirect('WIP/adam/request/030-check-answers.html');
   } else {
-    res.redirect('WIP/adam/request/020-tasks-cat.html');
+    res.redirect('WIP/adam/request/020-tasks-cat_all-but-one.html');
   }
 });
 
