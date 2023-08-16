@@ -32,13 +32,16 @@
       <p class="govuk-body">Upload the CSV file containing your data asset descriptions.</p>
 
 
-        <div class="govuk-form-group">
+        <div class="govuk-form-group  govuk-form-group--error">
           <label class="govuk-label" for="file-upload-1">
             Upload a file
           </label>
-
+          <p id="passport-issued-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Select a CSV file
+          </p>
           <div id="appUpload" class="app-upload">
             <button class="app-upload__button">Choose file</button>
+
             <span id="appUploadText" class="app-upload__text govuk-body">No file chosen</span>
           </div>
 
