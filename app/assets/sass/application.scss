@@ -21,16 +21,6 @@
 @import "finder_frontend/expander";
 
 // ----------------------------------------------
-// Request
-// ----------------------------------------------
-
-.custom-task-list__section-hint {
-    @include govuk-media-query($from: tablet) {
-        padding-left:30px;
-    }
-}
-
-// ----------------------------------------------
 // Global
 // ----------------------------------------------
 
@@ -56,6 +46,36 @@
         padding-bottom: 15px;
         &:last-child {
             padding-bottom:0px !important;
+        }
+    }
+}
+
+.custom-task-list__section-hint {
+    @include govuk-media-query($from: tablet) {
+        padding-left:30px;
+    }
+}
+
+// ----------------------------------------------
+// Review request
+// ----------------------------------------------
+
+@import "review-request/mock-email-notification";
+
+.mock-email {
+    .mock-email--table {
+    }  
+  .mock-email--table__body {
+  }
+    .mock-email--table__row {
+    }
+  .mock-email--table__cell {
+        p {
+            font-family: sans-serif;
+            font-size:18px;
+        }
+        span.secondary {
+            color:#CCC;
         }
     }
 }
