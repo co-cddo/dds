@@ -37,4 +37,15 @@ window.GOVUKPrototypeKit.documentReady(() => {
     $(this).parent().next('.app-c-expander__content').toggleClass('app-c-expander__content--visible')
 })
 
+var checkboxes = document.querySelectorAll("#searchForm input[type='checkbox']");
+var button = document.querySelector(".moj-filter__options button");
+
+for (var i = 0; i < checkboxes.length; i++) {
+  checkboxes[i].addEventListener("change", function() {
+    button.click();
+  });
+}
+
+
+
 })

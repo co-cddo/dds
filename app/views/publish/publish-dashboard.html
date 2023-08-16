@@ -24,9 +24,9 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Dept X published data descriptions
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-6">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+        Department for Levelling Up, Housing and Communities published data descriptions
       </h1>
       <p>Here's where you manage your data descriptions. Each government department has their own page.</p>
 
@@ -34,54 +34,114 @@
         Add new data description
       </a>
 
-      <h2 class="app-task-list__section">
-        Your published metadata records
-      </h2>
+    </div>
+  </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
 
-      <div class="publish-metrics">
-        <div class="publish-metric">
+        <h2 class="govuk-heading-l">
+          Your published metadata records
+        </h2>
 
-        </div>
-      </div>
 
       <dl class="publish-metrics">
         <div class="publish-metric">
-          <dt><span class="govuk-body">Datasets</span></dt>
-          <dd><a href="#" class="govuk-link">4 datasets</a></dd>
+          <dt><h3 class="govuk-heading-m">Datasets</h3></dt>
+          <dd><a href="/find/find?q=&organisationFilters=department-for-levelling-up-housing-and-communities&typesFilters=dataset&order=updated-newest&topicFilters=_unchecked&organisationFilters=_unchecked&typesFilters=_unchecked" class="govuk-link">1 dataset</a></dd>
         </div>
         <div class="publish-metric">
-          <dt>Data services</dt>
-          <dd>1 datasets</dd>
+          <dt><h3 class="govuk-heading-m">Data services</h3></dt>
+          <dd><a href="/find/find?q=&organisationFilters=department-for-levelling-up-housing-and-communities&typesFilters=dataservice&organisationFilters=department-for-levelling-up-housing-and-communities&typesFilters=dataset&order=updated-newest&topicFilters=_unchecked&organisationFilters=_unchecked&typesFilters=_unchecked" class="govuk-link">11 data service</a></dd>
         </div>
         <div class="publish-metric">
-          <dt>Data share requests</dt>
-          <dd>0 datasets</dd>
+          <dt><h3 class="govuk-heading-m">Pending share requests</h3></dt>
+          <dd><a href="/manage-shares/created-requests#pendingRequests" class="govuk-link">3 Data share requests</a></dd>
         </div>
         <div class="publish-metric">
-          <dt>Completed data shares</dt>
-          <dd>4 datasets</dd>
+          <dt><h3 class="govuk-heading-m">Submitted share requests</h3></dt>
+          <dd><a href="/manage-shares/created-requests#submittedRequests" class="govuk-link">2 Data share requests</a></dd>
+        </div>
+        <div class="publish-metric">
+          <dt><h3 class="govuk-heading-m">Completed data shares</h3></dt>
+          <dd><a href="/manage-shares/created-requests#completedRequests" class="govuk-link">2 Completed data shares</a></dd>
         </div>
       </dl>
-      
 
-      <ul class="app-task-list__items">
-        <li class="app-task-list__item">
-          <span class="app-task-list__task-name">
-            <a href="#" aria-describedby="eligibility-status">
-              data_asset_1
-            </a>
-          </span>
-          <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-        </li>
-        <li class="app-task-list__item">
-          <span class="app-task-list__task-name">
-            <a href="#" aria-describedby="read-declaration-status">
-              data_asset_2
-            </a>
-          </span>
-          <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
-        </li>
-      </ul>
+      <!-- Harvesters info to be added in later iterations -->
+      <!-- <h2 class="app-task-list__section">
+        Data Harvesters
+      </h2>
+
+      <table class="govuk-table" style="font-size: 18px;">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Title</th>
+            <th class="govuk-table__header" scope="col">Last run date</th>
+            <th class="govuk-table__header" scope="col">Completed runs</th>
+            <th class="govuk-table__header" scope="col">Status</th>
+            
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="record-1?error=no">Harvester</a>
+            </td>
+            <td class="govuk-table__cell">
+              dd-mm-yyyy
+            </td>
+            <td class="govuk-table__cell">
+              #123
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag">Active</strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="record-2?error=no">Harvester
+              </a>
+            </td>
+            <td class="govuk-table__cell">
+              dd-mm-yyyy
+            </td>
+            <td class="govuk-table__cell">
+              #123
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">Paused</strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="record-3?error=no">Harvester</a>
+            </td>
+            <td class="govuk-table__cell">
+              dd-mm-yyyy
+            </td>
+            <td class="govuk-table__cell">
+              #123
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">Cancelled </strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="record-4?error=no">Harvester</a>
+            </td>
+            <td class="govuk-table__cell">
+              dd-mm-yyyy
+            </td>
+            <td class="govuk-table__cell">
+              #123
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--red">Error </strong>
+            </td>
+          </tr>
+        </tbody>
+      </table> -->
 
     </div>
   </div>
