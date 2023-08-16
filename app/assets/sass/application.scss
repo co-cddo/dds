@@ -294,10 +294,10 @@
     border-bottom: 1px solid #b1b4b6;
 }
 
-.moj-override .govuk-button {
-    margin: 20px 0px 20px;
-    display: none;
-}
+// .moj-override .govuk-button {
+//     margin: 20px 0px 20px;
+//     display: none;
+// }
 
 .moj-override--selected-tags .moj-filter {
     box-shadow: none;
@@ -760,6 +760,22 @@ li.app-navigation__list-item.app-navigation__list-item--right {
     float: right;
     padding-right: 0;
     margin-right: -15px;
+}
+
+dl.publish-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.publish-metric h3 {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #b1b4b6;
+    padding-bottom: 5px;
+}
+
+.publish-metric dd {
+    margin: 0;
 }
 
 // PROB - Global 
