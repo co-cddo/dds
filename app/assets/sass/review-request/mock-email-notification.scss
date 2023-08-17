@@ -11,12 +11,12 @@
 		border:1px solid grey;
 		border-collapse: collapse;
 		width: 100%;
-		max-width: 900px;
+		max-width: 700px;
 		// margin:0 auto;
 		box-shadow:3px 3px grey;
 	}  
-  .mock-email--table__body {
-  }
+	.mock-email--table__body {
+	}
 	.mock-email--table__row {
 		border:1px solid grey;
 	}
@@ -57,6 +57,14 @@
 				box-shadow:none;
 				text-decoration: underline;
 			}
+		}
+		a.secert-link {
+			color:#0b0c0c !important;
+			text-decoration: none !important;
+			outline: none !important;
+			background-color: transparent !important;
+			box-shadow:none !important;
+			text-decoration-thickness:0px !important;
 		}
 	}
 }
