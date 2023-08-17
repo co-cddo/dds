@@ -31,11 +31,11 @@ router.post('/bMVP_wip--signin-route', function(request, response) {
 
     var signinRoute = request.session.data['signinRoute']
     if (signinRoute == "Find"){
-        response.redirect("/WIP/ben/find/find")
+        response.redirect("/WIP/find/find")
     } else if (signinRoute == "Manage") {
-        response.redirect("/WIP/adam/manage-shares/")
+        response.redirect("/WIP/manage-shares/")
     } else {
-        response.redirect("/WIP/ben/publish/publish-dashboard")
+        response.redirect("/WIP/publish/publish-dashboard")
     }
 })
 
