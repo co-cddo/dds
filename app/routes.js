@@ -27,6 +27,18 @@ router.post('/bMVP_ur--signin-route', function(request, response) {
     }
 })
 
+router.post('/bMVP_wip--signin-route', function(request, response) {
+
+    var signinRoute = request.session.data['signinRoute']
+    if (signinRoute == "Find"){
+        response.redirect("/WIP/ben/find/find")
+    } else if (signinRoute == "Manage") {
+        response.redirect("/WIP/adam/manage-shares/")
+    } else {
+        response.redirect("/WIP/ben/publish/publish-dashboard")
+    }
+})
+
 // #################################################
 // Find (Acquirer)
 // #################################################

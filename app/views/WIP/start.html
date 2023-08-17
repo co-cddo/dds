@@ -63,7 +63,7 @@
   <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
     <h2 class="govuk-heading-l govuk-!-font-weight-bold">Find data assets</h2>
     <p class="govuk-body">Find data assets from  government organisations. Personal and special category data is available.</p>
-    <form class="form" action="/login" method="post">
+    <form class="form" action="/WIP/login" method="post">
       {% from "govuk/components/input/macro.njk" import govukInput %}
       {{ govukInput({
         type: "hidden",
@@ -76,7 +76,7 @@
   <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
     <h2 class="govuk-heading-l">Manage data shares</h2>
     <p class="govuk-body">Set up and manage your data shares so you can share your data assets with other government organisations.</p>
-    <form class="form" action="/login" method="post">
+    <form class="form" action="/WIP/login" method="post">
       {% from "govuk/components/input/macro.njk" import govukInput %}
       {{ govukInput({
         type: "hidden",
@@ -89,12 +89,12 @@
   <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
     <h2 class="govuk-heading-l">Publish data descriptions</h2>
     <p class="govuk-body">Publish a description of your data assets so they can be found by other government organisations.</p>
-    <form class="form" action="/login" method="post">
+    <form class="form" action="/WIP/login" method="post">
       {% from "govuk/components/input/macro.njk" import govukInput %}
       {{ govukInput({
         type: "hidden",
         name: "signinRoute",
-        value: "Pusblish"
+        value: "Publish"
       }) }}
       <button class="govuk-button" data-module="govuk-button">Publish data descriptions</button>
     </form>
