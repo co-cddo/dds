@@ -10,22 +10,14 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
-
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="030-check-answers" method="post">
+    <form action="/bMVP_ur--ReadyForCYA" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="confirm-answers-data-gov-sec-tech-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">

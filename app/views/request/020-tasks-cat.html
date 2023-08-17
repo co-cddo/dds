@@ -10,15 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
-
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -51,11 +43,11 @@
             </li>
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-data-subjects-cat" aria-describedby="">
+                <!-- <a href="030-data-subjects-cat" aria-describedby=""> -->
                   Data subjects
-                </a>
+                <!-- </a> -->
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
+              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
             </li>
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
@@ -76,7 +68,7 @@
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
                 <a href="030-what-public-benefit-cat" aria-describedby="">
-                  Benefits
+                  Benefit to public
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
@@ -84,7 +76,7 @@
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
                 <a href="030-others-cat" aria-describedby="">
-                  Data access
+                  Other organisations accessing data
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
@@ -146,7 +138,15 @@
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
                 <!-- <a href="030-legal-basis-personal-cat" aria-describedby=""> -->
-                  Lawful basis
+                  Lawful basis for personal data
+                <!-- </a> -->
+              </span>
+              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
+            </li>
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <!-- <a href="030-legal-basis-special-cat" aria-describedby=""> -->
+                  Lawful basis for special category data
                 <!-- </a> -->
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
@@ -161,11 +161,11 @@
             </li>
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-role-cat" aria-describedby="">
+                <!-- <a href="030-role-cat" aria-describedby=""> -->
                   Role of organisation
-                </a>
+                <!-- </a> -->
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
+              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
             </li>
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
