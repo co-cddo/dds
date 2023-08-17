@@ -6,7 +6,7 @@
 
 {% block header %}
   {{ super() }}
-  {% include "includes/mvp-nav_sign-in.html" %}
+  {% include "includes/WIP_mvp-nav_sign-in.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -34,7 +34,7 @@
       {% from "govuk/components/input/macro.njk" import govukInput %}
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
-      <form action="/start-logged-in" method="post" novalidate>
+      <form action="/WIP/start-logged-in" method="post" novalidate>
         {{ govukInput({
           label: {
             text: "Email address",
