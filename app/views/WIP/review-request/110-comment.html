@@ -1,0 +1,43 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/WIP_mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="javascript:window.history.back()">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Request returned with comments</h1>
+        <div class="govuk-panel__body">
+          Request ID: <strong>RR523</strong>
+        </div>        
+      </div>
+
+      <p>You've told Department X that you need more information before you can make a decision</p>
+
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>If Department X supplies the information you need, you will reconsider their request.</p>
+      
+      <br>
+      <br>
+      <a href="../manage-shares/" class="govuk-button">
+        Return to manage data share requests
+      </a>
+    </div>
+  </div>
+
+{% endblock %}

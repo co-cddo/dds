@@ -16,14 +16,13 @@
       <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
       <ul class="app-navigation__list app-width-container">
           <li class="app-navigation__list-item ">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/start">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/start-logged-in">
               Home
             </a>
           </li>
-
           <li class="app-navigation__list-item app-navigation__list-item--right">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/login2">
-              Sign in
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/start">
+              Sign out
             </a>
           </li>
       </ul>
@@ -63,41 +62,26 @@
   <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
     <h2 class="govuk-heading-l govuk-!-font-weight-bold">Find data assets</h2>
     <p class="govuk-body">Find data assets from  government organisations. Personal and special category data is available.</p>
-    <form class="form" action="/WIP/login" method="post">
-      {% from "govuk/components/input/macro.njk" import govukInput %}
-      {{ govukInput({
-        type: "hidden",
-        name: "signinRoute",
-        value: "Find"
-      }) }}
-      <button class="govuk-button" data-module="govuk-button">Find data assets</button>
-    </form>
+    <!-- <p class="govuk-body govuk-!-margin-bottom-0"><a href="/styles/" class="govuk-link govuk-!-font-weight-bold">Find data</a></p> -->
+    <a href="/WIP/find/find" class="govuk-button" data-module="govuk-button">
+      Find data assets
+    </a>
   </div>
   <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
     <h2 class="govuk-heading-l">Manage data shares</h2>
     <p class="govuk-body">Set up and manage your data shares so you can share your data assets with other government organisations.</p>
-    <form class="form" action="/WIP/login" method="post">
-      {% from "govuk/components/input/macro.njk" import govukInput %}
-      {{ govukInput({
-        type: "hidden",
-        name: "signinRoute",
-        value: "Manage"
-      }) }}
-      <button class="govuk-button" data-module="govuk-button">Manage data shares</button>
-    </form>
+    <!-- <p class="govuk-body govuk-!-margin-bottom-0"><a href="/components/" class="govuk-link govuk-!-font-weight-bold">Manage data</a></p> -->
+    <a href="/WIP/manage-shares/" class="govuk-button" data-module="govuk-button">
+      Manage data shares
+    </a>
   </div>
   <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
     <h2 class="govuk-heading-l">Publish data descriptions</h2>
     <p class="govuk-body">Publish a description of your data assets so they can be found by other government organisations.</p>
-    <form class="form" action="/WIP/login" method="post">
-      {% from "govuk/components/input/macro.njk" import govukInput %}
-      {{ govukInput({
-        type: "hidden",
-        name: "signinRoute",
-        value: "Publish"
-      }) }}
-      <button class="govuk-button" data-module="govuk-button">Publish data descriptions</button>
-    </form>
+    <!-- <p class="govuk-body govuk-!-margin-bottom-0"><a href="/patterns/" class="govuk-link govuk-!-font-weight-bold">Publish Data</a></p> -->
+    <a href="/WIP/publish/publish-dashboard" class="govuk-button" data-module="govuk-button">
+      Publish data descriptions
+    </a>
   </div>
 
   <div class="govuk-grid-column-full">
@@ -107,18 +91,14 @@
   <div class="govuk-grid-column-one-half-from-desktop">
     <h2 id="community" class="govuk-heading-m">Learn</h2>
     <p class="govuk-body">
-      <a class="govuk-link" href="#1">Find information to help you</a> get the most out of the Data Marketplace.<br>
-      <br>
-      For example, terms used within the service, what information to provide when making a data asset request, and the UK Cross-Government Metadata Exchange Model. More information will be added as it is created.<br>
-      <br>
-      <a href="#1">Tell us</a> if there’s something you’d like to see included.<br>
+      <a class="govuk-link" href="#">Find policies and standards</a> relevant to your data and learn from the experience of others who work with data across government.
     </p>
   </div>
 
   <div class="govuk-grid-column-one-half-from-desktop">
     <h2 id="support" class="govuk-heading-m">Contact Data Marketplace Team</h2>
     <p class="govuk-body">
-      <a class="govuk-link" href="#1">Contact the team</a> if you have a question, suggestion or idea. We’d love to hear from you.
+      <a class="govuk-link" href="#">Contact the team</a> if you have a question, suggestion or idea. We’d love to hear from you.
     </p>
   </div>
 

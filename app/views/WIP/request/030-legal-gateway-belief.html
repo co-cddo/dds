@@ -1,0 +1,113 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/WIP_mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/bMVP_wip--legalGateway" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="legal-gateway-belief-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">{% include "includes/request/request-id.html" %}</span>
+            <h1 class="govuk-fieldset__heading">
+              Is there a 'legal gateway' for acquiring this data?
+            </h1>
+          </legend>
+          <br>
+          <div id="legal-gateway-hint" class="govuk-hint">
+            Your legal advisor may be asked to support this.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="legal-gateway-belief" name="legal-gateway-belief" type="radio" value="Yes" data-aria-controls="conditional-yes-gateway">
+              <label class="govuk-label govuk-radios__label" for="legal-gateway-belief">
+                Yes, there is a legal gateway for acquiring this data
+              </label>
+              <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                For example, names or addresses
+              </div> -->
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes-gateway">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="yes-gateway">
+                  What is the legal gateway for acquiring this data?
+                </label>
+                <textarea class="govuk-textarea" id="yes-gateway" name="yes-gateway" type="email" spellcheck="true" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="legal-gateway-belief-2" name="legal-gateway-belief" type="radio" value="Other" data-aria-controls="conditional-other-legal-grounds">
+              <label class="govuk-label govuk-radios__label" for="legal-gateway-belief-2">
+                We have other legal grounds for acquiring this data
+              </label>
+              <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                For example, data about health or religious beliefs.
+              </div> -->
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other-legal-grounds">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="other-legal-grounds">
+                  What other legal grounds do you have for acquiring this data?
+                </label>
+                <textarea class="govuk-textarea" id="other-legal-grounds" name="other-legal-grounds" type="email" spellcheck="true" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="legal-gateway-belief-5" name="legal-gateway-belief" type="radio" value="No" data-behaviour="exclusive">
+              <label class="govuk-label govuk-radios__label" for="legal-gateway-belief-5">
+                We don't know
+              </label>
+              <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                For example, anonymised data.
+              </div> -->
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
+          Save and return
+        </button>
+      </div>
+    </form>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What is a legal gateway?
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>Legal gateways allow specified public authorities to share data with each other.</p>
+        <p>Some gateways enable the sharing of personal data, while others allow the sharing of non-identifying data.</p>
+        <p>Disclosing information through a legal gateway is often outlined in jointly agreed documents, for example in:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>a memorandum of understanding (MOU)</li>
+          <li>a protocol</li>
+          <li>a partnership agreement</li>
+          <li>a statement of practice</li>
+          <li>a code of practice</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+{% endblock %}

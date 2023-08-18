@@ -31,11 +31,11 @@ router.post('/bMVP_wip--signin-route', function(request, response) {
 
     var signinRoute = request.session.data['signinRoute']
     if (signinRoute == "Find"){
-        response.redirect("/WIP/ben/find/find")
+        response.redirect("/WIP/find/find")
     } else if (signinRoute == "Manage") {
-        response.redirect("/WIP/adam/manage-shares/")
+        response.redirect("/WIP/manage-shares/")
     } else {
-        response.redirect("/WIP/ben/publish/publish-dashboard")
+        response.redirect("/WIP/publish/publish-dashboard")
     }
 })
 
@@ -60,6 +60,9 @@ router.post('/bMVP_wip--secure-signin-route', function(request, response) {
 const find_ur = require('./routes/find/ur.js')
 router.use('', find_ur);
 
+const find_wip = require('./routes/find/wip.js')
+router.use('', find_wip);
+
 // #################################################
 // Request (Acquirer)
 // #################################################
@@ -67,7 +70,6 @@ router.use('', find_ur);
 const request_ur = require('./routes/request/ur.js')
 router.use('', request_ur);
 
-// Iteration: 1
 const request_wip = require('./routes/request/wip.js')
 router.use('', request_wip);
 
@@ -87,7 +89,6 @@ router.use('', publish_ur);
 const reviewRequest_ur = require('./routes/review-request/ur.js')
 router.use('', reviewRequest_ur);
 
-// Iteration: 1
 const reviewRequest_wip = require('./routes/review-request/wip.js')
 router.use('', reviewRequest_wip);
 
@@ -97,5 +98,8 @@ router.use('', reviewRequest_wip);
 
 const manageShares_ur = require('./routes/manage-shares/ur.js')
 router.use('', manageShares_ur);
+
+const manageShares_wip = require('./routes/manage-shares/wip.js')
+router.use('', manageShares_wip);
 
 module.exports = router;

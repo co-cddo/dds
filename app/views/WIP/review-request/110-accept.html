@@ -1,0 +1,43 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/WIP_mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="javascript:window.history.back()">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Request accepted</h1>
+        <div class="govuk-panel__body">
+          Request ID: <strong>RR523</strong>
+        </div>
+      </div>
+
+      <p>Department X has been told their request has been accepted and you will contact them to discuss further.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">Contact <a href="#1">data-team@department-x.gov.uk</a> to start a discussion.</p>
+
+      <br>
+      <br>
+      <a href="../manage-shares/" class="govuk-button">
+        Return to manage data share requests
+      </a>
+
+    </div>
+  </div>
+
+{% endblock %}
