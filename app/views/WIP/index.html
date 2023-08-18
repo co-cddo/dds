@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner" style="border-color:#f47738">
+      <div class="govuk-notification-banner__header" style="background-color:#f47738;">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          Do not use these prototypes for research or development reference.
+        </p>
+      </div>
+    </div>
+
+    <h1 class="govuk-heading-xl">
+      WORK IN PROGRESS
+    </h1>
+
+
+    <h2 class="govuk-heading-l">Landing page</h2>
+    <p>Follow these steps to reach each sub-service that is currently ready for UR.</p>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      <li><b>Find</b> - Select "Find data assets"</li>
+      <li><b>Request</b> - Select "Find data assets" > Follow Find journey > Select "Start a data share request"</li>
+      <li><b>Manage data share requests</b> - Select "Manage data shares"</li>
+      <li><b>Publish</b> - Select "Publish data descriptions"</li>
+    </ul>
+    <br>
+    <p><a class="govuk-button" href="/WIP/start">View landing page</a></p>
+
+    <br>
+
+    <h2 class="govuk-heading-m">Direct links to sub-services</h2>
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      <li>
+        <a href="/WIP/find/find">Find journey (Acquirer)</a><br>
+      </li>
+      <li><a href="/WIP/request/">Request journey (Acquirer)</a></li>
+      <li>
+        <a href="/WIP/review-request/">Review request journey (Supplier)</a> - Start from email notification
+      </li>
+      <li>
+        <a href="/WIP/manage-shares/">Manage data share requests (Acquirer and Supplier)</a>
+      </li>
+      <li>
+        <a href="/WIP/publish/publish-dashboard">Publish (Supplier)</a>
+      </li>
+    </ul> 
+
+    <br>
+    <br>
+
+    <h2 class="govuk-heading-m">Email notifications</h2>
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      <li><a href="/WIP/manage-shares/email-notifications/email_supplier_review-request.html">Supplier - Request to review</a></li>
+      <li><a href="/WIP/manage-shares/email-notifications/email_acquirer_returned-request.html">Acquirer - Returned request</a></li>
+    </ul>  
+
+  </div>
+</div>
+
+{% endblock %}
