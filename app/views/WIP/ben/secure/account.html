@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Account
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/wip-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Account</h1>
+
+      {% from "govuk/components/table/macro.njk" import govukTable %}
+
+      {{ govukTable({
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: false,
+        rows: [
+          [
+            {
+              text: "Name"
+            },
+            {
+              text: "Joe Bloggs"
+            }
+          ],[
+          {
+            text: "Email"
+          },
+          {
+            text: "joe.bloggs@govdepartment.gov.uk"
+          }
+        ],[
+        {
+          text: "Organisation"
+        },
+          {
+            text: "Government Department Name"
+          }
+        ]
+          
+        ]
+      }) }}
+
+
+    </div>
+  </div>
+
+{% endblock %}
