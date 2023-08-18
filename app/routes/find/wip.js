@@ -25,7 +25,7 @@ global.index = searchSetup(global.resources);
 
 // Search and result workings
 
-sprint = 'WIP/find';
+sprint = 'WIP/find'; // For UR Ready sprint="find", For WIP sprint ="WIP/find"
 router.get('/' + sprint + '/find', function(req, res) {  
     sprint = 'WIP/find';
     const paginationPerPage = 20;

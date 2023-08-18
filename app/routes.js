@@ -85,4 +85,7 @@ router.use('', reviewRequest_wip);
 const manageShares_ur = require('./routes/manage-shares/ur.js')
 router.use('', manageShares_ur);
 
+const manageShares_wip = require('./routes/manage-shares/wip.js')
+router.use('', manageShares_wip);
+
 module.exports = router;
