@@ -41,9 +41,13 @@ router.post('/bMVP_wip--signin-route', function(request, response) {
 
 router.post('/bMVP_wip--secure-signin-route', function(request, response) {
 
+    var myorg = request.session.data['Organisation']
     var signinRoute = request.session.data['signinRoute']
-    if (signinRoute == "Find"){
-        response.redirect("/WIP/ben/find/find")
+
+    if (!myorg){
+        response.redirect("/WIP/ben/secure/complete-profile")
+    } else if (signinRoute == "Find") {
+        response.redirect("/WIP/ben/manage-shares/")
     } else if (signinRoute == "Manage") {
         response.redirect("/WIP/ben/manage-shares/")
     } else if (signinRoute == "Publish") {
