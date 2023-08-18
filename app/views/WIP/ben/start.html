@@ -14,6 +14,7 @@
   <div class="x-govuk-masthead x-govuk-masthead--large">
     <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
       <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
+      <div class="govuk-width-container">
       <ul class="app-navigation__list app-width-container">
           <li class="app-navigation__list-item ">
             <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="start">
@@ -21,7 +22,7 @@
             </a>
           </li>
       </ul>
-      <ul class="app-navigation__list app-width-container" style="float: right; padding-right: 32px;">
+      <ul class="app-navigation__list app-width-container" style="float: right;margin-right: -30px;">
         {% if data['loggedin'] == "true" %}
         <li class="app-navigation__list-item">
           <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="secure/account">
@@ -41,6 +42,7 @@
         </li>
         {% endif %}
       </ul>
+    </div>
     </nav>
     <div class="govuk-width-container">
 
