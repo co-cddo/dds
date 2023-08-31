@@ -1,0 +1,150 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    var $element = document.querySelector('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
+  </script>
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/WIP_mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Publishing data descriptions</h1>
+    
+      <!-- guide elements -->
+      <!--
+      <aside class="part-navigation-container" role="complementary">
+        <nav aria-label="Pages in this guide" class="gem-c-contents-list" role="navigation" data-gem-track-click-module-started="true" data-ga4-link-tracker-module-started="true">
+          <h2 class="gem-c-contents-list__title">
+            Contents
+          </h2>
+          <ol class="gem-c-contents-list__list">
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+              Overview
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link" href="#anchor__questions">Questions you will be asked</a>
+            </li>
+          </ol>
+        </nav>
+      </aside>
+      -->
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-6"> <!-- Add class if using gov.uk guide elements govuk-!-margin-top-6 --> 
+    <!-- guide elements -->
+    <!--
+    <h2 class="govuk-heading-l">Overview</h2>
+    -->
+    <p>The Data Marketplace allows government organisations to publish descriptions of data (known as metadata) so they can be found by anyone in government. Once found, a data share request can be made to facilitate access to the data under the agreed terms. The Data Marketplace does not host the data itself or provide access to the data. Your data description will be published to the Data Marketplace and will be available to be found by other government organisations who are looking for data.</p>
+    <p>All data descriptions should be findable, accessible, interoperable and reusable (FAIR). With data being published to the Data Marketplace, it should be easy to find, labelled with correct access rights, described to support interoperability with other data, and well described to support reuse. The descriptions of data should have their own identifiers and remain in the marketplace even if the data is no longer available.</p>
+    <p>The Data Marketplace supports descriptions of datasets and data services. A dataset is a collection of data, published or curated by a single agent and available for access or download in one or more representations. A data service is a collection of operations that provides access to one or more datasets or data processing functions.</p>
+    <p>Data descriptions can be added in a number of ways including:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Manually through a web form</li>
+      <li>Upload via our CSV template</li>
+      <li>Catalogue connection to synchronise the descriptions in your organisation data catalogue with the Data Marketplace (using a data harvester)</li>
+    </ul>
+
+    <p>To publish data descriptions you must have a Data Marketplace account with publish permission for your organisation. See X for how to get an account with publish permissions. The publisher dashboard will give you an overview of the data your organisation has published in the Data Marketplace and how it is being used.</p>
+
+    <h2 class="govuk-heading-l">Creating a manual data description</h2>
+    <h3 class="govuk-heading-m">Add data descriptions manually</h3>
+
+    <p>You can add a data description to the Data Marketplace using an online form. You must submit one form per dataset or data service.</p>
+
+    <h4 class="govuk-heading-s">Step 1: Gather information about your data description</h4>
+    
+    <p>Use the questions as a guide to ensure that enough information can be provided at each stage of adding a data description.</p>
+    <p>By answering the questions, your published data description will be helpful to users trying to find data. You should avoid using domain specific jargon and acronyms. Write your description in plain English.</p>
+    <p>The questions also ensure that your description meets the cross-government data sharing metadata standards.</p>
+
+    <h4 class="govuk-heading-s">Step 2: Enter your data description</h4>
+    
+    <p>Sign into the Data Marketplace and navigate to the Publish data descriptions dashboard then click on the ‘Add new data description’ button.</p>
+    <img style="border:1px solid grey;" src="/public/images/learn/publish-dashboard.png" alt="Publish dashboard screenshot"/>
+    <br>
+    <br>
+    <p>You need to select whether you are adding the description of a dataset (something that is distributed as a file download such as a CSV) or a data service (a web API that provides access to the data). If you are describing a dataset, then select ‘Add dataset description manually’. If you are describing a data service then select ‘Add a data service description manually’.</p>
+    <img style="border:1px solid grey;" src="/public/images/learn/add-description-options.png" alt="Select your data description screenshot"/>
+    <br>
+    <br>
+
+    <p>You will now be taken through a series of forms where you can provide the answers to each of the questions.</p>
+
+    <h4 class="govuk-heading-s">Step 3: Review your description</h4>
+    <p>Once you have completed entering the description of your data, you will be presented with a Check your answers page where you will have the option to change any of your answers.</p>
+    <img style="border:1px solid grey;" src="/public/images/learn/check-answers-for-single-asset.png" alt="Check your answers for data asset screenshot"/>
+    <br>
+    <br>
+
+    <p>Once you are satisfied your answers are correct, click on Submit, which will confirm your description of the data has been uploaded.</p>
+
+    <h4 class="govuk-heading-s">Step 4: View published data descriptions</h4>
+    <p>Your data description will now have been added to the Data Marketplace. If you click on View metadata record, you will be taken to the page that provides the details of your data. To return to the home page, click on ‘Home’.</p>
+    <img style="border:1px solid grey;" src="/public/images/learn/uploaded-single-asset.png" alt="Uploaded data asset screenshot"/>
+    <br>
+    <br>
+  </div>
+
+  <!-- guide elements -->
+  <!--
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-s" id="subsection-title">
+        Related content
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="#1">Content title</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  -->
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full govuk-!-margin-top-8">
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
+  </div>
+
+  <div class="govuk-grid-column-one-half-from-desktop">
+    <h2 id="community" class="govuk-heading-m">Learn</h2>
+    <p class="govuk-body">
+      <a class="govuk-link" href="/WIP/learn/">Find information to help you</a> with the data marketplace.
+      <br>
+      For example: a glossary, or the UK Cross-Government Metadata Exchange model.
+    </p>
+  </div>
+
+  <div class="govuk-grid-column-one-half-from-desktop">
+    <h2 id="support" class="govuk-heading-m">Contact Data Marketplace Team</h2>
+    <p class="govuk-body">
+      <a class="govuk-link" href="#1">Contact the team</a> if you have a question, suggestion or idea. We’d love to hear from you.
+    </p>
+  </div>
+</div>
+
+{% endblock %}
+
