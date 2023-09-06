@@ -26,11 +26,7 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-xl">Check your answers before submitting your data</h1>
-      {% if data['method'] == "dataset" %}
-      <h2 class="govuk-heading-l">Dataset description</h2>
-      {% else %}
-      <h2 class="govuk-heading-l">Data service description</h2>
-      {% endif %}
+
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -51,7 +47,11 @@
             Alternative title
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataAltTitle'] }}
+            <ul class="govuk-list">
+              {% for value in data['metadataAltTitle'] %}
+                <li>{{ value }}</li>
+              {% endfor %}
+            </ul>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/publish/manual/alternative-title?check-answers=true">
@@ -87,27 +87,33 @@
               <span class="govuk-visually-hidden"> summary</span>
             </a>
           </dd>
-        </div>        
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Keywords
+            Internal identifier
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataKeyword'] }}
+            {{ data['metadataIdentifier'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/keyword?check-answers=true">
+            <a href="/publish/manual/identifier?check-answers=true">
               Change
-              <span class="govuk-visually-hidden"> keyword</span>
+              <span class="govuk-visually-hidden"> identifier</span>
             </a>
           </dd>
-        </div>        
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Themes
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataThemes'] }}
+            <ul class="govuk-list">
+              {% for value in data['metadataThemes'] %}
+              {% if value != "Other" %}
+                <li>{{ value }}</li>
+              {% endif %}
+              {% endfor %}
+            </ul>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/publish/manual/theme?check-answers=true">
@@ -115,7 +121,25 @@
               <span class="govuk-visually-hidden"> themes</span>
             </a>
           </dd>
-        </div>        
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Keywords
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+              {% for value in data['metadataKeyword'] %}
+                <li>{{ value }}</li>
+              {% endfor %}
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/keyword?check-answers=true">
+              Change
+              <span class="govuk-visually-hidden"> keyword</span>
+            </a>
+          </dd>
+        </div>                
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Point of Contact
@@ -130,10 +154,28 @@
               <span class="govuk-visually-hidden"> contact</span>
             </a>
           </dd>
-        </div>        
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Version
+            Creator
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+              {% for value in data['metadataCreator'] %}
+                <li>{{ value }}</li>
+              {% endfor %}
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/creator?check-answers=true">
+              Change
+              <span class="govuk-visually-hidden"> creator</span>
+            </a>
+          </dd>
+        </div>      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Version number
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['metadataVersion'] }}
@@ -144,77 +186,7 @@
               <span class="govuk-visually-hidden"> version</span>
             </a>
           </dd>
-        </div>        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Access rights
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['metadataAccessRights'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/access-rights?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Licence
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['metadataLicence'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/licence?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> licence</span>
-            </a>
-          </dd>
-        </div>        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Security Classification
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['MetadataSecurity'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/security-classification?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> Security Classification</span>
-            </a>
-          </dd>
-        </div>        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Creator
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['metadataCreator'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/creator?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> creator</span>
-            </a>
-          </dd>
-        </div>        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Existing identifier
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['metadataIdentifier'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/identifier?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> identifier</span>
-            </a>
-          </dd>
-        </div>        
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Date Issued
@@ -242,13 +214,60 @@
               <span class="govuk-visually-hidden"> date modified</span>
             </a>
           </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Licence
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['metadataLicence'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/licence?check-answers=true">
+              Change
+              <span class="govuk-visually-hidden"> licence</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Access rights
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['metadataAccessRights'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/access-rights?check-answers=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
         </div>        
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Security Classification
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['MetadataSecurity'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/publish/manual/security-classification?check-answers=true">
+              Change
+              <span class="govuk-visually-hidden"> Security Classification</span>
+            </a>
+          </dd>
+        </div>                          
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Related data 
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataRelated'] }}
+            <ul class="govuk-list">
+              {% for value in data['metadataRelated'] %}
+                <li>{{ value }}</li>
+              {% endfor %}
+            </ul>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/publish/manual/related?check-answers=true">
@@ -347,244 +366,217 @@
 
       </dl>
 
-      {% if data['method'] == "dataset" %}
+      {% if data['csv-title'] or data['xml-title'] or data['xlxs-title'] or data['geo-title'] %}
       <h2 class="govuk-heading-l">Distributions</h2>
-      <h3 class="govuk-heading-m">Distribution 1</h3>
 
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9"> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Title
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionTitle'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-title?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> Title</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Description
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['DistributionDescription'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-description?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> description</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Modified
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['DistributionModifiedDay'] }} {{ data['DistributionModifiedMonth'] }} {{ data['DistributionModifiedYear'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-modified?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> date modified</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Identifier
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionIdentifier'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-identifier?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> date modified</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Access service
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['DistributionService'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-service?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> access service</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Download URL
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionUrl'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-url?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> url</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Media type
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionType'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-type?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> type</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            File size
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionSize'] }} {{ data['distributionSizeUnit'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-size?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> size</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-
-      {% if data['distributionTitle2'] %}
-      <h3 class="govuk-heading-m">Distribution 2</h3>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9"> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Title
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionTitle2'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-title?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> Title</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Description
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['DistributionDescription2'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-description?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> description</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Modified
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['DistributionModifiedDay2'] }} {{ data['DistributionModifiedMonth2'] }} {{ data['DistributionModifiedYear2'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-modified?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> date modified</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Identifier
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionIdentifier2'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-identifier?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> date modified</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Access service
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['DistributionService2'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-service?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> access service</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            URL
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionUrl2'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-url?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> url</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Media type
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionType2'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-type?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> type</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            File size
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['distributionSize2'] }} {{ data['distributionSizeUnit2'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/distribution-1/distribution-size?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> size</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
+        {% if data['csv-title'] %}
+        <table class="govuk-table govuk-!-margin-bottom-3">
+          <caption class="govuk-table__caption govuk-table__caption--m">CSV</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Title</th>
+              <th scope="col" class="govuk-table__header">Download URL</th>
+              <th scope="col" class="govuk-table__header">Filesize</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              {% for value in data['csv-title'] %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">{{ data['csv-title'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['csv-url'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['csv-size'][loop.index0] }} {{ data['csv-size-unit'][loop.index0] }}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+        <p class=" govuk-!-margin-bottom-6">
+          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+            Change
+            <span class="govuk-visually-hidden"> data served</span>
+          </a>
+        </p>
         {% endif %}
+
+        {% if data['xml-title'] %}
+        <table class="govuk-table govuk-!-margin-bottom-3">
+          <caption class="govuk-table__caption govuk-table__caption--m">XML</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Title</th>
+              <th scope="col" class="govuk-table__header">Download URL</th>
+              <th scope="col" class="govuk-table__header">Filesize</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              {% for value in data['xml-title'] %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">{{ data['xml-title'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['xml-url'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['xml-size'][loop.index0] }} {{ data['xml-size-unit'][loop.index0] }}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+        <p class=" govuk-!-margin-bottom-6">
+          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+            Change
+            <span class="govuk-visually-hidden"> data served</span>
+          </a>
+        </p>
         {% endif %}
+
+        {% if data['xlxs-title'] %}
+        <table class="govuk-table govuk-!-margin-bottom-3">
+          <caption class="govuk-table__caption govuk-table__caption--m">XLXS</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Title</th>
+              <th scope="col" class="govuk-table__header">Download URL</th>
+              <th scope="col" class="govuk-table__header">Filesize</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              {% for value in data['xlxs-title'] %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">{{ data['xlxs-title'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['xlxs-url'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['xlxs-size'][loop.index0] }} {{ data['xlxs-size-unit'][loop.index0] }}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+        <p class=" govuk-!-margin-bottom-6">
+          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+            Change
+            <span class="govuk-visually-hidden"> data served</span>
+          </a>
+        </p>
+        {% endif %}
+
+        {% if data['geo-title'] %}
+        <table class="govuk-table govuk-!-margin-bottom-3">
+          <caption class="govuk-table__caption govuk-table__caption--m">GeoPackage</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Title</th>
+              <th scope="col" class="govuk-table__header">Download URL</th>
+              <th scope="col" class="govuk-table__header">Filesize</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              {% for value in data['geo-title'] %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">{{ data['geo-title'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['geo-url'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['geo-size'][loop.index0] }} {{ data['geo-size-unit'][loop.index0] }}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+        <p class=" govuk-!-margin-bottom-6">
+          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+            Change
+            <span class="govuk-visually-hidden"> data served</span>
+          </a>
+        </p>
+        {% endif %}
+
+
+
+      {% endif %}
+
+
+      {% if data['REST-docs'] or data['SOAP-docs'] or data['event-docs'] %}
+      <h2 class="govuk-heading-l">Services</h2>
+
+        {% if data['REST-docs'] %}
+        <table class="govuk-table govuk-!-margin-bottom-3">
+          <caption class="govuk-table__caption govuk-table__caption--m">REST</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Endpoint URL</th>
+              <th scope="col" class="govuk-table__header">Documentation URL</th>
+              <th scope="col" class="govuk-table__header">Service Status</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              {% for value in data['REST-docs'] %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">{{ data['REST-url'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['REST-docs'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['REST-status'][loop.index0] }}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+        <p class=" govuk-!-margin-bottom-6">
+          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+            Change
+            <span class="govuk-visually-hidden"> data served</span>
+          </a>
+        </p>
+        {% endif %}
+
+        {% if data['SOAP-docs'] %}
+        <table class="govuk-table govuk-!-margin-bottom-3">
+          <caption class="govuk-table__caption govuk-table__caption--m">SOAP</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Endpoint URL</th>
+              <th scope="col" class="govuk-table__header">Documentation URL</th>
+              <th scope="col" class="govuk-table__header">Service Status</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              {% for value in data['SOAP-docs'] %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">{{ data['SOAP-url'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['SOAP-docs'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['SOAP-status'][loop.index0] }}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+        <p class=" govuk-!-margin-bottom-6">
+          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+            Change
+            <span class="govuk-visually-hidden"> data served</span>
+          </a>
+        </p>
+        {% endif %}
+
+
+        {% if data['event-docs'] %}
+        <table class="govuk-table govuk-!-margin-bottom-3">
+          <caption class="govuk-table__caption govuk-table__caption--m">Event based Service</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Endpoint URL</th>
+              <th scope="col" class="govuk-table__header">Documentation URL</th>
+              <th scope="col" class="govuk-table__header">Service Status</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              {% for value in data['event-docs'] %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">{{ data['event-url'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['event-docs'][loop.index0] }}</td>
+                <td class="govuk-table__cell">{{ data['event-status'][loop.index0] }}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+        <p class=" govuk-!-margin-bottom-6">
+          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+            Change
+            <span class="govuk-visually-hidden"> data served</span>
+          </a>
+        </p>
+        {% endif %}
+
+
+
+      {% endif %}
         
 
       <form action="/publish/manual/confirmation" method="post" novalidate>

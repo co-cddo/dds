@@ -60,7 +60,7 @@ router.post('/security-answer', function(request, response) {
 
     var securityType = request.session.data['MetadataSecurity']
     if (securityType == "Offical"){
-        response.redirect("/publish/manual/creator")
+        response.redirect("/publish/manual/related")
     } else {
         response.redirect("/publish/manual/security-error")
     }
@@ -83,6 +83,175 @@ router.post('/related-answer', function(request, response) {
             response.redirect("/publish/manual/frequency")
     } else {
         response.redirect("/publish/manual/endpoint-url")
+    }
+})
+
+router.post('/data-type-answer', function(request, response) {
+
+    var dataCSV = request.session.data['data-CSV']
+    var dataXML = request.session.data['data-XML']
+    var dataXLXS = request.session.data['data-XLXS']
+    var dataGeo = request.session.data['data-geo']
+    var dataREST = request.session.data['data-REST']
+    var dataSOAP = request.session.data['data-SOAP']
+    var dataEvent = request.session.data['data-event']
+
+    if (dataCSV == "CSV"){
+        response.redirect("/publish/manual/frequency")
+    } else if (dataXML == "XML") {
+        response.redirect("/publish/manual/frequency")
+    } else if (dataXLXS == "XLXS") {
+        response.redirect("/publish/manual/frequency")
+    } else if (dataGeo == "GeoPackage") {
+        response.redirect("/publish/manual/frequency")
+    } else if (dataREST == "REST web service") {
+        response.redirect("/publish/manual/add-data/rest")
+    } else if (dataSOAP == "SOAP web service") {
+        response.redirect("/publish/manual/add-data/soap")
+    } else if (dataEvent == "Event based service") {
+        response.redirect("/publish/manual/add-data/event")
+    } else {
+        response.redirect("/publish/manual/check-answers")
+    }
+})
+
+router.post('/frequency-answer', function(request, response) {
+
+    var dataCSV = request.session.data['data-CSV']
+    var dataXML = request.session.data['data-XML']
+    var dataXLXS = request.session.data['data-XLXS']
+    var dataGeo = request.session.data['data-geo']
+    var dataREST = request.session.data['data-REST']
+    var dataSOAP = request.session.data['data-SOAP']
+    var dataEvent = request.session.data['data-event']
+
+    if (dataCSV == "CSV"){
+        response.redirect("/publish/manual/add-data/csv")
+    } else if (dataXML == "XML") {
+        response.redirect("/publish/manual/add-data/xml")
+    } else if (dataXLXS == "XLXS") {
+        response.redirect("/publish/manual/add-data/xlxs")
+    } else if (dataGeo == "GeoPackage") {
+        response.redirect("/publish/manual/add-data/geopackage")
+    } else if (dataREST == "REST web service") {
+        response.redirect("/publish/manual/add-data/rest")
+    } else if (dataSOAP == "SOAP web service") {
+        response.redirect("/publish/manual/add-data/soap")
+    } else if (dataEvent == "Event based service") {
+        response.redirect("/publish/manual/add-data/event")
+    } else {
+        response.redirect("/publish/manual/check-answers")
+    }
+})
+
+router.post('/csv-answer', function(request, response) {
+
+    var dataXML = request.session.data['data-XML']
+    var dataXLXS = request.session.data['data-XLXS']
+    var dataGeo = request.session.data['data-geo']
+    var dataREST = request.session.data['data-REST']
+    var dataSOAP = request.session.data['data-SOAP']
+    var dataEvent = request.session.data['data-event']
+
+    if (dataXML == "XML") {
+        response.redirect("/publish/manual/add-data/xml")
+    } else if (dataXLXS == "XLXS") {
+        response.redirect("/publish/manual/add-data/xlxs")
+    } else if (dataGeo == "GeoPackage") {
+        response.redirect("/publish/manual/add-data/geopackage")
+    } else if (dataREST == "REST web service") {
+        response.redirect("/publish/manual/add-data/rest")
+    } else if (dataSOAP == "SOAP web service") {
+        response.redirect("/publish/manual/add-data/soap")
+    } else if (dataEvent == "Event based service") {
+        response.redirect("/publish/manual/add-data/event")
+    } else {
+        response.redirect("/publish/manual/check-answers")
+    }
+})
+
+router.post('/xml-answer', function(request, response) {
+
+    var dataXLXS = request.session.data['data-XLXS']
+    var dataGeo = request.session.data['data-geo']
+    var dataREST = request.session.data['data-REST']
+    var dataSOAP = request.session.data['data-SOAP']
+    var dataEvent = request.session.data['data-event']
+
+    if (dataXLXS == "XLXS") {
+        response.redirect("/publish/manual/add-data/xlxs")
+    } else if (dataGeo == "GeoPackage") {
+        response.redirect("/publish/manual/add-data/geopackage")
+    } else if (dataREST == "REST web service") {
+        response.redirect("/publish/manual/add-data/rest")
+    } else if (dataSOAP == "SOAP web service") {
+        response.redirect("/publish/manual/add-data/soap")
+    } else if (dataEvent == "Event based service") {
+        response.redirect("/publish/manual/add-data/event")
+    } else {
+        response.redirect("/publish/manual/check-answers")
+    }
+})
+
+router.post('/xlxs-answer', function(request, response) {
+
+    var dataGeo = request.session.data['data-geo']
+    var dataREST = request.session.data['data-REST']
+    var dataSOAP = request.session.data['data-SOAP']
+    var dataEvent = request.session.data['data-event']
+
+    if (dataGeo == "GeoPackage") {
+        response.redirect("/publish/manual/add-data/geopackage")
+    } else if (dataREST == "REST web service") {
+        response.redirect("/publish/manual/add-data/rest")
+    } else if (dataSOAP == "SOAP web service") {
+        response.redirect("/publish/manual/add-data/soap")
+    } else if (dataEvent == "Event based service") {
+        response.redirect("/publish/manual/add-data/event")
+    } else {
+        response.redirect("/publish/manual/check-answers")
+    }
+})
+
+router.post('/geo-answer', function(request, response) {
+
+    var dataREST = request.session.data['data-REST']
+    var dataSOAP = request.session.data['data-SOAP']
+    var dataEvent = request.session.data['data-event']
+
+    if (dataREST == "REST web service") {
+        response.redirect("/publish/manual/add-data/rest")
+    } else if (dataSOAP == "SOAP web service") {
+        response.redirect("/publish/manual/add-data/soap")
+    } else if (dataEvent == "Event based service") {
+        response.redirect("/publish/manual/add-data/event")
+    } else {
+        response.redirect("/publish/manual/check-answers")
+    }
+})
+
+router.post('/rest-answer', function(request, response) {
+
+    var dataSOAP = request.session.data['data-SOAP']
+    var dataEvent = request.session.data['data-event']
+
+    if (dataSOAP == "SOAP web service") {
+        response.redirect("/publish/manual/add-data/soap")
+    } else if (dataEvent == "Event based service") {
+        response.redirect("/publish/manual/add-data/event")
+    } else {
+        response.redirect("/publish/manual/check-answers")
+    }
+})
+
+router.post('/soap-answer', function(request, response) {
+
+    var dataEvent = request.session.data['data-event']
+
+    if (dataEvent == "Event based service") {
+        response.redirect("/publish/manual/add-data/event")
+    } else {
+        response.redirect("/publish/manual/check-answers")
     }
 })
 

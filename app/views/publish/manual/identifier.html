@@ -26,39 +26,30 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">What are the existing identifiers for the {{ data['method'] }}?</h1>
-      <p class="govuk-hint">Provide details of the identifiers by which this {{ data['method'] }} is known within your organisation.</p>
       {% if data['check-answers'] == "true" %}
       <form class="form" action="/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/publish/manual/created" method="post">
+      <form class="form" action="/publish/manual/theme" method="post">
       {% endif %}
-      
-        {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
-        {%- from "govuk/components/input/macro.njk" import govukInput -%}
 
-        <div data-module="moj-add-another">
-            {% call govukFieldset({
-              classes: 'moj-add-another__item'
-            }) %}
-            {{ govukInput({
-              id: 'metadataIdentifier[0]',
-              name: 'metadataIdentifier[0]',
-              label: {
-                html: 'Identifier',
-                classes: 'govuk-visually-hidden'
-              },
-              attributes: {
-                'data-name': 'metadataIdentifier[%index%]',
-                'data-id': 'metadataIdentifier[%index%]'
-              }
-            }) }}
-            {% endcall %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
 
-            <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">Add another identifier</button>
-            <button class="govuk-button" data-module="govuk-button">Continue</button>
-        </div>
+        {{ govukInput({
+          label: {
+            text: "What internal identifier do you have for the data?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          id: "metadataIdentifier",
+          name: "metadataIdentifier",
+          hint: {
+            text: "Provide details of the identifier by which the data is known within your organisation."
+          },
+          value: data['metadataIdentifier']
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
 
     </div>

@@ -38,40 +38,24 @@
 
               {% from "govuk/components/details/macro.njk" import govukDetails %}
 
-              {{ govukDetails({
-                summaryText: "What's a Dataset?",
-                text: "A collection of data, published or curated by a single agent, available for access, or download in one or more serialisations or formats."
-              }) }}
-
-              {{ govukDetails({
-                summaryText: "What's a Data service?",
-                text: "A collection of operations providing access to one or more datasets or data processing functions."
-              }) }}
-
               <p class="govuk-body">To add a data description and data service description manually, you'll need to <a href="/WIP/learn/articles/publish-data-descriptions-questions" class="govuk-link">answer these questions</a>.</p>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="method-1" name="method" type="radio" value="dataset">
                 <label class="govuk-label govuk-radios__label" for="method-1">
-                  Add a dataset description manually
+                  Add a data description manually
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="method-2" name="method" type="radio" value="data service">
+                <input class="govuk-radios__input" id="method-2" name="method" type="radio" value="Upload a CSV file of metadata">
                 <label class="govuk-label govuk-radios__label" for="method-2">
-                  Add a data service description manually
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="method-3" name="method" type="radio" value="Upload a CSV file of metadata">
-                <label class="govuk-label govuk-radios__label" for="method-3">
                   Upload a CSV file of data asset descriptions
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="method-4" name="method" type="radio" value="Connect a data harvester">
-                <label class="govuk-label govuk-radios__label" for="method-4">
+                <input class="govuk-radios__input" id="method-3" name="method" type="radio" value="Connect a data harvester">
+                <label class="govuk-label govuk-radios__label" for="method-3">
                   Connect a data harvester
                 </label>
               </div>

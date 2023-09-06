@@ -38,14 +38,14 @@ Description
 
         {{ govukTextarea({
           label: {
-            text: "What does the  " + data['method'] + " include?",
+            text: "What is the data about?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "metadataDescription",
           name: "metadataDescription",
           hint: {
-            text: "Provide a concise narrative of the content of a " + data['method'] + ". Markdown descriptions can be used."
+            text: "Provide a concise narrative of the content of the data. Markdown can be used to format your description."
           },
           value: data['metadataDescription']
         }) }}
