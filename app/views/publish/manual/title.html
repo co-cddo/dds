@@ -38,14 +38,14 @@
 
         {{ govukInput({
           label: {
-            text: "What is the title of the " + data['method'] + "?",
+            text: "What is the title of the data?",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "metadataTitle",
           name: "metadataTitle",
           hint: {
-            text: "Provide the full and formal name given to the " + data['method'] + ". This is not the same as alternative title, identifier, or series title."
+            text: "Provide the full and formal name given to the data. Avoid the use of acronyms and domain terminology."
           },
           value: data['metadataTitle']
         }) }}

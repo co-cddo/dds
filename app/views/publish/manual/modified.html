@@ -31,7 +31,7 @@
       <form class="form" action="/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/publish/manual/related" method="post">
+      <form class="form" action="/publish/manual/licence" method="post">
       {% endif %}
       
 
@@ -39,11 +39,11 @@
           <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                When was the {{data['method']}} last modified?
+                When was the data last modified?
               </h1>
             </legend>
             <div id="passport-issued-hint" class="govuk-hint">
-              Provide most recent date on which the {{data['method']}} was changed, updated or modified.
+              Provide the most recent date on which the data was changed, updated or modified.
             </div>
             <div class="govuk-date-input" id="passport-issued">
               <div class="govuk-date-input__item">

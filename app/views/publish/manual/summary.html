@@ -29,7 +29,7 @@ Summary
       <form class="form" action="/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/publish/manual/keyword" method="post">
+      <form class="form" action="/publish/manual/identifier" method="post">
       {% endif %}
      
 
@@ -38,14 +38,14 @@ Summary
 
         {{ govukTextarea({
           label: {
-            text: "What is the " + data['method'] + " summary? (optional)",
+            text: "Please provide a short summary of the data. (optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "metadataSummary",
           name: "metadataSummary",
           hint: {
-            text: "Provide a short textual summary of the " + data['method'] + " with a maximum length of 250 characters."
+            text: "Provide a short textual summary of the dataset with a maximum length of 250 characters. This will be used in lists of search results."
           },
           value: data['metadataSummary']
         }) }}

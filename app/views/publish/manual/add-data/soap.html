@@ -1,0 +1,155 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Add SOAP Service
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: serviceName,
+  serviceUrl: "/",
+  containerClasses: "govuk-width-container"
+}) }}
+    <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+      <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
+      <ul class="app-navigation__list app-width-container">
+        <li class="app-navigation__list-item ">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/publish/start-logged-in">
+            Home
+          </a>
+        </li>
+          </li>
+          <li class="app-navigation__list-item app-navigation__list-item--right">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/publish/start">
+              Sign out
+            </a>
+          </li>
+      </ul>
+    </nav>
+
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Add SOAP service</h1>
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
+      <form class="form" action="/SOAP-answer" method="post">
+      {% endif %}
+      
+        {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
+        {%- from "govuk/components/input/macro.njk" import govukInput -%}
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        <div data-module="moj-add-another">
+            {% call govukFieldset({
+              classes: 'moj-add-another__item'
+            }) %}
+
+            {{ govukInput({
+              id: 'SOAP-url[0]',
+              name: 'SOAP-url[0]',
+              label: {
+                html: 'Endpoint URL (optional)',
+                classes: 'govuk-label--m'
+              },
+              hint: {
+                text: "The root location or primary endpoint of the service."
+              },
+              attributes: {
+                'data-name': 'SOAP-url[%index%]',
+                'data-id': 'SOAP-url[%index%]'
+              }
+            }) }}
+
+            {{ govukInput({
+              id: 'SOAP-docs[0]',
+              name: 'SOAP-docs[0]',
+              label: {
+                html: 'Documentation link',
+                classes: 'govuk-label--m'
+              },
+              hint: {
+                text: "Link to documentation page for the service that details the operations available, their parameters, and return objects"
+              },
+              attributes: {
+                'data-name': 'SOAP-docs[%index%]',
+                'data-id': 'SOAP-docs[%index%]'
+              }
+            }) }}
+
+            {{ govukSelect({
+              id: "SOAP-status",
+              name: "SOAP-status",
+              label: {
+                text: "Service status",
+                classes: 'govuk-label--m'
+              },
+              hint: {
+                text: "Status of the data service in the context of a particular workflow process."
+              },
+              items: [
+                {
+                  value: "Discovery",
+                  text: "Discovery"
+                },
+                {
+                  value: "Alpha",
+                  text: "Alpha"
+                },
+                {
+                  value: "Beta",
+                  text: "Beta"
+                },
+                {
+                  value: "Private Beta",
+                  text: "Private Beta"
+                },
+                {
+                  value: "Bublic Beta",
+                  text: "Bublic Beta"
+                },
+                {
+                  value: "Live",
+                  text: "Live"
+                },
+                {
+                  value: "Depreciated",
+                  text: "Depreciated"
+                },
+                {
+                  value: "Withdrawn",
+                  text: "Withdrawn"
+                }
+              ]
+            }) }}
+
+            {% endcall %}
+
+            <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">Add another SOAP service</button>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

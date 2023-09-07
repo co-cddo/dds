@@ -26,13 +26,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">What are the keywords associated with the {{ data['method'] }}? (optional)</h1>
-      <p class="govuk-hint">Enter a few words (keywords) which are associated with the {{ data['method'] }}.</p>
+      <h1 class="govuk-heading-l">What are the keywords associated with the data? (optional)</h1>
+      <p class="govuk-hint">Enter a few words (keywords) which are associated with the data.</p>
       {% if data['check-answers'] == "true" %}
       <form class="form" action="/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/publish/manual/theme" method="post">
+      <form class="form" action="/publish/manual/contact" method="post">
       {% endif %}
       
         {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}

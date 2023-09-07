@@ -25,8 +25,8 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Does the {{ data['method'] }} have an alternative title? (optional)</h1>
-      <p class="govuk-hint">Provide any alternative names that the {{ data['method'] }} is known by.</p>
+      <h1 class="govuk-heading-l">Are there any alternative titles for the data? (optional)</h1>
+      <p class="govuk-hint">Provide any alternative names that the data is known by.</p>
 
       {% if data['check-answers'] == "true" %}
       <form class="form" action="/publish/manual/check-answers" method="post">
