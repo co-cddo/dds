@@ -290,80 +290,27 @@
             </a>
           </dd>
         </div>
-        {% if data['method'] == "data service" %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Endpoint URL
+            Delivery Mechanism
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataEndpointUrl'] }}
+            {% if data['data-CSV'] %}{{ data['data-CSV'] }}{% endif %}
+            {% if data['data-XML'] %}, {{ data['data-XML'] }}{% endif %}
+            {% if data['data-XLXS'] %}, {{ data['data-XLXS'] }}{% endif %}
+            {% if data['data-geo'] %}, {{ data['data-geo'] }}{% endif %}
+            {% if data['data-REST'] %}, {{ data['data-REST'] }}{% endif %}
+            {% if data['data-SOAP'] %}, {{ data['data-SOAP'] }}{% endif %}
+            {% if data['data-event'] %}, {{ data['data-event'] }}{% endif %}
+
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/endpoint-url?check-answers=true">
+            <a href="/publish/manual/data-type?check-answers=true">
               Change
-              <span class="govuk-visually-hidden"> endpoint url</span>
-            </a>
-          </dd>
-        </div>  
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Service Type
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['MetadataServiceType'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/service-type?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> service type</span>
-            </a>
-          </dd>
-        </div> 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Service status
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['MetadataServiceStatus'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/service-status?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> service status</span>
-            </a>
-          </dd>
-        </div>    
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Documentation URL
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['metadataEndpointDescription'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/endpoint-description?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> endpoint description</span>
-            </a>
-          </dd>
-        </div>              
-           
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Data served
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['metadatadataServed'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/data-served?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> data served</span>
+              <span class="govuk-visually-hidden"> Delivery Mechanism</span>
             </a>
           </dd>
         </div>
-        {% endif %}
-
       </dl>
 
       {% if data['csv-title'] or data['xml-title'] or data['xlxs-title'] or data['geo-title'] %}
