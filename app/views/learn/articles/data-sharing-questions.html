@@ -13,7 +13,7 @@
 
 {% block header %}
   {{ super() }}
-  {% include "includes/WIP_mvp-nav_sign-out.html" %}
+  {% include "includes/mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,7 +25,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Publishing data descriptions</h1>
+      <h1 class="govuk-heading-xl">Check questions for a data share request before you start</h1>
     
       <!-- guide elements -->
       <!--
@@ -54,26 +54,59 @@
     <!--
     <h2 class="govuk-heading-l">Overview</h2>
     -->
-
-    <p>The Data Marketplace allows government organisations to publish descriptions of data (known as metadata) so they can be found by anyone in government. Once found, a <a href="/WIP/learn/articles/data-sharing-arrangements">data share request</a> can be made to facilitate access to the data under the agreed terms. The Data Marketplace does not host the data itself or provide access to the data. Your data description will be published to the Data Marketplace and will be available to be found by other government organisations who are looking for data.</p>
-    <p>All data descriptions should be findable, accessible, interoperable and reusable (FAIR). With data being published to the Data Marketplace, it should be easy to find, labelled with correct access rights, described to support interoperability with other data, and well described to support reuse. The descriptions of data should have their own identifiers and remain in the marketplace even if the data is no longer available.</p>
-    <p>The Data Marketplace supports descriptions of datasets and data services. A dataset is a collection of data, published or curated by a single agent and available for access or download in one or more representations. A data service is a collection of operations that provides access to one or more datasets or data processing functions.</p>
-
-    <p>Data descriptions can be added in a number of ways including:</p>
+    <p>These are some common questions asked when requesting data from another government organisation.</p>
+    <p>Questions may differ slightly based on:</p>
     <ul class="govuk-list govuk-list--bullet">
-      <li>Manually through a web form</li>
-      <li>Upload via our CSV template</li>
-      <li>Catalogue connection to synchronise the descriptions in your organisation data catalogue with the Data Marketplace (using a data harvester)</li>
+      <li>unique requirements for a particular department</li>
+      <li>the sensitivity of the data you’re requesting</li>
+      <li>whether it will travel outside the UK</li>
     </ul>
-    <p>To publish data descriptions you must have a Data Marketplace account with publish permission for your organisation. See <a href="#1">guidance</a> for how to get an account with publish permissions. The publisher dashboard will give you an overview of the data your organisation has published in the Data Marketplace and how it is being used.</p>
+    <p>You’ll need to ensure your request meets data protection (GDPR) and data sharing standards.</p>
+    <p>Your request will be reviewed by the department owning the data.</p>
+    <p>Some questions may require support from people with skills in:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>technology</li>
+      <li>data security</li>
+      <li>data protection</li>
+      <li>legal</li>
+      <li>data governance </li>
+    </ul>
 
-    <h2 class="govuk-heading-l">Updating data descriptions</h2>
-    <p>Currently, updating data descriptions is not possible. We plan to add this feature in the near future.</p>
+    <h2 class="govuk-heading-l">The questions you will be asked</h2>
+    <h3 class="govuk-heading-m">Purpose of the data share</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>What type of data do you need?</li>
+      <li>Who are the data subjects?</li>
+      <li>What are the aims of your project?</li>
+      <li>What data from ((data-resource-name)) do you need?</li>
+      <li>What public benefits will your project provide?</li>
+      <li>Will other organisations need access to this data?</li>
+      <li>How will it impact your project if you don't get this data?</li>
+      <li>When do you need this data?</li>
+    </ul>
 
-    <h2 class="govuk-heading-l">Unpublishing data</h2>
-    <p>The Data Marketplace adheres to the FAIR Data Principles. As such, data descriptions are not removed from the marketplace when they are deleted. They will no longer be available in search results, but will still be retrievable from their permanent URL. This supports long-term referencing of data descriptions within data share requests and other places where the description of the data continues to be needed after the data is no longer available.</p>
-    <p>To have a data description unpublished, contact the Data Marketplace support team who will update the status of the data description.</p>
+    <h3 class="govuk-heading-m">Legal power and gateway</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Do you have the legal power to request this data?</li>
+      <li>What legal gateway allows ((department-name)) to share this data with you?</li>
+    </ul>
 
+    <h3 class="govuk-heading-m">Data protection</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>What is your lawful basis for requesting personal data under GDPR?</li>
+      <li>What is your lawful basis for requesting special category data under GDPR?</li>
+      <li>Will any of this data leave the UK?</li>
+      <li>What do you think the role of your organisation under UK GDPR will be?</li>
+    </ul>
+
+    <h3 class="govuk-heading-m">Data governance, security and technology</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>How would you like to receive this data?</li>
+      <li>What is your preferred data format?</li>
+      <li>How will you dispose of the data when your project finishes?</li>
+    </ul>
+
+    <p>You will need to give assurance that you’ve had your answers checked by people with the appropriate legal, data protection and data security knowledge and expertise. This will increase the chance of your request being accepted and cause minimum delay.</p>
   </div>
 
   <!-- guide elements -->
@@ -103,7 +136,7 @@
   <div class="govuk-grid-column-one-half-from-desktop">
     <h2 id="community" class="govuk-heading-m">Learn</h2>
     <p class="govuk-body">
-      <a class="govuk-link" href="/WIP/learn/">Find information to help you</a> with the data marketplace.
+      <a class="govuk-link" href="/learn/">Find information to help you</a> with the data marketplace.
       <br>
       For example: a glossary, or the UK Cross-Government Metadata Exchange model.
     </p>
