@@ -275,7 +275,8 @@
               <span class="govuk-visually-hidden"> Related data assets</span>
             </a>
           </dd>
-        </div>        
+        </div>     
+        {% if data['csv-title'] or data['xml-title'] or data['xlxs-title'] or data['geo-title'] %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Update frequency
@@ -290,6 +291,7 @@
             </a>
           </dd>
         </div>
+        {% endif %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Delivery Mechanism
@@ -365,7 +367,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+          <a class="govuk-link" href="/publish/manual/add-data/xml?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
@@ -393,7 +395,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+          <a class="govuk-link" href="/publish/manual/add-data/xlxs?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
@@ -421,7 +423,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+          <a class="govuk-link" href="/publish/manual/add-data/geopackage?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
@@ -457,7 +459,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+          <a class="govuk-link" href="/publish/manual/add-data/rest?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
@@ -485,7 +487,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+          <a class="govuk-link" href="/publish/manual/add-data/soap?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
@@ -514,7 +516,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+          <a class="govuk-link" href="/publish/manual/add-data/event?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
