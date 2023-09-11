@@ -1,0 +1,171 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Add Event based service
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: serviceName,
+  serviceUrl: "/",
+  containerClasses: "govuk-width-container"
+}) }}
+    <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+      <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
+      <ul class="app-navigation__list app-width-container">
+        <li class="app-navigation__list-item ">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/publish/start-logged-in">
+            Home
+          </a>
+        </li>
+          </li>
+          <li class="app-navigation__list-item app-navigation__list-item--right">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/publish/start">
+              Sign out
+            </a>
+          </li>
+      </ul>
+    </nav>
+
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Add Event based service</h1>
+      <form class="form" action="/WIP/publish/manual/check-answers" method="post">
+
+      
+        {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
+        {%- from "govuk/components/input/macro.njk" import govukInput -%}
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        <div data-module="moj-add-another">
+            {% call govukFieldset({
+              classes: 'moj-add-another__item'
+            }) %}
+
+            {{ govukInput({
+              id: 'event-url[0]',
+              name: 'event-url[0]',
+              label: {
+                html: 'Endpoint URL (optional)',
+                classes: 'govuk-label--m'
+              },
+              hint: {
+                text: "The root location or primary endpoint of the service."
+              },
+              attributes: {
+                'data-name': 'event-url[%index%]',
+                'data-id': 'event-url[%index%]'
+              }
+            }) }}
+
+            {{ govukInput({
+              id: 'event-docs[0]',
+              name: 'event-docs[0]',
+              label: {
+                html: 'Documentation link',
+                classes: 'govuk-label--m'
+              },
+              hint: {
+                text: "Link to documentation page for the service that details the operations available, their parameters, and return objects"
+              },
+              attributes: {
+                'data-name': 'event-docs[%index%]',
+                'data-id': 'event-docs[%index%]'
+              }
+            }) }}
+
+            {{ govukSelect({
+              id: "event-status",
+              name: "event-status",
+              label: {
+                text: "Service status",
+                classes: 'govuk-label--m'
+              },
+              hint: {
+                text: "Status of the data service in the context of a particular workflow process."
+              },
+              items: [
+                {
+                  value: "Discovery",
+                  text: "Discovery"
+                },
+                {
+                  value: "Alpha",
+                  text: "Alpha"
+                },
+                {
+                  value: "Beta",
+                  text: "Beta"
+                },
+                {
+                  value: "Private Beta",
+                  text: "Private Beta"
+                },
+                {
+                  value: "Bublic Beta",
+                  text: "Bublic Beta"
+                },
+                {
+                  value: "Live",
+                  text: "Live"
+                },
+                {
+                  value: "Depreciated",
+                  text: "Depreciated"
+                },
+                {
+                  value: "Withdrawn",
+                  text: "Withdrawn"
+                }
+              ]
+            }) }}
+
+            {% endcall %}
+
+            <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">Add another SOAP service</button>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
+      </form>
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="gem-c-contextual-sidebar">
+        <div class="gem-c-related-navigation">
+          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
+            Learn
+          </h2>
+          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
+            <ul class="gem-c-related-navigation__link-list">
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/metadata-model">Metadata sharing requirements</a>
+              </li>
+              
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
