@@ -61,6 +61,18 @@
     }
 }
 
+.REQUEST-add-another {
+    .govuk-form-group {
+        margin-bottom: 10px;
+        @media (min-width: 40.0625em) {
+            margin-bottom: 15px;
+        }
+    }
+    .moj-add-another__remove-button {
+        margin-top: 0px;
+    }
+}
+
 // ----------------------------------------------
 // Review request
 // ----------------------------------------------
