@@ -1,0 +1,89 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Data served
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">What is the data that is served?</h1>
+      <p class="govuk-hint">Select the dataset(s) that are made available through your data service.</p>
+
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/WIP/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
+      <form class="form" action="/WIP/publish/manual/check-answers" method="post">
+      {% endif %}
+      
+        {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
+        {%- from "govuk/components/input/macro.njk" import govukInput -%}
+
+        <div data-module="moj-add-another">
+            {% call govukFieldset({
+              classes: 'moj-add-another__item'
+            }) %}
+            {{ govukInput({
+              id: 'metadatadataServed[0]',
+              name: 'metadatadataServed[0]',
+              label: {
+                html: 'Dataset',
+                classes: 'govuk-visually-hidden'
+              },
+              attributes: {
+                'data-name': 'metadatadataServed[%index%]',
+                'data-id': 'metadatadataServed[%index%]'
+              }
+            }) }}
+            {% endcall %}
+
+            <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">Add another dataset</button>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
+      </form>
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="gem-c-contextual-sidebar">
+        <div class="gem-c-related-navigation">
+          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
+            Learn
+          </h2>
+          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
+            <ul class="gem-c-related-navigation__link-list">
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/metadata-model">Metadata sharing requirements</a>
+              </li>
+              
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

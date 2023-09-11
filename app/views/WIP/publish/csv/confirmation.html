@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">CSV file uploaded</h1>
+      </div>
+
+      <p>
+        Your data asset descriptions have been uploaded to the data marketplace.
+      </p>
+      <p>
+        They are now available to be found by other government organisations searching for a data asset.
+      </p>
+
+      <a href="/WIP/publish/publish-dashboard" class="govuk-button" data-module="govuk-button">
+        Return to publisher dashboard
+      </a>
+
+    </div>
+  </div>
+
+{% endblock %}
