@@ -116,30 +116,58 @@ Compl profile
         ]
         }) }}
 
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-
-        {{ govukSelect({
-          id: "Role",
+        {{ govukRadios({
           name: "Role",
-          classes: "govuk-!-width-full",
-          label: {
-            text: "Role"
+          fieldset: {
+            legend: {
+              text: "What is your primary skill?"
+            }
           },
           items: [
-          {
-            value: "",
-            text: "Please select"
-          }, 
             {
-              value: "Lawyer",
-              text: "Lawyer"
+              value: "Technology",
+              text: "Technology",
+              hint: {
+                text: "For exaample: a technical architect, to help define data flows and requirements."
+              }
             },
             {
-              value: "Data protection officer",
-              text: "Data protection officer"
+              value: "Data Security",
+              text: "Data Security",
+              hint: {
+                text: "For exaample: a cyber security analyst, to ensure data is shared safely."
+              }
+            },
+            {
+              value: "Data protection",
+              text: "Data protection",
+              hint: {
+                text: "For exaample: a technical protection specialist, to ensure you meet data regulations."
+              }
+            },
+            {
+              value: "Data governance",
+              text: "Data governance",
+              hint: {
+                text: "For exaample: an information manager, to ensure data is stored and managed correctly."
+              }
+            },
+            {
+              value: "Business ownership",
+              text: "Business ownership",
+              hint: {
+                text: "For exaample: a product owner or delivery manager, to oversee the project"
+              }
+            },
+            {
+              value: "Other",
+              text: "Other"
             }
           ]
         }) }}
+
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
