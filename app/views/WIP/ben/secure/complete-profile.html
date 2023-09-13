@@ -29,6 +29,8 @@ Compl profile
 
       <form class="form" action="/bMVP_wip--secure-signin-route" method="post">
         {% from "govuk/components/select/macro.njk" import govukSelect %}
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukSelect({
           id: "Organisation",
@@ -116,7 +118,16 @@ Compl profile
         ]
         }) }}
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% set otherRole %}
+        {{ govukInput({
+          id: "Role",
+          name: "Role",
+          type: "text",
+          label: {
+            text: "Enter other primary skill"
+          }
+        }) }}
+        {% endset -%}
 
         {{ govukRadios({
           name: "Role",
@@ -130,40 +141,43 @@ Compl profile
               value: "Technology",
               text: "Technology",
               hint: {
-                text: "For exaample: a technical architect, to help define data flows and requirements."
+                text: "For example: a technical architect, to help define data flows and requirements."
               }
             },
             {
               value: "Data Security",
               text: "Data Security",
               hint: {
-                text: "For exaample: a cyber security analyst, to ensure data is shared safely."
+                text: "For example: a cyber security analyst, to ensure data is shared safely."
               }
             },
             {
               value: "Data protection",
               text: "Data protection",
               hint: {
-                text: "For exaample: a technical protection specialist, to ensure you meet data regulations."
+                text: "For example: a technical protection specialist, to ensure you meet data regulations."
               }
             },
             {
               value: "Data governance",
               text: "Data governance",
               hint: {
-                text: "For exaample: an information manager, to ensure data is stored and managed correctly."
+                text: "For example: an information manager, to ensure data is stored and managed correctly."
               }
             },
             {
               value: "Business ownership",
               text: "Business ownership",
               hint: {
-                text: "For exaample: a product owner or delivery manager, to oversee the project"
+                text: "For example: a product owner or delivery manager, to oversee the project"
               }
             },
             {
               value: "Other",
-              text: "Other"
+              text: "Other",
+              conditional: {
+                html: otherRole
+              }
             }
           ]
         }) }}
