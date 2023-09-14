@@ -1,0 +1,399 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-xl">Request ID: RR147</h1>
+    </div>
+
+    <div class="govuk-grid-column-full"> 
+      <h2 class="govuk-heading-m">Purpose of the data share</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+              <li>Personal data</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data subjects
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Clinically extremely vulnerable patients.
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Project aims
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>
+              To assess claims and provide the correct level of support to vulnerable people based on their declared family relationships.
+            </p>
+            <p>
+              We cannot identify who needs support without access to a data set about who in the UK is clinically vulnerable.
+            </p>
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data required
+          </dt>
+          <dd class="govuk-summary-list__value">
+            List of vulnerable people's names and contact details
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Benefit to public
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">  
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom:5px;">
+                  Evidence for public service delivery
+                </p>
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f;">
+                  This data will allow us to identify both who to help and the number of people we need to help.
+                </p>
+              </li>
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom:5px;">
+                  Evidence for decisions which are likely to benefit people in the UK
+                </p>
+                <p class="govuk-body-s" style="margin-bottom:5px;color:#505a5f;">
+                  Depending on the number of people involved, this data could be used to support similar programs in the future.
+                </p>
+              </li> 
+            </ul> 
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Other organisations accessing data
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Yes</p>
+            <p class="govuk-body-s" style="color:#505a5f">Organisations:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li class="govuk-body-s" style="color:#505a5f">NHS</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Impact if data not given
+          </dt>
+          <dd class="govuk-summary-list__value">
+            The project will be impossible to complete. We are reliant on this data and have no alternatives.
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Date required
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            16/03/2024
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Legal power and gateway</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Legal power
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Yes</p>
+            <p class="govuk-body-s" style="color:#505a5f">
+              Common law
+            </p>
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Legal gateway
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p style="text-transform:capitalize;">Yes</p>
+            <p class="govuk-body-s" style="color:#505a5f">
+              Under Regulation 3 of The Health Service (Control of Patient Information), patient data can be lawfully processed with a view to:
+              <br>
+              <br>
+              * diagnosing communicable diseases and other risks to public health.<br>
+              * recognising trends in such diseases and risks.<br>
+              * controlling and preventing the spread of such diseases and risks.<br>
+              * monitoring and managing:<br>
+              ** outbreaks of communicable disease.<br>
+              ** incidents of exposure to communicable disease.<br>
+              ** the delivery, efficacy and safety of immunisation programmes.<br>
+              ** adverse reactions to vaccines and medicines.<br>
+              ** risks of infection acquired from food or the environment (including water supplies).<br>
+              ** the giving of information to persons about the diagnosis of communicable disease and risks of acquiring such disease.<br>
+            </p>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Legal review
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Data protection</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Lawful basis for personal data
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+              <li class="govuk-!-padding-bottom-3">Public task</li>
+              <li class="govuk-!-padding-bottom-3">Contract</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Lawful basis for special category data
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+              <li><span style="color: #b1b4b6">Not required</span></li>
+<!--               <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom: 5px;">
+                  Reasons of substantial public interest (with a basis in law)
+                </p>
+                <ul class="govuk-list govuk-list--bullet govuk-body-s" style="margin: 0px;color:#505a5f;">
+                  <li>Protecting the public</li>
+                  <li>Safeguarding of children and individuals at risk</li>
+                </ul>
+              </li>
+              <li class="govuk-!-padding-bottom-3">
+                <p style="margin-bottom: 5px;">
+                  Public health (with a basis in law)
+                </p>
+              </li> -->
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data travel outside UK
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            No
+<!--             <br>
+            <br>
+            <p class="govuk-body-s" style="color:#505a5f">Countries:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li class="govuk-body-s" style="color:#505a5f">United States of America</li>
+            </ul> -->
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Role of organisation
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            Processor
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!-- Change
+              <span class="govuk-visually-hidden"> Role of organisation</span> -->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data protection review
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Data governance, security and technology</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data delivery
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            Through secure third-party software
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data format
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <span style="text-transform: capitalize;">CSV file</span> 
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Disposal of data
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
+            Store CSV files in a secure sever and delete all files at end of project.
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key" style="max-width:20%;">
+            Data security review
+          </dt>
+          <dd class="govuk-summary-list__value" style="text-transform:capitalize;">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions" style="max-width:15px;">
+            <a href="#">
+              <!--Change
+              <span class="govuk-visually-hidden"> Data delivery</span>-->
+            </a>
+          </dd>
+        </div>
+      </dl>
+      <div class="govuk-button-group govuk-!-static-margin-top-9">
+        <a href="created-request-outcome_accepted" class="govuk-button govuk-button--secondary">Return to request outcome</a>
+        <a href="created-requests" class="govuk-link">View all created requests</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
