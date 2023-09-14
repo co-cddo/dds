@@ -28,45 +28,34 @@ Account
 
       <h1 class="govuk-heading-xl">Account</h1>
 
-      {% from "govuk/components/table/macro.njk" import govukTable %}
-
-      {{ govukTable({
-        captionClasses: "govuk-table__caption--m",
-        firstCellIsHeader: false,
-        rows: [
-          [
-            {
-              text: "Name"
-            },
-            {
-              text: "Joe Bloggs"
-            }
-          ],[
-          {
-            text: "Email"
-          },
-          {
-            text: "joe.bloggs@govdepartment.gov.uk"
-          }
-        ],[
-        {
-          text: "Organisation"
-        },
-          {
-            text: data["Organisation"]
-          }
-        ],[
-        {
-          text: "Role"
-        },
-          {
-            text: data["Role"]
-          }
-        ]
-          
-        ]
-      }) }}
-
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Name</td>
+                <td class="govuk-table__cell">Joe Bloggs</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Email</td>
+                <td class="govuk-table__cell">joe.bloggs@govdepartment.gov.uk</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Organisation</td>
+                <td class="govuk-table__cell">{{ data["Organisation"] }}</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Primary skill</td>
+                <td class="govuk-table__cell">
+                  <ul class="govuk-list govuk-!-margin-bottom-0">
+                    {% for value in data['Role'] %}
+                    {% if value != "Other" %}
+                      <li>{{ value }}</li>
+                    {% endif %}
+                    {% endfor %}
+                  </ul>
+                </td>
+              </tr>
+        </tbody>
+      </table>
 
     </div>
   </div>

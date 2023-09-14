@@ -23,10 +23,13 @@
 
 {% block content %}
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Check your answers before submitting your data</h1>
+  </div>
+</div>
 
-      <h1 class="govuk-heading-xl">Check your answers before submitting your data</h1>
-
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -538,6 +541,26 @@
 
       </form>
 
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="gem-c-contextual-sidebar">
+        <div class="gem-c-related-navigation">
+          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
+            Learn
+          </h2>
+          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
+            <ul class="gem-c-related-navigation__link-list">
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/metadata-model">Metadata sharing requirements</a>
+              </li>
+              
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   </div>
 {% endblock %}

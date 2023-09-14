@@ -29,6 +29,8 @@ Compl profile
 
       <form class="form" action="/bMVP_wip--secure-signin-route" method="post">
         {% from "govuk/components/select/macro.njk" import govukSelect %}
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukSelect({
           id: "Organisation",
@@ -116,30 +118,70 @@ Compl profile
         ]
         }) }}
 
-
-
-        {{ govukSelect({
+        {% set otherRole %}
+        {{ govukInput({
           id: "Role",
           name: "Role",
-          classes: "govuk-!-width-full",
+          type: "text",
           label: {
-            text: "Role"
+            text: "Enter other primary skill"
+          }
+        }) }}
+        {% endset -%}
+
+        {{ govukRadios({
+          name: "Role",
+          fieldset: {
+            legend: {
+              text: "What is your primary skill?"
+            }
           },
           items: [
-          {
-            value: "",
-            text: "Please select"
-          }, 
             {
-              value: "Lawyer",
-              text: "Lawyer"
+              value: "Technology",
+              text: "Technology",
+              hint: {
+                text: "For example: a technical architect, to help define data flows and requirements."
+              }
             },
             {
-              value: "Data protection officer",
-              text: "Data protection officer"
+              value: "Data Security",
+              text: "Data Security",
+              hint: {
+                text: "For example: a cyber security analyst, to ensure data is shared safely."
+              }
+            },
+            {
+              value: "Data protection",
+              text: "Data protection",
+              hint: {
+                text: "For example: a technical protection specialist, to ensure you meet data regulations."
+              }
+            },
+            {
+              value: "Data governance",
+              text: "Data governance",
+              hint: {
+                text: "For example: an information manager, to ensure data is stored and managed correctly."
+              }
+            },
+            {
+              value: "Business ownership",
+              text: "Business ownership",
+              hint: {
+                text: "For example: a product owner or delivery manager, to oversee the project"
+              }
+            },
+            {
+              value: "Other",
+              text: "Other",
+              conditional: {
+                html: otherRole
+              }
             }
           ]
         }) }}
+
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

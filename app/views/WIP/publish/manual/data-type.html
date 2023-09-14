@@ -24,92 +24,85 @@
 {% block content %}
 
   <div class="govuk-grid-row">
+
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">
-          How is the data made available?
-        </h1>
+      <h1 class="govuk-heading-l">
+        How is the data made available?
+      </h1>
       <p class="govuk-hint">
         Select all options that apply for your data. Based on your answers you will be taken through additional screens.
       </p>
 
-
-          {% if data['check-answers'] == "true" %}
-          <form class="form" action="/WIP/publish/manual/check-answers" method="post">
-            <input type="hidden" name="check-answers" value="false">
-          {% else %}
-          <form class="form" action="/wip-data-type-answer" method="post">
-          {% endif %}
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
-
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="data-CSV" name="data-CSV" type="checkbox" value="CSV">
-                      <label class="govuk-label govuk-checkboxes__label" for="data-CSV">
-                        CSV
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="data-XML" name="data-XML" type="checkbox" value="XML">
-                      <label class="govuk-label govuk-checkboxes__label" for="data-XML">
-                        XML
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="data-XLXS" name="data-XLXS" type="checkbox" value="XLXS">
-                      <label class="govuk-label govuk-checkboxes__label" for="data-XLXS">
-                        XLXS
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="data-geo" name="data-geo" type="checkbox" value="GeoPackage">
-                      <label class="govuk-label govuk-checkboxes__label" for="data-geo">
-                        GeoPackage
-                      </label>
-                    </div>
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/WIP/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
+      <form class="form" action="/wip-data-type-answer" method="post">
+      {% endif %}
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="data-CSV" name="data-CSV" type="checkbox" value="CSV">
+                    <label class="govuk-label govuk-checkboxes__label" for="data-CSV">
+                      CSV
+                    </label>
                   </div>
-                </fieldset>
-              </div>
-            
-            </div>
-
-            <div class="govuk-grid-column-one-half">
-
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="data-REST" name="data-REST" type="checkbox" value="REST web service">
-                      <label class="govuk-label govuk-checkboxes__label" for="data-REST">
-                        REST web service
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="data-SOAP" name="data-SOAP" type="checkbox" value="SOAP web service">
-                      <label class="govuk-label govuk-checkboxes__label" for="data-SOAP">
-                        SOAP web service
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="data-event" name="data-event" type="checkbox" value="Event based service">
-                      <label class="govuk-label govuk-checkboxes__label" for="data-event">
-                        Event based service
-                      </label>
-                    </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="data-XML" name="data-XML" type="checkbox" value="XML">
+                    <label class="govuk-label govuk-checkboxes__label" for="data-XML">
+                      XML
+                    </label>
                   </div>
-                </fieldset>
-              </div>
-            
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="data-XLXS" name="data-XLXS" type="checkbox" value="XLXS">
+                    <label class="govuk-label govuk-checkboxes__label" for="data-XLXS">
+                      XLXS
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="data-geo" name="data-geo" type="checkbox" value="GeoPackage">
+                    <label class="govuk-label govuk-checkboxes__label" for="data-geo">
+                      GeoPackage
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
             </div>
           </div>
-            <button class="govuk-button" data-module="govuk-button">Continue</button>
-
-          </form>
+          <div class="govuk-grid-column-one-half">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="data-REST" name="data-REST" type="checkbox" value="REST web service">
+                    <label class="govuk-label govuk-checkboxes__label" for="data-REST">
+                      REST web service
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="data-SOAP" name="data-SOAP" type="checkbox" value="SOAP web service">
+                    <label class="govuk-label govuk-checkboxes__label" for="data-SOAP">
+                      SOAP web service
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="data-event" name="data-event" type="checkbox" value="Event based service">
+                    <label class="govuk-label govuk-checkboxes__label" for="data-event">
+                      Event based service
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
         </div>
-      </div>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
     </div>
+
     <div class="govuk-grid-column-one-third">
       <div class="gem-c-contextual-sidebar">
         <div class="gem-c-related-navigation">
@@ -130,6 +123,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
 {% endblock %}
