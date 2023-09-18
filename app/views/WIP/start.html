@@ -124,6 +124,23 @@
       
 {% endblock %}
 
+{% block footer %}
+{{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: data['supportForm'],
+        text: "Get help and support"
+      },
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      }
+    ]
+  }
+}) }}
+{% endblock %}
+
 {% block scripts %}
   {{ super() }}
   <script src="/public/javascripts/jquery-3.6.3.min.js"></script>

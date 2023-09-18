@@ -507,7 +507,25 @@
       <a class="govuk-link" href="#1">Contact the team</a> if you have a question, suggestion or idea. We’d love to hear from you.
     </p>
   </div>
+
 </div>
 
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: data['supportForm'],
+        text: "Get help and support"
+      },
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      }
+    ]
+  }
+}) }}
 {% endblock %}
 
