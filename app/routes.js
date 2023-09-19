@@ -39,21 +39,21 @@ router.post('/bMVP_wip--signin-route', function(request, response) {
     }
 })
 
-router.post('/bMVP_wip--secure-signin-route', function(request, response) {
+router.post('/wip--secure-signin-route', function(request, response) {
 
     var myorg = request.session.data['Organisation']
     var signinRoute = request.session.data['signinRoute']
 
     if (!myorg){
-        response.redirect("/WIP/ben/secure/complete-profile")
+        response.redirect("/WIP/secure/complete-profile")
     } else if (signinRoute == "Find") {
-        response.redirect("/WIP/ben/find/find")
+        response.redirect("/WIP/find/find")
     } else if (signinRoute == "Manage") {
-        response.redirect("/WIP/ben/manage-shares/")
+        response.redirect("/WIP/manage-shares/")
     } else if (signinRoute == "Publish") {
-        response.redirect("/WIP/ben/publish/publish-dashboard")
+        response.redirect("/WIP/publish/publish-dashboard")
     } else {
-        response.redirect("/WIP/ben/start")
+        response.redirect("/WIP/start")
     }
 })
 
