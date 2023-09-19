@@ -13,38 +13,19 @@
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 
   <style>
-    .rr-tag_new {
-      color: #383f43;
-      background: #eeefef;
+    .rr-tag_review {
+      color: #942514;
+      background: #f6d7d2;
     }
-    .rr-tag_new::after {
-      content: 'Not started';
+    .rr-tag_review::after {
+      content: 'To review';
     }
     .rr-tag_inprogress {
       color: #144e81;
       background: #d2e2f1;
     }
     .rr-tag_inprogress::after {
-      content: 'In progress';
-    }
-    .rr-tag_returned {
-      color: #942514;
-      background: #f6d7d2;     
-    }
-    .rr-tag_returned::after {
-      content: 'Returned';
-    }
-    .rr-tag_submitted {
-      color: #383f43;
-      background: #eeefef;
-/*      color: #005a30;
-      background: #cce2d8*/;
-    }
-    .rr-tag_submitted::after {
-      content: 'Awaiting review';
-    }
-    .rr-tag_inreview::after {
-      content: 'In review';
+      content: 'Reviewing';
     }
     .rr-tag_accepted, .rr-tag_rejected {
       font-weight: normal;
@@ -55,6 +36,13 @@
     .rr-tag_rejected::after {
       content: 'Rejected';
     }
+    .rr-tag_returned {
+      color: #383f43;
+      background: #eeefef;
+    }
+    .rr-tag_returned::after {
+      content: 'Returned';
+    }
   </style>
 {% endblock %}
 
@@ -62,8 +50,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-l">Manage data share requests</span>
-      <h1 class="govuk-heading-xl">Created requests</h1>
-      <!-- <p>To start a request, <a href="#1">find data</a>.</p> -->
+      <h1 class="govuk-heading-xl">Received requests</h1>
     </div>
 
     <div class="govuk-grid-column-one-third">
@@ -73,8 +60,7 @@
         </h2> -->
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list">
-            <li><a href="received-requests_tabbed" class="govuk-link">View received requests</a></li>
-            <li><a href="#1" class="govuk-link">Find data to request</a></li>
+            <li><a href="created-requests_tabbed" class="govuk-link">View created requests</a></li>
           </ul>
         </nav>
       </aside>
@@ -89,13 +75,8 @@
         </h2>
         <ul class="govuk-tabs__list">
           <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-            <a class="govuk-tabs__tab" href="#pending">
-              Pending
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#submitted">
-              Submitted
+            <a class="govuk-tabs__tab" href="#current">
+              Current
             </a>
           </li>
           <li class="govuk-tabs__list-item">
@@ -104,14 +85,15 @@
             </a>
           </li>
         </ul>
-        <div class="govuk-tabs__panel" id="pending">
-          <h2 id="pendingRequests" class="govuk-heading-l">Pending requests</h2>
-          <table class="govuk-table govuk-!-margin-bottom-5" style="font-size: 18px;">
+        <div class="govuk-tabs__panel" id="current">
+          <h2 class="govuk-heading-l">Current requests</h2>
+          <table class="govuk-table" style="font-size: 18px;">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th class="govuk-table__header" scope="col">Request ID</th>
+                <th class="govuk-table__header" scope="col">From</th>
                 <th class="govuk-table__header" scope="col">Dataset</th>
-                <th class="govuk-table__header" scope="col">Owner</th>
+                <th class="govuk-table__header" scope="col">Received</th>
                 <th class="govuk-table__header" scope="col">Needed by</th>
                 <th class="govuk-table__header" scope="col">Status</th>
               </tr>
@@ -119,34 +101,40 @@
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR534 - View</a>
+                  <a class="govuk-link" href="#1">RR523 - View</a>
                 </td>
                 <td class="govuk-table__cell">
-                  employed-area-code_ARCHIVE
+                  Department X
                 </td>
                 <td class="govuk-table__cell">
-                  Department for Work and Pensions
+                  citizen-relationships
                 </td>
                 <td class="govuk-table__cell">
-                  Unrequested
+                  8 Jul 2023
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_new">
+                  16 Mar 2024
+                </td>
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag rr-tag_review">
                   </strong>
                 </td>
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR531 - View</a>
-                </td>
-                <td class="govuk-table__cell">
-                  employed-area-code_WEST
+                  <a class="govuk-link" href="#1">RR330 - View</a>
                 </td>
                 <td class="govuk-table__cell">
                   Department for Work and Pensions
                 </td>
                 <td class="govuk-table__cell">
-                  Unrequested
+                  citizen-switch-input
+                </td>
+                <td class="govuk-table__cell">
+                  2 Jul 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 Nov 2023
                 </td>
                 <td class="govuk-table__cell">
                   <strong class="govuk-tag rr-tag_inprogress">
@@ -155,19 +143,22 @@
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR523 - View</a>
+                  <a class="govuk-link" href="#1">RR221 - View</a>
                 </td>
                 <td class="govuk-table__cell">
-                  citizen-relationships
+                  HM Revenue and Customs
                 </td>
                 <td class="govuk-table__cell">
-                  Department Y
+                  tax-rate-change_brackets
                 </td>
                 <td class="govuk-table__cell">
-                  13 Dec 2023
+                  2 Jul 2023
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_inprogress rr-tag_returned">
+                  2 Nov 2023
+                </td>
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag rr-tag_returned">
                   </strong>
                 </td>
               </tr>
@@ -176,67 +167,37 @@
                   <a class="govuk-link" href="#1">RR523 - View</a>
                 </td>
                 <td class="govuk-table__cell">
-                  citizen-relationships
-                </td>
-                <td class="govuk-table__cell">
-                  Department Y
-                </td>
-                <td class="govuk-table__cell">
-                  13 Dec 2023
-                </td>
-                <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_inprogress rr-tag_returned">
-                  </strong>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR523 - View</a>
+                  Department X
                 </td>
                 <td class="govuk-table__cell">
                   citizen-relationships
                 </td>
                 <td class="govuk-table__cell">
-                  Department Y
+                  8 Jul 2023
                 </td>
                 <td class="govuk-table__cell">
-                  13 Dec 2023
+                  16 Mar 2024
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_inprogress rr-tag_returned">
+                  <strong class="govuk-tag rr-tag_review">
                   </strong>
                 </td>
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR534 - View</a>
-                </td>
-                <td class="govuk-table__cell">
-                  employed-area-code_ARCHIVE
+                  <a class="govuk-link" href="#1">RR330 - View</a>
                 </td>
                 <td class="govuk-table__cell">
                   Department for Work and Pensions
                 </td>
                 <td class="govuk-table__cell">
-                  Unrequested
+                  citizen-switch-input
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_new">
-                  </strong>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR531 - View</a>
+                  2 Jul 2023
                 </td>
                 <td class="govuk-table__cell">
-                  employed-area-code_WEST
-                </td>
-                <td class="govuk-table__cell">
-                  Department for Work and Pensions
-                </td>
-                <td class="govuk-table__cell">
-                  Unrequested
+                  2 Nov 2023
                 </td>
                 <td class="govuk-table__cell">
                   <strong class="govuk-tag rr-tag_inprogress">
@@ -245,19 +206,22 @@
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR523 - View</a>
+                  <a class="govuk-link" href="#1">RR221 - View</a>
                 </td>
                 <td class="govuk-table__cell">
-                  citizen-relationships
+                  HM Revenue and Customs
                 </td>
                 <td class="govuk-table__cell">
-                  Department Y
+                  tax-rate-change_brackets
                 </td>
                 <td class="govuk-table__cell">
-                  13 Dec 2023
+                  2 Jul 2023
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_inprogress rr-tag_returned">
+                  2 Nov 2023
+                </td>
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag rr-tag_returned">
                   </strong>
                 </td>
               </tr>
@@ -266,189 +230,116 @@
                   <a class="govuk-link" href="#1">RR523 - View</a>
                 </td>
                 <td class="govuk-table__cell">
+                  Department X
+                </td>
+                <td class="govuk-table__cell">
                   citizen-relationships
                 </td>
                 <td class="govuk-table__cell">
-                  Department Y
+                  8 Jul 2023
                 </td>
                 <td class="govuk-table__cell">
-                  13 Dec 2023
+                  16 Mar 2024
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_inprogress rr-tag_returned">
+                  <strong class="govuk-tag rr-tag_review">
                   </strong>
                 </td>
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR523 - View</a>
+                  <a class="govuk-link" href="#1">RR330 - View</a>
                 </td>
                 <td class="govuk-table__cell">
-                  citizen-relationships
+                  Department for Work and Pensions
                 </td>
                 <td class="govuk-table__cell">
-                  Department Y
+                  citizen-switch-input
                 </td>
                 <td class="govuk-table__cell">
-                  13 Dec 2023
+                  2 Jul 2023
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_inprogress rr-tag_returned">
+                  2 Nov 2023
+                </td>
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag rr-tag_inprogress">
                   </strong>
                 </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <a class="govuk-link" href="#1">RR221 - View</a>
+                </td>
+                <td class="govuk-table__cell">
+                  HM Revenue and Customs
+                </td>
+                <td class="govuk-table__cell">
+                  tax-rate-change_brackets
+                </td>
+                <td class="govuk-table__cell">
+                  2 Jul 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 Nov 2023
+                </td>
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag rr-tag_returned">
+                  </strong>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <a class="govuk-link" href="#1">RR221 - View</a>
+                </td>
+                <td class="govuk-table__cell">
+                  HM Revenue and Customs
+                </td>
+                <td class="govuk-table__cell">
+                  tax-rate-change_brackets
+                </td>
+                <td class="govuk-table__cell">
+                  2 Jul 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 Nov 2023
+                </td>
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag rr-tag_returned">
+                  </strong>
+                </td>
+              </tr>
             </tbody>
           </table>
           <nav class="govuk-pagination" role="navigation" aria-label="results">
             <ul class="govuk-pagination__list">
               <li class="govuk-pagination__item govuk-pagination__item--current">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+                <a class="govuk-link govuk-pagination__link" href="#1" aria-label="Page 1" aria-current="page">
                   1
                 </a>
               </li>
               <li class="govuk-pagination__item ">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+                <a class="govuk-link govuk-pagination__link" href="#1" aria-label="Page 2">
                   2
                 </a>
               </li>
             </ul>
             <div class="govuk-pagination__next">
-              <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <a class="govuk-link govuk-pagination__link" href="#1" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
                   <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
                 </svg></a>
             </div>
           </nav>
         </div>
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="submitted">
-          <h2 id="submittedRequests" class="govuk-heading-l">Submitted requests</h2>
-          <table class="govuk-table govuk-!-margin-bottom-5" style="font-size: 18px;">
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header" scope="col">Request ID</th>
-                <th class="govuk-table__header" scope="col">Dataset</th>
-                <th class="govuk-table__header" scope="col">Owner</th>
-                <th class="govuk-table__header" scope="col">Submitted</th>
-                <th class="govuk-table__header" scope="col">Needed by</th>
-                <th class="govuk-table__header" scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">
-                  RR503
-                </td>
-                <td class="govuk-table__cell">
-                  tax-code-impact
-                </td>
-                <td class="govuk-table__cell">
-                  Department for Work and Pensions
-                </td>
-                <td class="govuk-table__cell">
-                  2 Feb 2023
-                </td>
-                <td class="govuk-table__cell">
-                  23 Apr 2023
-                </td>
-                <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_submitted">
-                  </strong>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">
-                  RR501
-                </td>
-                <td class="govuk-table__cell">
-                  unemployed-dat-sat
-                </td>
-                <td class="govuk-table__cell">
-                  Department for Work and Pensions
-                </td>
-                <td class="govuk-table__cell">
-                  2 Feb 2023
-                </td>
-                <td class="govuk-table__cell">
-                  23 Apr 2023
-                </td>
-                <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_inprogress rr-tag_inreview">
-                  </strong>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">
-                  RR501
-                </td>
-                <td class="govuk-table__cell">
-                  unemployed-dat-sat
-                </td>
-                <td class="govuk-table__cell">
-                  Department for Work and Pensions
-                </td>
-                <td class="govuk-table__cell">
-                  2 Feb 2023
-                </td>
-                <td class="govuk-table__cell">
-                  23 Apr 2023
-                </td>
-                <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_inprogress rr-tag_inreview">
-                  </strong>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">
-                  RR501
-                </td>
-                <td class="govuk-table__cell">
-                  unemployed-dat-sat
-                </td>
-                <td class="govuk-table__cell">
-                  Department for Work and Pensions
-                </td>
-                <td class="govuk-table__cell">
-                  2 Feb 2023
-                </td>
-                <td class="govuk-table__cell">
-                  23 Apr 2023
-                </td>
-                <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_inprogress rr-tag_inreview">
-                  </strong>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">
-                  RR501
-                </td>
-                <td class="govuk-table__cell">
-                  unemployed-dat-sat
-                </td>
-                <td class="govuk-table__cell">
-                  Department for Work and Pensions
-                </td>
-                <td class="govuk-table__cell">
-                  2 Feb 2023
-                </td>
-                <td class="govuk-table__cell">
-                  23 Apr 2023
-                </td>
-                <td class="govuk-table__cell">
-                  <strong class="govuk-tag rr-tag_inprogress rr-tag_inreview">
-                  </strong>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed">
-          <h2 id="completedRequests" class="govuk-heading-l">Completed requests</h2>
-          <table class="govuk-table govuk-!-margin-bottom-5" style="font-size: 18px;">
+          <h2 class="govuk-heading-l">Completed requests</h2>
+          <table class="govuk-table" style="font-size: 18px;">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th class="govuk-table__header" scope="col">Request ID</th>
+                <th class="govuk-table__header" scope="col">From</th>
                 <th class="govuk-table__header" scope="col">Dataset</th>
-                <th class="govuk-table__header" scope="col">Owner</th>
-                <th class="govuk-table__header" scope="col">Needed by</th>
+                <th class="govuk-table__header" scope="col">Received</th>
                 <th class="govuk-table__header" scope="col">Completed</th>
                 <th class="govuk-table__header" scope="col">Decision</th>
               </tr>
@@ -459,16 +350,16 @@
                   <a class="govuk-link" href="#1">RR147 - View</a>
                 </td>
                 <td class="govuk-table__cell">
-                  student-early-years_stats
-                </td>
-                <td class="govuk-table__cell">
                   Department for Education
                 </td>
                 <td class="govuk-table__cell">
-                  18 Jun 2023
+                  Inline-core_reporting-and-location
                 </td>
                 <td class="govuk-table__cell">
-                  2 Nov 2023
+                  18 Apr 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 May 2023
                 </td>
                 <td class="govuk-table__cell">
                   <strong class="rr-tag_accepted">
@@ -477,82 +368,19 @@
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR148 - View</a>
-                </td>
-                <td class="govuk-table__cell">
-                  teacher-end-of-year_reporting
+                  <a class="govuk-link" href="#1">RR109 - View</a>
                 </td>
                 <td class="govuk-table__cell">
                   Department for Education
                 </td>
                 <td class="govuk-table__cell">
-                  18 Jun 2023
+                  Input-switch_slice3
                 </td>
                 <td class="govuk-table__cell">
-                  2 Nov 2023
+                  2 Apr 2023
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="rr-tag_rejected">
-                  </strong>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR148 - View</a>
-                </td>
-                <td class="govuk-table__cell">
-                  teacher-end-of-year_reporting
-                </td>
-                <td class="govuk-table__cell">
-                  Department for Education
-                </td>
-                <td class="govuk-table__cell">
-                  18 Jun 2023
-                </td>
-                <td class="govuk-table__cell">
-                  2 Nov 2023
-                </td>
-                <td class="govuk-table__cell">
-                  <strong class="rr-tag_rejected">
-                  </strong>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR148 - View</a>
-                </td>
-                <td class="govuk-table__cell">
-                  teacher-end-of-year_reporting
-                </td>
-                <td class="govuk-table__cell">
-                  Department for Education
-                </td>
-                <td class="govuk-table__cell">
-                  18 Jun 2023
-                </td>
-                <td class="govuk-table__cell">
-                  2 Nov 2023
-                </td>
-                <td class="govuk-table__cell">
-                  <strong class="rr-tag_rejected">
-                  </strong>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR148 - View</a>
-                </td>
-                <td class="govuk-table__cell">
-                  teacher-end-of-year_reporting
-                </td>
-                <td class="govuk-table__cell">
-                  Department for Education
-                </td>
-                <td class="govuk-table__cell">
-                  18 Jun 2023
-                </td>
-                <td class="govuk-table__cell">
-                  2 Nov 2023
+                  2 May 2023
                 </td>
                 <td class="govuk-table__cell">
                   <strong class="rr-tag_rejected">
@@ -564,16 +392,16 @@
                   <a class="govuk-link" href="#1">RR147 - View</a>
                 </td>
                 <td class="govuk-table__cell">
-                  student-early-years_stats
-                </td>
-                <td class="govuk-table__cell">
                   Department for Education
                 </td>
                 <td class="govuk-table__cell">
-                  18 Jun 2023
+                  Inline-core_reporting-and-location
                 </td>
                 <td class="govuk-table__cell">
-                  2 Nov 2023
+                  18 Apr 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 May 2023
                 </td>
                 <td class="govuk-table__cell">
                   <strong class="rr-tag_accepted">
@@ -582,19 +410,19 @@
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR148 - View</a>
-                </td>
-                <td class="govuk-table__cell">
-                  teacher-end-of-year_reporting
+                  <a class="govuk-link" href="#1">RR109 - View</a>
                 </td>
                 <td class="govuk-table__cell">
                   Department for Education
                 </td>
                 <td class="govuk-table__cell">
-                  18 Jun 2023
+                  Input-switch_slice3
                 </td>
                 <td class="govuk-table__cell">
-                  2 Nov 2023
+                  2 Apr 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 May 2023
                 </td>
                 <td class="govuk-table__cell">
                   <strong class="rr-tag_rejected">
@@ -603,19 +431,40 @@
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR148 - View</a>
-                </td>
-                <td class="govuk-table__cell">
-                  teacher-end-of-year_reporting
+                  <a class="govuk-link" href="#1">RR147 - View</a>
                 </td>
                 <td class="govuk-table__cell">
                   Department for Education
                 </td>
                 <td class="govuk-table__cell">
-                  18 Jun 2023
+                  Inline-core_reporting-and-location
                 </td>
                 <td class="govuk-table__cell">
-                  2 Nov 2023
+                  18 Apr 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 May 2023
+                </td>
+                <td class="govuk-table__cell">
+                  <strong class="rr-tag_accepted">
+                  </strong>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <a class="govuk-link" href="#1">RR109 - View</a>
+                </td>
+                <td class="govuk-table__cell">
+                  Department for Education
+                </td>
+                <td class="govuk-table__cell">
+                  Input-switch_slice3
+                </td>
+                <td class="govuk-table__cell">
+                  2 Apr 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 May 2023
                 </td>
                 <td class="govuk-table__cell">
                   <strong class="rr-tag_rejected">
@@ -624,19 +473,40 @@
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR148 - View</a>
-                </td>
-                <td class="govuk-table__cell">
-                  teacher-end-of-year_reporting
+                  <a class="govuk-link" href="#1">RR147 - View</a>
                 </td>
                 <td class="govuk-table__cell">
                   Department for Education
                 </td>
                 <td class="govuk-table__cell">
-                  18 Jun 2023
+                  Inline-core_reporting-and-location
                 </td>
                 <td class="govuk-table__cell">
-                  2 Nov 2023
+                  18 Apr 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 May 2023
+                </td>
+                <td class="govuk-table__cell">
+                  <strong class="rr-tag_accepted">
+                  </strong>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <a class="govuk-link" href="#1">RR109 - View</a>
+                </td>
+                <td class="govuk-table__cell">
+                  Department for Education
+                </td>
+                <td class="govuk-table__cell">
+                  Input-switch_slice3
+                </td>
+                <td class="govuk-table__cell">
+                  2 Apr 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 May 2023
                 </td>
                 <td class="govuk-table__cell">
                   <strong class="rr-tag_rejected">
@@ -645,19 +515,40 @@
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#1">RR148 - View</a>
-                </td>
-                <td class="govuk-table__cell">
-                  teacher-end-of-year_reporting
+                  <a class="govuk-link" href="#1">RR147 - View</a>
                 </td>
                 <td class="govuk-table__cell">
                   Department for Education
                 </td>
                 <td class="govuk-table__cell">
-                  18 Jun 2023
+                  Inline-core_reporting-and-location
                 </td>
                 <td class="govuk-table__cell">
-                  2 Nov 2023
+                  18 Apr 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 May 2023
+                </td>
+                <td class="govuk-table__cell">
+                  <strong class="rr-tag_accepted">
+                  </strong>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <a class="govuk-link" href="#1">RR109 - View</a>
+                </td>
+                <td class="govuk-table__cell">
+                  Department for Education
+                </td>
+                <td class="govuk-table__cell">
+                  Input-switch_slice3
+                </td>
+                <td class="govuk-table__cell">
+                  2 Apr 2023
+                </td>
+                <td class="govuk-table__cell">
+                  2 May 2023
                 </td>
                 <td class="govuk-table__cell">
                   <strong class="rr-tag_rejected">
@@ -668,7 +559,7 @@
           </table>
           <nav class="govuk-pagination" role="navigation" aria-label="results">
             <div class="govuk-pagination__prev">
-              <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+              <a class="govuk-link govuk-pagination__link" href="#1" rel="prev">
                 <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
                   <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
                 </svg>
@@ -676,35 +567,35 @@
             </div>
             <ul class="govuk-pagination__list">
               <li class="govuk-pagination__item">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                <a class="govuk-link govuk-pagination__link" href="#1" aria-label="Page 1">
                   1
                 </a>
               </li>
               <li class="govuk-pagination__item govuk-pagination__item--ellipses">&ctdot;</li>
               <li class="govuk-pagination__item">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 6">
+                <a class="govuk-link govuk-pagination__link" href="#1" aria-label="Page 6">
                   6
                 </a>
               </li>
               <li class="govuk-pagination__item govuk-pagination__item--current">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 7" aria-current="page">
+                <a class="govuk-link govuk-pagination__link" href="#1" aria-label="Page 7" aria-current="page">
                   7
                 </a>
               </li>
               <li class="govuk-pagination__item">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 8">
+                <a class="govuk-link govuk-pagination__link" href="#1" aria-label="Page 8">
                   8
                 </a>
               </li>
               <li class="govuk-pagination__item govuk-pagination__item--ellipses">&ctdot;</li>
               <li class="govuk-pagination__item">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">
+                <a class="govuk-link govuk-pagination__link" href="#1" aria-label="Page 42">
                   42
                 </a>
               </li>
             </ul>
             <div class="govuk-pagination__next">
-              <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <a class="govuk-link govuk-pagination__link" href="#1" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
                   <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
                 </svg></a>
             </div>
@@ -716,3 +607,19 @@
 
 {% endblock %}
 
+{% block footer %}
+{{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: data['supportForm'],
+        text: "Get help and support"
+      },
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      }
+    ]
+  }
+}) }}
+{% endblock %}
