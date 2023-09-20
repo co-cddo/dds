@@ -14,19 +14,35 @@
   <div class="x-govuk-masthead x-govuk-masthead--large">
     <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
       <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
+      <div class="govuk-width-container">
       <ul class="app-navigation__list app-width-container">
           <li class="app-navigation__list-item ">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/start">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="start">
               Home
             </a>
           </li>
-
-          <li class="app-navigation__list-item app-navigation__list-item--right">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/login2">
-              Sign in
-            </a>
-          </li>
       </ul>
+      <ul class="app-navigation__list app-width-container" style="float: right;margin-right: -30px;">
+        {% if data['loggedin'] == "true" %}
+        <li class="app-navigation__list-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="secure/account">
+            Account
+          </a>
+        </li>
+        <li class="app-navigation__list-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="start?loggedin=false">
+            Sign out
+          </a>
+        </li>
+        {% else %}
+        <li class="app-navigation__list-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="secure/information?loggedin=true&signinRoute=home">
+            Sign in
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
     </nav>
     <div class="govuk-width-container">
 
@@ -63,7 +79,12 @@
   <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
     <h2 class="govuk-heading-l govuk-!-font-weight-bold">Find data assets</h2>
     <p class="govuk-body">Find data assets from  government organisations. Personal and special category data is available.</p>
-    <form class="form" action="/WIP/login" method="post">
+    {% if data['loggedin'] == "true" %}
+    <form class="form" action="find/find" method="post">
+    {% else %}
+    <form class="form" action="secure/information" method="post">
+    {% endif %}
+    
       {% from "govuk/components/input/macro.njk" import govukInput %}
       {{ govukInput({
         type: "hidden",
@@ -76,7 +97,11 @@
   <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
     <h2 class="govuk-heading-l">Manage data shares</h2>
     <p class="govuk-body">Set up and manage your data shares so you can share your data assets with other government organisations.</p>
-    <form class="form" action="/WIP/login" method="post">
+    {% if data['loggedin'] == "true" %}
+    <form class="form" action="/manage-shares/" method="post">
+    {% else %}
+    <form class="form" action="secure/information" method="post">
+    {% endif %}
       {% from "govuk/components/input/macro.njk" import govukInput %}
       {{ govukInput({
         type: "hidden",
@@ -89,7 +114,11 @@
   <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
     <h2 class="govuk-heading-l">Publish data descriptions</h2>
     <p class="govuk-body">Publish a description of your data assets so they can be found by other government organisations.</p>
-    <form class="form" action="/WIP/login" method="post">
+    {% if data['loggedin'] == "true" %}
+    <form class="form" action="/publish/publish-dashboard" method="post">
+    {% else %}
+    <form class="form" action="secure/information" method="post">
+    {% endif %}
       {% from "govuk/components/input/macro.njk" import govukInput %}
       {{ govukInput({
         type: "hidden",
@@ -107,17 +136,17 @@
   <div class="govuk-grid-column-one-half-from-desktop">
     <h2 id="community" class="govuk-heading-m">Learn</h2>
     <p class="govuk-body">
-      <a class="govuk-link" href="/WIP/learn/">Find information to help you</a> with the data marketplace.
+      <a class="govuk-link" href="/learn/">Find information to help you</a> with the data marketplace.
       <br>
       For example: a glossary, or the UK Cross-Government Metadata Exchange model.
     </p>
   </div>
 
   <div class="govuk-grid-column-one-half-from-desktop">
-    <h2 id="support" class="govuk-heading-m">Get help and support</h2>
+    <h2 id="support" class="govuk-heading-m">Contact Data Marketplace Team</h2>
     <p class="govuk-body">
-    <p><a class="govuk-link" href="{{data['supportForm']}}">Tell us what you need help with</a>.</p>
-    <p>If you have any questions about the data asset description (metadata), you should contact the data asset supplier directly.</p>
+      <a class="govuk-link" href="#1">Contact the team</a> if you have a question, suggestion or idea. We’d love to hear from you.
+    </p>
   </div>
 
 </div>

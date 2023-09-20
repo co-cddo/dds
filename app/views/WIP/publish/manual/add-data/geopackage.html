@@ -5,29 +5,8 @@
 {% endblock %}
 
 {% block header %}
-{{ govukHeader({
-  homepageUrl: "/",
-  serviceName: serviceName,
-  serviceUrl: "/",
-  containerClasses: "govuk-width-container"
-}) }}
-    <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
-      <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
-      <ul class="app-navigation__list app-width-container">
-        <li class="app-navigation__list-item ">
-          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/publish/start-logged-in">
-            Home
-          </a>
-        </li>
-          </li>
-          <li class="app-navigation__list-item app-navigation__list-item--right">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/publish/start">
-              Sign out
-            </a>
-          </li>
-      </ul>
-    </nav>
-
+  {{ super() }}
+  {% include "includes/wip-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
