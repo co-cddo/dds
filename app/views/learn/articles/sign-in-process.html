@@ -1,0 +1,128 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    var $element = document.querySelector('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
+  </script>
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/WIP_mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Sign-in process</h1>
+    
+      <!-- guide elements -->
+      <!--
+      <aside class="part-navigation-container" role="complementary">
+        <nav aria-label="Pages in this guide" class="gem-c-contents-list" role="navigation" data-gem-track-click-module-started="true" data-ga4-link-tracker-module-started="true">
+          <h2 class="gem-c-contents-list__title">
+            Contents
+          </h2>
+          <ol class="gem-c-contents-list__list">
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+              Overview
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link" href="#anchor__questions">Questions you will be asked</a>
+            </li>
+          </ol>
+        </nav>
+      </aside>
+      -->
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-6"> <!-- Add class if using gov.uk guide elements govuk-!-margin-top-6 --> 
+    <!-- guide elements -->
+    <!--
+    <h2 class="govuk-heading-l">Overview</h2>
+    -->
+    <p>Access to some features and data in the Data Marketplace, for example to start a data share request, requires you to sign in to verify that you’re a government employee. You can sign in at any time by clicking the <b>Sign in</b> link at the top of the page. Otherwise you will be prompted to sign in when you try to access a feature that’s only available to authorised users.</p>
+    <p>To sign in, you'll use your government email address and go through your standard sign-in process, for example an authentication code sent to your phone or using an authentication app. Our sign in process uses <a href="https://www.security.gov.uk/">the government single sign on service</a>.</p>
+    <p>When you first sign in to the Data Marketplace, you'll be invited to complete your profile by choosing your organisation from a drop-down list and select your primary skill from a list of available options.</p>
+    <p>Once you've set up your profile and are signed in to the Data Marketplace, you'll see an <b>Account</b> link at the top of the page. From there, you can view your profile which will show your:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Name</li>
+      <li>Email address</li>
+      <li>Organisation</li>
+      <li>Role</li>
+    </ul>
+
+  </div>
+
+  <!-- guide elements -->
+  <!--
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-s" id="subsection-title">
+        Related content
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="#1">Content title</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  -->
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full govuk-!-margin-top-8">
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
+  </div>
+
+  <div class="govuk-grid-column-one-half-from-desktop">
+    <h2 id="community" class="govuk-heading-m">Learn</h2>
+    <p class="govuk-body">
+      <a class="govuk-link" href="/WIP/learn/">Find information to help you</a> with the data marketplace.
+      <br>
+      For example: a glossary, or the UK Cross-Government Metadata Exchange model.
+    </p>
+  </div>
+
+  <div class="govuk-grid-column-one-half-from-desktop">
+    <h2 id="support" class="govuk-heading-m">Get help and support</h2>
+    <p class="govuk-body">
+    <p><a class="govuk-link" href="{{data['supportForm']}}">Tell us what you need help with</a>.</p>
+    <p>If you have any questions about the data asset description (metadata), you should contact the data asset supplier directly.</p>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: data['supportForm'],
+        text: "Get help and support"
+      },
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      }
+    ]
+  }
+}) }}
+{% endblock %}
