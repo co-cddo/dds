@@ -13,7 +13,7 @@
 
 {% block header %}
   {{ super() }}
-  {% include "includes/nav_sign-out.html" %}
+  {% include "includes/WIP_mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,7 +25,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Publishing data descriptions</h1>
+      <h1 class="govuk-heading-xl">Sign-in process</h1>
     
       <!-- guide elements -->
       <!--
@@ -54,25 +54,16 @@
     <!--
     <h2 class="govuk-heading-l">Overview</h2>
     -->
-
-    <p>The Data Marketplace allows government organisations to publish descriptions of data (known as metadata) so they can be found by anyone in government. Once found, a <a href="/learn/articles/data-sharing-arrangements">data share request</a> can be made to facilitate access to the data under the agreed terms. The Data Marketplace does not host the data itself or provide access to the data. Your data description will be published to the Data Marketplace and will be available to be found by other government organisations who are looking for data.</p>
-    <p>All data descriptions should be findable, accessible, interoperable and reusable (FAIR). With data being published to the Data Marketplace, it should be easy to find, labelled with correct access rights, described to support interoperability with other data, and well described to support reuse. The descriptions of data should have their own identifiers and remain in the marketplace even if the data is no longer available.</p>
-    <p>The Data Marketplace supports descriptions of datasets and data services. A dataset is a collection of data, published or curated by a single agent and available for access or download in one or more representations. A data service is a collection of operations that provides access to one or more datasets or data processing functions.</p>
-
-    <p>Data descriptions can be added in a number of ways including:</p>
+    <p>Access to some features and data in the Data Marketplace, for example to start a data share request, requires you to sign in to verify that you’re a government employee. You can sign in at any time by clicking the <b>Sign in</b> link at the top of the page. Otherwise you will be prompted to sign in when you try to access a feature that’s only available to authorised users.</p>
+    <p>To sign in, you'll use your government email address and go through your standard sign-in process, for example an authentication code sent to your phone or using an authentication app. Our sign in process uses <a href="https://www.security.gov.uk/">the government single sign on service</a>.</p>
+    <p>When you first sign in to the Data Marketplace, you'll be invited to complete your profile by choosing your organisation from a drop-down list and select your primary skill from a list of available options.</p>
+    <p>Once you've set up your profile and are signed in to the Data Marketplace, you'll see an <b>Account</b> link at the top of the page. From there, you can view your profile which will show your:</p>
     <ul class="govuk-list govuk-list--bullet">
-      <li>Manually through a web form</li>
-      <li>Upload via our CSV template</li>
-      <li>Catalogue connection to synchronise the descriptions in your organisation data catalogue with the Data Marketplace (using a data harvester)</li>
+      <li>Name</li>
+      <li>Email address</li>
+      <li>Organisation</li>
+      <li>Role</li>
     </ul>
-    <p>To publish data descriptions you must have a Data Marketplace account with publish permission for your organisation. See <a href="#1">guidance</a> for how to get an account with publish permissions. The publisher dashboard will give you an overview of the data your organisation has published in the Data Marketplace and how it is being used.</p>
-
-    <h2 class="govuk-heading-l">Updating data descriptions</h2>
-    <p>Currently, updating data descriptions is not possible. We plan to add this feature in the near future.</p>
-
-    <h2 class="govuk-heading-l">Unpublishing data</h2>
-    <p>The Data Marketplace adheres to the FAIR Data Principles. As such, data descriptions are not removed from the marketplace when they are deleted. They will no longer be available in search results, but will still be retrievable from their permanent URL. This supports long-term referencing of data descriptions within data share requests and other places where the description of the data continues to be needed after the data is no longer available.</p>
-    <p>To have a data description unpublished, contact the Data Marketplace support team who will update the status of the data description.</p>
 
   </div>
 
@@ -119,3 +110,19 @@
 
 {% endblock %}
 
+{% block footer %}
+{{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: data['supportForm'],
+        text: "Get help and support"
+      },
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      }
+    ]
+  }
+}) }}
+{% endblock %}
