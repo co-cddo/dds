@@ -17,26 +17,47 @@
       <div class="govuk-width-container">
       <ul class="app-navigation__list app-width-container">
           <li class="app-navigation__list-item ">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="start">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/start">
               Home
+            </a>
+          </li>
+          {% if data['loggedin'] == "true" %}
+          <li class="app-navigation__list-item ">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/find/find?signinRoute=Find">
+              Find data assets
+            </a>
+          </li>
+
+          {% else %}
+          <li class="app-navigation__list-item ">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/secure/information?signinRoute=Find"">
+              Find data assets
+            </a>
+          </li>
+          {% endif %}
+
+
+          <li class="app-navigation__list-item ">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP//learn/">
+              Learn
             </a>
           </li>
       </ul>
       <ul class="app-navigation__list app-width-container" style="float: right;margin-right: -30px;">
         {% if data['loggedin'] == "true" %}
         <li class="app-navigation__list-item">
-          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="secure/account">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/secure/account">
             Account
           </a>
         </li>
         <li class="app-navigation__list-item">
-          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="start?loggedin=false">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/start?loggedin=false">
             Sign out
           </a>
         </li>
         {% else %}
         <li class="app-navigation__list-item">
-          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="secure/information?loggedin=true&signinRoute=home">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/secure/information?loggedin=true&signinRoute=home">
             Sign in
           </a>
         </li>
@@ -52,21 +73,39 @@
             Beta
           </strong>
           <span class="govuk-phase-banner__text">
-            This is a new service – your <a class="govuk-link" href="#" style="color: white;">feedback</a> will help us to improve it.
+            This is a new service – your <a class="govuk-link" href="/WIP/#" style="color: white;">feedback</a> will help us to improve it.
           </span>
         </p>
       </div>
 
 
   
-  <h1 class="x-govuk-masthead__title">
+  <h1 class="x-govuk-masthead__title govuk-!-margin-bottom-2">
     Data Marketplace
   </h1>
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds-from-desktop">
-            <p class="x-govuk-masthead__description govuk-!-margin-bottom-3">
+        <div class="govuk-grid-column-three-quarters">
+            <p class="x-govuk-masthead__description govuk-!-margin-bottom-4">
               A place for people who work in government  organisations, agencies and public bodies to share data.
             </p>
+            <h2 class="govuk-heading-m  govuk-!-margin-bottom-3" style="color: inherit">Find data assets from government organisations</h2>
+            
+
+            {% if data['loggedin'] == "true" %}
+            <a href="/WIP/find/find?signinRoute=Find" role="button" draggable="false" class="govuk-button govuk-button--inverse govuk-!-margin-bottom-0 govuk-button--start" data-module="govuk-button">
+              Find data assets
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+              </svg>
+            </a>
+            {% else %}
+            <a href="/WIP/secure/information?signinRoute=Find" role="button" draggable="false" class="govuk-button govuk-button--inverse govuk-!-margin-bottom-4 govuk-button--start" data-module="govuk-button">
+              Find data assets
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+              </svg>
+            </a>
+            {% endif %}
         </div>
       
       </div>
@@ -76,98 +115,69 @@
 
 {% block content %}
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-    <h2 class="govuk-heading-l govuk-!-font-weight-bold">Find data assets</h2>
-    <p class="govuk-body">Find data assets from  government organisations. Personal and special category data is available.</p>
+  <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+    <h2 class="govuk-heading-m">Data requests</h2>
+    <p class="govuk-body">Manage your data share requests with other government organisations.</p>
     {% if data['loggedin'] == "true" %}
-    <form class="form" action="find/find" method="post">
+    <ul class="govuk-list">
+      <li>
+        <a href="/WIP//manage-shares?signinRoute=Manage" class="govuk-link  govuk-!-font-weight-bold">Data request Dashboard</a>
+      </li>
+    </ul>
     {% else %}
-    <form class="form" action="secure/information" method="post">
+    <ul class="govuk-list">
+      <li>
+        <p class="govuk-body"><a href="/WIP/secure/information?signinRoute=Manage" class="govuk-link  govuk-!-font-weight-bold">Data request Dashboard</a></p>
+      </li>
+    </ul>
+   
     {% endif %}
     
-      {% from "govuk/components/input/macro.njk" import govukInput %}
-      {{ govukInput({
-        type: "hidden",
-        name: "signinRoute",
-        value: "Find"
-      }) }}
-      <button class="govuk-button" data-module="govuk-button">Find data assets</button>
-    </form>
   </div>
-  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-    <h2 class="govuk-heading-l">Manage data shares</h2>
-    <p class="govuk-body">Set up and manage your data shares so you can share your data assets with other government organisations.</p>
+  <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+    <h2 class="govuk-heading-m">Data descriptions</h2>
+    <p class="govuk-body">Add a metadata description of your data assets.</p>
+
     {% if data['loggedin'] == "true" %}
-    <form class="form" action="/WIP/manage-shares/" method="post">
+    <ul class="govuk-list">
+      <li>
+        <a href="/WIP//publish/publish-dashboard?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Descriptions dashboard</a>
+      </li>
+      <li>
+        <a href="/WIP//publish/method?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Add data description</a>
+      </li>
+    </ul>
     {% else %}
-    <form class="form" action="/WIP/secure/information" method="post">
+    <ul class="govuk-list">
+      <li>
+        <a href="/WIP/secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Descriptions dashboard</a>
+      </li>
+      <li>
+        <a href="/WIP/secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Add data description</a>
+      </li>
+    </ul>
     {% endif %}
-      {% from "govuk/components/input/macro.njk" import govukInput %}
-      {{ govukInput({
-        type: "hidden",
-        name: "signinRoute",
-        value: "Manage"
-      }) }}
-      <button class="govuk-button" data-module="govuk-button">Manage data shares</button>
-    </form>
-  </div>
-  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
-    <h2 class="govuk-heading-l">Publish data descriptions</h2>
-    <p class="govuk-body">Publish a description of your data assets so they can be found by other government organisations.</p>
-    {% if data['loggedin'] == "true" %}
-    <form class="form" action="/WIP/publish/publish-dashboard" method="post">
-    {% else %}
-    <form class="form" action="/WIP/secure/information" method="post">
-    {% endif %}
-      {% from "govuk/components/input/macro.njk" import govukInput %}
-      {{ govukInput({
-        type: "hidden",
-        name: "signinRoute",
-        value: "Publish"
-      }) }}
-      <button class="govuk-button" data-module="govuk-button">Publish data descriptions</button>
-    </form>
   </div>
 
   <div class="govuk-grid-column-full">
-    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l govuk-!-margin-top-0">
   </div>
 
-  <div class="govuk-grid-column-one-half-from-desktop">
+  <div class="govuk-grid-column-three-quarters">
     <h2 id="community" class="govuk-heading-m">Learn</h2>
     <p class="govuk-body">
-      <a class="govuk-link" href="/WIP/learn/">Find information to help you</a> with the data marketplace.
+      <a class="govuk-link" href="/WIP//learn/">Find information to help you</a> with the data marketplace.
       <br>
       For example: a glossary, or the UK Cross-Government Metadata Exchange model.
     </p>
   </div>
-
-  <div class="govuk-grid-column-one-half-from-desktop">
-    <h2 id="support" class="govuk-heading-m">Get help and support</h2>
-    <p class="govuk-body">
-    <p><a class="govuk-link" href="{{data['supportForm']}}">Tell us what you need help with</a>.</p>
-    <p>If you have any questions about the data asset description (metadata), you should contact the data asset supplier directly.</p>
-  </div>
-
 </div>
       
 {% endblock %}
 
 {% block footer %}
-{{ govukFooter({
-  meta: {
-    items: [
-      {
-        href: data['supportForm'],
-        text: "Get help and support"
-      },
-      {
-        href: "/manage-prototype/clear-data",
-        text: "Clear data"
-      }
-    ]
-  }
-}) }}
+{% include "includes/footer.html" %}
+
 {% endblock %}
 
 {% block scripts %}
