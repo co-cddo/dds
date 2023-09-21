@@ -98,9 +98,9 @@
     <h2 class="govuk-heading-l">Manage data shares</h2>
     <p class="govuk-body">Set up and manage your data shares so you can share your data assets with other government organisations.</p>
     {% if data['loggedin'] == "true" %}
-    <form class="form" action="/manage-shares/" method="post">
+    <form class="form" action="/WIP/manage-shares/" method="post">
     {% else %}
-    <form class="form" action="secure/information" method="post">
+    <form class="form" action="/WIP/secure/information" method="post">
     {% endif %}
       {% from "govuk/components/input/macro.njk" import govukInput %}
       {{ govukInput({
@@ -115,9 +115,9 @@
     <h2 class="govuk-heading-l">Publish data descriptions</h2>
     <p class="govuk-body">Publish a description of your data assets so they can be found by other government organisations.</p>
     {% if data['loggedin'] == "true" %}
-    <form class="form" action="/publish/publish-dashboard" method="post">
+    <form class="form" action="/WIP/publish/publish-dashboard" method="post">
     {% else %}
-    <form class="form" action="secure/information" method="post">
+    <form class="form" action="/WIP/secure/information" method="post">
     {% endif %}
       {% from "govuk/components/input/macro.njk" import govukInput %}
       {{ govukInput({
@@ -136,17 +136,17 @@
   <div class="govuk-grid-column-one-half-from-desktop">
     <h2 id="community" class="govuk-heading-m">Learn</h2>
     <p class="govuk-body">
-      <a class="govuk-link" href="/learn/">Find information to help you</a> with the data marketplace.
+      <a class="govuk-link" href="/WIP/learn/">Find information to help you</a> with the data marketplace.
       <br>
       For example: a glossary, or the UK Cross-Government Metadata Exchange model.
     </p>
   </div>
 
   <div class="govuk-grid-column-one-half-from-desktop">
-    <h2 id="support" class="govuk-heading-m">Contact Data Marketplace Team</h2>
+    <h2 id="support" class="govuk-heading-m">Get help and support</h2>
     <p class="govuk-body">
-      <a class="govuk-link" href="#1">Contact the team</a> if you have a question, suggestion or idea. We’d love to hear from you.
-    </p>
+    <p><a class="govuk-link" href="{{data['supportForm']}}">Tell us what you need help with</a>.</p>
+    <p>If you have any questions about the data asset description (metadata), you should contact the data asset supplier directly.</p>
   </div>
 
 </div>
