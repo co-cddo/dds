@@ -880,4 +880,25 @@ dl.publish-metrics {
     display: none;
 }
 
+// Spoof links from buttons where we need to post a form for routing - would use a link in a dev environment with server side routing
+
+button.govuk-link.app-spoof-link {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+    border: 0;
+    background: transparent;
+    color: #1d70b8;
+    padding: 0;
+}
+
+button.govuk-link.app-spoof-link:hover {
+    color: #003078;
+}
+
+button.govuk-link.app-spoof-link:focus {
+    color: #0b0c0c;
+    background-color: #ffdd00;
+}
+
 
