@@ -65,38 +65,8 @@
     {% elseif resource.type == "dataservice" %}
     <h2 class="govuk-heading-l">Request this data service</h2>
     {% endif %}
-    
-
-    <!-- <div class="govuk-warning-text govuk-!-margin-bottom-0">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        Important
-      </strong>
-    </div> -->
-    
+  
     <p class="govuk-body">This data contains sensitive information (such as personal details) and requires a data share agreement with {{ resource.issuing_body_readable }}.</p>
-    <p class="govuk-body">You need to answer some questions to make sure your request meets GDPR and data sharing standards. You can see the <a href="/WIP/learn/articles/data-sharing-questions">list of questions <span class="govuk-visually-hidden">Used to evaluate a share request</span></a> before you start.</p>
-    <p class="govuk-body">Your answers will be reviewed by {{ resource.issuing_body_readable }}</p>
-
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Before you start
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        To answer these questions you may require support from people with skills in:
-
-        <ul>
-          <li>Technology</li>
-          <li>Data security</li>
-          <li>Data protection</li>
-          <li>Legal</li>
-          <li>Data governance</li>
-        </ul>
-      </div>
-    </details>
 
     <form class="form" action="/WIP/request/" method="post">
       {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -109,9 +79,6 @@
       <button class="govuk-button" data-module="govuk-button">Start a data share request</button>
     </form>
 
-    <p class="govuk-body">
-      <a href="#" class="govuk-link">Get more help</a>
-    </p>
   </div>
 
     {% if resource.type == "dataset" %}
@@ -170,19 +137,21 @@
     </table>
     {% endif %}
 
+      <h2 class="govuk-heading-l">Licence</h2>
+      <h3 class="govuk-heading-m">Open Government Licence</h3>
+      <p class="govuk-body">You are encouraged to use and re-use the Information that is available under this licence freely and flexibly, with only a few conditions. You are free to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Copy, publish, distribute and transmit the Information</li>
+        <li>Adapt the Information;</li>
+        <li>Exploit the Information commercially and non-commercially for example, by combining it with other Information, or by including it in your own product or application.</li>
+      </ul>
+      <p class="govuk-body"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/" class="govuk-link">Read more about this licence</a></p>
+
     <h2 class="govuk-heading-l">Further information</h2>
     
     <table class="govuk-table govuk-!-margin-bottom-8">
       
       <tbody class="govuk-table__body">
-              {% if resource.license %}
-              <h3 class="govuk-heading-s govuk-!-margin-bottom-1">License</h3>
-              <p>{{ resource.license | govukMarkdown | safe }}</p>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header  govuk-!-width-one-half">License</th>
-                <td class="govuk-table__cell  govuk-!-width-one-half">{{ resource.license | govukMarkdown | safe }}</td>
-              </tr>
-            {% endif %}
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header  govuk-!-width-one-half">Access rights</th>
               <td class="govuk-table__cell  govuk-!-width-one-half">Internal</td>
