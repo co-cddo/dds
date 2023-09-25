@@ -91,21 +91,25 @@
             <h2 class="govuk-heading-m  govuk-!-margin-bottom-3" style="color: inherit">Find data assets from government organisations</h2>
             
 
-            {% if data['loggedin'] == "true" %}
-            <a href="/WIP/find/find?signinRoute=Find" role="button" draggable="false" class="govuk-button govuk-button--inverse govuk-!-margin-bottom-0 govuk-button--start" data-module="govuk-button">
-              Find data assets
-              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-              </svg>
-            </a>
-            {% else %}
-            <a href="/WIP/secure/information?signinRoute=Find" role="button" draggable="false" class="govuk-button govuk-button--inverse govuk-!-margin-bottom-4 govuk-button--start" data-module="govuk-button">
-              Find data assets
-              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-              </svg>
-            </a>
-            {% endif %}
+            <form action="/WIP/find/find" method="GET" id="searchForm">
+              <div class="gem-c-search gem-c-search--on-white govuk-!-width-two-thirds govuk-!-margin-bottom-4">
+                  <label for="search" class="gem-c-search__label govuk-label">Search the Data Catalogue</label>
+                  <div class="gem-c-search__item-wrapper">
+                      <input  class="gem-c-search__item gem-c-search__input govuk-input js-class-toggle" id="search" name="q" title="Search" type="search" value="{{ query }}">
+                          <div class="gem-c-search__item gem-c-search__submit-wrapper">
+                              <button class="gem-c-search__submit" type="submit" enterkeyhint="search">
+                                  Search
+                          <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                          <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
+                          <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"></line>
+                          </svg>
+                          </button> 
+                      </div>
+                  </div>
+              </div>
+          
+          </form>
+
         </div>
       
       </div>

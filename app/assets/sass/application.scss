@@ -889,6 +889,29 @@ dl.publish-metrics {
     display: none;
 }
 
+// Fix search button wrapper width 
+.gem-c-search__item.gem-c-search__submit-wrapper {
+    width: 40px;
+}
+
+.gem-c-search__submit:focus {
+    z-index: 2;
+    outline: 3px solid #fd0;
+    box-shadow: inset 0 0 0 4px #0b0c0c;
+}
+
+.x-govuk-masthead .gem-c-search__input {
+    border: 0;
+}
+
+.x-govuk-masthead button.gem-c-search__submit {
+    background: black;
+}
+
+.x-govuk-masthead button.gem-c-search__submit:hover {
+    background: #171919;
+}
+
 // Spoof links from buttons where we need to post a form for routing - would use a link in a dev environment with server side routing
 
 button.govuk-link.app-spoof-link {
