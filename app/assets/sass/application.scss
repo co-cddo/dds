@@ -37,6 +37,15 @@
     line-height: 30px;
 }
 
+.sidebar {
+    padding:18px 10px 10px 10px;
+    border:1px solid grey;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 700px;
+    box-shadow:3px 3px grey;
+}  
+
 @import "review-request/mock-email-notification";
 @import "learn/contents-nav-section";
 @import "learn/wip";

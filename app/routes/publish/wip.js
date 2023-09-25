@@ -1,6 +1,26 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
+
+// Access to publish
+router.get('/bMVP_wip--dashboard-add-permission', (req, res) => {
+  const permissions = req.session.data['WIP_settings_permissions'];
+  if (permissions && permissions.includes("add")) {
+    res.redirect('/WIP/publish/publish-dashboard.html');
+  } else {
+    res.redirect('/WIP/publish/no-add-permission.html');
+  }
+});
+
+router.get('/bMVP_wip--method-add-permission', (req, res) => {
+  const permissions = req.session.data['WIP_settings_permissions'];
+  if (permissions && permissions.includes("add")) {
+    res.redirect('/WIP/publish/method.html');
+  } else {
+    res.redirect('/WIP/publish/no-add-permission.html');
+  }
+});
+
 // Publisher journey
 router.post('/wip-method-answer', function(request, response) {
 

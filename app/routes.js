@@ -51,7 +51,7 @@ router.post('/wip--secure-signin-route', function(request, response) {
     } else if (signinRoute == "Manage") {
         response.redirect("/WIP/manage-shares/")
     } else if (signinRoute == "Publish") {
-        response.redirect("/WIP/publish/publish-dashboard")
+        response.redirect("/bMVP_wip--dashboard-add-permission")
     } else {
         response.redirect("/WIP/start")
     }

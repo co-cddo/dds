@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Setting (WIP prototype)
+    </h1>
+
+    <p>As default an account has all permissions enabled. You can change this using the options below.</p>
+    <p>Use the <a href="/manage-prototype/clear-data">clear data link</a> to revert back to the default.</p>
+    <br>
+
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    <form action="/WIP/" method="post" novalidate>
+
+    {{ govukCheckboxes({
+      name: "WIP_settings_permissions",
+      values: data['WIP_settings_permissions'],
+      fieldset: {
+        legend: {
+          text: "Permissions",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "add",
+          text: "Add data descriptions"
+        },
+        {
+          value: "review",
+          text: "View received data share requests"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Save and return"
+    }) }}
+    </form>
+    
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: data['supportForm'],
+        text: "Get help and support"
+      },
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      }
+    ]
+  }
+}) }}
+{% endblock %}
