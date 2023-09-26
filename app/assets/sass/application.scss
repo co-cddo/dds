@@ -920,6 +920,18 @@ dl.publish-metrics {
     background: #171919;
 }
 
+.x-govuk-masthead p, .x-govuk-masthead p a.govuk-link {
+    color: white;
+}
+
+.x-govuk-masthead p a:visited, .x-govuk-masthead p a.govuk-link:visited {
+    color: white;
+}
+
+.x-govuk-masthead p a:focus, .x-govuk-masthead p a.govuk-link:focus {
+    color: black;
+}
+
 // Spoof links from buttons where we need to post a form for routing - would use a link in a dev environment with server side routing
 
 button.govuk-link.app-spoof-link {

@@ -21,21 +21,12 @@
               Home
             </a>
           </li>
-          {% if data['loggedin'] == "true" %}
+
           <li class="app-navigation__list-item ">
             <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/find/find?signinRoute=Find">
               Find data assets
             </a>
           </li>
-
-          {% else %}
-          <li class="app-navigation__list-item ">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/secure/information?signinRoute=Find"">
-              Find data assets
-            </a>
-          </li>
-          {% endif %}
-
 
           <li class="app-navigation__list-item ">
             <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/learn/">
@@ -109,6 +100,7 @@
               </div>
           
           </form>
+          <p class="govuk-text"><a href="/find/find">View all data</a> or browse by <a href="/WIP/find/organisations" class="govuk-link">organisation</a> or <a href="/WIP/find/topics" class="govuk-link">topic</a></p>
 
         </div>
       
