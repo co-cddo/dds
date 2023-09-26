@@ -115,7 +115,7 @@
     <h2 class="govuk-heading-l">Publish data descriptions</h2>
     <p class="govuk-body">Publish a description of your data assets so they can be found by other government organisations.</p>
     {% if data['loggedin'] == "true" %}
-    <form class="form" action="/publish/publish-dashboard" method="post">
+    <form class="form" action="/bMVP--dashboard-add-permission" method="post">
     {% else %}
     <form class="form" action="secure/information" method="post">
     {% endif %}
