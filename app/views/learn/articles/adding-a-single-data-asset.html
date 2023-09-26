@@ -13,7 +13,7 @@
 
 {% block header %}
   {{ super() }}
-  {% include "includes/nav_sign-out.html" %}
+  {% include "includes/mvp-nav_conditional.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -141,6 +141,11 @@
     <p>If you have any questions about the data asset description (metadata), you should contact the data asset supplier directly.</p>
   </div>
 </div>
+
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
 
 {% endblock %}
 

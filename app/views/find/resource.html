@@ -7,7 +7,7 @@
 
 {% block header %}
   {{ super() }}
-  {% include "includes/mvp-nav_sign-out.html" %}
+  {% include "includes/mvp-nav_conditional.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -253,6 +253,11 @@
 </div>
   </div>
 </div>
+
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
 
 {% endblock %}
 

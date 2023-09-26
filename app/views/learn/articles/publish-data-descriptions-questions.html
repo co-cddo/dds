@@ -13,7 +13,7 @@
 
 {% block header %}
   {{ super() }}
-  {% include "includes/mvp-nav_sign-out.html" %}
+  {% include "includes/mvp-nav_conditional.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -173,18 +173,6 @@
 {% endblock %}
 
 {% block footer %}
-{{ govukFooter({
-  meta: {
-    items: [
-      {
-        href: data['supportForm'],
-        text: "Get help and support"
-      },
-      {
-        href: "/manage-prototype/clear-data",
-        text: "Clear data"
-      }
-    ]
-  }
-}) }}
+{% include "includes/footer.html" %}
+
 {% endblock %}

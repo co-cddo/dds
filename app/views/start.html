@@ -137,19 +137,19 @@
     {% if data['loggedin'] == "true" %}
     <ul class="govuk-list">
       <li>
-        <a href="/bMVP_wip--dashboard-add-permission?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Descriptions dashboard</a>
+        <a href="/publish/publish-dashboard?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Descriptions dashboard</a>
       </li>
       <li>
-        <a href="/bMVP_wip--method-add-permission?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Add data description</a>
+        <a href="/publish/method?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Add data description</a>
       </li>
     </ul>
     {% else %}
     <ul class="govuk-list">
       <li>
-        <a href="/secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Descriptions dashboard</a>
+        <a href="secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Descriptions dashboard</a>
       </li>
       <li>
-        <a href="/secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Add data description</a>
+        <a href="secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Add data description</a>
       </li>
     </ul>
     {% endif %}
