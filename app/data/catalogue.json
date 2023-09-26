@@ -1,5 +1,55 @@
 [
   {
+    "name": "Bathing Water Monitoring Locations",
+    "accessRights": "Open",
+    "dateUpdated": "2023-09-25",
+    "url": "",
+    "description": "The Environment Agency collects and analyses water samples each year from May to September, to ensure that designated bathing water sites on the coast and inland are safe and clean for swimming and other activities. This shape file shows the approximate locations of our monitoring sites and the compliance or classification for each bathing water in England from 1988 to present. It is updated twice a year, to revise the inventory, and the assessment results. For coastal waters the specific locations of monitoring vary along a transect with the changing of the tides. The results of these samples are assessed in annual classifications and are available to view and download through the bathing water data explorer. This data is covered by AfA470. Attribution Statement: © Environment Agency copyright and/or database right 2015. All rights reserved.",
+    "documentation": "",
+    "license": "Open Government License",
+    "maintainer": "BGS Enquiries - enquiries@bgs.ac.uk",
+    "areaServed": "England, Scotland and Wales",
+    "startDate": "",
+    "endDate": "",
+    "provider": "department-for-environment-food-rural-affairs",
+    "topic": "mapping,environment,defence",
+    "dateAdded": "2023-09-24",
+    "Good title/description?": "",
+    "Keep?": "",
+    "better description": "The Environment Agency collects and analyses water samples each year from May to September, to ensure that designated bathing water sites on the coast and inland are safe and clean for swimming and other activities. This shape file shows the approximate locations of our monitoring sites and the compliance or classification for each bathing water in England from 1988 to present. It is updated twice a year, to revise the inventory, and the assessment results. For coastal waters the specific locations of monitoring vary along a transect with the changing of the tides. The results of these samples are assessed in annual classifications and are available to view and download through the bathing water data explorer. This data is covered by AfA470. Attribution Statement: © Environment Agency copyright and/or database right 2015. All rights reserved.",
+    "type": "dataset",
+    "distributions": [
+      "GML",
+      "SHP",
+      "KML"
+    ]
+
+  },
+  {
+    "name": "Address Lookup",
+    "accessRights": "Internal",
+    "dateUpdated": "2023-09-20",
+    "url": "",
+    "description": "The location-service provides endpoints to perform a range of address based queries for UK locations. The reference data used is provided by Ordnance Survey and covers Great Britain Northern Ireland and the Channel Islands.",
+    "documentation": "",
+    "license": "ISC",
+    "maintainer": "BGS Enquiries - enquiries@bgs.ac.uk",
+    "areaServed": "England, Scotland and Wales",
+    "startDate": "",
+    "endDate": "",
+    "provider": "department-for-work-pensions",
+    "topic": "mapping,environment,defence",
+    "dateAdded": "2023-09-18",
+    "Good title/description?": "",
+    "Keep?": "",
+    "better description": "The location-service provides endpoints to perform a range of address based queries for UK locations. The reference data used is provided by Ordnance Survey and covers Great Britain Northern Ireland and the Channel Islands.",
+    "type": "dataservice",
+    "distributions": [
+      "REST"
+    ]
+
+  },
+  {
     "name": "BGS Sensor Data Service",
     "dateUpdated": "2022-02-01",
     "url": "https://sensors.bgs.ac.uk/FROST-Server/v1.1",
@@ -20,7 +70,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "AGS File Utilities Tool and API",
@@ -43,7 +94,8 @@
     "distributions": [
       "REST",
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "BGS OGCAPI Server",
@@ -65,7 +117,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Services",
@@ -87,7 +140,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Cefas Data Portal APIs",
@@ -109,7 +163,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Companies House",
@@ -132,7 +187,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Companies House Streaming",
@@ -155,7 +211,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Teacher Training API",
@@ -177,7 +234,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Get into Teaching API",
@@ -199,7 +257,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "DfE EAPIM Platform API",
@@ -222,7 +281,8 @@
     "distributions": [
       "REST",
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "DfE Sign-in applications API",
@@ -244,7 +304,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "UK-AIR Sensor Observation Service",
@@ -267,7 +328,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "UK Trade Quotas",
@@ -289,7 +351,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "UK Global Tariff (measures as defined)",
@@ -311,7 +374,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "UK Global Tariff (measures on declarable commodities)",
@@ -333,7 +397,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Check barriers to trading and investing abroad",
@@ -355,7 +420,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "UK Global Tariff (commodities)",
@@ -377,7 +443,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Energy Performance Certificates - Domestic Buildings Search API",
@@ -399,7 +466,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "OpenDataCommunities (Official statistics from DLUHC) SPARQL endpoint",
@@ -422,7 +490,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Energy Performance Certificates - Non-domestic Recommendations API",
@@ -444,7 +513,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Energy Performance Certificates - Non-domestic Certificates API",
@@ -466,7 +536,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Energy Performance Certificates - Display (public buildings) Certificates API",
@@ -488,7 +559,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Energy Performance Certificates - Domestic Certificate Recommendations API",
@@ -510,7 +582,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Energy Performance Certificates - Non-domestic Buildings Search API",
@@ -532,7 +605,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Energy Performance Certificates - Display (public buildings) certificates search API",
@@ -554,7 +628,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "OpenDataCommunities (Official statistics from DLUHC.) LinkedData resource API",
@@ -576,7 +651,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Energy Performance Certificates - Domestic Certificates API",
@@ -598,7 +674,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Energy Performance Certificates - Display (public buildings) Recommendations API",
@@ -620,7 +697,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "National Public Transport Access Nodes (NaPTAN) and National Public Transport Gazetteer (NPTG) API",
@@ -643,7 +721,8 @@
     "distributions": [
       "REST",
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Get Citizen Income Information API",
@@ -665,7 +744,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Include Exclude Earnings",
@@ -687,7 +767,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Maintain Interest Details",
@@ -709,7 +790,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Contact Details Verification",
@@ -731,7 +813,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Citizen Trace",
@@ -753,7 +836,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "FINDr Matching Service",
@@ -775,7 +859,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOVUK Notify",
@@ -797,7 +882,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Calculate Earnings",
@@ -819,7 +905,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "View Earnings",
@@ -842,7 +929,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "DWP GUID Service",
@@ -865,7 +953,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Citizen API",
@@ -887,7 +976,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Block Earnings",
@@ -910,7 +1000,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Calculate Earnings by Payday",
@@ -933,7 +1024,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Employment Income API",
@@ -955,7 +1047,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "PIP Service Award Subsitute",
@@ -977,7 +1070,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Citizen Relationships",
@@ -999,7 +1093,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Self Reported Earnings",
@@ -1021,7 +1116,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOVUK Pay",
@@ -1043,7 +1139,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Life Event Verification",
@@ -1066,7 +1163,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Reach SMS",
@@ -1089,7 +1187,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Pension Income API",
@@ -1111,7 +1210,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Residency Services",
@@ -1134,7 +1234,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "NHS Charge Exemption",
@@ -1157,7 +1258,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Maternity Allowance Awards API",
@@ -1179,7 +1281,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Habitual Residency",
@@ -1201,7 +1304,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Manage Interests",
@@ -1223,7 +1327,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GUID Translation Service",
@@ -1245,7 +1350,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Manage Earnings Threshold",
@@ -1267,7 +1373,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Care Homes Information Service",
@@ -1290,7 +1397,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Get Interest Details",
@@ -1312,7 +1420,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "PIPCS Informational API",
@@ -1334,7 +1443,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "DVLA Authentication",
@@ -1356,7 +1466,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "DVLA Vehicle Enquiry Service",
@@ -1378,7 +1489,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Bathing Water",
@@ -1400,7 +1512,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Asset Management",
@@ -1422,7 +1535,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Public Registers for Environmental Information",
@@ -1444,7 +1558,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Ecology and Fish Data",
@@ -1466,7 +1581,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Rainfall",
@@ -1488,7 +1604,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Water Quality",
@@ -1511,7 +1628,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Flood-monitoring",
@@ -1533,7 +1651,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Hydrology",
@@ -1556,7 +1675,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Tide Gauge",
@@ -1578,7 +1698,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Catchment Data",
@@ -1600,7 +1721,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOV.UK Search",
@@ -1623,7 +1745,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOV.UK Organisations",
@@ -1645,7 +1768,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOV.UK Notify",
@@ -1668,7 +1792,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOV.UK Governments",
@@ -1690,7 +1815,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOV.UK Pay",
@@ -1712,7 +1838,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOV.UK World locations",
@@ -1734,7 +1861,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Document Checking Service pilot",
@@ -1757,7 +1885,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOV.UK Content",
@@ -1780,7 +1909,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Data.gov.uk",
@@ -1802,7 +1932,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOV.UK PaaS v3",
@@ -1824,7 +1955,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOV.UK PaaS v2",
@@ -1846,7 +1978,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Bank Holidays",
@@ -1868,7 +2001,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "CIS Deductions (MTD)",
@@ -1890,7 +2024,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Interest Restrictition Return (IRR)",
@@ -1913,7 +2048,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Business Source Adjustable Summary (MTD)",
@@ -1935,7 +2071,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Individual Benefits",
@@ -1958,7 +2095,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Goods Vehicle Movements",
@@ -1981,7 +2119,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Bulk Data File List",
@@ -2003,7 +2142,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Business Rates",
@@ -2025,7 +2165,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Safety and Security Import Notifications",
@@ -2048,7 +2189,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Self Assessment Accounts (MTD)",
@@ -2070,7 +2212,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Marriage Allowance",
@@ -2092,7 +2235,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Agent Authorisation",
@@ -2114,7 +2258,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Check an EORI Number",
@@ -2137,7 +2282,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Individual Calculations (MTD)",
@@ -2159,7 +2305,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Lifetime ISA",
@@ -2182,7 +2329,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Push Pull Notifications",
@@ -2204,7 +2352,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "VAT (MTD)",
@@ -2226,7 +2375,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Safety and Security Import Declarations",
@@ -2248,7 +2398,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Relief at Source",
@@ -2270,7 +2421,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Individual Losses (MTD)",
@@ -2293,7 +2445,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Individual Income",
@@ -2315,7 +2468,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOV.UK Trade Tariff API",
@@ -2337,7 +2491,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Individual Employment",
@@ -2359,7 +2514,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Individual Tax",
@@ -2381,7 +2537,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Safety and Security Import Outcomes",
@@ -2403,7 +2560,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Obligations (MTD)",
@@ -2425,7 +2583,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Self Assessment (MTD)",
@@ -2447,7 +2606,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Customs Inventory Linking Exports",
@@ -2469,7 +2629,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Business Details (MTD)",
@@ -2492,7 +2653,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "National Insurance",
@@ -2514,7 +2676,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Common Transit Convention Traders",
@@ -2536,7 +2699,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Business Income Source Summary (MTD)",
@@ -2558,7 +2722,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Life Event Verification",
@@ -2581,7 +2746,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Debt Respite Scheme (Breathing Space)",
@@ -2604,7 +2770,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Land Charges Full Search",
@@ -2626,7 +2793,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "e-Document Registration Service",
@@ -2648,7 +2816,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Application Enquiry",
@@ -2671,7 +2840,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Discharge Enquiry",
@@ -2693,7 +2863,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Inform Plus",
@@ -2716,7 +2887,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Hackney Addresses",
@@ -2738,7 +2910,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Keyworker API",
@@ -2760,7 +2933,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GOV.UK Courts and Tribunals Publishing API",
@@ -2782,7 +2956,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Custody API",
@@ -2804,7 +2979,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Money to Prisoners API",
@@ -2827,7 +3003,8 @@
     "distributions": [
       "REST",
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Visit someone in prison",
@@ -2850,7 +3027,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Statistics",
@@ -2872,7 +3050,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Open Geography portal",
@@ -2894,7 +3073,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "OS Features API",
@@ -2917,7 +3097,8 @@
     "distributions": [
       "REST",
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "OS Maps API",
@@ -2940,7 +3121,8 @@
     "distributions": [
       "REST",
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "OS Vector Tile API",
@@ -2962,7 +3144,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "OS Places API",
@@ -2984,7 +3167,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "OS Names API",
@@ -3006,7 +3190,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "OS Download API",
@@ -3028,7 +3213,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "OS OAuth 2 API",
@@ -3050,7 +3236,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "OS Linked Identifiers API",
@@ -3072,7 +3259,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Statistics.gov.scot",
@@ -3094,7 +3282,8 @@
     "type": "dataset",
     "distributions": [
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GeoNetwork REST API",
@@ -3116,7 +3305,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Recruitment API",
@@ -3138,7 +3328,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Display vacancy advert API",
@@ -3160,7 +3351,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Discovery",
@@ -3182,7 +3374,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Transport for London Unified API",
@@ -3204,7 +3397,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Tidal API - Foundation",
@@ -3226,7 +3420,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "UK Tidal API - Discovery",
@@ -3248,7 +3443,8 @@
     "type": "dataservice",
     "distributions": [
       "REST"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "AVCS Online Discovery API",
@@ -3271,7 +3467,8 @@
     "distributions": [
       "REST",
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Tidal API - Premium",
@@ -3293,7 +3490,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "ADMIRALTY Marine Environment Service",
@@ -3316,7 +3514,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "ADMIRALTY Maritime Limits Service",
@@ -3339,7 +3538,8 @@
     "distributions": [
       "CSV",
       "XLS"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Police API",
@@ -3361,7 +3561,8 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "GeoReport",
@@ -3383,7 +3584,8 @@
     "type": "dataset",
     "distributions": [
       "CSV"
-    ]
+    ],
+    "accessRights": "Open"
   },
   {
     "name": "Transport for West Midlands API",
@@ -3405,6 +3607,7 @@
     "type": "dataservice",
     "distributions": [
       "SOAP"
-    ]
+    ],
+    "accessRights": "Open"
   }
 ]
