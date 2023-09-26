@@ -69,7 +69,7 @@ router.post('/secure-signin-route', function(request, response) {
     } else if (signinRoute == "Manage") {
         response.redirect("/manage-shares/")
     } else if (signinRoute == "Publish") {
-        response.redirect("/publish/publish-dashboard")
+        response.redirect("/bMVP--dashboard-add-permission")
     } else {
         response.redirect("/start")
     }

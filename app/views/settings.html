@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Settings (UR prototype)
+    </h1>
+
+    <p>As default an account has all permissions enabled. You can change this using the options below.</p>
+    <p>Use the <a href="/manage-prototype/clear-data">clear data link</a> to revert to the default.</p>
+    <br>
+
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    <form action="/index" method="post" novalidate>
+
+    {{ govukCheckboxes({
+      name: "settings_permissions",
+      values: data['settings_permissions'],
+      formGroup: {
+        classes: "hack_hide-last-checkbox"
+      },
+      fieldset: {
+        legend: {
+          text: "Permissions",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "add",
+          text: "Add data descriptions"
+        },
+        {
+          value: "review",
+          text: "View received data share requests"
+        },
+        {
+          value: "hack",
+          text: "This options is hidden so the array never defaults back to what is set in the session-data-defaults.js file",
+          classes: "govuk-visually-hidden"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Save and return"
+    }) }}
+    </form>
+    
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: data['supportForm'],
+        text: "Get help and support"
+      },
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      }
+    ]
+  }
+}) }}
+
+{% endblock %}

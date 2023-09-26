@@ -13,7 +13,7 @@
 
 {% block header %}
   {{ super() }}
-  {% include "includes/WIP_mvp-nav_sign-out.html" %}
+  {% include "includes/mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,7 +25,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Adding a single data description asset</h1>
+      <h1 class="govuk-heading-xl">Account permissions for the {{ serviceName }}</h1>
     
       <!-- guide elements -->
       <!--
@@ -55,50 +55,26 @@
     <h2 class="govuk-heading-l">Overview</h2>
     -->
 
-    <p>You can add a data description to the Data Marketplace using an online form. You must submit one form per dataset or data service.</p>
+    <p>To search for data in the {{ serviceName }}, and submit a data share request, you only need a gov.uk email address.</p>
 
-    <h2 class="govuk-heading-m">Step 1: Gather information about your data description</h2>
+    <p>If you want to add a metadata description of your data, or if you want to review a request from someone to see your data, you’ll need to request additional permissions.</p>
 
-    <p>Use the <a href="./publish-data-descriptions-questions">questions</a> as a guide to ensure that enough information can be provided at each stage of adding a data description.</p>
+    
+    <h2 class="govuk-heading-l">What permissions you need</h2>
+    <p>If you want to add a description of your data (also referred to as metadata) to the {{ serviceName }} so your data is available for colleagues in government organisations to find, you’ll need permission to add a data description.</p>
+    <p>If you want to review a request from colleagues in government organisations who want you to share your data with them, you’ll need permission to review a data share request.</p>
+    
+    <h2 class="govuk-heading-l">What permissions enable you to do</h2>
+    <p><b>Add a data description permission</b> will enable you to add a metadata description of your data to the Data Marketplace so it can be found by other colleagues across government.</p>
+    <p><b>Review a data share request permission</b> will enable you to review a data share request from colleagues who have found a description of your data and would like you to share it with them.</p>
 
-    <p>By answering the questions, your published data description will be helpful to users trying to find data. You should avoid using domain specific jargon and acronyms. Write your description in plain English.</p>
-
-    <p>The questions also ensure that your description meets the <a href="./dcat">cross-government data sharing metadata guidance</a>.</p>
-
-    <h2 class="govuk-heading-m">Step 2: Enter your data description</h2>
-
-    <p>Sign into the Data Marketplace and navigate to the <a href="/bMVP_wip--dashboard-add-permission">Publish data descriptions</a> dashboard then click on the ‘Add new data description’ button.</p>
-
-    <img style="max-width:100%;height:auto;border:1px solid grey;" src="/public/images/learn/publish-dashboard.png" alt="Publish dashboard screenshot"/>
-    <br>
-    <br>
-    <br>
-
-    <p>You need to select ‘Add a data description manually’ which includes adding the description of a dataset (something that is distributed as a file download such as a CSV) or a data service (a web API that provides access to the data).</p>
-
-    <img style="max-width:100%;height:auto;border:1px solid grey;" src="/public/images/learn/add-description-options.png" alt="Select your data description screenshot"/>
-    <br>
-    <br>
-    <br>
-
-    <p>You will now be taken through a series of forms where you can provide the answers to each of the questions.</p>
-
-    <h2 class="govuk-heading-m">Step 3: Review your description</h2>
-
-    <p>Once you have completed entering the description of your data, you will be presented with a check your answers page where you will have the option to change any of your answers.</p>
-
-    <img style="max-width:100%;height:auto;border:1px solid grey;" src="/public/images/learn/check-answers-for-single-asset.png" alt="Check your answers for data asset screenshot"/>
-    <br>
-    <br>
-    <br>
-
-    <p>Once you are satisfied your answers are correct, click on Submit, which will confirm your description of the data has been uploaded.</p>
-
-    <h2 class="govuk-heading-m">Step 4: View published data descriptions</h2>
-
-    <p>Your data description will now have been added to the Data Marketplace. If you click on View metadata record, you will be taken to the page that provides the details of your data. To return to the home page, click on ‘Home’.</p>
-
-    <img style="max-width:100%;height:auto;border:1px solid grey;" src="/public/images/learn/uploaded-single-asset.png" alt="Uploaded data asset screenshot"/>
+    <h2 class="govuk-heading-l">How to request permission</h2>
+    <p>In the <a href="{{ data['supportForm'] }}">{{ serviceName }} help and support form</a> select either:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Permission to add data descriptions</li>
+      <li>Permission to review data share requests</li>
+    </ul>
+    <p>The form will be sent to your organisation, or team, administrator for approval. They’ll send you an email to confirm whether or not you have been given permission.</p>
   </div>
 
   <!-- guide elements -->
@@ -128,7 +104,7 @@
   <div class="govuk-grid-column-one-half-from-desktop">
     <h2 id="community" class="govuk-heading-m">Learn</h2>
     <p class="govuk-body">
-      <a class="govuk-link" href="/WIP/learn/">Find information to help you</a> with the data marketplace.
+      <a class="govuk-link" href="/learn/">Find information to help you</a> with the data marketplace.
       <br>
       For example: a glossary, or the UK Cross-Government Metadata Exchange model.
     </p>
