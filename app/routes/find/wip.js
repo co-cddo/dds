@@ -293,6 +293,7 @@ mapLiveSchemaToSpec(data, issuing_body, topic, type) {
             n.dateUpdated = e.data.dateUpdated;
             n.type = e.data.type;
             n.type = type;
+            n.accessRights = e.data.accessRights;
         }
         else {
             n.title = e.name;
@@ -309,6 +310,7 @@ mapLiveSchemaToSpec(data, issuing_body, topic, type) {
                 n.topic = helpers.splitTopics(e.topic);
             }
             n.type = e.type;
+            n.accessRights = e.accessRights;
             
         }
         n.url = e.url;
