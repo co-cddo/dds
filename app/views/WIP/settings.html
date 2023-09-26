@@ -24,6 +24,9 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
     {{ govukCheckboxes({
       name: "WIP_settings_permissions",
       values: data['WIP_settings_permissions'],
+      formGroup: {
+        classes: "hack_hide-last-checkbox"
+      },
       fieldset: {
         legend: {
           text: "Permissions",
@@ -39,6 +42,11 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         {
           value: "review",
           text: "View received data share requests"
+        },
+        {
+          value: "hack",
+          text: "This options is hidden so the array never defaults back to what is set in the session-data-defaults.js file",
+          classes: "govuk-visually-hidden"
         }
       ]
     }) }}
@@ -47,6 +55,10 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
       text: "Save and return"
     }) }}
     </form>
+
+    <p>
+{{ data['WIP_settings_permissions'] }}  
+</p>
     
 </div>
 
@@ -67,4 +79,5 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
     ]
   }
 }) }}
+
 {% endblock %}

@@ -41,10 +41,18 @@
     padding:18px 10px 10px 10px;
     border:1px solid grey;
     border-collapse: collapse;
-    width: 100%;
-    max-width: 700px;
     box-shadow:3px 3px grey;
 }  
+
+.hack_hide-last-checkbox {
+    .govuk-checkboxes {
+        .govuk-checkboxes__item {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+}
 
 @import "review-request/mock-email-notification";
 @import "learn/contents-nav-section";
