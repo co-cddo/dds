@@ -54,7 +54,7 @@
     }
 }
 
-@import "review-request/mock-email-notification";
+@import "global/mock-email-notification";
 @import "learn/contents-nav-section";
 @import "learn/wip";
 @import "learn/ur";
@@ -95,23 +95,23 @@
 // Review request
 // ----------------------------------------------
 
-.mock-email {
-    .mock-email--table {
-    }  
-  .mock-email--table__body {
-  }
-    .mock-email--table__row {
-    }
-  .mock-email--table__cell {
-        p {
-            font-family: sans-serif;
-            font-size:18px;
-        }
-        span.secondary {
-            color:#CCC;
-        }
-    }
-}
+// .mock-email {
+//     .mock-email--table {
+//     }  
+//   .mock-email--table__body {
+//   }
+//     .mock-email--table__row {
+//     }
+//   .mock-email--table__cell {
+//         p {
+//             font-family: sans-serif;
+//             font-size:18px;
+//         }
+//         span.secondary {
+//             color:#CCC;
+//         }
+//     }
+// }
 
 // ----------------------------------------------
 // Find

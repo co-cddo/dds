@@ -6,7 +6,7 @@
 
 {% block header %}
   {{ super() }}
-  {% include "includes/nav_sign-out.html" %}
+  {% include "includes/DEV_mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,7 +31,7 @@
       <form class="form" action="/DEV/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/frequency-answer" method="post">
+      <form class="form" action="/DEV/frequency-answer" method="post">
       {% endif %}
       
       {% from "govuk/components/select/macro.njk" import govukSelect %}

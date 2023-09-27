@@ -17,7 +17,7 @@
       <div class="govuk-width-container">
       <ul class="app-navigation__list app-width-container">
           <li class="app-navigation__list-item ">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="start">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/DEV/start">
               Home
             </a>
           </li>
@@ -25,18 +25,18 @@
       <ul class="app-navigation__list app-width-container" style="float: right;margin-right: -30px;">
         {% if data['loggedin'] == "true" %}
         <li class="app-navigation__list-item">
-          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="secure/account">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/DEV/secure/account">
             Account
           </a>
         </li>
         <li class="app-navigation__list-item">
-          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="start?loggedin=false">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/DEV/start?loggedin=false">
             Sign out
           </a>
         </li>
         {% else %}
         <li class="app-navigation__list-item">
-          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="secure/information?loggedin=true&signinRoute=home">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/DEV/secure/information?loggedin=true&signinRoute=home">
             Sign in
           </a>
         </li>
@@ -78,9 +78,9 @@
     <h2 class="govuk-heading-l govuk-!-font-weight-bold">Find data assets</h2>
     <p class="govuk-body">Find data assets from  government organisations. Personal and special category data is available.</p>
     {% if data['loggedin'] == "true" %}
-    <form class="form" action="find/find" method="post">
+    <form class="form" action="/DEV/find/find" method="post">
     {% else %}
-    <form class="form" action="secure/information" method="post">
+    <form class="form" action="/DEV/secure/information" method="post">
     {% endif %}
     
       {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -98,7 +98,7 @@
     {% if data['loggedin'] == "true" %}
     <form class="form" action="/DEV/manage-shares/" method="post">
     {% else %}
-    <form class="form" action="secure/information" method="post">
+    <form class="form" action="/DEV/secure/information" method="post">
     {% endif %}
       {% from "govuk/components/input/macro.njk" import govukInput %}
       {{ govukInput({
@@ -113,9 +113,9 @@
     <h2 class="govuk-heading-l">Publish data descriptions</h2>
     <p class="govuk-body">Publish a description of your data assets so they can be found by other government organisations.</p>
     {% if data['loggedin'] == "true" %}
-    <form class="form" action="/bMVP--dashboard-add-permission" method="post">
+    <form class="form" action="/bMVP_dev--dashboard-add-permission" method="post">
     {% else %}
-    <form class="form" action="secure/information" method="post">
+    <form class="form" action="/DEV/secure/information" method="post">
     {% endif %}
       {% from "govuk/components/input/macro.njk" import govukInput %}
       {{ govukInput({

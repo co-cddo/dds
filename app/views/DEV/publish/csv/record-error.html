@@ -6,7 +6,7 @@
 
 {% block header %}
   {{ super() }}
-  {% include "includes/nav_sign-out.html" %}
+  {% include "includes/DEV_mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -276,7 +276,7 @@
       
       
 
-    <form action="/upload-error" method="post" novalidate="">
+    <form action="/DEV/upload-error" method="post" novalidate="">
 
       <input type="hidden" name="answers-checked" value="true">
 

@@ -15,59 +15,20 @@ let items;
 // Global
 // #################################################
 
-router.post('/secure-signin-route', function(request, response) {
+// None
 
-    var myorg = request.session.data['Organisation']
-    var signinRoute = request.session.data['signinRoute']
+// #################################################
+// Secure
+// #################################################
 
-    if (!myorg){
-        response.redirect("/secure/complete-profile")
-    } else if (signinRoute == "Find") {
-        response.redirect("/find/find")
-    } else if (signinRoute == "Manage") {
-        response.redirect("/manage-shares/")
-    } else if (signinRoute == "Publish") {
-        response.redirect("/bMVP--dashboard-add-permission")
-    } else {
-        response.redirect("/start")
-    }
-})
+const secure_dev = require('./routes/secure/dev.js')
+router.use('', secure_dev);
 
-router.post('/wip--secure-signin-route', function(request, response) {
+const secure_ur = require('./routes/secure/ur.js')
+router.use('', secure_ur);
 
-    var myorg = request.session.data['Organisation']
-    var signinRoute = request.session.data['signinRoute']
-
-    if (!myorg){
-        response.redirect("/WIP/secure/complete-profile")
-    } else if (signinRoute == "Find") {
-        response.redirect("/WIP/find/find")
-    } else if (signinRoute == "Manage") {
-        response.redirect("/WIP/manage-shares/")
-    } else if (signinRoute == "Publish") {
-        response.redirect("/bMVP_wip--dashboard-add-permission")
-    } else {
-        response.redirect("/WIP/start")
-    }
-})
-
-router.post('/dev--secure-signin-route', function(request, response) {
-
-    var myorg = request.session.data['Organisation']
-    var signinRoute = request.session.data['signinRoute']
-
-    if (!myorg){
-        response.redirect("/DEV/secure/complete-profile")
-    } else if (signinRoute == "Find") {
-        response.redirect("/DEV/find/find")
-    } else if (signinRoute == "Manage") {
-        response.redirect("/DEV/manage-shares/")
-    } else if (signinRoute == "Publish") {
-        response.redirect("/bMVP_dev--dashboard-add-permission")
-    } else {
-        response.redirect("/DEV/start")
-    }
-})
+const secure_wip = require('./routes/secure/wip.js')
+router.use('', secure_wip);
 
 // #################################################
 // Find (Acquirer)

@@ -6,7 +6,7 @@
 
 {% block header %}
   {{ super() }}
-  {% include "includes/nav_sign-out.html" %}
+  {% include "includes/DEV_mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -532,13 +532,10 @@
         
 
       <form action="/DEV/publish/manual/confirmation" method="post" novalidate>
-
         <input type="hidden" name="answers-checked" value="true">
-
         <button type="submit" class="govuk-button" data-module="govuk-button">
           Submit
         </button>
-
       </form>
 
     </div>

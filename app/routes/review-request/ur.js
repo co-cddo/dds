@@ -1,15 +1,9 @@
 // #################################################
-// Stage: Beta, MVP
-// Prepared For: UR Round 4
-// Date: 17 Aug 2023
+// Supplier - Review request - UR
 // #################################################
 
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
-
-// #################################################
-// Supplier - Review request
-// #################################################
 
 router.post('/bMVP_ur--decision-after-declaration', (req, res) => {
   var decision = req.session.data["your-decision"];

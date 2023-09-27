@@ -51,7 +51,7 @@
       <form class="form" action="/DEV/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/SOAP-answer" method="post">
+      <form class="form" action="/DEV/SOAP-answer" method="post">
       {% endif %}
       
         {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}

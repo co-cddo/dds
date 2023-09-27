@@ -6,7 +6,7 @@
 
 {% block header %}
   {{ super() }}
-  {% include "includes/nav_sign-out.html" %}
+  {% include "includes/DEV_mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -37,7 +37,7 @@
       <form class="form" action="/DEV/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/data-type-answer" method="post">
+      <form class="form" action="/DEV/data-type-answer" method="post">
       {% endif %}
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-one-half">
