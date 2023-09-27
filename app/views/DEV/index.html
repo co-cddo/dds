@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Data Marketplace
+    </h1>
+
+    <h2 class="govuk-heading-l">Landing page</h2>
+    <p>Follow these steps to reach each sub-service that is currently ready for UR.</p>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      <li><b>Find</b> - Select "Find data assets"</li>
+      <li><b>Request</b> - Select "Find data assets" > Follow Find journey > Select "Start a data share request"</li>
+      <li><b>Manage data share requests</b> - Select "Manage data shares"</li>
+      <li><b>Publish data descriptions</b> - Select "Publish data descriptions"</li>
+      <li><b>Learn</b> - Select "Find information to help you" under the "Learn" title.</li>
+    </ul>
+    <br>
+    <p><a class="govuk-button" href="/DEV/start">View landing page</a></p>
+
+    <br>
+
+    <h2 class="govuk-heading-m">Direct links to sub-services</h2>
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      <li>
+        <a href="/DEV/find/find">Find journey (Acquirer)</a><br>
+      </li>
+      <li><a href="/DEV/request/">Request journey (Acquirer)</a></li>
+      <li>
+        <a href="/DEV/review-request/">Review request journey (Supplier)</a> - Start from email notification
+      </li>
+      <li>
+        <a href="/DEV/manage-shares/">Manage data share requests (Acquirer and Supplier)</a>
+      </li>
+      <li>
+        <a href="/DEV/publish/publish-dashboard">Publish journey</a>
+      </li>
+      <li>
+        <a href="/DEV/learn/">Learn (Formerly Knowledge Hub)</a>
+      </li>
+    </ul> 
+
+    <br>
+
+    <h3 class="govuk-heading-m">Email notifications</h3>
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      <li><a href="/DEV/manage-shares/email-notifications/email_supplier_review-request.html">Supplier - Request to review</a></li>
+      <li><a href="/DEV/manage-shares/email-notifications/email_acquirer_returned-request.html">Acquirer - Returned request</a></li>
+    </ul>  
+
+    <br>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">Other stimulus</h2>
+
+    <h3 class="govuk-heading-m">Manage data share requests - high volumes</h3>
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      <li><a href="/DEV/misc/manage_high-volumes/received-requests_tabbed.html">Received requests (Supplier)</a></li>
+      <li><a href="/DEV/misc/manage_high-volumes/created-requests_tabbed.html">Created requests (Acquirer)</a></li>
+    </ul>
+  </div>
+
+  <div class="govuk-grid-column-one-third" style="position: sticky; top:40px;">
+    <aside class="app-related-items sidebar" role="complementary">
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-list--bullet" style="list-style-type:circle;margin-bottom: 0">
+          <li><a href="settings">Settings (DEV)</a></li>
+          <li><a href="/WIP/">WIP prototype</a></li>
+          <li><a href="/">UR prototype</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+{% endblock %}

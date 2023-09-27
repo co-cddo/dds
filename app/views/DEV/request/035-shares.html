@@ -1,0 +1,224 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Your data shares</span>
+      <h1 class="govuk-heading-l">Manage your data shares</h1>
+
+      <p>
+        If you've received a request for your department's data, or have started writing a request for data, these in progress arrangements are listed here. Completed and active requests are listed below. 
+      </p>
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h2 class="govuk-heading-m">Open requests and data-shares being established</h2>
+
+      <table class="govuk-table" style="font-size: 18px;">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col" style="width:15%;"> Request / agreement </th>
+      <th class="govuk-table__header govuk-!-width-one-half" scope="col"> Purpose </th>
+      <th class="govuk-table__header" scope="col"> Status </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="035-share-instance">DS 13992 - Review documents</a></li>
+          <!-- li><a class="govuk-link" href="035-MoU">edit draft</a></li -->
+        </ul>
+      </td>
+      <td class="govuk-table__cell">
+        <p>To assess claims and provide the correct level of support to vulnerable people based on their declared family relationships.</p>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--red">
+          Awaiting response
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="#a">RR 00723 - Review documents</a></li>
+        </ul>
+      </td>
+      <td class="govuk-table__cell">
+        <p>To improve public safety by sharing information between law enforcement agencies.</p>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--blue">
+          Under review
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="#c">DS 099B - Review documents</a></li>
+        </ul>
+      </td>
+      <td class="govuk-table__cell">
+        <p>To increase efficiency in tax collection by sharing income data between government departments.</p>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--blue">
+          Under review
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="#">QRT 0003 - Review documents</a>
+      </td>
+      <td class="govuk-table__cell">
+        <p>To streamline social services delivery by sharing relevant client data.</p>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--purple">
+          Edit requested
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="#">QRT 0007 - Review documents</a>
+      </td>
+      <td class="govuk-table__cell">
+        <p>To facilitate public health research by combining anonymized health records.</p>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--blue">
+          Under review
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="#">JEDB7222201 - Review documents</a>
+      </td>
+      <td class="govuk-table__cell">
+        <p>To enhance fraud detection by cross-referencing government data sources.</p>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Submitted
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="#">TBD REF - Review documents</a>
+      </td>
+      <td class="govuk-table__cell">
+        <p>To enable cross-departemental analysis of demographics for policy development.</p>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          Editing MoU
+        </strong>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="govuk-heading-m">Active data shares</h2>
+
+
+<table class="govuk-table" style="font-size: 14px;">
+  <tr id="table-header"></tr>
+</thead>
+<tbody class="govuk-table__body" id="table-body-active"></tbody>
+</table>
+
+
+
+<nav class="govuk-pagination" role="navigation" aria-label="results">
+  <div class="govuk-pagination__prev">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+      </svg>
+      <span class="govuk-pagination__link-title">Previous</span></a>
+  </div>
+  <ul class="govuk-pagination__list">
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+        1
+      </a>
+    </li>
+    <li class="govuk-pagination__item govuk-pagination__item--current">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+        2
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+        3
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+      </svg></a>
+  </div>
+</nav>
+
+
+
+
+    </div>
+  </div>
+
+  <script>
+    fetch("/public/staticdata/sample.csv")
+      .then(response => response.text())
+      .then(data => {
+        const rows = data.trim().split("\n");
+        const tbody = document.getElementById("table-body-active");
+        const headerRow = document.getElementById("table-header");
+        const headerValues = rows.shift().split("<divider>");
+        headerValues.forEach(headerValue => {
+          const th = document.createElement("th");
+          th.setAttribute("scope", "col");
+          th.classList.add("govuk-table__header");
+          th.textContent = headerValue;
+          headerRow.appendChild(th);
+        });
+        rows.forEach(row => {
+          const values = row.split("<divider>");
+          const tr = document.createElement("tr");
+          values.forEach(value => {
+            const td = document.createElement("td");
+            td.classList.add("govuk-table__cell");
+            // td.textContent = value;
+            td.textContent = value.slice(0, 200);
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+      });
+  </script>
+
+
+{% endblock %}
+

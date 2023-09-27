@@ -1,0 +1,33 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">{% include "includes/request/request-id.html" %}</span>
+    <h1 class="govuk-heading-l">Get legal advice</h1>
+    <p>Contact a lawyer, or someone with legal expertise, to discuss your legal power for requesting data.</p>
+    <p>Once you've provided your legal power, return to this service and continue.</p>
+
+    <p><a target="_blank" href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-sharing/data-sharing-a-code-of-practice/lawfulness/">See guidance on lawfulness from the Information Commissioner's Office (opens in new tab)</a></p>
+    <div class="govuk-button-group govuk-!-static-margin-top-9">
+      <a href="030-legal-gateway-belief" class="govuk-button" data-module="govuk-button">Save and continue</a>
+      <a href="#1" class="govuk-button govuk-button--secondary" data-module="govuk-button">Save and return</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
