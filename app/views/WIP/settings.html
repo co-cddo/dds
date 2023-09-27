@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
 {% block pageTitle %}
 Home – {{serviceName}} – GOV.UK Prototype Kit
@@ -61,19 +61,5 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block footer %}
-{{ govukFooter({
-  meta: {
-    items: [
-      {
-        href: data['supportForm'],
-        text: "Get help and support"
-      },
-      {
-        href: "/manage-prototype/clear-data",
-        text: "Clear data"
-      }
-    ]
-  }
-}) }}
-
+{% include "includes/backstage_footer.html" %}
 {% endblock %}

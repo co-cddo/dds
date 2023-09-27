@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
 {% block pageTitle %}
 Home – {{serviceName}} – GOV.UK Prototype Kit
@@ -66,10 +66,24 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
     <h2 class="govuk-heading-m">Email notifications</h2>
 
+    <p>Emails mocked up for user research. The links are disabled, to progress click "Data Marketpalce" at the top of the email.</p>
+
     <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
       <li><a href="/WIP/manage-shares/email-notifications/email_supplier_review-request.html">Supplier - Request to review</a></li>
       <li><a href="/WIP/manage-shares/email-notifications/email_acquirer_returned-request.html">Acquirer - Returned request</a></li>
-    </ul>  
+    </ul> 
+
+    <br>
+    <br>
+
+    <h2 class="govuk-heading-m">Design exploration</h2>
+
+    <p>These as experimental designs and prototypes created by the designers to explore potential solutions.</p>
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      <li><a href="/adam.html">Adam</a></li>
+      <li><a href="/ben.html">Ben</a></li>
+    </ul>   
 
   </div>
 
@@ -94,18 +108,5 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block footer %}
-{{ govukFooter({
-  meta: {
-    items: [
-      {
-        href: data['supportForm'],
-        text: "Get help and support"
-      },
-      {
-        href: "/manage-prototype/clear-data",
-        text: "Clear data"
-      }
-    ]
-  }
-}) }}
+{% include "includes/backstage_footer.html" %}
 {% endblock %}

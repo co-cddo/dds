@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
 {% block pageTitle %}
 Home – {{serviceName}} – GOV.UK Prototype Kit
@@ -75,4 +75,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
   </div>
 </div>
 
+{% endblock %}
+
+{% block footer %}
+{% include "includes/backstage_footer.html" %}
 {% endblock %}
