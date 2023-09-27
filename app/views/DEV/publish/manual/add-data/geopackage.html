@@ -1,0 +1,190 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Add GeoPackage
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: serviceName,
+  serviceUrl: "/",
+  containerClasses: "govuk-width-container"
+}) }}
+    <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+      <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
+      <ul class="app-navigation__list app-width-container">
+        <li class="app-navigation__list-item ">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/DEV/publish/start-logged-in">
+            Home
+          </a>
+        </li>
+          </li>
+          <li class="app-navigation__list-item app-navigation__list-item--right">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/DEV/publish/start">
+              Sign out
+            </a>
+          </li>
+      </ul>
+    </nav>
+
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Add GeoPackage Distribution</h1>
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/DEV/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
+      <form class="form" action="/DEV/geo-answer" method="post">
+      {% endif %}
+      
+        {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
+        {%- from "govuk/components/input/macro.njk" import govukInput -%}
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        <div data-module="moj-add-another">
+            {% call govukFieldset({
+              classes: 'moj-add-another__item'
+            }) %}
+
+            {{ govukInput({
+              id: 'geo-title[0]',
+              name: 'geo-title[0]',
+              label: {
+                html: 'Title',
+                classes: 'govuk-label--m'
+              },
+              hint: {
+                text: "Distribution title is the name given to the distribution."
+              },
+              attributes: {
+                'data-name': 'geo-title[%index%]',
+                'data-id': 'geo-title[%index%]'
+              }
+            }) }}
+
+            {{ govukInput({
+              id: 'geo-url[0]',
+              name: 'geo-url[0]',
+              label: {
+                html: 'Download URL (optional)',
+                classes: 'govuk-label--m'
+              },
+              hint: {
+                text: "Provide URL in a given format. For example, XLXS or RDF file."
+              },
+              attributes: {
+                'data-name': 'geo-url[%index%]',
+                'data-id': 'geo-url[%index%]'
+              }
+            }) }}
+
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading">
+                  Filesize
+                </h2>
+
+              </legend>
+              <div id="XLXS-size-hint" class="govuk-hint">
+                Provide the size of the distribution in bytes, kilobytes, megabytes, gigabytes, terabytes or petabytes.
+              </div>
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-half">
+                  {{ govukInput({
+                    id: 'XLXS-size[0]',
+                    name: 'XLXS-size[0]',
+                    label: {
+                      html: 'Filesize',
+                      classes: 'govuk-visually-hidden'
+                    },
+                    attributes: {
+                      'data-name': 'XLXS-size[%index%]',
+                      'data-id': 'XLXS-size[%index%]'
+                    }
+                  }) }}
+                </div>
+                <div class="govuk-grid-column-one-half">
+                  {{ govukSelect({
+                    id: "XLXS-size-unit[0]",
+                    name: "XLXS-size-unit[0]",
+                    label: {
+                      text: "size unit",
+                      classes: 'govuk-visually-hidden'
+                    },
+                    items: [
+                      {
+                        value: "kB",
+                        text: "kilobytes (kB)"
+                      },
+                      {
+                        value: "MB",
+                        text: "megabytes (MB)"
+                      },
+                      {
+                        value: "GB",
+                        text: "gigabytes (GB)"
+                      },
+                      {
+                        value: "TB",
+                        text: "terabytes (TB)"
+                      },
+                      {
+                        value: "PB",
+                        text: "petabytes (PB)"
+                      }
+                    ]
+                  }) }}
+                </div>
+              </div>
+
+            </fieldset>
+
+            {% endcall %}
+
+            <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">Add another XLXS</button>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
+      </form>
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="gem-c-contextual-sidebar">
+        <div class="gem-c-related-navigation">
+          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
+            Learn
+          </h2>
+          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
+            <ul class="gem-c-related-navigation__link-list">
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/DEV/learn/articles/metadata-model">Metadata sharing requirements</a>
+              </li>
+              
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/DEV/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,158 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Themes
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/DEV_mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/DEV/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
+      <form class="form" action="/DEV/publish/manual/keyword" method="post">
+      {% endif %}
+      
+
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {% set otherHtml %}
+        {{ govukInput({
+          id: "metadataThemes",
+          name: "metadataThemes",
+          type: "text",
+          label: {
+            text: "Enter URI to theme"
+          }
+        }) }}
+        {% endset -%}
+
+        {{ govukCheckboxes({
+          name: "metadataThemes",
+          fieldset: {
+            legend: {
+              text: "What are the themes associated with the data? (optional)",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Provide the main category of the data. Data can have multiple themes."
+          },
+          items: [
+            {
+              value: "Business and economy",
+              text: "Business and economy"
+            },
+            {
+              value: "Crime and justice",
+              text: "Crime and justice"
+            },
+            {
+              value: "Defence",
+              text: "Defence"
+            },
+            {
+              value: "Education",
+              text: "Education"
+            },
+            {
+              value: "Environment",
+              text: "Environment"
+            },
+            {
+              value: "Government",
+              text: "Government"
+            },
+            {
+              value: "Government spending",
+              text: "Government spending"
+            },
+            {
+              value: "Health",
+              text: "Health"
+            },
+            {
+              value: "Mapping",
+              text: "Mapping"
+            },
+            {
+              value: "Society",
+              text: "Society"
+            },
+            {
+              value: "Towns and cities",
+              text: "Towns and cities"
+            },
+            {
+              value: "Transport",
+              text: "Transport"
+            },
+            {
+              value: "Digital service performance",
+              text: "Digital service performance"
+            },
+            {
+              value: "Government reference data",
+              text: "Government reference data"
+            },
+            {
+              value: "Other",
+              text: "Other",
+              conditional: {
+                html: otherHtml
+              }
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="gem-c-contextual-sidebar">
+        <div class="gem-c-related-navigation">
+          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
+            Learn
+          </h2>
+          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
+            <ul class="gem-c-related-navigation__link-list">
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/DEV/learn/articles/metadata-model">Metadata sharing requirements</a>
+              </li>
+              
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/DEV/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

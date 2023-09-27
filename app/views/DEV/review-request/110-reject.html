@@ -1,0 +1,42 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/DEV_mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="javascript:window.history.back()">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Request rejected</h1>
+        <div class="govuk-panel__body">
+          Request ID: <strong>RR523</strong>
+        </div>
+      </div>
+
+      <p>You've told Department X why you've rejected their request.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>You do not need to take any further action.</p>
+
+      <p>If they address the reasons why their request was rejected, they can submit another request.</p>
+      <br>
+      <br>
+      <a href="../manage-shares/" class="govuk-button">
+        Return to manage data share requests
+      </a>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,166 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/DEV_mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<style type="text/css">
+.request-section {
+  border-top: 1px solid #ccc;
+  padding-top: 1em;
+}
+</style>
+
+<div class="govuk-grid-row" style="border-top:none;padding-top:0;">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Request ID: RR221</span>
+    <h1 class="govuk-heading-l">
+      HM Revenue and Customs requested access to tax-rate-change_brackets
+    </h1>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">Lawful basis for personal data</h2>
+      <ul class="govuk-list">
+        <li class="govuk-!-padding-bottom-3">Public task</li>
+        <li class="govuk-!-padding-bottom-3">Contract</li>
+      </ul>
+    </div>
+
+<!--     <div class="request-section">
+      <h2 class="govuk-heading-m">Lawful basis for special data</h2>
+      <ul class="govuk-list">
+        <li class="govuk-!-padding-bottom-3">Not required</li>
+      </ul>
+    </div> -->
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">Legal power</h2>
+      <p>Common law</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m govuk-!-static-margin-bottom-1">Justification for legal gateway</h2>
+      <div class="govuk-warning-text govuk-!-static-margin-bottom-2">
+      </div>
+      <p>
+        Under Regulation 3 of The Health Service (Control of Patient Information), patient data can be lawfully processed with a view to:<br>
+        <br>
+        * diagnosing communicable diseases and other risks to public health.<br>
+        * recognising trends in such diseases and risks.<br>
+        * controlling and preventing the spread of such diseases and risks.<br>
+        * monitoring and managing:<br>
+        ** outbreaks of communicable disease.<br>
+        ** incidents of exposure to communicable disease.<br>
+        ** the delivery, efficacy and safety of immunisation programmes.<br>
+        ** adverse reactions to vaccines and medicines.<br>
+        ** risks of infection acquired from food or the environment (including water supplies).<br>
+        ** the giving of information to persons about the diagnosis of communicable disease and risks of acquiring such disease.<br>
+      </p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">Data travel outside UK</h2>
+      <p>No</p>
+<!--       <p>Data will travel outside UK to these countries:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>United States of America</li>
+      </ul> -->
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">Data subjects</h2>
+      <p>Clinically extremely vulnerable patients.</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">Aim of project</h2>
+      <p>To assess claims and provide the correct level of support to vulnerable people based on their declared family relationships.</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">How data will help reach this aim</h2>
+      <p>We cannot identify who needs support without access to a data set about who in the UK is clinically vulnerable.</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">Public benefits of project</h2>
+      <h3 class="govuk-heading-s">Evidence for public service delivery</h3>
+      <p>
+        This data will allow us to identify both who to help and the number of people we need to help.</p>
+      <h3 class="govuk-heading-s">Evidence for decisions which are likely to benefit people in the UK</h3>
+      <p>Depending on the number of people involved, this data could be used to support similar programs in the future.</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">Preferred format</h2>
+      <p>CSV file</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">How they want to receive it</h2>
+      <p>Through secure third-party software</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">What they think their role is</h2>
+      <p>Processor</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">Data they want</h2>
+      <p>List of vulnerable people's names and contact details</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">How it will impact the project if they don't get the data</h2>
+      <p>The project will be impossible to complete. We are reliant on this data and have no alternatives.</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">How they will dispose of the data</h2>
+      <p>Store CSV files in a secure sever and delete all files at end of project.</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">When they need it</h2>
+      <p>16 March 2024</p>
+    </div>
+
+    <div class="request-section">
+      <h2 class="govuk-heading-m">Data type</h2>
+      <p>Personal data</p>
+    </div>
+
+    <div class="request-section" style="border-bottom: 1px solid #ccc;">
+      <h2 class="govuk-heading-m">Data accessed by other organisations</h2>
+      <p>Yes</p>
+      <p>Organisations:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>NHS</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-button-group govuk-!-static-margin-top-9">
+      <a href="received-request-outcome_returned" class="govuk-button govuk-button--secondary">Return to request outcome</a>
+      <a href="received-requests" class="govuk-link">View all received requests</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

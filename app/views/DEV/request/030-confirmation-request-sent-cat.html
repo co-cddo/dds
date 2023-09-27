@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/DEV_mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Data share request sent
+        </h1>
+        <div class="govuk-panel__body">
+          Your request number<br><strong>RR523</strong>
+        </div>
+      </div>
+      <p class="govuk-body">We have sent you a confirmation email.</p>
+
+<!--       <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+        aria-labelledby="govuk-notification-banner-title"
+        data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Your request to share data has been sent.
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h3 class="govuk-notification-banner__heading">
+            Your <a href="200-review-request-cat">request DS 13992</a> has been saved in anticipation of your future negotiations with the other depatment.
+          </h3>
+        </div>
+      </div> -->
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>Department Y will review your request.</p> 
+      <p>It can take up to X working days for them to reply. You can track the status of your request when you <a href="../manage-shares/index.html">manage data share requests</a>.</p>
+      <p>If you have any problems, you can also contact the data asset owner, <a href="#1">data-team@department-y.gov.uk</a>.</p>
+
+<!--       <h3 class="govuk-heading-m">Data asset owner</h3>
+      <ul class="govuk-list">
+        <li class="govuk-body govuk-!-margin-bottom-4">
+          <span class="govuk-body govuk-!-font-weight-bold">Name</span>
+          <br>
+          Jane Smith
+        </li>
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">Email</span>
+          <br>
+          <a href="#">jane.smith@dwp.gov.uk</a>
+        </li>
+      </ul> -->
+    </div>
+  </div>
+
+{% endblock %}
