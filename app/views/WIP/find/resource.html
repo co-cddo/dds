@@ -81,8 +81,40 @@
         }) }}
         <button class="govuk-button" data-module="govuk-button">Start a data share request</button>
       </form>
-
+      <p class="govuk-body">
+        <a href="/learn/articles/data-sharing-arrangements" class="govuk-link">Get more help</a>
+      </p>
     </div>
+    <table class="govuk-table govuk-!-margin-bottom-8">
+    
+      {% if resource.type == "dataset" %}
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          
+          <th scope="col" class="govuk-table__header">File</th>
+
+
+         
+        
+          <th scope="col" class="govuk-table__header">Date added</th>
+        
+          <th scope="col" class="govuk-table__header">Format</th>
+        
+        </tr>
+      </thead>
+      
+      <tbody class="govuk-table__body">
+        {% for distribution in resource.distributions %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">{{ resource.slug }}-{{ loop.index0 + 1 }}</th>
+              <td class="govuk-table__cell">{{resource.dateUpdated}}</td>
+              <td class="govuk-table__cell">{{ distribution }}</td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+
     {% else %}
 
     <div class="additional-info govuk-!-margin-bottom-8">
