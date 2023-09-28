@@ -1,0 +1,168 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Creator
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/DEV_mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Which organisation(s) have created the data?</h1>
+      <p class="govuk-hint">The creator is the organisation responsible for producing the data.</p>
+
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/DEV/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
+      <form class="form" action="/DEV/publish/manual/version" method="post">
+      {% endif %}
+      
+        {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
+        {%- from "govuk/components/input/macro.njk" import govukInput -%}
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+
+        <div data-module="moj-add-another">
+            {% call govukFieldset({
+              classes: 'moj-add-another__item'
+            }) %}
+
+            {{ govukSelect({
+              label: {
+                text: "Organisation",
+                classes: "govuk-visually-hidden",
+                isPageHeading: true
+              },
+              id: "metadataCreator[0]",
+              name: "metadataCreator[0]",
+              attributes: {
+                'data-name': 'metadataCreator[%index%]',
+                'data-id': 'metadataCreator[%index%]'
+              },
+              items: [
+                {
+                  value: "Department for Business, Energy & Industrial Strategy (BEIS)",
+                  text: "Department for Business, Energy & Industrial Strategy (BEIS)"
+                },
+                {
+                  value: "Department for Digital, Culture, Media & Sport (DCMS)",
+                  text: "Department for Digital, Culture, Media & Sport (DCMS)"
+                },
+                {
+                  value: "Department for Education (DfE)",
+                  text: "Department for Education (DfE)"
+                },
+                {
+                  value: "Department for Environment, Food & Rural Affairs (DEFRA)",
+                  text: "Department for Environment, Food & Rural Affairs (DEFRA)"
+                },
+                {
+                  value: "Department for International Trade (DIT)",
+                  text: "Department for International Trade (DIT)"
+                },
+                {
+                  value: "Department for Transport (DfT)",
+                  text: "Department for Transport (DfT)"
+                },
+                {
+                  value: "Department for Work and Pensions (DWP)",
+                  text: "Department for Work and Pensions (DWP)"
+                },
+                {
+                  value: "Department of Health and Social Care (DHSC)",
+                  text: "Department of Health and Social Care (DHSC)"
+                },
+                {
+                  value: "Department of International Development (DFID)",
+                  text: "Department of International Development (DFID)"
+                },
+                {
+                  value: "Foreign, Commonwealth & Development Office (FCDO)",
+                  text: "Foreign, Commonwealth & Development Office (FCDO)"
+                },
+                {
+                  value: "Her Majesty's Revenue and Customs (HMRC)",
+                  text: "Her Majesty's Revenue and Customs (HMRC)"
+                },
+                {
+                  value: "Home Office",
+                  text: "Home Office"
+                },
+                {
+                  value: "Ministry of Defence (MOD)",
+                  text: "Ministry of Defence (MOD)"
+                },
+                {
+                  value: "Ministry of Housing, Communities & Local Government (MHCLG)",
+                  text: "Ministry of Housing, Communities & Local Government (MHCLG)"
+                },
+                {
+                  value: "Ministry of Justice (MOJ)",
+                  text: "Ministry of Justice (MOJ)"
+                },
+                {
+                  value: "Northern Ireland Executive",
+                  text: "Northern Ireland Executive"
+                },
+                {
+                  value: "Scotland Office",
+                  text: "Scotland Office"
+                },
+                {
+                  value: "Wales Office",
+                  text: "Wales Office"
+                }
+              ]
+    
+            }) }}
+
+            {% endcall %}
+
+            <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">Add another organisation</button>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
+      </form>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="gem-c-contextual-sidebar">
+        <div class="gem-c-related-navigation">
+          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
+            Learn
+          </h2>
+          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
+            <ul class="gem-c-related-navigation__link-list">
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/DEV/learn/articles/metadata-model">Metadata sharing requirements</a>
+              </li>
+              
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/DEV/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

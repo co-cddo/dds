@@ -1,0 +1,124 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/DEV_mvp-nav_sign-out.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+  <style>
+    .rr-tag_error {
+      color: #942514;
+      background: #f6d7d2;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Upload summary</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body">File: <strong>my_data_file_without_errors.csv</strong></p>
+      <p class="govuk-body">All data asset descriptions passed validation. Review the records to ensure that they are correct. If you are happy then click Publish otherwise click on upload new CSV file.</p>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="gem-c-contextual-sidebar">
+        <div class="gem-c-related-navigation">
+          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
+            Learn
+          </h2>
+          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
+            <ul class="gem-c-related-navigation__link-list">
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/DEV/learn/articles/metadata-model">Metadata sharing requirements</a>
+              </li>
+              
+              <li class="gem-c-related-navigation__link">
+                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/DEV/learn/articles/adding-a-CSV-file">Adding a collection of metadata records as a CSV file</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table" style="font-size: 18px;">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Data asset</th>
+            <th class="govuk-table__header" scope="col">Asset type</th>
+            <th class="govuk-table__header" scope="col">Status</th>
+            
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="record-1?error=no">Local authority Districts - Deprivation</a>
+            </td>
+            <td class="govuk-table__cell">
+              Dataset
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag">Pass </strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="record-2?error=no">Lower Layer Super Output Area - Deprivation
+              </a>
+            </td>
+            <td class="govuk-table__cell">
+              Dataset
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag">Pass</strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="record-3?error=no">Local Authority District Summaries-lower-tier</a>
+            </td>
+            <td class="govuk-table__cell">
+              Dataset
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag">Pass </strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="record-4?error=no">Index of Multiple Deprivation</a>
+            </td>
+            <td class="govuk-table__cell">
+              Dataset
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag">Pass </strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a class="govuk-button" data-module="govuk-button" href="/DEV/publish/csv/confirmation">Publish data asset description</a>
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/DEV/publish/csv/upload">Re-upload CSV file</a>
+    </div>
+  </div>
+
+{% endblock %}
+

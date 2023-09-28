@@ -1,0 +1,193 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Complete your profile
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {% include "includes/DEV_mvp-nav_sign-out" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Complete your profile</h1>
+
+      <form class="form" action="/dev--secure-signin-route" method="post">
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukSelect({
+          id: "Organisation",
+          name: "Organisation",
+          classes: "govuk-!-width-full",
+          label: {
+            text: "Organisation"
+          },
+          items: [
+          {
+            value: "",
+            text: "Please select"
+          },          {
+            value: "Department for Business, Energy & Industrial Strategy (BEIS)",
+            text: "Department for Business, Energy & Industrial Strategy (BEIS)"
+          },
+          {
+            value: "Department for Digital, Culture, Media & Sport (DCMS)",
+            text: "Department for Digital, Culture, Media & Sport (DCMS)"
+          },
+          {
+            value: "Department for Education (DfE)",
+            text: "Department for Education (DfE)"
+          },
+          {
+            value: "Department for Environment, Food & Rural Affairs (DEFRA)",
+            text: "Department for Environment, Food & Rural Affairs (DEFRA)"
+          },
+          {
+            value: "Department for International Trade (DIT)",
+            text: "Department for International Trade (DIT)"
+          },
+          {
+            value: "Department for Transport (DfT)",
+            text: "Department for Transport (DfT)"
+          },
+          {
+            value: "Department for Work and Pensions (DWP)",
+            text: "Department for Work and Pensions (DWP)"
+          },
+          {
+            value: "Department of Health and Social Care (DHSC)",
+            text: "Department of Health and Social Care (DHSC)"
+          },
+          {
+            value: "Department of International Development (DFID)",
+            text: "Department of International Development (DFID)"
+          },
+          {
+            value: "Foreign, Commonwealth & Development Office (FCDO)",
+            text: "Foreign, Commonwealth & Development Office (FCDO)"
+          },
+          {
+            value: "Her Majesty's Revenue and Customs (HMRC)",
+            text: "Her Majesty's Revenue and Customs (HMRC)"
+          },
+          {
+            value: "Home Office",
+            text: "Home Office"
+          },
+          {
+            value: "Ministry of Defence (MOD)",
+            text: "Ministry of Defence (MOD)"
+          },
+          {
+            value: "Ministry of Housing, Communities & Local Government (MHCLG)",
+            text: "Ministry of Housing, Communities & Local Government (MHCLG)"
+          },
+          {
+            value: "Ministry of Justice (MOJ)",
+            text: "Ministry of Justice (MOJ)"
+          },
+          {
+            value: "Northern Ireland Executive",
+            text: "Northern Ireland Executive"
+          },
+          {
+            value: "Scotland Office",
+            text: "Scotland Office"
+          },
+          {
+            value: "Wales Office",
+            text: "Wales Office"
+          }
+        ]
+        }) }}
+
+        {% set otherRole %}
+        {{ govukInput({
+          id: "Role",
+          name: "Role",
+          type: "text",
+          label: {
+            text: "Enter other primary skill"
+          }
+        }) }}
+        {% endset -%}
+
+        {{ govukRadios({
+          name: "Role",
+          fieldset: {
+            legend: {
+              text: "What is your primary skill?"
+            }
+          },
+          items: [
+            {
+              value: "Technology",
+              text: "Technology",
+              hint: {
+                text: "For example: a technical architect, to help define data flows and requirements."
+              }
+            },
+            {
+              value: "Data Security",
+              text: "Data Security",
+              hint: {
+                text: "For example: a cyber security analyst, to ensure data is shared safely."
+              }
+            },
+            {
+              value: "Data protection",
+              text: "Data protection",
+              hint: {
+                text: "For example: a data protection specialist, to ensure you meet data regulations."
+              }
+            },
+            {
+              value: "Data governance",
+              text: "Data governance",
+              hint: {
+                text: "For example: an information manager, to ensure data is stored and managed correctly."
+              }
+            },
+            {
+              value: "Business ownership",
+              text: "Business ownership",
+              hint: {
+                text: "For example: a product owner or delivery manager, to oversee the project"
+              }
+            },
+            {
+              value: "Other",
+              text: "Other",
+              conditional: {
+                html: otherRole
+              }
+            }
+          ]
+        }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

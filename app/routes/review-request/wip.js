@@ -1,14 +1,9 @@
 // #################################################
-// Stage: Beta, MVP
-// Iteration: 1
+// Supplier - Review request - WIP
 // #################################################
 
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
-
-// #################################################
-// Supplier - Review request
-// #################################################
 
 router.post('/bMVP_wip--decision-after-declaration', (req, res) => {
   var decision = req.session.data["your-decision"];

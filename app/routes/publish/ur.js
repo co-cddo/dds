@@ -11,15 +11,14 @@ router.get('/bMVP--dashboard-add-permission', (req, res) => {
   }
 });
 
-// Route for when the new homepage design is in place - if it still links directly the /publish/method
-// router.get('/bMVP--method-add-permission', (req, res) => {
-//   const permissions = req.session.data['settings_permissions'];
-//   if (permissions && permissions.includes("add")) {
-//     res.redirect('/publish/method.html');
-//   } else {
-//     res.redirect('/publish/no-add-permission.html');
-//   }
-// });
+router.get('/bMVP--method-add-permission', (req, res) => {
+  const permissions = req.session.data['settings_permissions'];
+  if (permissions && permissions.includes("add")) {
+    res.redirect('/publish/method.html');
+  } else {
+    res.redirect('/publish/no-add-permission.html');
+  }
+});
 
 // Publisher journey
 router.post('/method-answer', function(request, response) {
