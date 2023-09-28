@@ -5,19 +5,16 @@
   {{ resource.title }}
 {% endblock %}
 
+{% set WIPconditionalURL = "/WIP/start?loggedin=" + data['loggedin'] %}
 {% block header %}
-  {{ super() }}
-  {% include "includes/wip-nav_sign-out.html" %}
+    {{ govukHeader({
+      homepageUrl: "/WIP/",
+      serviceName: serviceName,
+      serviceUrl: WIPconditionalURL,
+      containerClasses: "govuk-width-container"
+    }) }}
+    {% include "includes/WIP_mvp-nav_conditional.html" %}
 {% endblock %}
-
-{% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
 
 <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
@@ -278,9 +275,9 @@
       </h2>
       <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-related_items-ae81accd">
         <ul class="gem-c-related-navigation__link-list">
-          <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/find/resources/citizen-relationships">Citizen Relationships</a></li>
-          <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/find/resources/contact-details-verification">Contact Details Verification</a></li>
-          <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/find/resources/gov.uk-content">GOV.UK Content</a></li>
+          <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/find/resources/citizen-relationships">Citizen Relationships</a></li>
+          <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/find/resources/contact-details-verification">Contact Details Verification</a></li>
+          <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/find/resources/gov.uk-content">GOV.UK Content</a></li>
         </ul>
       </nav>
 

@@ -5,8 +5,13 @@ Account
 {% endblock %}
 
 {% block header %}
-  {{ super() }}
-  {% include "includes/wip-nav_sign-out.html" %}
+    {{ govukHeader({
+      homepageUrl: "/WIP/",
+      serviceName: serviceName,
+      serviceUrl: "/WIP/start?loggedin=true",
+      containerClasses: "govuk-width-container"
+    }) }}
+    {% include "includes/WIP_mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}

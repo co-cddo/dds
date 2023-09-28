@@ -5,8 +5,13 @@
 {% endblock %}
 
 {% block header %}
-  {{ super() }}
-  {% include "includes/wip-nav_sign-out.html" %}
+    {{ govukHeader({
+      homepageUrl: "/WIP/",
+      serviceName: serviceName,
+      serviceUrl: "/WIP/start?loggedin=true",
+      containerClasses: "govuk-width-container"
+    }) }}
+    {% include "includes/WIP_mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -39,7 +44,7 @@
             {{ data['metadataTitle'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/title?check-answers=true">
+            <a href="/WIP/publish/manual/title?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> title</span>
             </a>
@@ -57,7 +62,7 @@
             </ul>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/alternative-title?check-answers=true">
+            <a href="/WIP/publish/manual/alternative-title?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> alternative title</span>
             </a>
@@ -71,7 +76,7 @@
             {{ data['metadataDescription'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/description?check-answers=true">
+            <a href="/WIP/publish/manual/description?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> description</span>
             </a>
@@ -85,7 +90,7 @@
             {{ data['metadataSummary'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/summary?check-answers=true">
+            <a href="/WIP/publish/manual/summary?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> summary</span>
             </a>
@@ -99,7 +104,7 @@
             {{ data['metadataIdentifier'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/identifier?check-answers=true">
+            <a href="/WIP/publish/manual/identifier?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> identifier</span>
             </a>
@@ -119,7 +124,7 @@
             </ul>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/theme?check-answers=true">
+            <a href="/WIP/publish/manual/theme?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> themes</span>
             </a>
@@ -137,7 +142,7 @@
             </ul>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/keyword?check-answers=true">
+            <a href="/WIP/publish/manual/keyword?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> keyword</span>
             </a>
@@ -152,7 +157,7 @@
             {{ data['metadataContactEmail'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/contact?check-answers=true">
+            <a href="/WIP/publish/manual/contact?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> contact</span>
             </a>
@@ -170,7 +175,7 @@
             </ul>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/creator?check-answers=true">
+            <a href="/WIP/publish/manual/creator?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> creator</span>
             </a>
@@ -184,7 +189,7 @@
             {{ data['metadataVersion'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/version?check-answers=true">
+            <a href="/WIP/publish/manual/version?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> version</span>
             </a>
@@ -198,7 +203,7 @@
             {{ data['metadataCreatedDay'] }} {{ data['metadataCreatedMonth'] }} {{ data['metadataCreatedYear'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/created?check-answers=true">
+            <a href="/WIP/publish/manual/created?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> date created</span>
             </a>
@@ -212,7 +217,7 @@
             {{ data['metadataModifiedDay'] }} {{ data['metadataModifiedMonth'] }} {{ data['metadataModifiedYear'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/modified?check-answers=true">
+            <a href="/WIP/publish/manual/modified?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> date modified</span>
             </a>
@@ -226,7 +231,7 @@
             {{ data['metadataLicence'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/licence?check-answers=true">
+            <a href="/WIP/publish/manual/licence?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> licence</span>
             </a>
@@ -240,7 +245,7 @@
             {{ data['metadataAccessRights'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/access-rights?check-answers=true">
+            <a href="/WIP/publish/manual/access-rights?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> name</span>
             </a>
@@ -255,7 +260,7 @@
             {{ data['MetadataSecurity'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/security-classification?check-answers=true">
+            <a href="/WIP/publish/manual/security-classification?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> Security Classification</span>
             </a>
@@ -273,7 +278,7 @@
             </ul>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/related?check-answers=true">
+            <a href="/WIP/publish/manual/related?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> Related data assets</span>
             </a>
@@ -288,7 +293,7 @@
             {{ data['metadataFrequency'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/frequency?check-answers=true">
+            <a href="/WIP/publish/manual/frequency?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> update frequency</span>
             </a>
@@ -310,7 +315,7 @@
 
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/publish/manual/data-type?check-answers=true">
+            <a href="/WIP/publish/manual/data-type?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> Delivery Mechanism</span>
             </a>
@@ -342,7 +347,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/csv?check-answers=true">
+          <a class="govuk-link" href="/WIP/publish/manual/add-data/csv?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
@@ -370,7 +375,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/xml?check-answers=true">
+          <a class="govuk-link" href="/WIP/publish/manual/add-data/xml?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
@@ -398,7 +403,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/xlxs?check-answers=true">
+          <a class="govuk-link" href="/WIP/publish/manual/add-data/xlxs?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
@@ -426,7 +431,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/geopackage?check-answers=true">
+          <a class="govuk-link" href="/WIP/publish/manual/add-data/geopackage?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
@@ -462,7 +467,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/rest?check-answers=true">
+          <a class="govuk-link" href="/WIP/publish/manual/add-data/rest?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
@@ -490,7 +495,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/soap?check-answers=true">
+          <a class="govuk-link" href="/WIP/publish/manual/add-data/soap?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>
@@ -519,7 +524,7 @@
           </tbody>
         </table>
         <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/publish/manual/add-data/event?check-answers=true">
+          <a class="govuk-link" href="/WIP/publish/manual/add-data/event?check-answers=true">
             Change
             <span class="govuk-visually-hidden"> data served</span>
           </a>

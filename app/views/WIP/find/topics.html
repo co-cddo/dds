@@ -4,15 +4,20 @@
   {{ serviceName }}
 {% endblock %}
 
+{% set WIPconditionalURL = "/WIP/start?loggedin=" + data['loggedin'] %}
 {% block header %}
-  {{ super() }}
-  {% include "includes/WIP_mvp-nav_conditional.html" %}
+    {{ govukHeader({
+      homepageUrl: "/WIP/",
+      serviceName: serviceName,
+      serviceUrl: WIPconditionalURL,
+      containerClasses: "govuk-width-container"
+    }) }}
+    {% include "includes/WIP_mvp-nav_conditional.html" %}
 {% endblock %}
 
 {% block beforeContent %}
     <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
-
 
 {% block content %}
 
