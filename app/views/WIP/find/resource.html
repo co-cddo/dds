@@ -82,39 +82,67 @@
         <button class="govuk-button" data-module="govuk-button">Start a data share request</button>
       </form>
       <p class="govuk-body">
-        <a href="/learn/articles/data-sharing-arrangements" class="govuk-link">Get more help</a>
+        <a href="#" class="govuk-link">Get more help</a>
       </p>
     </div>
-    <table class="govuk-table govuk-!-margin-bottom-8">
-    
+
       {% if resource.type == "dataset" %}
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
+
+      <h2 class="govuk-heading-l">Data available</h2>
+      <p class="govuk-body">The following files are available as part of this dataset. </p>
+  
+      <table class="govuk-table govuk-!-margin-bottom-8">
+    
+    
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
           
-          <th scope="col" class="govuk-table__header">File</th>
-
-
-         
+            <th scope="col" class="govuk-table__header">File</th>
+          
+            <th scope="col" class="govuk-table__header">Date added</th>
+          
+            <th scope="col" class="govuk-table__header">File format</th>
+          
+          </tr>
+        </thead>
         
-          <th scope="col" class="govuk-table__header">Date added</th>
+        <tbody class="govuk-table__body">
+          {% for distribution in resource.distributions %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">{{ resource.slug }}-{{ loop.index0 + 1 }}</th>
+                <td class="govuk-table__cell">{{resource.dateUpdated}}</td>
+                <td class="govuk-table__cell">{{ distribution }}</td>
+              </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <h2 class="govuk-heading-l">Data available</h2>
+      <p class="govuk-body">The API information is available for this data service.</p>
+  
+      <table class="govuk-table govuk-!-margin-bottom-8">
         
-          <th scope="col" class="govuk-table__header">Format</th>
-        
-        </tr>
-      </thead>
-      
-      <tbody class="govuk-table__body">
-        {% for distribution in resource.distributions %}
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">{{ resource.slug }}-{{ loop.index0 + 1 }}</th>
-              <td class="govuk-table__cell">{{resource.dateUpdated}}</td>
-              <td class="govuk-table__cell">{{ distribution }}</td>
-            </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    {% endif %}
-
+        <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Service type</th>
+                <td class="govuk-table__cell">{{ resource.distributions }}</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Service Status</th>
+                <td class="govuk-table__cell">In production</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Endpoint URL (o)</th>
+                <td class="govuk-table__cell">https://api.endpointexample.service.gov.uk/</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Documentation</th>
+                <td class="govuk-table__cell"><a href="https://www.endpointexample.service.gov.uk/documentation" class="govuk-link">https://www.endpointexample.service.gov.uk/documentation</a></td>
+              </tr>
+              
+        </tbody>
+      </table>
+      {% endif %}
     {% else %}
 
     <div class="additional-info govuk-!-margin-bottom-8">
@@ -163,12 +191,14 @@
                 <th scope="row" class="govuk-table__header">Service Status</th>
                 <td class="govuk-table__cell">In production</td>
               </tr>
-              {% if resource.url %}
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Endpoint URL (o)</th>
-                <td class="govuk-table__cell">{{ resource.url | govukMarkdown | safe }}</td>
+                <td class="govuk-table__cell"><a href="https://api.endpointexample.service.gov.uk/" class="govuk-link">https://api.endpointexample.service.gov.uk/</a></td>
               </tr>
-              {% endif %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Documentation</th>
+                <td class="govuk-table__cell"><a href="https://www.endpointexample.service.gov.uk/documentation" class="govuk-link">https://www.endpointexample.service.gov.uk/documentation</a></td>
+              </tr>
               
         </tbody>
       </table>
@@ -224,12 +254,6 @@
               <th scope="row" class="govuk-table__header govuk-!-width-one-half">Version</th>
               <td class="govuk-table__cell govuk-!-width-one-half">1.2</td>
             </tr>
-            {% if resource.documentation %}
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Documentation</th>
-              <td class="govuk-table__cell">{{ resource.documentation | govukMarkdown | safe }}</td>
-            </tr>
-            {% endif %}
             {% if resource.contact %}
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Contact</th>
