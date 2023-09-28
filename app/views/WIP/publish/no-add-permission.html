@@ -4,12 +4,7 @@
   {{ serviceName }}
 {% endblock %}
 
-{% block pageScripts %}
-  <script type="text/javascript">
-    var $element = document.querySelector('#step-by-step-navigation')
-    var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
-  </script>
-{% endblock %}
+
 
 {% block header %}
   {{ super() }}
@@ -41,18 +36,5 @@
 {% endblock %}
 
 {% block footer %}
-{{ govukFooter({
-  meta: {
-    items: [
-      {
-        href: data['supportForm'],
-        text: "Get help and support"
-      },
-      {
-        href: "/manage-prototype/clear-data",
-        text: "Clear data"
-      }
-    ]
-  }
-}) }}
+{% include "includes/WIP_footer.html" %}
 {% endblock %}
