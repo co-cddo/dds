@@ -151,6 +151,10 @@
       
 {% endblock %}
 
+{% block footer %}
+{% include "includes/DEV_footer.html" %}
+{% endblock %}
+
 {% block scripts %}
   {{ super() }}
   <script src="/public/javascripts/jquery-3.6.3.min.js"></script>
