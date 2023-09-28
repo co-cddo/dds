@@ -8,10 +8,14 @@
   Find government data - Sprint 4
 {% endblock %}
 
-
 {% block header %}
-  {{ super() }}
-  {% include "includes/DEV_mvp-nav_sign-out.html" %}
+    {{ govukHeader({
+      homepageUrl: "/DEV/",
+      serviceName: serviceName,
+      serviceUrl: "/DEV/start?loggedin=true",
+      containerClasses: "govuk-width-container"
+    }) }}
+    {% include "includes/DEV_mvp-nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}

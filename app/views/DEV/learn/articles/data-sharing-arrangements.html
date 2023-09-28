@@ -6,9 +6,15 @@
 
 
 
+{% set DEVconditionalURL = "/DEV/start?loggedin=" + data['loggedin'] %}
 {% block header %}
-  {{ super() }}
-  {% include "includes/DEV_mvp-nav_conditional.html" %}
+    {{ govukHeader({
+      homepageUrl: "/DEV/",
+      serviceName: serviceName,
+      serviceUrl: DEVconditionalURL,
+      containerClasses: "govuk-width-container"
+    }) }}
+    {% include "includes/DEV_mvp-nav_conditional.html" %}
 {% endblock %}
 
 {% block beforeContent %}
