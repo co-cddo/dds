@@ -1,7 +1,7 @@
 # Data Marketplace prototypes
 Prototypes of the Design a Data Share tools and services. These include journeys for both acquirer and supplier personas and may eventually be merged with other prototypes in this repo.
 
-Read [How this prototype has been setup](HOW.md), if you're an Interaction Designer working on this project.
+Read [How this prototype has been set up](HOW.md), if you're an Interaction Designer working on this project.
 
 ## Prototype for user research testing
 

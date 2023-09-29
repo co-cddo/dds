@@ -1,14 +1,25 @@
-# How the prototype has been setup
+# How the prototype has been set up
 
 This prototype has been created using the [GOV UK prototyping kit](https://prototype-kit.service.gov.uk/docs/create-new-prototype), and organised in a way that allows for different versions to exist. The different versions are:
 
-- WIP, Work in progress - Where designers create new designs and explore design iterations of existing designs. 
-- UR, user research - Where user research go to find research stimulus.
-- DEV, development reference: Where developers go to see how the design looks (and works to some degree) when creating the real service.
+- WIP, Work in progress - Where Designers create new designs and iterate existing designs. 
+- UR, user research - Where Rser Researchers go to find the latest research stimulus.
+- DEV, development reference: Where Developers go to find the agreed and tested designs ready to be developed.
 
-The folder structure
+## Why set it up this way
 
-The view folder has been structured to keep the different versions separated.
+The main aim for the structure is to increase confidence in the team that each role has access to the right page, journey, sub-service for the work they are doing.
+
+It's also useful to help create a light-touch gated process, where all the messy work of design (understanding user needs, talking with internal stakeholders, playing with ideas, amendments, more amendmenet, and more amendments &#128579;) can happen without disrupting or confusing other team mates.
+
+The diagram illustrate the process, with the different prototype versions highlighted in yellow.
+
+![Flowchart diagram of way of working - showing a journey from the WIP version, to UR, to DEV and then into development.](/public/images/how-wow.png "Prototype and design process")
+
+
+## The folder structure
+
+The **view** folder has been structured to keep the versions separated.
 
 - views
 	- UR views
@@ -36,7 +47,7 @@ Currently all prototypes reference the same assets found in the following folder
 
 There wasn’t an need to create variations between prototypes but if this changes in the future consider adding sub-folders for each prototype version, and/or sub-service files/folders (See the ‘routes’ folder for reference).
 
-**Important: It's not recommended to create completely global styles, routes or JS. This can easily lead to clashes between version that go unnoticed **
+**Important: It's not recommended that you create completely global styles, routes or JS. This can easily lead to clashes between versions that go unnoticed**
 
 ## Moving designs between versions
 
