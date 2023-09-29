@@ -5,8 +5,13 @@ Summary
 {% endblock %}
 
 {% block header %}
-  {{ super() }}
-  {% include "includes/nav_sign-out.html" %}
+    {{ govukHeader({
+      homepageUrl: "/",
+      serviceName: serviceName,
+      serviceUrl: "/start?loggedin=true",
+      containerClasses: "govuk-width-container"
+    }) }}
+    {% include "includes/nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}

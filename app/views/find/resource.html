@@ -5,9 +5,15 @@
   {{ resource.title }}
 {% endblock %}
 
+{% set conditionalURL = "/start?loggedin=" + data['loggedin'] %}
 {% block header %}
-  {{ super() }}
-  {% include "includes/mvp-nav_conditional.html" %}
+    {{ govukHeader({
+      homepageUrl: "/",
+      serviceName: serviceName,
+      serviceUrl: conditionalURL,
+      containerClasses: "govuk-width-container"
+    }) }}
+    {% include "includes/nav_conditional.html" %}
 {% endblock %}
 
 {% block beforeContent %}

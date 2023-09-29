@@ -5,8 +5,13 @@ Use GOV.UK One Login to sign in to this service
 {% endblock %}
 
 {% block header %}
-  {{ super() }}
-  {% include "includes/nav_sign-in.html" %}
+    {{ govukHeader({
+      homepageUrl: "/",
+      serviceName: serviceName,
+      serviceUrl: "/start?loggedin=false",
+      containerClasses: "govuk-width-container"
+    }) }}
+    {% include "includes/nav_sign-in.html" %}
 {% endblock %}
 
 {% block beforeContent %}
