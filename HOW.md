@@ -14,7 +14,7 @@ It's also useful to help create a light-touch gated process, where all the messy
 
 The diagram illustrate the process, with the different prototype versions highlighted in yellow.
 
-![Flowchart diagram of way of working - showing a journey from the WIP version, to UR, to DEV and then into development.](/app/assets/images/how-wow.png "Prototype and design process")
+![Flowchart diagram of way of working - showing a journey from the WIP version, to UR, to DEV and then into development.](/app/assets/images/wow.png "Prototype and design process")
 
 ## The folder structure
 
