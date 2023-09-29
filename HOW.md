@@ -16,7 +16,6 @@ The diagram illustrate the process, with the different prototype versions highli
 
 ![Flowchart diagram of way of working - showing a journey from the WIP version, to UR, to DEV and then into development.](/app/assets/images/how-wow.png "Prototype and design process")
 
-
 ## The folder structure
 
 The **view** folder has been structured to keep the versions separated.
